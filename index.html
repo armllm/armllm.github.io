@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Based off of this template: https://getbootstrap.com/docs/4.1/examples/offcanvas/ -->
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="Welcome to the 2024 Bellairs Workshop on Causality, an academic event organized by Alexandre Drouin and Perouz Taslakian. Join us for in-depth discussions on causal inference and machine learning, held at the Bellairs Research Institute of McGill University in Barbados." />
+    <meta name="author" content="Alexandre Drouin, Perouz Taslakian" />
+    <meta name="keywords" content="Bellairs Workshop on Causality, causality, causal representation learning, causal inference, machine learning, representation learning, computer science, academic event, Bellairs Research Institute, McGill University, Barbados" />
+    <meta name="geo.region" content="BB" />
+    <meta name="geo.placename" content="Barbados" />
+    <meta name="geo.position" content="13.2094;-59.5929" />
+    <meta name="ICBM" content="13.2094, -59.5929" />
+    
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4QXV9B2MS6"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-4QXV9B2MS6');
+    </script>
+
+    <title>Armenia LLM Summer School</title>
+    <link rel="icon" type="img/gif/png" href="images/favicon.png">
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
+
+    <style type="text/css">
+        .text-white-50 {
+            color: rgba(255, 255, 255, 0.5);
+        }
+
+        .bg-color {
+            background-color: #315cd3;
+        }
+
+        .border-bottom {
+            border-bottom: 1px solid #e5e5e5;
+        }
+
+        .box-shadow {
+            box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.05);
+        }
+
+        .lh-100 {
+            line-height: 1;
+        }
+
+        .lh-125 {
+            line-height: 1.25;
+        }
+
+        .lh-150 {
+            line-height: 1.5;
+        }
+
+        .jumbotron-billboard .img {
+            margin-bottom: 0px;
+            color: #fff;
+            background: #fff url("images/llm.png") top center no-repeat;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            overflow: hidden;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1;
+        }
+
+        .jumbotron h1 {
+            margin-top: 0;
+            font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+            font-weight: 800;
+        }
+
+        .jumbotron p {
+            color: rgb(78, 78, 78);
+            font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+            font-weight: 600;
+        }
+
+        .jumbotron {
+            position: relative;
+            padding-top: 50px;
+            padding-bottom: 50px;
+        }
+
+        .jumbotron .container {
+            position: relative;
+            z-index: 2;
+        }
+
+        @media screen and (max-width: 768px) {
+            .jumbotron {
+                padding-top: 20px;
+                padding-bottom: 20px;
+            }
+        }
+
+        .jumbotron .graphic {
+            width: 30%;
+            padding-top: 12px;
+        }
+
+        @media screen and (max-width: 768px) {
+            .jumbotron .graphic {
+                width: 70%;
+                padding-top: 12px;
+            }
+        }
+
+        @media (max-width: 450px) {
+            .jumbotron-heading {
+                font-size: 30px;
+            }
+        }
+
+        .anchoritem {
+            display: block;
+            padding-top: 4rem;
+            margin-top: -4rem;
+        }
+
+        .schedule {
+            background-color: rgba(0, 0, 0, 0.05);
+        }
+
+        .list-inline li {
+            display: inline-block;
+            margin: 5px;
+        }
+
+        .list-inline img {
+            object-fit: cover;
+        }
+
+        .map-container {
+            overflow: hidden;
+            padding-bottom: 56.25%;
+            position: relative;
+            height: 0;
+        }
+
+        .map-container iframe {
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 100%;
+            position: absolute;
+        }
+    </style>
+</head>
+
+<body data-spy="scroll" data-target="#navbarCollapse" class="bg-light" style="min-height: 75rem;margin-top:3rem;">
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <a class="navbar-brand" href="#">ArmLLM 2024</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+            aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a href="#abstract" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#attendees" class="nav-link">Speakers</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#goals" class="nav-link">Sponsors</a>
+                </li>
+                <!-- <li class="nav-item">
+                    <a href="#photo-gallery" class="nav-link">Photo Gallery</a>
+                </li> -->
+                <li class="nav-item">
+                    <a href="#program" class="nav-link">Program</a>
+                </li>
+                <!-- <li class="nav-item">
+                    <a href="#organizers" class="nav-link">Organizers</a>
+                </li> -->
+            </ul>
+        </div>
+    </nav>
+
+    <main role="main">
+        <section class="jumbotron text-center jumbotron-billboard">
+            <!--padding-bottom:0;-->
+            <div class="img"></div>
+            <div class="container">
+                <br>
+                <!--
+                <h3 class="jumbotron-heading" style="color: #85929E;">
+		-->
+                <h3 class="jumbotron-heading" style="color: #FFFFFF;">
+                    Welcome to the First 
+                </h3>
+                <br>
+                <h1 class="jumbotron-heading" style="color: #FFFFFF;">
+                    Armenain LLM Summer School
+                </h1>
+                <!--<h3 class="jumbotron-heading" style="color: #FFFFFF">
+                    Inference and Representation Learning
+                </h3>-->
+                <br>
+                <h4 class="jumbotron-heading" style="color: #FFFFFF; ">
+                    July 1-7, 2024
+                </h4>
+                <br>
+            </div>
+        </section>
+        <div class="container">
+            <div class="my-3 p-3 bg-white rounded box-shadow">
+                <h5 class="border-bottom border-gray pb-2 mb-0 anchoritem" id="abstract">
+                   About the summer school 
+                </h5>
+                <div class="media text-muted pt-3">
+                    <p class="media-body pb-1 mb-0 medium lh-125">
+                        Welcome to the LLM Armenian Summer School, an immersive educational experience designed to explore 
+                        the dynamic fields of Large Language Models (LLM) and its variations. 
+                        This program is tailored for enthusiasts, scholars, and professionals keen to delve into the world of 
+                        LLM generative approaches and multihop-reasoning, explainability, interpretability, risk assessment, 
+                        fairness and transparency and retrieval-based approaches in AI-driven content generation. 
+                        Our summer school offers a comprehensive curriculum, hands-on projects, and expert-led lectures, 
+                        providing participants with theoretical knowledge and practical skills.
+                    </p>
+                </div>
+
+                <div class="media text-muted pt-3">
+                    <p class="media-body pb-3 mb-0 medium  lh-125 border-gray">
+                        <strong class="d-block text-gray-dark">Objective and Scope</strong>
+                        The summer school will offer a series of workshops, lectures, and hands-on sessions, aiming to bridge the 
+                        knowledge gap among members of academia and industry in the fast-developing research area of foundational large language models (LLMs). 
+                        The curriculum will cover a range of both core and specialized topics in LLMs.
+
+                    </p>
+                </div>
+                <div class="media text-muted pt-3">
+                      <strong class="d-block text-gray-dark">Topics (tentative)</strong>
+                </div>
+                <div class="media text-muted pt-3">
+                        <ul>
+                          <li>
+                              Transformer architectures
+                          </li>
+                          <li>
+                              Pretraining
+                          </li>
+                          <li>
+                              Model alignment, parameter-efficient tuning
+                          </li>
+                          <li>
+                              In-context learning and reasoning
+                          </li>
+                          <li>
+                              Responsible AI and  LLM safety
+                          </li>
+                          <li>
+                              Model editing
+                          </li>
+                        </ul>
+                </div>
+
+
+                <div class="media text-muted pt-3">
+                    <p class="media-body pb-3 mb-0 medium  lh-125 border-gray">
+                        <strong class="d-block text-gray-dark">Format</strong>
+                        The school agenda will consist of lectures, followed by more hands-on practice sessions 
+                        where students will do different exercises and mini-projects.
+                    </p>
+                </div>
+
+                <div class="media text-muted pt-3">
+                    <p class="media-body pb-3 mb-0 medium  lh-125 border-gray">
+                        <strong class="d-block text-gray-dark">Expected Outcomes</strong>
+                        The participants are expected to gain an understanding of the research topics, 
+                        run relevant baseline models, and conduct supervised research. We also envision that 
+                        some of the participants will engage in collaborative research projects beyond the summer school.
+                    </p>
+                </div>
+
+                <div class="media text-muted pt-3">
+                    <p class="media-body pb-3 mb-0 medium  lh-125 border-gray">
+                        <strong class="d-block text-gray-dark">Venue</strong>
+                        The workshop will take place at the American University of Armenia
+                    </p>
+                </div>
+
+                <div class="media text-muted pt-3">
+                    <p class="media-body pb-3 mb-0 medium  lh-125 border-gray">
+                        <strong class="d-block text-gray-dark">Target Audience</strong>
+                        Senior undergrad and graduate students in Armenia and  Diaspora; 
+                        pre-doctoral students who need publications for admission into ML PhD programs; 
+                        Researchers both from academia and industry.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="my-3 p-3 bg-white rounded box-shadow">
+                <h5 class="border-bottom border-gray pb-2 mb-0 anchoritem" id="attendees">
+                   Speakers 
+                </h5>
+                <div class="media text-muted pt-3">
+                    <img data-src="holder.js/32x32?theme=thumb&bg=007bff&fg=007bff&size=1" alt=""
+                        class="mr-2 rounded" />
+                    <div class="d-flex flex-column w-100">
+                        <ul class="list-inline" style="line-height: 25px; text-align: center;">
+
+                            <li>
+                                <a href="https://scholar.google.com/citations?user=KxQfzRcAAAAJ" target="_blank">
+                                    <b><img src="https://itel.am/datas/znews/big_/2023/11/03/6544e40b4ad3e5.72335961.jpg" class="rounded-circle" width="150"
+                                            height="150" /><br />Armen Aghajanyan</b>
+                                </a> <br />(Meta AI FAIR)
+                            </li>
+
+
+                            <li>
+                                <a href="https://www.alexandonian.com/" target="_blank"><b><img
+                                            src="https://scholar.googleusercontent.com/citations?view_op=view_photo&user=PN7hXAMAAAAJ&citpid=2" class="rounded-circle" width="150"
+                                            height="150" /><br />Alex Andonian
+                                    </b></a> <br />(MIT)
+                            </li>
+
+
+                            <li>
+                                <a href="https://scholar.google.com/citations?user=63BfrxMAAAAJ" target="_blank">
+                                    <b><img src="https://scholar.googleusercontent.com/citations?view_op=view_photo&user=63BfrxMAAAAJ&citpid=3" class="rounded-circle" width="150"
+                                            height="150" /><br />Erik Arakelyan</b>
+                                </a> <br />(UCPH)
+                            </li>
+
+                            <li>
+                                <a href="https://shushanarakelyan.github.io/" target="_blank">
+                                    <b><img src="https://shushanarakelyan.github.io/authors/shushan/avatar_hu535661bce2c742bf7a0f6a055ac0b6d1_326901_270x270_fill_q75_lanczos_center.jpg"
+                                            class="rounded-circle" width="150" height="150" /><br />Shushan Arakelyan
+                                        </b>
+                                </a> <br />(USC)
+                            </li>
+
+
+                            <li>
+                                <a href="https://www.cs.cornell.edu/~eugene/" target="_blank"><b><img src="https://www.cs.cornell.edu/~eugene/assets/images/zhenya_new.jpg"
+                                            class="rounded-circle" width="150" height="150" /><br />Eugene Baghdasaryan</b></a> <br />(Google / UMass Amherst)
+                            </li>
+                            <li>
+                                <a href="https://scholar.google.com/citations?user=V3JjNJ0AAAAJ&hl=en"
+                                    target="_blank"><b><img src="https://scholar.googleusercontent.com/citations?view_op=view_photo&user=V3JjNJ0AAAAJ&citpid=4" class="rounded-circle" width="150"
+                                            height="150" /><br />Karen Hambardzumyan
+                                    </b></a> <br />(Meta AI FAIR / UCL)
+                            </li>
+
+                            <li>
+                                <a href="https://scholar.google.com/citations?user=tmK5EPEAAAAJ" target="_blank"><b><img
+                                            src="https://scholar.googleusercontent.com/citations?view_op=view_photo&user=tmK5EPEAAAAJ&citpid=2" class="rounded-circle" width="150"
+                                            height="150" /><br />Jonathan May
+                                    </b></a> <br />(USC)
+                            </li>
+
+                            <li>
+                                <a href="https://sunjiao123sun.github.io/" target="_blank"><b><img
+                                            src="https://pbs.twimg.com/profile_images/1700212798373113857/EHEzziCH_400x400.jpg" class="rounded-circle" width="150"
+                                            height="150" /><br />Jiao Sun
+                                    </b></a> <br />(USC)
+                            </li>
+                        </ul>
+
+                        * Organizers
+                    </div>
+                </div>
+            </div>
+
+            <div class="my-3 p-3 bg-white rounded box-shadow">
+                <h5 class="border-bottom border-gray pb-2 mb-0 anchoritem" id="goals">
+                   Sponsors 
+                </h5>
+                <div class="media text-muted pt-3 pb-0 mb-0">
+                    <p class="media-body pb-0 mb-0 medium  lh-125 border-gray">We thank all our sponsors for helping make this summer school possible.
+                    </p>
+                </div>
+                <div class="media text-muted pt-3">
+                    <div class="d-flex flex-column w-100">
+                        <ul class="list-inline" style="line-height: 25px; text-align: center;">
+                            <li>
+                                <a href="https://aua.am/" target="_blank"><b><img
+                                            src="images/aua_logo.png" class="rounded-circle" width="150"
+                                            height="150" /><br />American University of Armenia</b>
+                                </a> <br />
+                            </li>
+                    </ul>
+                </div>
+            </div>
+
+
+            <div class="my-3 p-3 bg-white rounded box-shadow">
+                <h5 class="border-bottom border-gray pb-2 mb-0 anchoritem" id="program">
+                    Program
+                </h5>
+                <div class="media text-muted pt-3">
+                    <img data-src="holder.js/32x32?theme=thumb&bg=e83e8c&fg=e83e8c&size=1" alt=""
+                        class="mr-2 rounded" />
+                    <p class="media-body pb-3 mb-0 medium  lh-125 border-gray">
+                        Coming soon.                     </p>
+                </div>
+            </div>
+
+                <div id="map" class="my-3 p-3 bg-white rounded box-shadow">
+                    <div class="media text-muted pt-3">
+                        <p class="text-center media-body pb-1 mb-0 medium lh-125">
+                            For questions please contact one of the organizers 
+                            <a href="mailto:galstyan@isi.edu">Aram Galstyan</a>, 
+                            <a href="mailto:perou@gmail.com">Perouz Taslakian</a>, 
+                            <a href="mailto:erik.a@di.ku.dk">Erik Arakelyan</a>.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+    </main>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
