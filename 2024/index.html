@@ -153,6 +153,41 @@
             width: 100%;
             position: absolute;
         }
+        body {
+            margin: 20px;
+        }
+ 
+        h1 {
+            color: green;
+        }
+ 
+        /* This div design part is
+            used as an Image */
+        .round {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            text-align: center;
+            font-size: 30px;
+            float: left;
+            font-weight: bold;
+ 
+            /* Change the shape according
+                to the image */
+            shape-outside: circle();
+            background-color: Green;
+            color: white;
+        }
+ 
+        article {
+            padding-top: 75px;
+            display: inline-block;
+        }
+ 
+        p {
+            text-align: justify;
+            font-size: 22px;
+        }
     </style>
 </head>
 
@@ -224,15 +259,27 @@
                    About the summer school 
                 </h5>
                 <div class="media text-muted pt-3">
-                    <p class="media-body pb-1 mb-0 medium lh-125">
-                        Welcome to the LLM Armenian Summer School, an immersive educational experience designed to explore 
-                        the dynamic fields of Large Language Models (LLM) and its variations. 
-                        This program is tailored for enthusiasts, scholars, and professionals keen to delve into the world of 
-                        LLM generative approaches and multihop-reasoning, explainability, interpretability, risk assessment, 
-                        fairness and transparency and retrieval-based approaches in AI-driven content generation. 
-                        Our summer school offers a comprehensive curriculum, hands-on projects, and expert-led lectures, 
-                        providing participants with theoretical knowledge and practical skills.
-                    </p>
+                    <table cellspacing="10">
+                        <tr>
+                            <td>
+                                <img src=
+                "images/logo_armllm_bg_removed.png"
+                                    alt="Logo"/>
+                            </td>
+                            <td>
+                                <p class="media-body pb-1 mb-0 medium lh-125">
+                                    
+                                    Welcome to the LLM Armenian Summer School, an immersive educational experience designed to explore 
+                                    the dynamic fields of Large Language Models (LLM) and its variations. 
+                                    This program is tailored for enthusiasts, scholars, and professionals keen to delve into the world of 
+                                    LLM generative approaches and multihop-reasoning, explainability, interpretability, risk assessment, 
+                                    fairness and transparency and retrieval-based approaches in AI-driven content generation. 
+                                    Our summer school offers a comprehensive curriculum, hands-on projects, and expert-led lectures, 
+                                    providing participants with theoretical knowledge and practical skills.
+                                </p>
+                            </td>
+                        </tr>
+                    </table>
                 </div>
 
                 <div class="media text-muted pt-3">
