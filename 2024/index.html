@@ -11,15 +11,15 @@
     <meta name="geo.region" content="BB" />
     <meta property="og:image" content="images/favicon.png" />
     <meta name="geo.placename" content="Armenia" />
-    
+
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-4QXV9B2MS6"></script>
     <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
 
-    gtag('config', 'G-4QXV9B2MS6');
+        gtag('config', 'G-4QXV9B2MS6');
     </script>
 
     <title>LLM Summer School</title>
@@ -153,16 +153,15 @@
             width: 100%;
             position: absolute;
         }
+
         body {
             margin: 20px;
         }
- 
+
         h1 {
             color: green;
         }
- 
-        /* This div design part is
-            used as an Image */
+
         .round {
             width: 200px;
             height: 200px;
@@ -171,22 +170,42 @@
             font-size: 30px;
             float: left;
             font-weight: bold;
- 
-            /* Change the shape according
-                to the image */
             shape-outside: circle();
             background-color: Green;
             color: white;
         }
- 
+
         article {
             padding-top: 75px;
             display: inline-block;
         }
- 
+
         p {
             text-align: justify;
             font-size: 22px;
+        }
+
+        @media (max-width: 768px) {
+            .container img {
+                width: 100%;
+                height: auto;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .list-inline {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            .list-inline li {
+                flex: 0 0 45%;
+                margin: 5px 5px;
+            }
+            .list-inline img {
+                width: 100%;
+                height: auto;
+            }
         }
     </style>
 </head>
@@ -212,30 +231,21 @@
                 <li class="nav-item">
                     <a href="#hosts" class="nav-link">Hosts</a>
                 </li>
-                <!-- <li class="nav-item">
-                    <a href="#photo-gallery" class="nav-link">Photo Gallery</a>
-                </li> -->
                 <li class="nav-item">
                     <a href="#program" class="nav-link">Program</a>
-		<li class="nav-item">
+                </li>
+                <li class="nav-item">
                     <a href="#supporters" class="nav-link">Supporters</a>
                 </li>
-                <!-- <li class="nav-item">
-                    <a href="#organizers" class="nav-link">Organizers</a>
-                </li> -->
             </ul>
         </div>
     </nav>
 
     <main role="main">
         <section class="jumbotron text-center jumbotron-billboard">
-            <!--padding-bottom:0;-->
             <div class="img"></div>
             <div class="container">
                 <br>
-                <!--
-                <h3 class="jumbotron-heading" style="color: #85929E;">
-		-->
                 <h3 class="jumbotron-heading" style="color: #FFFFFF;">
                     Welcome to the First 
                 </h3>
@@ -259,100 +269,80 @@
                    About the summer school 
                 </h5>
                 <div class="media text-muted pt-3">
-                    <table cellspacing="10">
-                        <tr>
-                            <td>
-                                <img src=
-                "images/small_armllm.png"
-                                    alt="Logo" width="250" height="250" />
-                            </td>
-                            <td>
-                                <p class="media-body pb-1 mb-0 medium lh-125">
-                                    
-                                    Welcome to the LLM Armenian Summer School, an immersive educational experience designed to explore 
-                                    the dynamic fields of Large Language Models (LLM) and its variations. 
-                                    This program is tailored for enthusiasts, scholars, and professionals keen to delve into the world of 
-                                    LLM generative approaches and multihop-reasoning, explainability, interpretability, risk assessment, 
-                                    fairness and transparency and retrieval-based approaches in AI-driven content generation. 
-                                    Our summer school offers a comprehensive curriculum, hands-on projects, and expert-led lectures, 
-                                    providing participants with theoretical knowledge and practical skills.
-                                </p>
-                            </td>
-                        </tr>
-                    </table>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <img src="images/small_armllm.png" alt="Logo" class="img-fluid" />
+                        </div>
+                        <div class="col-md-8">
+                            <p class="media-body pb-1 mb-0 medium lh-125">
+                                Welcome to the LLM Armenian Summer School, an immersive educational experience designed to explore
+                                the dynamic fields of Large Language Models (LLM) and its variations.
+                                This program is tailored for enthusiasts, scholars, and professionals keen to delve into the world of
+                                LLM generative approaches and multihop-reasoning, explainability, interpretability, risk assessment,
+                                fairness and transparency and retrieval-based approaches in AI-driven content generation.
+                                Our summer school offers a comprehensive curriculum, hands-on projects, and expert-led lectures,
+                                providing participants with theoretical knowledge and practical skills.
+                            </p>
+                        </div>
+                    </div>
                 </div>
 
                 <div class="media text-muted pt-3">
-                    <p class="media-body pb-3 mb-0 medium  lh-125 border-gray">
+                    <p class="media-body pb-3 mb-0 medium lh-125 border-gray">
                         <strong class="d-block text-gray-dark">Objective and Scope</strong>
-                        The summer school will offer a series of workshops, lectures, and hands-on sessions, aiming to bridge the 
-                        knowledge gap among members of academia and industry in the fast-developing research area of foundational large language models (LLMs). 
+                        The summer school will offer a series of workshops, lectures, and hands-on sessions, aiming to bridge the
+                        knowledge gap among members of academia and industry in the fast-developing research area of foundational large language models (LLMs).
                         The curriculum will cover a range of both core and specialized topics in LLMs.
-
                     </p>
                 </div>
                 <div class="media text-muted pt-3">
-                      <strong class="d-block text-gray-dark">Topics (tentative)</strong>
+                    <strong class="d-block text-gray-dark">Topics (tentative)</strong>
                 </div>
                 <div class="media text-muted pt-3">
-                        <ul>
-                          <li>
-                              Transformer architectures
-                          </li>
-                          <li>
-                              Pretraining
-                          </li>
-                          <li>
-                              Model alignment, parameter-efficient tuning
-                          </li>
-                          <li>
-                              In-context learning and reasoning
-                          </li>
-                          <li>
-                              Responsible AI and  LLM safety
-                          </li>
-                          <li>
-                              Model editing
-                          </li>
-                        </ul>
+                    <ul>
+                        <li>Transformer architectures</li>
+                        <li>Pretraining</li>
+                        <li>Model alignment, parameter-efficient tuning</li>
+                        <li>In-context learning and reasoning</li>
+                        <li>Responsible AI and LLM safety</li>
+                        <li>Model editing</li>
+                    </ul>
                 </div>
 
-
                 <div class="media text-muted pt-3">
-                    <p class="media-body pb-3 mb-0 medium  lh-125 border-gray">
+                    <p class="media-body pb-3 mb-0 medium lh-125 border-gray">
                         <strong class="d-block text-gray-dark">Format</strong>
-                        The school agenda will consist of lectures, followed by more hands-on practice sessions 
+                        The school agenda will consist of lectures, followed by more hands-on practice sessions
                         where students will do different exercises and mini-projects.
                     </p>
                 </div>
 
                 <div class="media text-muted pt-3">
-                    <p class="media-body pb-3 mb-0 medium  lh-125 border-gray">
+                    <p class="media-body pb-3 mb-0 medium lh-125 border-gray">
                         <strong class="d-block text-gray-dark">Expected Outcomes</strong>
-                        The participants are expected to gain an understanding of the research topics, 
-                        run relevant baseline models, and conduct supervised research. We also envision that 
+                        The participants are expected to gain an understanding of the research topics,
+                        run relevant baseline models, and conduct supervised research. We also envision that
                         some of the participants will engage in collaborative research projects beyond the summer school.
                     </p>
                 </div>
 
                 <div class="media text-muted pt-3">
-                    <p class="media-body pb-3 mb-0 medium  lh-125 border-gray">
+                    <p class="media-body pb-3 mb-0 medium lh-125 border-gray">
                         <strong class="d-block text-gray-dark">Venue</strong>
                         The workshop will take place at the Small Auditorium, Main Building, American University of Armenia (40 M. Baghramyan Avenue, Yerevan).
                     </p>
                 </div>
 
                 <div class="media text-muted pt-3">
-                    <p class="media-body pb-3 mb-0 medium  lh-125 border-gray">
+                    <p class="media-body pb-3 mb-0 medium lh-125 border-gray">
                         <strong class="d-block text-gray-dark">Target Audience</strong>
-                        The school is designed for senior undergraduate and graduate students in Armenia, Diaspora and abroad,  
-                        pre-doctoral students, as weel as 
-                        researchers both from academia and industry. 
+                        The school is designed for senior undergraduate and graduate students in Armenia, Diaspora and abroad,
+                        pre-doctoral students, as well as
+                        researchers both from academia and industry.
                     </p>
                 </div>
 
             </div>
-
 
             <div class="my-3 p-3 bg-white rounded box-shadow">
                 <h5 class="border-bottom border-gray pb-2 mb-0 anchoritem" id="speakers">
@@ -363,7 +353,6 @@
                         class="mr-2 rounded" />
                     <div class="d-flex flex-column w-100">
                         <ul class="list-inline" style="line-height: 25px; text-align: center;">
-
                             <li>
                                 <a href="https://scholar.google.com/citations?user=KxQfzRcAAAAJ" target="_blank">
                                     <b><img src="https://itel.am/datas/znews/big_/2023/11/03/6544e40b4ad3e5.72335961.jpg" class="rounded-circle" width="150"
@@ -371,14 +360,12 @@
                                 </a> <br />(Meta FAIR)
                             </li>
 
-
                             <li>
                                 <a href="https://www.alexandonian.com/" target="_blank"><b><img
                                             src="https://scholar.googleusercontent.com/citations?view_op=view_photo&user=PN7hXAMAAAAJ&citpid=2" class="rounded-circle" width="150"
                                             height="150" /><br />Alex Andonian
                                     </b></a> <br />(MIT)
                             </li>
-
 
                             <li>
                                 <a href="https://scholar.google.com/citations?user=63BfrxMAAAAJ" target="_blank">
@@ -394,7 +381,6 @@
                                         </b>
                                 </a> <br />(Google Research)
                             </li>
-
 
                             <li>
                                 <a href="https://www.cs.cornell.edu/~eugene/" target="_blank"><b><img src="https://www.cs.cornell.edu/~eugene/assets/images/zhenya_new.jpg"
@@ -420,11 +406,11 @@
                                     </b></a> <br />(USC)
                             </li>
 
-                           <li>
+                            <li>
                                 <a href="https://scholar.google.com/citations?user=1R3XgHQAAAAJ&hl=en" target="_blank"><b><img
                                             src="https://scholar.googleusercontent.com/citations?view_op=medium_photo&user=1R3XgHQAAAAJ&citpid=1" class="rounded-circle" width="150"
                                             height="150" /><br />Ninareh Mehrabi
-									</b></a> <br />(Amazon)
+                                    </b></a> <br />(Amazon)
                             </li>
                             <li>
                                 <a href="https://sunjiao123sun.github.io/" target="_blank"><b><img
@@ -433,7 +419,6 @@
                                     </b></a> <br />(USC)
                             </li>
                         </ul>
-
                     </div>
                 </div>
             </div>
@@ -445,84 +430,73 @@
                 </h5>
                 <div class="media text-muted pt-3">
                     <p class="media-body pb-1 mb-0 medium lh-125">
-                        The school will be open to a limited number of qualified and motivated candidates. 
-                        Students (Bachelor, Masters, Ph.D.), researchers (both academic and industrial), and  academic/industrial professionals are encouraged to apply. 
+                        The school will be open to a limited number of qualified and motivated candidates.
+                        Students (Bachelor, Masters, Ph.D.), researchers (both academic and industrial), and academic/industrial professionals are encouraged to apply.
                         <br>
-                        At the end of the application period, all applicants will be informed whether or not their summer school application is accepted. 
+                        At the end of the application period, all applicants will be informed whether or not their summer school application is accepted.
                         <br>
                         <br>
-                        Applications to attend the summer school should be received before <b>May 3, 2024</b>. 
+                        Applications to attend the summer school should be received before <b>May 3, 2024</b>.
                         <br>
                         Applicants will receive notification of acceptance by May 31, 2024.
                         Accepted applicants will then be invited to pay the registration fee to finalize their registration to the summer school.
-
                     </p>
                 </div>
 
                 <br>
 
                 <div class="media text-muted pt-3">
-                      <strong class="d-block text-gray-dark">Application Form.</strong>
+                    <strong class="d-block text-gray-dark">Application Form.</strong>
                 </div>
                 <div class="media text-muted pt-3">
                     <p class="media-body pb-1 mb-0 medium lh-125">
-                        Please submit your application by filling out the <a href="https://docs.google.com/forms/d/e/1FAIpQLSfWR7Rdyuk5gv7EX0v28MpFQdgOTx3u9IB0BIH1FyhD3r5Xng/viewform?usp=sf_link">Application Form</a>. 
-
+                        Please submit your application by filling out the <a href="https://docs.google.com/forms/d/e/1FAIpQLSfWR7Rdyuk5gv7EX0v28MpFQdgOTx3u9IB0BIH1FyhD3r5Xng/viewform?usp=sf_link">Application Form</a>.
                         <br>
-
-                       Once we receive your application, we will send you a test  assessing your  Python programming skills. This test is mandatory, and all selected participants should have satisfactory results.   
-                       <br>
-                      Note that submitting an application does not guarantee that you will be able to attend -- you must wait to receive a notification of acceptance before you can do so.
-                    </p>
-                </div>
-
-
-                <br>
-
-                <div class="media text-muted pt-3">
-                      <strong class="d-block text-gray-dark">Fees.</strong>
-                </div>
-                <div class="media text-muted pt-3">
-                    <p class="media-body pb-1 mb-0 medium lh-125">
-                    The registration fee is <b>300 USD</b> or 120,000 AMD. 
-                    <br>
-                    The fee will cover access to GPUs during the course of the summer school, which you will need to do the projects.
+                        Once we receive your application, we will send you a test assessing your Python programming skills. This test is mandatory, and all selected participants should have satisfactory results.
+                        <br>
+                        Note that submitting an application does not guarantee that you will be able to attend -- you must wait to receive a notification of acceptance before you can do so.
                     </p>
                 </div>
 
                 <br>
 
                 <div class="media text-muted pt-3">
-                      <strong class="d-block text-gray-dark">Financial Assistance.</strong>
+                    <strong class="d-block text-gray-dark">Fees.</strong>
                 </div>
                 <div class="media text-muted pt-3">
                     <p class="media-body pb-1 mb-0 medium lh-125">
-                      All applicants are eligible for financial assistance. Students enrolled at Armenian universities automatically qualify for a reduced fee of 10,000 AMD. 
+                        The registration fee is <b>300 USD</b> or 120,000 AMD.
+                        <br>
+                        The fee will cover access to GPUs during the course of the summer school, which you will need to do the projects.
+                    </p>
+                </div>
+
+                <br>
+
+                <div class="media text-muted pt-3">
+                    <strong class="d-block text-gray-dark">Financial Assistance.</strong>
+                </div>
+                <div class="media text-muted pt-3">
+                    <p class="media-body pb-1 mb-0 medium lh-125">
+                        All applicants are eligible for financial assistance. Students enrolled at Armenian universities automatically qualify for a reduced fee of 10,000 AMD.
                         <br>
                         If you would like to be considered for registration fee reduction, please fill out the <a href="https://docs.google.com/forms/d/e/1FAIpQLSdIFwXBQb4kM5UPlbWIEKE96n9CyGLQPzItCf4WaF3Uz1oIcw/viewform?usp=sf_link">Financial Assistance Form</a>.
                     </p>
                 </div>
 
-
-
-
                 <br>
 
                 <div class="media text-muted pt-3">
-                      <strong class="d-block text-gray-dark">Important Dates.</strong>
+                    <strong class="d-block text-gray-dark">Important Dates.</strong>
                 </div>
                 <div class="media text-muted pt-3">
-                        <ul>
-                            <li>Application deadline: <b>May 3, 2024</b></li>
-                            <li>Notification of acceptance: <b>May 31, 2024</b></li>
-                            <li>Summer School dates: <b>July 1 - 7, 2024</b></li>
-                        </ul>
+                    <ul>
+                        <li>Application deadline: <b>May 3, 2024</b></li>
+                        <li>Notification of acceptance: <b>May 31, 2024</b></li>
+                        <li>Summer School dates: <b>July 1 - 7, 2024</b></li>
+                    </ul>
                 </div>
-
-
             </div>
-
-
 
             <!--  Hosts -->
             <div class="my-3 p-3 bg-white rounded box-shadow">
@@ -530,7 +504,7 @@
                    Hosts
                 </h5>
                 <div class="media text-muted pt-3 pb-0 mb-0">
-                    <p class="media-body pb-0 mb-0 medium  lh-125 border-gray">The summer school is co-hosted by the American University of Armenia and YerevaNN. The lectures will take place at the AUA campus.
+                    <p class="media-body pb-0 mb-0 medium lh-125 border-gray">The summer school is co-hosted by the American University of Armenia and YerevaNN. The lectures will take place at the AUA campus.
                     </p>
                 </div>
                 <div class="media text-muted pt-3">
@@ -538,23 +512,21 @@
                         <ul class="list-inline" style="line-height: 25px; text-align: center;">
                             <li>
                                 <a href="https://aua.am/" target="_blank"><b><img
-                                            src="images/aua.png" class="large-image"  width="150"
-                                            height="150" /><br />American University of Armenia</b> 
+                                            src="images/aua.png" class="large-image" width="150"
+                                            height="150" /><br />American University of Armenia</b>
                                 </a> (Venue) <br />
                             </li>
 
-			   <li>
+                            <li>
                                 <a href="https://yerevann.com/" target="_blank"><b><img
                                             src="images/yn logo.png" class="large-image" width="150"
                                             height="150" /><br />YerevaNN</b>
                                 </a> <br />
                             </li>
-				
                         </ul>
                     </div>
                 </div>
             </div>
-
 
             <!--  Program -->
             <div class="my-3 p-3 bg-white rounded box-shadow">
@@ -564,53 +536,52 @@
                 <div class="media text-muted pt-3">
                     <img data-src="holder.js/32x32?theme=thumb&bg=e83e8c&fg=e83e8c&size=1" alt=""
                         class="mr-2 rounded" />
-                    <p class="media-body pb-3 mb-0 medium  lh-125 border-gray">
-                        Coming soon.                     </p>
+                    <p class="media-body pb-3 mb-0 medium lh-125 border-gray">
+                        Coming soon.
+                    </p>
                 </div>
             </div>
-		
+
             <!--  Supporters -->
             <div class="my-3 p-3 bg-white rounded box-shadow">
                 <h5 class="border-bottom border-gray pb-2 mb-0 anchoritem" id="supporters">
                     Our supporters
                 </h5>
                 <div class="media text-muted pt-3 pb-0 mb-0">
-                    <p class="media-body pb-0 mb-0 medium  lh-125 border-gray"> We thank Vahe Kuzoyan and Picsart for their generous financial contributions in support of the summer school. 
-			    We also thank Nebius AI for their generous support with the compute infrastructure for the school.
+                    <p class="media-body pb-0 mb-0 medium lh-125 border-gray"> We thank Vahe Kuzoyan and Picsart for their generous financial contributions in support of the summer school.
+                        We also thank Nebius AI for their generous support with the compute infrastructure for the school.
                     </p>
                 </div>
-				<div class="media text-muted pt-3">
+                <div class="media text-muted pt-3">
                     <div class="d-flex flex-column w-100">
                         <ul class="list-inline" style="line-height: 25px; text-align: center;">
-			<div>
+                            <li>
                                 <a href="https://nebius.ai/" target="_blank"><b><img
-                                            src="images/nebius.png" class="large-image"  max-width="150"
+                                            src="images/nebius.png" class="large-image" max-width="150"
                                             height="150" />
-					 </a> <br />
-				
-		    </div>   
+                                </a> <br />
+                            </li>
 
-			   <div>
+                            <li>
                                 <a href="https://picsart.com/" target="_blank"><b><img
                                             src="images/picsart.png" class="large-image" max-width="150"
                                             height="150" />
                                 </a> <br />
-                            </div>
-				
+                            </li>
                         </ul>
                     </div>
                 </div>
             </div>
-                <div id="map" class="my-3 p-3 bg-white rounded box-shadow">
-                    <div class="media text-muted pt-3">
-                        <p class="text-center media-body pb-1 mb-0 medium lh-125">
+            <div id="map" class="my-3 p-3 bg-white rounded box-shadow">
+                <div class="media text-muted pt-3">
+                    <p class="text-center media-body pb-1 mb-0 medium lh-125">
                         <b>Organizers:</b> Aram Galstyan, Perouz Taslakian, Erik Arakelyan, Armen Aghajanyan, Hrant Khachatrian.
-                            <br>
-                            For further questions, please email us at <a href="mailto:armeniallm@gmail.com">armeniallm@gmail.com</a>
-                        </p>
-                    </div>
+                        <br>
+                        For further questions, please email us at <a href="mailto:armeniallm@gmail.com">armeniallm@gmail.com</a>
+                    </p>
                 </div>
             </div>
+        </div>
     </main>
 
     <!-- Bootstrap core JavaScript
