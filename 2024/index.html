@@ -296,7 +296,7 @@
                     </p>
                 </div>
                 <div class="media text-muted pt-3">
-                    <strong class="d-block text-gray-dark">Topics (tentative)</strong>
+                    <strong class="d-block text-gray-dark">Topics </strong>
                 </div>
                 <div class="media text-muted pt-3">
                     <ul>
@@ -304,8 +304,10 @@
                         <li>Pretraining</li>
                         <li>Model alignment, parameter-efficient tuning</li>
                         <li>In-context learning and reasoning</li>
-                        <li>Responsible AI and LLM safety</li>
-                        <li>Model editing</li>
+                        <li>Multimodality and Visual LLMs</li>
+                        <li>LLM Interpretability, Safety & Privacy</li>
+                        <li>Knowledge Graphs</li>
+                        <li>Retrieval Augmented Generation (RAG)</li>
                     </ul>
                 </div>
 
@@ -537,7 +539,102 @@
                     <img data-src="holder.js/32x32?theme=thumb&bg=e83e8c&fg=e83e8c&size=1" alt=""
                         class="mr-2 rounded" />
                     <p class="media-body pb-3 mb-0 medium lh-125 border-gray">
-                        Coming soon.
+                        <ul>
+                            <li>
+                                <strong>Module 1: Intro & Pretraining</strong> (Armen Aghajanyan)
+                                <ul>
+                                    <li><strong>July 1</strong></li>
+                                    <ul>
+                                        <li>9:00-10:30 Sequence Modeling as a unified framework for ML</li>
+                                        <li>10:30-10:45 break</li>
+                                        <li>10:45-12:00 Transformer architecture & self-attention mechanism, multi-head attention</li>
+                                        <li>12:00-13:00 Lunch break</li>
+                                        <li>13:00-17:00 Module 1 Practice Session</li>
+                                    </ul>
+                                    <li><strong>July 2</strong></li>
+                                    <ul>
+                                        <li>9:00-10:30 Pre-training, masked language models, fine-tuning</li>
+                                        <li>10:30-10:45 break</li>
+                                        <li>10:45-12:00 Scaling Laws: Model performance vs model and data size, compute time</li>
+                                        <li>12:00-13:00 Lunch break</li>
+                                        <li>13:00-17:00 Module 1 Practice Session</li>
+                                    </ul>
+                                </ul>
+                            </li>
+                            <li>
+                                <strong>Module 2: Alignment</strong>
+                                <ul>
+                                    <li><strong>July 3</strong> (Morning session: Jiao Sun, Afternoon session: Karen Hambardzumyan)</li>
+                                    <ul>
+                                        <li>9:00-10:30 Instruction tuning, LIMA</li>
+                                        <li>10:30-10:45 Coffee break</li>
+                                        <li>10:45-12:00 LLM evaluation</li>
+                                        <li>12:00-13:00 Lunch break</li>
+                                        <li>13:00-14:00 Efficient fine-tuning approaches: Adapters, PET, Prefix Tuning, Prompt Tuning, LoRA</li>
+                                        <li>14:00-14:30 API-only learning approaches: Prompts and Instructions, In-Context Learning, Chain-of-Thought</li>
+                                        <li>14:30-14:45 Break</li>
+                                        <li>14:45-17:00 Practice session: Efficient model loading from huggingface hub, Text generation with model.generate(), Using automatic mixed precision, Dataset loading, In-Context learning to parse free-text listings, Chain-of-Thought on GSM8K</li>
+                                    </ul>
+                                    <li><strong>July 4</strong> (Jon May)</li>
+                                    <ul>
+                                        <li>From token-level to segment-level objectives</li>
+                                        <li>Error and Risk</li>
+                                        <li>Policy Gradient RL Basics</li>
+                                        <li>PPO (incl. code walkthrough)</li>
+                                        <li>RLHF (including InstructGPT and ChatGPT)</li>
+                                        <li>DPO/CPO (incl. code walkthrough)</li>
+                                        <li>Recent work/project: ASTRAPOP and STAMP</li>
+                                        <li>Recent work: Is REINFORCE enough? (Cohere paper)</li>
+                                        <li>Recent work: MBR and DPO (Cambridge paper)</li>
+                                    </ul>
+                                </ul>
+                            </li>
+                            <li>
+                                <strong>Module 3: Visual LLMs</strong> (Alex Andonian, Armen Aghajanyan)
+                                <ul>
+                                    <li><strong>July 5</strong></li>
+                                    <ul>
+                                        <li>Intro to Visual LLMs</li>
+                                        <li>Late-fusion approaches, LLaVa</li>
+                                        <li>Early fusion & natively multi-modal models</li>
+                                    </ul>
+                                </ul>
+                            </li>
+                            <li>
+                                <strong>Module 4: LLM Interpretability, Safety & Privacy</strong>
+                                <ul>
+                                    <li><strong>July 6</strong></li> (Morning session: Narine Kokhlikyan, Afternoon session: Eugene Bagdasaryan)
+                                    <ul>
+                                        <li>9:00-10:30 Introduction to Attribution algorithms, Captum Library</li>
+                                        <li>10:30-10:45 coffee break</li>
+                                        <li>10:45-12:00 Practice session: Prompt Explainability Applications with Captum, Exercises on Prompt Explainability</li>
+                                        <li>12:00-13:00 Lunch break</li>
+                                        <li>13:00-14:00 LLM Privacy: training and inference privacy, contextual integrity</li>
+                                        <li>14:00-15:00 LLM Security: adversarial attacks, prompt injections, poisoning</li>
+                                        <li>15:00-15:15 Break</li>
+                                        <li>15:15-17:00 Practice session: poisoning and adversarial examples on llms and multi modal llms, injecting and detecting bias and propaganda in LLMs</li>
+                                    </ul>
+                                </ul>
+                            </li>
+                            <li>
+                                <strong>Module 5: RAG & KG-enhanced LLMs</strong>
+                                <ul>
+                                    <li><strong>July 7</strong> (Morning Session: Erik Arakelyan, Afternoon Session: Hrayr Harutyunyan)</li>
+                                    <ul>
+                                        <li>09:00-10:30 Introduction to Knowledge Graphs and Complex Reasoning Over Them</li>
+                                        <li>10:30-10:45 coffee break</li>
+                                        <li>10:45-12:00 Practical for KGs</li>
+                                        <li>12:00-13:00 Lunch Break</li>
+                                        <li>13:00-14:00 Efficient Indexing for Retrieval</li>
+                                        <li>14:00-15:00 Retrieval-augmented generation</li>
+                                        <li>15:00-15:15 coffee break</li>
+                                        <li>15:15-17:00 Common retrieval techniques, RAG architectures: kNN-LM, REALM, RETRO</li>
+                                    </ul>
+                                </ul>
+                            </li>
+                        </ul>
+                    
+
                     </p>
                 </div>
             </div>
