@@ -188,6 +188,14 @@
             }
         }
 
+        .hero-dates {
+            font-size: 1.5rem;
+            color: var(--accent-color);
+            margin: 0.5rem 0 1.5rem;
+            text-shadow: 0 0 15px rgba(129, 140, 248, 0.5);
+            font-weight: 500;
+        }
+
         .section {
             padding: 5rem 0;
             position: relative;
@@ -316,6 +324,40 @@
             color: rgba(255, 255, 255, 0.8);
             font-size: 0.9rem;
         }
+
+        .card h4 {
+            color: var(--accent-color);
+            margin: 0.5rem 0;
+            font-size: 1.1rem;
+            text-shadow: 0 0 10px rgba(129, 140, 248, 0.3);
+        }
+
+        .topic-list {
+            list-style: none;
+            padding: 0;
+            margin: 1rem 0 0;
+            text-align: left;
+            font-size: 0.9rem;
+        }
+
+        .topic-list li {
+            margin: 0.5rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .topic-list li::before {
+            content: "•";
+            color: var(--accent-color);
+            position: absolute;
+            left: 0;
+        }
+
+        .card-subtitle {
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.6);
+            margin-top: 0.5rem;
+        }
     </style>
 </head>
 <body>
@@ -339,6 +381,7 @@
         <div class="container hero-content">
             <img src="images/logo_armllm_bg_removed.png" alt="ARMLLM Logo" class="hero-logo">
             <h1>AI Summer School 2025</h1>
+            <p class="hero-dates">July 24-30, 2025</p>
             <p>Join us for an intensive program exploring the latest developments in Artificial Intelligence and Machine Learning</p>
             <a href="#apply" class="cta-button">Apply Now</a>
         </div>
@@ -353,7 +396,8 @@
             <div class="grid">
                 <div class="card">
                     <h3>⏱️ Duration</h3>
-                    <p>Two weeks of intensive learning and hands-on experience</p>
+                    <p>July 24-30, 2025</p>
+                    <p class="card-subtitle">One week of intensive learning and hands-on experience</p>
                 </div>
                 <div class="card">
                     <h3>📚 Format</h3>
@@ -432,28 +476,50 @@
         <div class="container">
             <div class="section-title">
                 <h2>Program Schedule</h2>
-                <p>Two weeks of intensive learning and collaboration</p>
+                <p>July 24-30, 2025 - Yerevan, Armenia</p>
             </div>
             <div class="grid">
                 <div class="card">
-                    <h3>🧠 Module 1: Intro & Pretraining</h3>
-                    <p>Sequence Modeling, Transformer architecture, Pre-training, Scaling Laws</p>
+                    <h3>📅 July 24</h3>
+                    <h4>🧠 Intro to LLMs</h4>
+                    <p>Speaker: Armen Aghajanyan</p>
                 </div>
                 <div class="card">
-                    <h3>🎯 Module 2: Alignment</h3>
-                    <p>Instruction tuning, LLM evaluation, Efficient fine-tuning, API-only learning</p>
+                    <h3>📅 July 25</h3>
+                    <h4>👁️ Multi-modal Models</h4>
+                    <p>Speaker: Armen Aghajanyan</p>
                 </div>
                 <div class="card">
-                    <h3>👁️ Module 3: Vision LLMs</h3>
-                    <p>Vision Language modeling, Late-fusion approaches, Early fusion</p>
+                    <h3>📅 July 26</h3>
+                    <h4>🎯 Post-training</h4>
+                    <p>SFT, RLHF, GRPO, PPO</p>
                 </div>
                 <div class="card">
-                    <h3>🔒 Module 4: LLM Interpretability, Safety & Privacy</h3>
-                    <p>Attribution algorithms, LLM Privacy, LLM Security, Adversarial attacks</p>
+                    <h3>📅 July 27</h3>
+                    <h4>🌅 Sunday Break</h4>
+                    <p>Day off for rest and exploration</p>
                 </div>
                 <div class="card">
-                    <h3>🔍 Module 5: RAG & KG-enhanced LLMs</h3>
-                    <p>Knowledge Graphs, Complex Reasoning, Efficient Indexing, RAG architectures</p>
+                    <h3>📅 July 28</h3>
+                    <h4>⚡ Inference Time Compute / Reasoning</h4>
+                    <p>Speakers: XXX</p>
+                </div>
+                <div class="card">
+                    <h3>📅 July 29</h3>
+                    <h4>🤖 Agents & Tool Usage</h4>
+                    <p>Speaker: Alex Drouin</p>
+                    <!-- <ul class="topic-list">
+                        <li>TALM: Tool Augmented Language Models</li>
+                        <li>Binding Language Models in Symbolic Languages</li>
+                        <li>PAL: Program-aided Language Models</li>
+                        <li>Program of Thoughts Prompting</li>
+                        <li>Toolformer: Self-taught Tool Usage</li>
+                    </ul> -->
+                </div>
+                <div class="card">
+                    <h3>📅 July 30</h3>
+                    <h4>🔒 Security (Agents & Adversarial)</h4>
+                    <p>Speaker: Gauthier Gidel</p>
                 </div>
             </div>
         </div>
