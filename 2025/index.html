@@ -407,6 +407,47 @@
         .venue-link:hover::after {
             width: 100%;
         }
+
+        .clickable-card {
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .clickable-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(129, 140, 248, 0.3);
+            background: rgba(255, 255, 255, 0.1);
+        }
+        
+        .clickable-card:hover h3 {
+            color: var(--white);
+        }
+        
+        .clickable-card .card-cta {
+            color: var(--accent-color);
+            font-weight: bold;
+            margin-top: 1rem;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .clickable-card:hover .card-cta {
+            text-shadow: 0 0 10px rgba(129, 140, 248, 0.5);
+        }
+        
+        .clickable-card .card-cta::after {
+            content: '→';
+            margin-left: 5px;
+            transition: all 0.3s;
+            position: relative;
+            opacity: 0;
+            right: -10px;
+        }
+        
+        .clickable-card:hover .card-cta::after {
+            opacity: 1;
+            right: 0;
+        }
     </style>
 </head>
 <body>
@@ -585,11 +626,14 @@
             </div>
             
             <div class="grid">
-                <div class="card">
-                    <h3>🔍 Application Process</h3>
-                    <p>Submit your application through our online form (available soon)</p>
-                    <p class="card-subtitle">Once we receive your application, we will send you a test assessing your Python programming skills. This test is mandatory, and all selected participants should have satisfactory results.</p>
-                </div>
+                <a href="https://forms.gle/poTtSxhFf2QojAm87" target="_blank" style="text-decoration: none;">
+                    <div class="card clickable-card">
+                        <h3>🔍 Application Process</h3>
+                        <p>Submit your application through our online application form</p>
+                        <p class="card-subtitle">Once we receive your application, we will send you a test assessing your Python programming skills. This test is mandatory, and all selected participants should have satisfactory results.</p>
+                        <p class="card-cta">Apply Now</p>
+                    </div>
+                </a>
                 
                 <div class="card">
                     <h3>💰 Registration Fee</h3>
@@ -597,11 +641,14 @@
                     <p class="card-subtitle">The fee covers access to GPUs during the course of the summer school, which you will need to do the projects</p>
                 </div>
                 
-                <div class="card">
-                    <h3>🤝 Financial Assistance</h3>
-                    <p>All applicants are eligible for financial assistance</p>
-                    <p class="card-subtitle">Students enrolled at Armenian universities automatically qualify for a reduced fee of 10,000 AMD</p>
-                </div>
+                <a href="https://forms.gle/Y1pDQqcticvNB7Zr9" target="_blank" style="text-decoration: none;">
+                    <div class="card clickable-card">
+                        <h3>🤝 Financial Assistance</h3>
+                        <p>All applicants are eligible for financial assistance</p>
+                        <p class="card-subtitle">Students enrolled at Armenian universities automatically qualify for a reduced fee</p>
+                        <p class="card-cta">Apply for Fee Waiver</p>
+                    </div>
+                </a>
             </div>
             
             <div style="text-align: center; margin-top: 3rem;">
@@ -615,7 +662,7 @@
             </div>
             
             <div style="text-align: center; margin-top: 3rem;">
-                <a href="#" class="cta-button">Submit Application</a>
+                <a href="https://forms.gle/poTtSxhFf2QojAm87" target="_blank" class="cta-button">Submit Application</a>
             </div>
         </div>
     </section>
