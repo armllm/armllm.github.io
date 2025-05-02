@@ -452,10 +452,11 @@
 
         .organizer-grid {
             display: flex;
-            justifycontent: center;
-            gap: 2rem;
+            justify-content: center; /* centers items in the row */
             flex-wrap: wrap;
+            gap: 2rem;
             margin: 2rem auto 0;
+            max-width: 1000px; /* optional: limits how wide the grid can go */
         }
 
         .organizer-card {
