@@ -381,76 +381,86 @@
 
         /* Media Cards Styles */
         .media-card {
-            height: 250px;
-            display: flex;
-            flex-direction: column;
-            cursor: pointer;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+            overflow: hidden;
             transition: transform 0.3s, box-shadow 0.3s;
+            height: 100%;
+            border: 1px solid rgba(255, 255, 255, 0.1);
         }
         
         .media-link {
             text-decoration: none;
             color: inherit;
-            display: flex;
-            flex-direction: column;
+            display: block;
             height: 100%;
+        }
+        
+        .media-thumbnail {
             width: 100%;
+            height: 200px;
+            object-fit: cover;
+            display: block;
+            background-color: rgba(255, 255, 255, 0.05);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
         }
         
-        .media-icon {
-            font-size: 2rem;
-            margin-bottom: 1rem;
-            color: var(--accent-color);
-        }
-        
-        .media-title {
-            color: var(--accent-color);
-            margin-bottom: 0.5rem;
-            font-size: 1.2rem;
-            text-shadow: 0 0 10px rgba(129, 140, 248, 0.3);
+        .media-content {
+            padding: 1.25rem;
         }
         
         .media-source {
-            color: rgba(255, 255, 255, 0.8);
+            color: var(--accent-color);
+            font-weight: 600;
             font-size: 0.9rem;
-            margin-bottom: 1rem;
-            flex-grow: 1;
+            margin-bottom: 0.5rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        
+        .media-title {
+            color: white;
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+            font-weight: 500;
+            line-height: 1.4;
+        }
+        
+        .media-description {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.9rem;
+            margin-bottom: 0;
+            line-height: 1.5;
         }
         
         .media-card:hover {
             transform: translateY(-5px);
             box-shadow: 0 8px 15px rgba(129, 140, 248, 0.2);
-            background: rgba(255, 255, 255, 0.1);
         }
         
-        .media-card:hover .media-title {
-            color: var(--white);
+        .media-section {
+            background: rgba(15, 23, 42, 0.7);
+            padding: 5rem 0;
+            backdrop-filter: blur(10px);
         }
         
-        .media-card .card-cta {
-            color: var(--accent-color);
-            font-weight: bold;
-            margin-top: auto;
-            position: relative;
-            display: inline-block;
+        .media-section .section-heading {
+            text-align: left;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding-bottom: 1rem;
+            margin-bottom: 2rem;
         }
         
-        .media-card:hover .card-cta {
-            text-shadow: 0 0 10px rgba(129, 140, 248, 0.5);
+        .media-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 2rem;
         }
         
-        .media-card .card-cta::after {
-            content: '→';
-            margin-left: 5px;
-            transition: all 0.3s;
-            position: relative;
-            opacity: 0;
-            right: -10px;
-        }
-        
-        .media-card:hover .card-cta::after {
-            opacity: 1;
-            right: 0;
+        @media (max-width: 768px) {
+            .media-grid {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
@@ -508,43 +518,52 @@
                 </div>
             </section>
             
-            <section class="section">
+            <section class="media-section">
                 <div class="container">
-                    <div class="section-title">
-                        <h2>Media Coverage</h2>
-                        <p>Recent coverage of the LLM Summer School in the press and media</p>
-                    </div>
-                    <div class="grid">
-                        <div class="card media-card">
+                    <h2 class="section-heading">Featured in Media</h2>
+                    
+                    <div class="media-grid">
+                        <div class="media-card">
                             <a href="https://www.youtube.com/watch?v=wy8eMSnoA2s" target="_blank" class="media-link">
-                                <div class="media-icon">📺</div>
-                                <h3 class="media-title">YouTube Coverage</h3>
-                                <p class="media-source">LLM Summer School Highlights</p>
-                                <p class="card-cta">Watch Video</p>
+                                <img src="https://img.youtube.com/vi/wy8eMSnoA2s/maxresdefault.jpg" alt="LLM Summer School Highlights" class="media-thumbnail">
+                                <div class="media-content">
+                                    <div class="media-source">YouTube</div>
+                                    <h3 class="media-title">LLM Summer School Highlights</h3>
+                                    <p class="media-description">A video showcase of the Armenia LLM Summer School featuring presentations and collaborative sessions</p>
+                                </div>
                             </a>
                         </div>
-                        <div class="card media-card">
+                        
+                        <div class="media-card">
                             <a href="https://tech.news.am/arm/news/3794/hayastanum-meknarkel-e-mets-lezvakan-modelneri-arajin-amarayin-dprocy.html" target="_blank" class="media-link">
-                                <div class="media-icon">📰</div>
-                                <h3 class="media-title">News.am Tech</h3>
-                                <p class="media-source">Հայաստանում մեկնարկել է մեծ լեզվական մոդելների առաջին ամառային դպրոցը</p>
-                                <p class="card-cta">Read Article</p>
+                                <img src="https://tech.news.am/static/news/b/2024/07/3794.jpg" alt="Armenia's First LLM Summer School Launch" class="media-thumbnail">
+                                <div class="media-content">
+                                    <div class="media-source">News.am Tech</div>
+                                    <h3 class="media-title">Armenia's First LLM Summer School Launch</h3>
+                                    <p class="media-description">Հայաստանում մեկնարկել է մեծ լեզվական մոդելների առաջին ամառային դպրոցը</p>
+                                </div>
                             </a>
                         </div>
-                        <div class="card media-card">
+                        
+                        <div class="media-card">
                             <a href="http://dev.itel.am/am/news/15435" target="_blank" class="media-link">
-                                <div class="media-icon">📰</div>
-                                <h3 class="media-title">iTel.am</h3>
-                                <p class="media-source">LLM ամառային դպրոցը՝ տպավորիչ դասախոսական կազմով ու AI թրենդներով</p>
-                                <p class="card-cta">Read Article</p>
+                                <img src="https://itel.am/datas/znews/big_/2024/07/10/668e2a0d271c42.85868638.jpg" alt="LLM Summer School with Impressive Faculty" class="media-thumbnail">
+                                <div class="media-content">
+                                    <div class="media-source">iTel.am</div>
+                                    <h3 class="media-title">LLM Summer School with Impressive Faculty</h3>
+                                    <p class="media-description">LLM ամառային դպրոցը՝ տպավորիչ դասախոսական կազմով ու AI թրենդներով</p>
+                                </div>
                             </a>
                         </div>
-                        <div class="card media-card">
+                        
+                        <div class="media-card">
                             <a href="https://evnreport.com/podcasts/evn-disrupt/perouz-taslakian-erik-arakelyan-llm-summer-school/" target="_blank" class="media-link">
-                                <div class="media-icon">🎙️</div>
-                                <h3 class="media-title">EVN Report Podcast</h3>
-                                <p class="media-source">Perouz Taslakian & Erik Arakelyan: LLM Summer School</p>
-                                <p class="card-cta">Listen to Podcast</p>
+                                <img src="https://evnreport.com/wp-content/uploads/2024/07/Perouz-Taslakian-and-Erik-Arakelyan_web.jpg" alt="Perouz Taslakian & Erik Arakelyan: LLM Summer School" class="media-thumbnail">
+                                <div class="media-content">
+                                    <div class="media-source">EVN Report Podcast</div>
+                                    <h3 class="media-title">Perouz Taslakian & Erik Arakelyan: LLM Summer School</h3>
+                                    <p class="media-description">A discussion about the development and goals of the LLM Summer School in Armenia</p>
+                                </div>
                             </a>
                         </div>
                     </div>
