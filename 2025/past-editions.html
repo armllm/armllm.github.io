@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Past Editions - LLM Summer School</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <style>
+        :root {
+            --primary-color: #4f46e5;
+            --secondary-color: #1e1b4b;
+            --accent-color: #818cf8;
+            --text-color: #1f2937;
+            --light-bg: #f3f4f6;
+            --white: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background: #0f172a;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('images/logo_armllm_bg_removed.png') no-repeat center center;
+            background-size: 80%;
+            opacity: 0.05;
+            z-index: -2;
+            pointer-events: none;
+        }
+
+        #particles-js {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            background: radial-gradient(circle at center, var(--primary-color) 0%, var(--secondary-color) 100%);
+        }
+
+        #particles-js::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+            opacity: 0.1;
+            mix-blend-mode: overlay;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        header {
+            background: rgba(15, 23, 42, 0.8);
+            box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            text-decoration: none;
+        }
+
+        .logo-img {
+            height: 40px;
+            width: auto;
+            filter: drop-shadow(0 0 8px rgba(129, 140, 248, 0.5));
+        }
+
+        .logo-text {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--white);
+            text-shadow: 0 0 10px rgba(129, 140, 248, 0.5);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--white);
+            font-weight: 500;
+            transition: all 0.3s;
+            position: relative;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--accent-color);
+            transition: width 0.3s;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .section {
+            padding: 5rem 0;
+            position: relative;
+            background: rgba(15, 23, 42, 0.7);
+            backdrop-filter: blur(10px);
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .section:nth-child(even) {
+            background: rgba(30, 27, 75, 0.7);
+        }
+
+        .page-header {
+            color: var(--white);
+            padding: 8rem 0 4rem;
+            text-align: center;
+            position: relative;
+        }
+        
+        .page-header h1 {
+            font-size: 3rem;
+            text-shadow: 0 0 20px rgba(129, 140, 248, 0.5);
+            background: linear-gradient(45deg, var(--white), var(--accent-color));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 1rem;
+        }
+        
+        .page-header p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto;
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        .edition-card {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+            margin-bottom: 2rem;
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .edition-header {
+            padding: 1.5rem 2rem;
+            background: rgba(79, 70, 229, 0.2);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .edition-title {
+            font-size: 1.5rem;
+            color: var(--white);
+            font-weight: 600;
+            margin: 0;
+        }
+
+        .edition-subtitle {
+            color: rgba(255, 255, 255, 0.8);
+            font-weight: 400;
+            margin-top: 0.25rem;
+        }
+
+        .edition-toggle {
+            font-size: 1.5rem;
+            color: var(--accent-color);
+            transition: transform 0.3s ease;
+        }
+
+        .edition-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease;
+        }
+
+        .edition-content-inner {
+            padding: 0 2rem 2rem;
+        }
+
+        .edition-card.active .edition-content {
+            max-height: 2000px;
+        }
+
+        .edition-card.active .edition-toggle {
+            transform: rotate(180deg);
+        }
+
+        .edition-section {
+            margin-top: 2rem;
+        }
+
+        .edition-section-title {
+            color: var(--accent-color);
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .topic-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .topic-item {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 1rem;
+            border-radius: 8px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .topic-title {
+            color: var(--white);
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .topic-speaker {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.9rem;
+        }
+
+        .speaker-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .speaker-card {
+            text-align: center;
+        }
+
+        .speaker-image {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            margin-bottom: 0.75rem;
+        }
+
+        .speaker-name {
+            color: var(--white);
+            font-weight: 600;
+            margin-bottom: 0.25rem;
+        }
+
+        .speaker-affiliation {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.9rem;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(45deg, var(--primary-color), var(--accent-color));
+            color: var(--white);
+            padding: 0.75rem 1.5rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 4px 15px rgba(129, 140, 248, 0.3);
+            margin-top: 1.5rem;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(129, 140, 248, 0.4);
+        }
+
+        .edition-footer {
+            text-align: center;
+            margin-top: 1.5rem;
+        }
+
+        .back-button {
+            display: inline-block;
+            background: linear-gradient(45deg, var(--primary-color), var(--accent-color));
+            color: var(--white);
+            margin-top: 40px;
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 4px 15px rgba(129, 140, 248, 0.3);
+        }
+
+        .back-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(129, 140, 248, 0.4);
+        }
+        
+        footer {
+            background: rgba(15, 23, 42, 0.9);
+            color: var(--white);
+            padding: 3rem 0;
+            text-align: center;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .topic-list, .speaker-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="particles-js"></div>
+    <header>
+        <nav class="container">
+            <a href="index.html" class="logo-container">
+                <img src="images/logo_armllm_bg_removed.png" alt="ARMLLM Logo" class="logo-img">
+                <span class="logo-text">LLM Summer School</span>
+            </a>
+            <div class="nav-links">
+                <a href="index.html#about">About</a>
+                <a href="index.html#schedule">Schedule</a>
+                <a href="index.html#speakers">Speakers</a>
+                <a href="index.html#apply">Apply</a>
+                <a href="media.html">Media</a>
+                <a href="past-editions.html">Past Editions</a>
+            </div>
+        </nav>
+    </header>
+
+    <section class="page-header">
+        <div class="container">
+            <h1>Past Editions</h1>
+            <p>Explore previous editions of the LLM Summer School</p>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="edition-card" id="edition-2024">
+                <div class="edition-header" onclick="toggleEdition('edition-2024')">
+                    <div>
+                        <h2 class="edition-title">LLM Summer School 2024</h2>
+                        <p class="edition-subtitle">July 1-7, 2024 • Yerevan, Armenia</p>
+                    </div>
+                    <div class="edition-toggle">▼</div>
+                </div>
+                <div class="edition-content">
+                    <div class="edition-content-inner">
+                        <div class="edition-section">
+                            <h3 class="edition-section-title">Key Topics</h3>
+                            <div class="topic-list">
+                                <div class="topic-item">
+                                    <h4 class="topic-title">Intro & Pretraining</h4>
+                                    <p class="topic-speaker">Presented by Armen Aghajanyan (Meta FAIR)</p>
+                                </div>
+                                <div class="topic-item">
+                                    <h4 class="topic-title">Alignment & LLM Evaluation</h4>
+                                    <p class="topic-speaker">Presented by Jiao Sun (USC), Karen Hambardzumyan (UCL), Jonathan May (USC)</p>
+                                </div>
+                                <div class="topic-item">
+                                    <h4 class="topic-title">Vision LLMs</h4>
+                                    <p class="topic-speaker">Presented by Alex Andonian (MIT), Armen Aghajanyan (Meta FAIR)</p>
+                                </div>
+                                <div class="topic-item">
+                                    <h4 class="topic-title">LLM Interpretability, Safety & Privacy</h4>
+                                    <p class="topic-speaker">Presented by Narine Kokhlikyan (Meta FAIR), Eugene Bagdasaryan (Google/UMass Amherst)</p>
+                                </div>
+                                <div class="topic-item">
+                                    <h4 class="topic-title">RAG & KG-enhanced LLMs</h4>
+                                    <p class="topic-speaker">Presented by Erik Arakelyan (UCPH), Hrayr Harutyunyan (Google Research)</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="edition-section">
+                            <h3 class="edition-section-title">Featured Speakers</h3>
+                            <div class="speaker-grid">
+                                <div class="speaker-card">
+                                    <img src="https://itel.am/datas/znews/big_/2023/11/03/6544e40b4ad3e5.72335961.jpg" alt="Armen Aghajanyan" class="speaker-image">
+                                    <h4 class="speaker-name">Armen Aghajanyan</h4>
+                                    <p class="speaker-affiliation">Meta FAIR</p>
+                                </div>
+                                <div class="speaker-card">
+                                    <img src="https://scholar.googleusercontent.com/citations?view_op=view_photo&user=PN7hXAMAAAAJ&citpid=2" alt="Alex Andonian" class="speaker-image">
+                                    <h4 class="speaker-name">Alex Andonian</h4>
+                                    <p class="speaker-affiliation">MIT</p>
+                                </div>
+                                <div class="speaker-card">
+                                    <img src="https://scholar.googleusercontent.com/citations?view_op=view_photo&user=63BfrxMAAAAJ&citpid=3" alt="Erik Arakelyan" class="speaker-image">
+                                    <h4 class="speaker-name">Erik Arakelyan</h4>
+                                    <p class="speaker-affiliation">UCPH</p>
+                                </div>
+                                <div class="speaker-card">
+                                    <img src="https://avatars.githubusercontent.com/u/7198338?v=4" alt="Hrayr Harutyunyan" class="speaker-image">
+                                    <h4 class="speaker-name">Hrayr Harutyunyan</h4>
+                                    <p class="speaker-affiliation">Google Research</p>
+                                </div>
+                                <div class="speaker-card">
+                                    <img src="https://www.cs.cornell.edu/~eugene/assets/images/zhenya_new.jpg" alt="Eugene Bagdasaryan" class="speaker-image">
+                                    <h4 class="speaker-name">Eugene Bagdasaryan</h4>
+                                    <p class="speaker-affiliation">Google/UMass Amherst</p>
+                                </div>
+                                <div class="speaker-card">
+                                    <img src="https://scholar.googleusercontent.com/citations?view_op=view_photo&user=V3JjNJ0AAAAJ&citpid=4" alt="Karen Hambardzumyan" class="speaker-image">
+                                    <h4 class="speaker-name">Karen Hambardzumyan</h4>
+                                    <p class="speaker-affiliation">UCL</p>
+                                </div>
+                                <div class="speaker-card">
+                                    <img src="https://neurox.qcri.org/images/team/NarineKokhlikyan_square.png" alt="Narine Kokhlikyan" class="speaker-image">
+                                    <h4 class="speaker-name">Narine Kokhlikyan</h4>
+                                    <p class="speaker-affiliation">Meta FAIR</p>
+                                </div>
+                                <div class="speaker-card">
+                                    <img src="https://scholar.googleusercontent.com/citations?view_op=view_photo&user=tmK5EPEAAAAJ&citpid=2" alt="Jonathan May" class="speaker-image">
+                                    <h4 class="speaker-name">Jonathan May</h4>
+                                    <p class="speaker-affiliation">USC</p>
+                                </div>
+                                <div class="speaker-card">
+                                    <img src="https://pbs.twimg.com/profile_images/1700212798373113857/EHEzziCH_400x400.jpg" alt="Jiao Sun" class="speaker-image">
+                                    <h4 class="speaker-name">Jiao Sun</h4>
+                                    <p class="speaker-affiliation">USC</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="edition-section">
+                            <h3 class="edition-section-title">Highlights</h3>
+                            <p style="color: rgba(255, 255, 255, 0.9); margin-bottom: 1rem;">
+                                The first LLM Summer School in Armenia brought together over 70 students and researchers for an intensive week of learning and collaboration. The program featured lectures, hands-on workshops, and practical sessions where participants applied their knowledge to innovative projects.
+                            </p>
+                            <p style="color: rgba(255, 255, 255, 0.9); margin-bottom: 1rem;">
+                                The curriculum covered a range of both core and specialized topics in LLMs, including Transformer architectures, pretraining, model alignment, parameter-efficient tuning, in-context learning and reasoning, multimodality and Vision LLMs, LLM interpretability, safety & privacy, knowledge graphs, and retrieval augmented generation (RAG).
+                            </p>
+                            <p style="color: rgba(255, 255, 255, 0.9);">
+                                The event was co-hosted by the American University of Armenia and YerevaNN, with the lectures taking place at the AUA campus. Nebius AI and Picsart provided generous support for the summer school.
+                            </p>
+                        </div>
+                        
+                        <div class="edition-footer">
+                            <a href="https://armllm.github.io/2024/" target="_blank" class="cta-button">View Full 2024 Website</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div style="text-align: center; margin-top: 3rem;">
+                <a href="index.html" class="back-button">Back to 2025 Edition</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 LLM Summer School. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Particle.js configuration
+        particlesJS('particles-js', {
+            particles: {
+                number: {
+                    value: 100,
+                    density: {
+                        enable: true,
+                        value_area: 800
+                    }
+                },
+                color: {
+                    value: ['#818cf8', '#4f46e5', '#ffffff']
+                },
+                shape: {
+                    type: 'circle'
+                },
+                opacity: {
+                    value: 0.6,
+                    random: true,
+                    animation: {
+                        enable: true,
+                        speed: 1,
+                        opacity_min: 0.1,
+                        sync: false
+                    }
+                },
+                size: {
+                    value: 3,
+                    random: true,
+                    animation: {
+                        enable: true,
+                        speed: 2,
+                        size_min: 0.1,
+                        sync: false
+                    }
+                },
+                line_linked: {
+                    enable: true,
+                    distance: 150,
+                    color: '#818cf8',
+                    opacity: 0.2,
+                    width: 1
+                },
+                move: {
+                    enable: true,
+                    speed: 3,
+                    direction: 'none',
+                    random: true,
+                    straight: false,
+                    out_mode: 'out',
+                    bounce: true
+                }
+            },
+            interactivity: {
+                detect_on: 'canvas',
+                events: {
+                    onhover: {
+                        enable: true,
+                        mode: 'grab'
+                    },
+                    onclick: {
+                        enable: true,
+                        mode: 'push'
+                    },
+                    resize: true
+                }
+            },
+            retina_detect: true
+        });
+        
+        // Expandable edition cards functionality
+        function toggleEdition(id) {
+            const card = document.getElementById(id);
+            card.classList.toggle('active');
+        }
+        
+        // Auto-expand the first edition by default
+        document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById('edition-2024').classList.add('active');
+        });
+    </script>
+</body>
+</html> 

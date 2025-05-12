@@ -584,6 +584,77 @@
             background: rgba(255, 255, 255, 0.1);
         }
         
+        .media-card {
+            height: 250px;
+            display: flex;
+            flex-direction: column;
+            cursor: pointer;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .media-link {
+            text-decoration: none;
+            color: inherit;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            width: 100%;
+        }
+        
+        .media-icon {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: var(--accent-color);
+        }
+        
+        .media-title {
+            color: var(--accent-color);
+            margin-bottom: 0.5rem;
+            font-size: 1.2rem;
+        }
+        
+        .media-source {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+            flex-grow: 1;
+        }
+        
+        .media-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(129, 140, 248, 0.2);
+            background: rgba(255, 255, 255, 0.1);
+        }
+        
+        .media-card:hover .media-title {
+            color: var(--white);
+        }
+        
+        .media-card .card-cta {
+            color: var(--accent-color);
+            font-weight: bold;
+            margin-top: auto;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .media-card:hover .card-cta {
+            text-shadow: 0 0 10px rgba(129, 140, 248, 0.5);
+        }
+        
+        .media-card .card-cta::after {
+            content: '→';
+            margin-left: 5px;
+            transition: all 0.3s;
+            position: relative;
+            opacity: 0;
+            right: -10px;
+        }
+        
+        .media-card:hover .card-cta::after {
+            opacity: 1;
+            right: 0;
+        }
     </style>
 </head>
 <body>
@@ -599,7 +670,8 @@
                 <a href="#schedule">Schedule</a>
                 <a href="#speakers">Speakers</a>
                 <a href="#apply">Apply</a>
-                <a href="https://armllm.github.io/2024/">2024 Edition</a>
+                <a href="media.html">Media</a>
+                <a href="past-editions.html">Past Editions</a>
             </div>
         </nav>
     </header>
@@ -684,7 +756,7 @@
                 </div>
                 <div class="card speaker-card">
                     <a href="https://scholar.google.it/citations?hl=en&user=IqcCDXkAAAAJ" target="_blank" class="speaker-link">
-                        <img src="https://scholar.googleusercontent.com/citations?view_op=medium_photo&user=IqcCDXkAAAAJ&citpid=1" alt="Nouha Dziri" class="speaker-image">
+                        <img src="https://scholar.googleusercontent.com/citations?view_op=medium_photo&user=IqcCDXkAAAAJ" alt="Nouha Dziri" class="speaker-image">
                         <h3 class="speaker-name">Nouha Dziri</h3>
                         <p class="speaker-affiliation">Allen Institute for AI (AI2) </p>
                     </a>
@@ -893,6 +965,23 @@
          </div>
      </div>
    </section> 
+    <section id="media" class="section">
+      <div class="container">
+         <div class="section-title">
+             <h2>Media Coverage</h2>
+             <p>Recent coverage of the LLM Summer School in the press and media</p>
+         </div>
+         <div style="max-width: 600px; margin: 0 auto;">
+             <a href="media.html" style="text-decoration: none;">
+                 <div class="card clickable-card">
+                     <h3>📰 Press & Media Coverage</h3>
+                     <p>Check out recent articles, videos, and podcasts featuring our LLM Summer School</p>
+                     <p class="card-cta">View All Media</p>
+                 </div>
+             </a>
+         </div>
+      </div>
+   </section>
     <footer>
         <div class="container">
             <p>&copy; 2025 LLM Summer School. All rights reserved.</p>
