@@ -453,6 +453,7 @@
         .sponsor-grid {
             display: flex;
             justify-content: center; /* centers items in the row */
+            align-items: flex-start; /* 👈 Align items to top */
             flex-wrap: wrap;
             gap: 2rem;
             margin: 2rem auto 0;
@@ -465,6 +466,7 @@
             align-items: center;
             justify-content: center;
             width: 200px; /* Set a consistent width for all sponsor blocks */
+            min-height: 150px; /* 👈 force same height across all cards */
             margin: 0 1rem; /* Optional spacing between cards */
             text-align: center;
         }
