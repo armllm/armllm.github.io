@@ -465,22 +465,24 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            width: 200px; /* Set a consistent width for all sponsor blocks */
-            margin: 0 1rem; /* Optional spacing between cards */
+            width: 300px; /* Fixed width */
+            height: 250px; /* Fixed height for consistency */
+            margin: 0 2rem;
             text-align: center;
         }
         
         .sponsor-photo {
             width: auto;
-            height: 60px; /* adjust as needed for consistency */
+            height: 120px; /* Increased height */
+            max-width: 250px; /* Maximum width to prevent overflow */
             object-fit: contain;
             border-radius: 0%;
             border: none;
-            margin-bottom: 0.75rem;
+            margin-bottom: 1.25rem;
         }
 
         .sponsor-name {
-            font-size: 1rem;
+            font-size: 1.3rem;
             font-weight: 600;
             margin: 0.2rem 0;
             color: white;
@@ -488,11 +490,11 @@
 
         .partner-grid {
             display: flex;
-            justify-content: center; /* centers items in the row */
+            justify-content: center;
             flex-wrap: wrap;
-            gap: 2rem;
+            gap: 3rem;
             margin: 2rem auto 0;
-            max-width: 1000px; /* optional: limits how wide the grid can go */
+            max-width: 1000px;
         }
 
         .partner-card {
@@ -500,22 +502,24 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            width: 200px; /* Set a consistent width for all sponsor blocks */
-            margin: 0 1rem; /* Optional spacing between cards */
+            width: 300px; /* Fixed width */
+            height: 250px; /* Fixed height for consistency */
+            margin: 0 2rem;
             text-align: center;
         }
         
         .partner-photo {
             width: auto;
-            height: 60px; /* adjust as needed for consistency */
+            height: 120px; /* Increased height */
+            max-width: 250px; /* Maximum width to prevent overflow */
             object-fit: contain;
             border-radius: 0%;
             border: none;
-            margin-bottom: 0.75rem;
+            margin-bottom: 1.25rem;
         }
 
         .partner-name {
-            font-size: 1rem;
+            font-size: 1.3rem; /* Increased from 1.2rem */
             font-weight: 600;
             margin: 0.2rem 0;
             color: white;
@@ -554,6 +558,30 @@
         .organizer-affiliation {
             font-size: 0.9rem;
             color: rgba(255, 255, 255, 0.8);
+        }
+        
+        .sponsor-link, .partner-link {
+            text-decoration: none;
+            color: inherit;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            transition: all 0.3s ease;
+        }
+        
+        .sponsor-card, .partner-card {
+            transition: transform 0.3s, box-shadow 0.3s;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+            padding: 2.5rem; /* Increased from 2rem */
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .sponsor-card:hover, .partner-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(129, 140, 248, 0.2);
+            background: rgba(255, 255, 255, 0.1);
         }
         
     </style>
@@ -798,14 +826,17 @@
          <div class="sponsor-grid">
              <div class="sponsor-card">
                  <a href="https://www.asof.am/" target="_blank" class="sponsor-link">
-                 <img src="2025/images/ASOF Logo.png" alt="The Armenian Society of Fellows" class="sponsor-photo">
-                 <h3 class="sponsor-name">The Armenian Society of Fellows</h3>
-        </div>
-            <div class="sponsor-card">
-                 <a href="https://www.armeniafund.org/" class="sponsor-link">
-                 <img src="2025/images/Armenia Fund.png" alt="Armenia Fund" class="sponsor-photo">
-                 <h3 class="sponsor-name">Armenia Fund</h3>
-        </div>
+                     <img src="images/ASOF_Logo.png" alt="The Armenian Society of Fellows" class="sponsor-photo">
+                     <h3 class="sponsor-name">The Armenian Society of Fellows</h3>
+                 </a>
+             </div>
+             <div class="sponsor-card">
+                 <a href="https://www.armeniafund.org/" target="_blank" class="sponsor-link">
+                     <img src="images/Armenia_Fund.png" alt="Armenia Fund" class="sponsor-photo">
+                     <h3 class="sponsor-name">Armenia Fund</h3>
+                 </a>
+             </div>
+         </div>
     </section>
              
    <section id="Partners" class="section">
@@ -816,9 +847,11 @@
          <div class="partner-grid">       
              <div class="partner-card">
                  <a href="https://nebius.com/" target="_blank" class="partner-link">
-                 <img src="2025/images/nebius.png" alt="Nebius AI" class="partner-photo">
-                 <h3 class="partner-name">Nebius AI</h3>
-        </div>
+                     <img src="images/nebius.png" alt="Nebius AI" class="partner-photo">
+                     <h3 class="partner-name">Nebius AI</h3>
+                 </a>
+             </div>
+         </div>
     </section>
              
     <section id="organizers" class="section">
@@ -828,19 +861,9 @@
          </div>
          <div class="organizer-grid">
              <div class="organizer-card">
-                 <img src="https://pbs.twimg.com/profile_images/1483877264597176320/UweP0bQ2_400x400.jpg" alt="Perouz Taslakian" class="organizer-photo">
-                 <h3 class="organizer-name">Perouz Taslakian</h3>
-                 <p class="organizer-affiliation">Service Now Research</p>
-             </div>
-             <div class="organizer-card">
-                 <img src="https://yt3.googleusercontent.com/ytc/AIdro_mEEMJOz6qnp-p0_X084BwAAoqJm8vMadvEFB5AdxAyoD4_=s900-c-k-c0x00ffffff-no-rj" alt="Hrant Khachatryan" class="organizer-photo">
-                 <h3 class="organizer-name">Hrant Khachatryan</h3>
-                 <p class="organizer-affiliation">YerevaNN</p>
-             </div>
-             <div class="organizer-card">
-                 <img src="https://www.isi.edu/wp-content/uploads/headshots/galstyan-1.jpg" alt="Aram Galstyan" class="organizer-photo">
-                 <h3 class="organizer-name">Aram Galstyan</h3>
-                 <p class="organizer-affiliation">USC / Amazon</p>
+                 <img src="https://itel.am/datas/znews/big_/2023/11/03/6544e40b4ad3e5.72335961.jpg" alt="Armen Aghajanyan" class="organizer-photo">
+                 <h3 class="organizer-name">Armen Aghajanyan</h3>
+                 <p class="organizer-affiliation">Perceptron AI</p>
              </div>
              <div class="organizer-card">
                  <img src="https://scholar.googleusercontent.com/citations?view_op=medium_photo&user=63BfrxMAAAAJ&citpid=5" alt="Erik Arakelyan" class="organizer-photo">
@@ -848,9 +871,24 @@
                  <p class="organizer-affiliation">Nvidia</p>
              </div>
              <div class="organizer-card">
-                 <img src="https://itel.am/datas/znews/big_/2023/11/03/6544e40b4ad3e5.72335961.jpg" alt="Armen Aghajanyan" class="organizer-photo">
-                 <h3 class="organizer-name">Armen Aghajanyan</h3>
-                 <p class="organizer-affiliation">Perceptron AI</p>
+                 <img src="https://www.isi.edu/wp-content/uploads/headshots/galstyan-1.jpg" alt="Aram Galstyan" class="organizer-photo">
+                 <h3 class="organizer-name">Aram Galstyan</h3>
+                 <p class="organizer-affiliation">USC / Amazon</p>
+             </div>
+             <div class="organizer-card">
+                 <img src="https://yt3.googleusercontent.com/ytc/AIdro_mEEMJOz6qnp-p0_X084BwAAoqJm8vMadvEFB5AdxAyoD4_=s900-c-k-c0x00ffffff-no-rj" alt="Hrant Khachatryan" class="organizer-photo">
+                 <h3 class="organizer-name">Hrant Khachatryan</h3>
+                 <p class="organizer-affiliation">YerevaNN</p>
+             </div>
+             <div class="organizer-card">
+                 <img src="https://pbs.twimg.com/profile_images/1483877264597176320/UweP0bQ2_400x400.jpg" alt="Perouz Taslakian" class="organizer-photo">
+                 <h3 class="organizer-name">Perouz Taslakian</h3>
+                 <p class="organizer-affiliation">Service Now Research</p>
+             </div>
+             <div class="organizer-card">
+                 <img src="images/Tatevik_V.jpg" alt="Tatevik Vardanyan" class="organizer-photo">
+                 <h3 class="organizer-name">Tatevik Vardanyan</h3>
+                 <p class="organizer-affiliation">YerevaNN</p>
              </div>
          </div>
      </div>
