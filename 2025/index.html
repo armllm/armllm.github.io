@@ -450,6 +450,35 @@
             right: 0;
         }
 
+        .sponsor-grid {
+            display: flex;
+            justify-content: center; /* centers items in the row */
+            flex-wrap: wrap;
+            gap: 2rem;
+            margin: 2rem auto 0;
+            max-width: 1000px; /* optional: limits how wide the grid can go */
+        }
+
+        .sponsor-card {
+            text-align: center;
+            max-width: 150px;
+        }
+
+        .sponsor-photo {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 2px solid rgba(255, 255, 255, 0.7);
+            margin-bottom: 0.75rem;
+        }
+
+        .sponsor-name {
+            font-size: 1rem;
+            font-weight: 600;
+            margin: 0.2rem 0;
+            color: white;
+        }
 
         .organizer-grid {
             display: flex;
