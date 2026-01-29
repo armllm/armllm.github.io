@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Armenia LLM Summer School</title>
+    <link rel="icon" href="2025/images/small_armllm.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <style>
+        :root {
+            --primary-color: #4f46e5;
+            --secondary-color: #1e1b4b;
+            --accent-color: #818cf8;
+            --text-color: #f3f4f6;
+            --dark-bg: #0f172a;
+            --card-bg: rgba(255, 255, 255, 0.05);
+            --white: #ffffff;
+            --transition: all 0.3s ease;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background: var(--dark-bg);
+            min-height: 100vh;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('2025/images/logo_armllm_bg_removed.png') no-repeat center center;
+            background-size: 80%;
+            opacity: 0.05;
+            z-index: -2;
+            pointer-events: none;
+        }
+
+        #particles-js {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            background: radial-gradient(circle at center, var(--primary-color) 0%, var(--secondary-color) 100%);
+        }
+
+        #particles-js::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+            opacity: 0.1;
+            mix-blend-mode: overlay;
+        }
+        
+        header {
+            background: rgba(15, 23, 42, 0.8);
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            position: relative;
+            z-index: 1;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+        
+        .hero {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem 0;
+        }
+        
+        .logo {
+            max-width: 200px;
+            margin-bottom: 1.5rem;
+            filter: drop-shadow(0 0 15px rgba(129, 140, 248, 0.5));
+            animation: float 6s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0px);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
+            100% {
+                transform: translateY(0px);
+            }
+        }
+        
+        h1 {
+            font-size: 2.75rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            text-shadow: 0 0 20px rgba(129, 140, 248, 0.5);
+            background: linear-gradient(45deg, var(--white), var(--accent-color));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .tagline {
+            font-size: 1.25rem;
+            max-width: 800px;
+            margin: 0 auto 2rem;
+            text-align: center;
+            color: rgba(255, 255, 255, 0.9);
+            text-shadow: 0 0 10px rgba(129, 140, 248, 0.3);
+        }
+        
+        main {
+            position: relative;
+            z-index: 1;
+        }
+
+        .section {
+            padding: 5rem 0;
+            position: relative;
+            background: rgba(15, 23, 42, 0.7);
+            backdrop-filter: blur(10px);
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .section:nth-child(even) {
+            background: rgba(30, 27, 75, 0.7);
+        }
+        
+        .editions-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 4rem 0;
+        }
+        
+        .edition-card {
+            background: var(--card-bg);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 25px rgba(0, 0, 0, 0.1);
+            transition: var(--transition);
+            text-decoration: none;
+            color: inherit;
+            display: flex;
+            flex-direction: column;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .edition-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(129, 140, 248, 0.2);
+            background: rgba(255, 255, 255, 0.1);
+        }
+        
+        .edition-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .edition-content {
+            padding: 1.5rem;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .edition-title {
+            font-size: 1.75rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            color: var(--accent-color);
+            text-shadow: 0 0 10px rgba(129, 140, 248, 0.3);
+        }
+        
+        .edition-date {
+            font-size: 1.1rem;
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 1rem;
+        }
+        
+        .edition-description {
+            margin-bottom: 1.5rem;
+            flex-grow: 1;
+            color: rgba(255, 255, 255, 0.8);
+        }
+        
+        .edition-cta {
+            background: linear-gradient(45deg, var(--primary-color), var(--accent-color));
+            color: var(--white);
+            padding: 0.75rem 1.5rem;
+            border-radius: 8px;
+            text-decoration: none;
+            display: inline-block;
+            font-weight: 600;
+            transition: var(--transition);
+            text-align: center;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 4px 15px rgba(129, 140, 248, 0.3);
+        }
+        
+        .edition-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(129, 140, 248, 0.4);
+        }
+        
+        .featured {
+            position: relative;
+        }
+        
+        .featured::after {
+            content: "Latest";
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: var(--accent-color);
+            color: white;
+            padding: 0.25rem 0.75rem;
+            border-radius: 30px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+        
+        .about-section {
+            background: rgba(30, 27, 75, 0.7);
+            padding: 4rem 0;
+            margin: 2rem 0;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+        }
+        
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+        
+        .about-image {
+            width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 0 20px rgba(129, 140, 248, 0.3);
+        }
+        
+        .section-title {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            color: var(--white);
+            text-shadow: 0 0 15px rgba(129, 140, 248, 0.3);
+        }
+        
+        .partners {
+            padding: 3rem 0;
+            text-align: center;
+        }
+        
+        .partners-title {
+            margin-bottom: 2rem;
+        }
+        
+        .partners-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 2rem;
+            align-items: center;
+        }
+        
+        .partner-logo {
+            height: 60px;
+            transition: var(--transition);
+            opacity: 0.8;
+        }
+        
+        .partner-logo:hover {
+            transform: translateY(-5px);
+            opacity: 1;
+            filter: drop-shadow(0 0 10px rgba(129, 140, 248, 0.5));
+        }
+        
+        footer {
+            background: rgba(15, 23, 42, 0.9);
+            color: var(--white);
+            padding: 3rem 0;
+            text-align: center;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            position: relative;
+            z-index: 1;
+        }
+        
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 2rem;
+        }
+        
+        .footer-links {
+            display: flex;
+            gap: 1.5rem;
+        }
+        
+        .footer-link {
+            color: white;
+            text-decoration: none;
+            transition: var(--transition);
+            position: relative;
+        }
+        
+        .footer-link:hover {
+            text-shadow: 0 0 8px rgba(129, 140, 248, 0.5);
+        }
+        
+        .footer-link::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 1px;
+            background: var(--accent-color);
+            transition: width 0.3s;
+        }
+        
+        .footer-link:hover::after {
+            width: 100%;
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.25rem;
+            }
+            
+            .about-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .footer-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .footer-links {
+                flex-direction: column;
+                gap: 1rem;
+            }
+        }
+
+        /* Media Cards Styles */
+        .media-card {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+            height: 100%;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .media-link {
+            text-decoration: none;
+            color: inherit;
+            display: block;
+            height: 100%;
+        }
+        
+        .media-thumbnail {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            display: block;
+            background-color: rgba(255, 255, 255, 0.05);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .media-content {
+            padding: 1.25rem;
+        }
+        
+        .media-source {
+            color: var(--accent-color);
+            font-weight: 600;
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        
+        .media-title {
+            color: white;
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+            font-weight: 500;
+            line-height: 1.4;
+        }
+        
+        .media-description {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.9rem;
+            margin-bottom: 0;
+            line-height: 1.5;
+        }
+        
+        .media-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(129, 140, 248, 0.2);
+        }
+        
+        .media-section {
+            background: rgba(15, 23, 42, 0.7);
+            padding: 5rem 0;
+            backdrop-filter: blur(10px);
+        }
+        
+        .media-section .section-heading {
+            text-align: left;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding-bottom: 1rem;
+            margin-bottom: 2rem;
+        }
+        
+        .media-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+        
+        @media (max-width: 768px) {
+            .media-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="particles-js"></div>
+    <header>
+        <div class="container hero">
+            <img src="2025/images/logo_armllm_bg_removed.png" alt="Armenia LLM Summer School Logo" class="logo">
+            <h1>Armenia LLM Summer School</h1>
+            <p class="tagline">Bringing together researchers, students, and experts for an immersive learning experience in Large Language Model technology</p>
+        </div>
+    </header>
+    
+    <main>
+        <div class="container">
+            <div class="editions-container">
+                <a href="2026/index.html" class="edition-card featured">
+                    <img src="2025/images/coverllm.png" alt="Armenia LLM Summer School 2026" class="edition-image">
+                    <div class="edition-content">
+                        <h2 class="edition-title">LLM Summer School 2026</h2>
+                        <p class="edition-date">Coming Soon • Yerevan, Armenia</p>
+                        <p class="edition-description">
+                            The third edition of the Armenia LLM Summer School is coming! Stay tuned for announcements about speakers, schedule, and applications.
+                        </p>
+                        <div class="edition-cta">View 2026 Website</div>
+                    </div>
+                </a>
+                
+                <a href="2025/index.html" class="edition-card">
+                    <img src="2025/images/coverllm.png" alt="Armenia LLM Summer School 2025" class="edition-image">
+                    <div class="edition-content">
+                        <h2 class="edition-title">LLM Summer School 2025</h2>
+                        <p class="edition-date">July 24-30, 2025 • Yerevan, Armenia</p>
+                        <p class="edition-description">
+                            The second edition of the Armenia LLM Summer School featured cutting-edge topics in language models with world-class researchers and AI experts.
+                        </p>
+                        <div class="edition-cta">View 2025 Website</div>
+                    </div>
+                </a>
+                
+                <a href="2024/index.html" class="edition-card">
+                    <img src="2024/images/coverllm.png" alt="Armenia LLM Summer School 2024" class="edition-image">
+                    <div class="edition-content">
+                        <h2 class="edition-title">LLM Summer School 2024</h2>
+                        <p class="edition-date">July 1-7, 2024 • Yerevan, Armenia</p>
+                        <p class="edition-description">
+                            The inaugural Armenia LLM Summer School brought together over 70 students and researchers for an intensive week focused on the fundamentals and applications of large language models.
+                        </p>
+                        <div class="edition-cta">View 2024 Website</div>
+                    </div>
+                </a>
+            </div>
+            
+            <section class="about-section">
+                <div class="container">
+                    <div class="about-content">
+                        <div>
+                            <h2 class="section-title">About the Summer School</h2>
+                            <p>The Armenia LLM Summer School is a comprehensive program designed to provide participants with in-depth knowledge of large language models through lectures, workshops, and hands-on projects.</p>
+                            <br>
+                            <p>Our program covers key topics including model architecture, training techniques, alignment, evaluation, interpretability, safety, vision-language models, and responsible AI applications.</p>
+                            <br>
+                            <p>Led by experts from leading research institutions and industry organizations, the summer school fosters collaboration, networking, and the exchange of ideas in the rapidly evolving field of AI language models.</p>
+                        </div>
+                        <img src="2025/images/llm.png" alt="LLM Summer School" class="about-image">
+                    </div>
+                </div>
+            </section>
+            
+            <section class="media-section">
+                <div class="container">
+                    <h2 class="section-heading">Featured in Media</h2>
+                    
+                    <div class="media-grid">
+                        <div class="media-card">
+                            <a href="https://www.youtube.com/watch?v=wy8eMSnoA2s" target="_blank" class="media-link">
+                                <img src="https://img.youtube.com/vi/wy8eMSnoA2s/maxresdefault.jpg" alt="LLM Summer School Highlights" class="media-thumbnail">
+                                <div class="media-content">
+                                    <div class="media-source">YouTube</div>
+                                    <h3 class="media-title">LLM Summer School Highlights</h3>
+                                    <p class="media-description">A video showcase of the Armenia LLM Summer School featuring presentations and collaborative sessions</p>
+                                </div>
+                            </a>
+                        </div>
+                        
+                        <div class="media-card">
+                            <a href="https://tech.news.am/arm/news/3794/hayastanum-meknarkel-e-mets-lezvakan-modelneri-arajin-amarayin-dprocy.html" target="_blank" class="media-link">
+                                <img src="https://tech.news.am/static/news/b/2024/07/3794.jpg" alt="Armenia's First LLM Summer School Launch" class="media-thumbnail">
+                                <div class="media-content">
+                                    <div class="media-source">News.am Tech</div>
+                                    <h3 class="media-title">Armenia's First LLM Summer School Launch</h3>
+                                    <p class="media-description">Հայաստանում մեկնարկել է մեծ լեզվական մոդելների առաջին ամառային դպրոցը</p>
+                                </div>
+                            </a>
+                        </div>
+                        
+                        <div class="media-card">
+                            <a href="http://dev.itel.am/am/news/15435" target="_blank" class="media-link">
+                                <img src="https://itel.am/datas/znews/big_/2024/07/10/668e2a0d271c42.85868638.jpg" alt="LLM Summer School with Impressive Faculty" class="media-thumbnail">
+                                <div class="media-content">
+                                    <div class="media-source">iTel.am</div>
+                                    <h3 class="media-title">LLM Summer School with Impressive Faculty</h3>
+                                    <p class="media-description">LLM ամառային դպրոցը՝ տպավորիչ դասախոսական կազմով ու AI թրենդներով</p>
+                                </div>
+                            </a>
+                        </div>
+                        
+                        <div class="media-card">
+                            <a href="https://evnreport.com/podcasts/evn-disrupt/perouz-taslakian-erik-arakelyan-llm-summer-school/" target="_blank" class="media-link">
+                                <img src="https://evnreport.com/wp-content/uploads/2024/07/Perouz-Taslakian-and-Erik-Arakelyan_web.jpg" alt="Perouz Taslakian & Erik Arakelyan: LLM Summer School" class="media-thumbnail">
+                                <div class="media-content">
+                                    <div class="media-source">EVN Report Podcast</div>
+                                    <h3 class="media-title">Perouz Taslakian & Erik Arakelyan: LLM Summer School</h3>
+                                    <p class="media-description">A discussion about the development and goals of the LLM Summer School in Armenia</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="partners">
+                <h2 class="section-title partners-title">Our Partners</h2>
+                <div class="partners-grid">
+                    <img src="2025/images/aua.png" alt="American University of Armenia" class="partner-logo">
+                    <img src="2025/images/ynn.png" alt="YerevaNN" class="partner-logo">
+                    <img src="2025/images/nebius.png" alt="Nebius AI" class="partner-logo">
+                    <img src="2025/images/picsart.png" alt="Picsart" class="partner-logo">
+                </div>
+            </section>
+        </div>
+    </main>
+    
+    <footer>
+        <div class="container footer-content">
+            <div>
+                <p>© 2026 Armenia LLM Summer School</p>
+            </div>
+            <div class="footer-links">
+                <a href="2026/index.html" class="footer-link">2026 Edition</a>
+                <a href="2025/index.html" class="footer-link">2025 Edition</a>
+                <a href="2024/index.html" class="footer-link">2024 Edition</a>
+                <a href="mailto:contact@armllm.org" class="footer-link">Contact Us</a>
+            </div>
+            <div>
+                <p></p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        particlesJS('particles-js', {
+            particles: {
+                number: {
+                    value: 100,
+                    density: {
+                        enable: true,
+                        value_area: 800
+                    }
+                },
+                color: {
+                    value: ['#818cf8', '#4f46e5', '#ffffff']
+                },
+                shape: {
+                    type: 'circle'
+                },
+                opacity: {
+                    value: 0.6,
+                    random: true,
+                    animation: {
+                        enable: true,
+                        speed: 1,
+                        opacity_min: 0.1,
+                        sync: false
+                    }
+                },
+                size: {
+                    value: 3,
+                    random: true,
+                    animation: {
+                        enable: true,
+                        speed: 2,
+                        size_min: 0.1,
+                        sync: false
+                    }
+                },
+                line_linked: {
+                    enable: true,
+                    distance: 150,
+                    color: '#818cf8',
+                    opacity: 0.2,
+                    width: 1
+                },
+                move: {
+                    enable: true,
+                    speed: 3,
+                    direction: 'none',
+                    random: true,
+                    straight: false,
+                    out_mode: 'out',
+                    bounce: true
+                }
+            },
+            interactivity: {
+                detect_on: 'canvas',
+                events: {
+                    onhover: {
+                        enable: true,
+                        mode: 'grab'
+                    },
+                    onclick: {
+                        enable: true,
+                        mode: 'push'
+                    },
+                    resize: true
+                }
+            },
+            retina_detect: true
+        });
+    </script>
+</body>
+</html> 

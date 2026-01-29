@@ -1,0 +1,25 @@
+{
+  "name": "Armenia LLM Summer School",
+  "short_name": "ArmLLM",
+  "description": "An intensive program for students and researchers exploring Large Language Models",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0f172a",
+  "theme_color": "#4f46e5",
+  "icons": [
+    {
+      "src": "/images/small_armllm.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/images/logo_armllm_bg_removed.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "categories": ["education", "technology"],
+  "lang": "en",
+  "orientation": "any"
+}

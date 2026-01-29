@@ -1,0 +1,72 @@
+@import "tailwindcss";
+
+/* Custom theme configuration */
+@theme {
+  --color-primary: #4f46e5;
+  --color-secondary: #1e1b4b;
+  --color-accent: #818cf8;
+  --color-dark: #0f172a;
+  
+  --font-family-sans: 'Inter', sans-serif;
+}
+
+/* Base styles */
+@layer base {
+  body {
+    @apply font-sans leading-relaxed text-gray-100 bg-dark overflow-x-hidden;
+  }
+}
+
+/* Animation keyframes */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 4px 15px rgba(129, 140, 248, 0.4);
+  }
+  50% {
+    box-shadow: 0 4px 25px rgba(129, 140, 248, 0.7);
+  }
+}
+
+/* Custom utilities */
+@layer utilities {
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+  
+  .animate-pulse-glow {
+    animation: pulse-glow 2s infinite;
+  }
+  
+  .text-gradient {
+    background: linear-gradient(45deg, white, var(--color-accent));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  .text-shadow-glow {
+    text-shadow: 0 0 20px rgba(129, 140, 248, 0.5);
+  }
+  
+  .bg-glass {
+    background: rgba(15, 23, 42, 0.8);
+    backdrop-filter: blur(10px);
+  }
+  
+  .bg-glass-light {
+    background: rgba(255, 255, 255, 0.05);
+  }
+  
+  .border-glass {
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+}

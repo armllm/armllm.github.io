@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LLM Summer School 2026 - Coming Soon</title>
+    <link rel="icon" type="image/png" href="../2025/images/small_armllm.png">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <style>
+        :root {
+            --primary-color: #4f46e5;
+            --secondary-color: #1e1b4b;
+            --accent-color: #818cf8;
+            --text-color: #1f2937;
+            --light-bg: #f3f4f6;
+            --white: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background: #0f172a;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('../2025/images/logo_armllm_bg_removed.png') no-repeat center center;
+            background-size: 80%;
+            opacity: 0.05;
+            z-index: -2;
+            pointer-events: none;
+        }
+
+        #particles-js {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            background: radial-gradient(circle at center, var(--primary-color) 0%, var(--secondary-color) 100%);
+        }
+
+        #particles-js::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+            opacity: 0.1;
+            mix-blend-mode: overlay;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        header {
+            background: rgba(15, 23, 42, 0.8);
+            box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            text-decoration: none;
+        }
+
+        .logo-img {
+            height: 40px;
+            width: auto;
+            filter: drop-shadow(0 0 8px rgba(129, 140, 248, 0.5));
+        }
+
+        .logo-text {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--white);
+            text-shadow: 0 0 10px rgba(129, 140, 248, 0.5);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--white);
+            font-weight: 500;
+            transition: all 0.3s;
+            position: relative;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--accent-color);
+            transition: width 0.3s;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .hero {
+            color: var(--white);
+            padding: 10rem 0 6rem;
+            text-align: center;
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            width: 100%;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 0.5rem;
+            text-shadow: 0 0 20px rgba(129, 140, 248, 0.5);
+            background: linear-gradient(45deg, var(--white), var(--accent-color));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            max-width: 800px;
+            margin: 0 auto;
+            text-shadow: 0 0 10px rgba(129, 140, 248, 0.3);
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        .hero-logo {
+            width: 200px;
+            height: auto;
+            margin-bottom: 2rem;
+            filter: drop-shadow(0 0 15px rgba(129, 140, 248, 0.5));
+            animation: float 6s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0px);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
+            100% {
+                transform: translateY(0px);
+            }
+        }
+
+        .hero-dates {
+            font-size: 1.5rem;
+            color: var(--accent-color);
+            margin: 0.5rem 0 1.5rem;
+            text-shadow: 0 0 15px rgba(129, 140, 248, 0.5);
+            font-weight: 500;
+        }
+
+        .hero-location {
+            font-size: 2rem;
+            color: var(--white);
+            margin-bottom: 1rem;
+            text-shadow: 0 0 15px rgba(129, 140, 248, 0.3);
+            font-weight: 600;
+        }
+
+        .coming-soon-badge {
+            display: inline-block;
+            background: linear-gradient(45deg, var(--primary-color), var(--accent-color));
+            color: var(--white);
+            padding: 0.5rem 1.5rem;
+            border-radius: 30px;
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 2rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            box-shadow: 0 4px 15px rgba(129, 140, 248, 0.4);
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 4px 15px rgba(129, 140, 248, 0.4);
+            }
+            50% {
+                box-shadow: 0 4px 25px rgba(129, 140, 248, 0.7);
+            }
+            100% {
+                box-shadow: 0 4px 15px rgba(129, 140, 248, 0.4);
+            }
+        }
+
+        .section {
+            padding: 5rem 0;
+            position: relative;
+            background: rgba(15, 23, 42, 0.7);
+            backdrop-filter: blur(10px);
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .section:nth-child(even) {
+            background: rgba(30, 27, 75, 0.7);
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-title h2 {
+            font-size: 2.5rem;
+            color: var(--white);
+            margin-bottom: 1rem;
+            text-shadow: 0 0 15px rgba(129, 140, 248, 0.3);
+        }
+
+        .section-title p {
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            text-align: center;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(129, 140, 248, 0.2);
+        }
+
+        .card h3 {
+            color: var(--accent-color);
+            margin-bottom: 1rem;
+            text-shadow: 0 0 10px rgba(129, 140, 248, 0.3);
+        }
+
+        .card p {
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        .card-subtitle {
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.6);
+            margin-top: 0.5rem;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(45deg, var(--primary-color), var(--accent-color));
+            color: var(--white);
+            margin-top: 40px;
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 4px 15px rgba(129, 140, 248, 0.3);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(129, 140, 248, 0.4);
+        }
+
+        .cta-button.secondary {
+            background: transparent;
+            border: 2px solid var(--accent-color);
+        }
+
+        .cta-button.secondary:hover {
+            background: rgba(129, 140, 248, 0.1);
+        }
+
+        .past-editions-grid {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .edition-card {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 2rem 3rem;
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            text-align: center;
+            transition: all 0.3s;
+            text-decoration: none;
+        }
+
+        .edition-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(129, 140, 248, 0.2);
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .edition-card h3 {
+            color: var(--accent-color);
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .edition-card p {
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        footer {
+            background: rgba(15, 23, 42, 0.9);
+            color: var(--white);
+            padding: 3rem 0;
+            text-align: center;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .countdown-container {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin: 2rem 0;
+            flex-wrap: wrap;
+        }
+
+        .countdown-item {
+            text-align: center;
+        }
+
+        .countdown-value {
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--accent-color);
+            text-shadow: 0 0 15px rgba(129, 140, 248, 0.5);
+        }
+
+        .countdown-label {
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.7);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .tbd-text {
+            color: var(--accent-color);
+            font-style: italic;
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .countdown-value {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="particles-js"></div>
+    <header>
+        <nav class="container">
+            <a href="#" class="logo-container">
+                <img src="../2025/images/logo_armllm_bg_removed.png" alt="ARMLLM Logo" class="logo-img">
+                <span class="logo-text">LLM Summer School 2026</span>
+            </a>
+            <div class="nav-links">
+                <a href="#about">About</a>
+                <a href="#past-editions">Past Editions</a>
+            </div>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="container hero-content">
+            <div class="coming-soon-badge">Coming Soon</div>
+            <img src="../2025/images/logo_armllm_bg_removed.png" alt="ARMLLM Logo" class="hero-logo">
+            <h1>LLM Summer School 2026</h1>
+            <p class="hero-location">Yerevan, Armenia</p>
+            <p class="hero-dates"><span class="tbd-text">Dates to be announced</span></p>
+            <p>The 3rd edition of the LLM Summer School is coming! An intensive program for students and researchers exploring the latest advancements in Large Language Models.</p>
+            <div style="margin-top: 2rem;">
+                <a href="../2025/index.html" class="cta-button secondary">View 2025 Edition</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>About the Program</h2>
+                <p>Building on the success of previous editions</p>
+            </div>
+            
+            <div style="margin-bottom: 3rem; color: rgba(255, 255, 255, 0.9); max-width: 900px; margin-left: auto; margin-right: auto; text-align: center;">
+                <p style="margin-bottom: 1.5rem;">The LLM Summer School in Armenia is an annual event dedicated to exploring the latest advancements in Large Language Models (LLMs). The program features comprehensive lectures, hands-on workshops, and an exciting hackathon where participants can apply their knowledge to innovative projects.</p>
+                
+                <p style="margin-bottom: 1.5rem;">Stay tuned for announcements about speakers, schedule, and application details for the 2026 edition.</p>
+            </div>
+            
+            <div class="grid">
+                <div class="card">
+                    <h3>📚 Format</h3>
+                    <p>Combination of lectures, workshops, and practical sessions</p>
+                    <p class="card-subtitle">Followed by a hackathon</p>
+                </div>
+                <div class="card">
+                    <h3>📍 Location</h3>
+                    <p>Yerevan, Armenia</p>
+                    <p class="card-subtitle">Venue to be announced</p>
+                </div>
+                <div class="card">
+                    <h3>📅 Dates</h3>
+                    <p class="tbd-text">To be announced</p>
+                    <p class="card-subtitle">Expected: Summer 2026</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="past-editions" class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Past Editions</h2>
+                <p>Explore our previous summer schools</p>
+            </div>
+            
+            <div class="past-editions-grid">
+                <a href="../2025/index.html" class="edition-card">
+                    <h3>2025</h3>
+                    <p>2nd Edition</p>
+                    <p style="margin-top: 0.5rem; color: rgba(255, 255, 255, 0.5); font-size: 0.85rem;">Jul 24 - Jul 30, 2025</p>
+                </a>
+                <a href="../2024/index.html" class="edition-card">
+                    <h3>2024</h3>
+                    <p>1st Edition</p>
+                    <p style="margin-top: 0.5rem; color: rgba(255, 255, 255, 0.5); font-size: 0.85rem;">Inaugural Summer School</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p style="margin-bottom: 1rem;">Want to stay updated? Check back soon for announcements.</p>
+            <p>&copy; 2026 LLM Summer School. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        particlesJS('particles-js', {
+            particles: {
+                number: {
+                    value: 100,
+                    density: {
+                        enable: true,
+                        value_area: 800
+                    }
+                },
+                color: {
+                    value: ['#818cf8', '#4f46e5', '#ffffff']
+                },
+                shape: {
+                    type: 'circle'
+                },
+                opacity: {
+                    value: 0.6,
+                    random: true,
+                    animation: {
+                        enable: true,
+                        speed: 1,
+                        opacity_min: 0.1,
+                        sync: false
+                    }
+                },
+                size: {
+                    value: 3,
+                    random: true,
+                    animation: {
+                        enable: true,
+                        speed: 2,
+                        size_min: 0.1,
+                        sync: false
+                    }
+                },
+                line_linked: {
+                    enable: true,
+                    distance: 150,
+                    color: '#818cf8',
+                    opacity: 0.2,
+                    width: 1
+                },
+                move: {
+                    enable: true,
+                    speed: 3,
+                    direction: 'none',
+                    random: true,
+                    straight: false,
+                    out_mode: 'out',
+                    bounce: true
+                }
+            },
+            interactivity: {
+                detect_on: 'canvas',
+                events: {
+                    onhover: {
+                        enable: true,
+                        mode: 'grab'
+                    },
+                    onclick: {
+                        enable: true,
+                        mode: 'push'
+                    },
+                    resize: true
+                }
+            },
+            retina_detect: true
+        });
+    </script>
+</body>
+</html>
