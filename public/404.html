@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Armenia LLM Summer School</title>
+    <script>
+      // Single Page App redirect for GitHub Pages
+      // Redirects 404s to index.html with the path in the hash
+      const path = window.location.pathname;
+      const hash = window.location.hash;
+      const search = window.location.search;
+      
+      // Redirect to root with hash-based routing
+      if (path !== '/' && path !== '/index.html') {
+        window.location.replace('/#' + path + search + hash);
+      }
+    </script>
+  </head>
+  <body>
+    <noscript>
+      <meta http-equiv="refresh" content="0; url=/" />
+    </noscript>
+  </body>
+</html>
