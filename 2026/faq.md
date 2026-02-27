@@ -56,7 +56,7 @@ Welcome! We know you have questions about how the summer school works. We have c
 **How much does the program cost?**
 
 - **In-Person (General Participation):** 100,000 AMD (or equivalent in other currencies). This covers all theoretical and practical sessions, including **GPU access**.
-- **Online Participation:** 100 USD (or equivalent). This covers the theoretical sessions.
+- **Online Participation:** 200 USD (or equivalent). This covers the theoretical sessions. The aid for online participation will be distributed based on funding available.
 
 **Is there financial aid for students?** Yes, we want to make this accessible!
 
