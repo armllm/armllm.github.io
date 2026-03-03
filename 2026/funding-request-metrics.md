@@ -38,3 +38,19 @@ Average ratings (out of 5):
 - Instructor effectiveness: **4.53**
 - Practical sessions helpfulness: **4.11**
 
+## Scale (website highlights)
+
+These are statements included on the public websites for past editions:
+
+- 2024 edition highlight: **“over 70”** participants (see `2025/past-editions.html`)
+- 2025 edition statement: **“We anticipate over 70 participants.”** (see `2025/index.html`)
+
+## 2026 program parameters (for donor context)
+
+Source: `2026/faq.md`
+
+- Dates: **Aug 3–7, 2026** (AI9 Startup Campus) + **Aug 8** hack day
+- Tracks: **in-person + online (Zoom)** (online covers theoretical sessions)
+- Fees: **100,000 AMD** (in-person) • **200 USD** (online)
+- Financial aid: student waivers **up to 90%** (funding-dependent); reduced fee for many university students (~10,000 AMD)
+

@@ -19,4 +19,5 @@ This folder contains a **6-slide** donor-facing deck for the **Armenia LLM Summe
 
 - Update the **funding target / tiers** on Slide 6 (currently examples/placeholders).
 - Add a one-line **impact target** (e.g., “X additional scholarships”, “Y additional seats”, “Z recorded lectures”).
+- If needed, add a “Proof points” line from the websites (e.g., **70+ participants** highlight and media coverage), which are now summarized in `2026/funding-request-metrics.md`.
 
