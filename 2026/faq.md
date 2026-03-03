@@ -20,8 +20,6 @@ Welcome! We know you have questions about how the summer school works. We have c
 
 **Do you provide housing or food?** We do not provide accommodation directly, but we usually recommend the **Yerevan State University guesthouse**. It is affordable (~35 USD/day in 2025) and within walking distance. For food, we provide coffee and snacks during breaks, but you will need to handle your own lunch and dinner at the many great cafes nearby.
 
-**What are some good cafes within 5 minutes of the campus?** Yerevan has a vibrant coffee culture. Here are some great spots just a few minutes away: **To add**
-
 **How do we stay updated during the school?** Once you are confirmed, you will get an invite to our **Slack channel**. This is where we post the agenda, links, and where you can chat with instructors and other students.
 
 ### ✅ 2) Eligibility & Technical Background
