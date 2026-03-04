@@ -40,8 +40,8 @@ Welcome! We know you have questions about how the summer school works. We have c
 
 **What is the application timeline for 2026?**
 - **Stage 1 (Initial application):** submit the form and CV by **May 15, 2026**.
-- **Stage 2 (Technical assessment):** applicants should monitor email for a test link on **June 10** (after the application phase closes on **May 15**).
-- **Final step:** successful candidates receive confirmation by email.
+- **Stage 2 (Technical assessment):** applicants should monitor email for a test link on **May 28, 2026** (after the application phase closes on **May 15**).
+- **Answers:** expect to receive an answer by **June 5**.
 
 **What if I do not receive the technical test link?** Contact the organizers at **armeniallm@gmail.com**.
 
