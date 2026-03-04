@@ -86,10 +86,14 @@
         }
 
         nav {
-            display: flex;
-            justify-content: space-between;
+            display: grid;
+            grid-template-columns: 1fr auto 1fr;
             align-items: center;
             padding: 1rem 2rem;
+        }
+
+        .nav-spacer {
+            height: 1px;
         }
 
         .logo-container {
@@ -115,6 +119,7 @@
         .nav-links {
             display: flex;
             gap: 2rem;
+            justify-content: flex-end;
         }
 
         .nav-links a {
@@ -213,9 +218,9 @@
             display: inline-block;
             background: linear-gradient(45deg, var(--primary-color), var(--accent-color));
             color: var(--white);
-            padding: 0.5rem 1.5rem;
+            padding: 0.75rem 2.1rem;
             border-radius: 30px;
-            font-size: 1rem;
+            font-size: 1.35rem;
             font-weight: 600;
             margin-bottom: 2rem;
             text-transform: uppercase;
@@ -305,11 +310,12 @@
             display: inline-block;
             background: linear-gradient(45deg, var(--primary-color), var(--accent-color));
             color: var(--white);
-            margin-top: 40px;
-            padding: 1rem 2rem;
+            margin-top: 0;
+            padding: 1.15rem 2.6rem;
             border-radius: 8px;
             text-decoration: none;
             font-weight: 600;
+            font-size: 1.1rem;
             transition: all 0.3s;
             border: 1px solid rgba(255, 255, 255, 0.1);
             box-shadow: 0 4px 15px rgba(129, 140, 248, 0.3);
@@ -332,13 +338,9 @@
         .cta-buttons {
             display: flex;
             justify-content: center;
-            gap: 1rem;
+            gap: 1.25rem;
             flex-wrap: wrap;
             margin-top: 2rem;
-        }
-
-        .cta-button {
-            margin-top: 0;
         }
 
         .sponsors-grid {
@@ -349,23 +351,24 @@
         }
 
         .sponsor-card {
-            background: rgba(255, 255, 255, 0.95);
-            border-radius: 14px;
-            padding: 2rem;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+            padding: 2.5rem;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
             gap: 1rem;
-            border: 1px solid rgba(255, 255, 255, 0.15);
-            box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
             text-decoration: none;
             transition: transform 0.3s, box-shadow 0.3s;
         }
 
         .sponsor-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 12px 26px rgba(0,0,0,0.35);
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(129, 140, 248, 0.2);
+            background: rgba(255, 255, 255, 0.1);
         }
 
         .sponsor-meta {
@@ -376,20 +379,116 @@
             font-size: 0.85rem;
             letter-spacing: 0.12em;
             text-transform: uppercase;
-            color: rgba(0, 0, 0, 0.55);
+            color: rgba(255, 255, 255, 0.7);
             margin-bottom: 0.25rem;
             font-weight: 600;
         }
 
         .sponsor-meta .name {
             font-size: 1.1rem;
-            color: rgba(0, 0, 0, 0.85);
+            color: rgba(255, 255, 255, 0.95);
             font-weight: 700;
         }
 
         .ai9-logo {
-            width: min(360px, 100%);
+            width: 140px;
             height: auto;
+        }
+
+        .organizer-grid {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 2rem;
+            margin: 2rem auto 0;
+            max-width: 1000px;
+        }
+
+        .organizer-card {
+            text-align: center;
+            max-width: 150px;
+        }
+
+        .organizer-photo {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 2px solid rgba(255, 255, 255, 0.7);
+            margin-bottom: 0.75rem;
+        }
+
+        .organizer-name {
+            font-size: 1rem;
+            font-weight: 600;
+            margin: 0.2rem 0;
+            color: var(--white);
+        }
+
+        .organizer-affiliation {
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        .faq-grid {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .faq-category {
+            margin-bottom: 2rem;
+        }
+
+        .faq-category h3 {
+            color: var(--accent-color);
+            margin-bottom: 1rem;
+            text-shadow: 0 0 10px rgba(129, 140, 248, 0.3);
+            font-size: 1.35rem;
+            text-align: left;
+        }
+
+        details.faq-item {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            padding: 1.25rem 1.5rem;
+            margin-bottom: 1rem;
+            transition: background 0.3s, box-shadow 0.3s, transform 0.3s;
+        }
+
+        details.faq-item:hover {
+            background: rgba(255, 255, 255, 0.08);
+            box-shadow: 0 8px 15px rgba(129, 140, 248, 0.15);
+            transform: translateY(-2px);
+        }
+
+        details.faq-item summary {
+            cursor: pointer;
+            list-style: none;
+            font-weight: 600;
+            color: rgba(255, 255, 255, 0.95);
+            outline: none;
+        }
+
+        details.faq-item summary::-webkit-details-marker {
+            display: none;
+        }
+
+        details.faq-item .faq-answer {
+            margin-top: 0.9rem;
+            color: rgba(255, 255, 255, 0.85);
+        }
+
+        details.faq-item .faq-answer p {
+            margin-bottom: 0.75rem;
+        }
+
+        details.faq-item .faq-answer ul {
+            padding-left: 1.1rem;
+        }
+
+        details.faq-item .faq-answer li {
+            margin: 0.35rem 0;
         }
 
         .past-editions-grid {
@@ -484,17 +583,19 @@
     <div id="particles-js"></div>
     <header>
         <nav class="container">
+            <div class="nav-spacer"></div>
             <a href="#" class="logo-container">
                 <img src="../2025/images/logo_armllm_bg_removed.png" alt="ARMLLM Logo" class="logo-img">
                 <span class="logo-text">LLM Summer School 2026</span>
             </a>
             <div class="nav-links">
                 <a href="#about">About</a>
+                <a href="#organizers">Organizers</a>
                 <a href="#apply">Apply</a>
                 <a href="#fees">Fees</a>
+                <a href="#faq">FAQ</a>
                 <a href="#sponsors">Sponsors</a>
                 <a href="#past-editions">Past Editions</a>
-                <a href="faq.md">FAQ</a>
             </div>
         </nav>
     </header>
@@ -506,11 +607,10 @@
             <h1>LLM Summer School 2026</h1>
             <p class="hero-location">AI9 Startup Campus • Yerevan, Armenia</p>
             <p class="hero-dates">August 3–7, 2026</p>
-            <p>An intensive week of lectures and hands-on sessions on Large Language Models — with an online track and a 24-hour hackathon organized by AI9.</p>
+            <p>An intensive week of lectures and hands-on sessions on Large Language Models — with an online track and a 24-hour hackathon co-organized by AI9.</p>
             <div class="cta-buttons">
                 <a href="https://forms.gle/1HnZ4BLitQkXo2reA" class="cta-button" target="_blank" rel="noopener noreferrer">Apply</a>
                 <a href="https://forms.gle/NMMsdenubnoGkRJ87" class="cta-button secondary" target="_blank" rel="noopener noreferrer">Fee waiver</a>
-                <a href="../2025/index.html" class="cta-button secondary">View 2025 Edition</a>
             </div>
         </div>
     </section>
@@ -558,7 +658,7 @@
                 <div class="card">
                     <h3>🗓️ Deadline</h3>
                     <p><strong>May 15, 2026</strong></p>
-                    <p class="card-subtitle">Submit the form and upload your CV (1 file, up to 10 MB)</p>
+                    <p class="card-subtitle">Submit the form and upload your CV</p>
                 </div>
                 <div class="card">
                     <h3>🧪 Technical assessment</h3>
@@ -576,6 +676,47 @@
                 <a href="https://forms.gle/1HnZ4BLitQkXo2reA" class="cta-button" target="_blank" rel="noopener noreferrer">Apply</a>
                 <a href="https://forms.gle/NMMsdenubnoGkRJ87" class="cta-button secondary" target="_blank" rel="noopener noreferrer">Fee waiver</a>
                 <a href="faq.md" class="cta-button secondary">Read FAQ</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="organizers" class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Organizers</h2>
+            </div>
+
+            <div class="organizer-grid">
+                <div class="organizer-card">
+                    <img src="https://itel.am/datas/znews/big_/2023/11/03/6544e40b4ad3e5.72335961.jpg" alt="Armen Aghajanyan" class="organizer-photo">
+                    <h3 class="organizer-name">Armen Aghajanyan</h3>
+                    <p class="organizer-affiliation">Perceptron AI</p>
+                </div>
+                <div class="organizer-card">
+                    <img src="https://scholar.googleusercontent.com/citations?view_op=medium_photo&user=63BfrxMAAAAJ&citpid=5" alt="Erik Arakelyan" class="organizer-photo">
+                    <h3 class="organizer-name">Erik Arakelyan</h3>
+                    <p class="organizer-affiliation">Nvidia</p>
+                </div>
+                <div class="organizer-card">
+                    <img src="https://www.isi.edu/wp-content/uploads/headshots/galstyan-1.jpg" alt="Aram Galstyan" class="organizer-photo">
+                    <h3 class="organizer-name">Aram Galstyan</h3>
+                    <p class="organizer-affiliation">USC / Amazon</p>
+                </div>
+                <div class="organizer-card">
+                    <img src="https://yt3.googleusercontent.com/ytc/AIdro_mEEMJOz6qnp-p0_X084BwAAoqJm8vMadvEFB5AdxAyoD4_=s900-c-k-c0x00ffffff-no-rj" alt="Hrant Khachatryan" class="organizer-photo">
+                    <h3 class="organizer-name">Hrant Khachatryan</h3>
+                    <p class="organizer-affiliation">YerevaNN</p>
+                </div>
+                <div class="organizer-card">
+                    <img src="https://pbs.twimg.com/profile_images/1483877264597176320/UweP0bQ2_400x400.jpg" alt="Perouz Taslakian" class="organizer-photo">
+                    <h3 class="organizer-name">Perouz Taslakian</h3>
+                    <p class="organizer-affiliation">Service Now Research</p>
+                </div>
+                <div class="organizer-card">
+                    <img src="../2025/images/Tatevik_V.jpg" alt="Tatevik Vardanyan" class="organizer-photo">
+                    <h3 class="organizer-name">Tatevik Vardanyan</h3>
+                    <p class="organizer-affiliation">YerevaNN</p>
+                </div>
             </div>
         </div>
     </section>
@@ -619,12 +760,163 @@
             </div>
 
             <div class="sponsors-grid">
-                <div class="sponsor-card" aria-label="AI9 venue sponsor">
-                    <img src="images/ai9-startup-campus.svg" alt="AI9 Startup Campus" class="ai9-logo">
+                <a class="sponsor-card" href="https://www.ai9.am/" target="_blank" rel="noopener noreferrer" aria-label="AI9 venue sponsor">
+                    <img src="images/ai9-square.svg" alt="AI9" class="ai9-logo">
                     <div class="sponsor-meta">
                         <div class="label">Venue sponsor</div>
                         <div class="name">AI9 Startup Campus</div>
                     </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="faq" class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>FAQ</h2>
+                <p>Quick answers. For the full list, see <a href="faq.md" style="color: rgba(255, 255, 255, 0.9); text-decoration: underline;">faq.md</a>.</p>
+            </div>
+
+            <div class="faq-grid">
+                <div class="faq-category">
+                    <h3>Program overview</h3>
+
+                    <details class="faq-item">
+                        <summary>When and where is the summer school happening?</summary>
+                        <div class="faq-answer">
+                            <p>August 3–7, 2026 at the AI9 Startup Campus (9 Isahakyan St, Yerevan, Armenia).</p>
+                        </div>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary>Is there an online option?</summary>
+                        <div class="faq-answer">
+                            <p>Yes. We offer an online track via Zoom covering the theoretical sessions. Online participants typically do not get access to shared GPU resources.</p>
+                        </div>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary>Will there be a hackathon?</summary>
+                        <div class="faq-answer">
+                            <p>Yes. The hackathon starts on August 8 at 00:00 and runs for a full 24-hour hack day. It is co-organized with our partner AI9.</p>
+                        </div>
+                    </details>
+                </div>
+
+                <div class="faq-category">
+                    <h3>Eligibility & background</h3>
+
+                    <details class="faq-item">
+                        <summary>Who should apply?</summary>
+                        <div class="faq-answer">
+                            <p>The program is designed for motivated learners in AI, including students, researchers, and engineers.</p>
+                        </div>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary>Do I need prior LLM experience?</summary>
+                        <div class="faq-answer">
+                            <p>No. Prior hands-on LLM experience is not required, but a foundational understanding of machine learning and neural networks is expected.</p>
+                        </div>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary>Do I need Python experience?</summary>
+                        <div class="faq-answer">
+                            <p>Python proficiency is expected and is asked in the application form.</p>
+                        </div>
+                    </details>
+                </div>
+
+                <div class="faq-category">
+                    <h3>Application & selection</h3>
+
+                    <details class="faq-item">
+                        <summary>How are applicants selected?</summary>
+                        <div class="faq-answer">
+                            <p>Selection is competitive and follows a two-stage process: (1) initial application form and (2) technical assessment.</p>
+                        </div>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary>What do I need for registration?</summary>
+                        <div class="faq-answer">
+                            <p>The form asks for personal/contact details, affiliation, experience, Python proficiency, and a short motivation paragraph. You must upload your CV/resume.</p>
+                        </div>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary>What is the application timeline for 2026?</summary>
+                        <div class="faq-answer">
+                            <ul>
+                                <li><strong>Stage 1:</strong> submit the form and CV by <strong>May 15, 2026</strong>.</li>
+                                <li><strong>Stage 2:</strong> monitor email for a test link on <strong>June 10</strong>.</li>
+                                <li><strong>Final step:</strong> successful candidates receive confirmation by email.</li>
+                            </ul>
+                            <p>If you do not receive the technical test link, contact <a href="mailto:armeniallm@gmail.com" style="color: rgba(255, 255, 255, 0.9); text-decoration: underline;">armeniallm@gmail.com</a>.</p>
+                        </div>
+                    </details>
+                </div>
+
+                <div class="faq-category">
+                    <h3>Fees & financial aid</h3>
+
+                    <details class="faq-item">
+                        <summary>How much does the program cost?</summary>
+                        <div class="faq-answer">
+                            <ul>
+                                <li><strong>In-person:</strong> 100,000 AMD (or equivalent). Includes GPU access.</li>
+                                <li><strong>Online:</strong> $200 (or equivalent). Theoretical sessions via Zoom.</li>
+                            </ul>
+                        </div>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary>Is there financial aid?</summary>
+                        <div class="faq-answer">
+                            <p>Yes. Students can apply for waivers that can cover up to 90% of the fee. Depending on available funds, we may offer discounts to other participants as well.</p>
+                        </div>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary>Can my company pay for me?</summary>
+                        <div class="faq-answer">
+                            <p>Yes. We can issue a prepayment invoice for your employer and provide an official tax invoice after the program ends if needed.</p>
+                        </div>
+                    </details>
+                </div>
+
+                <div class="faq-category">
+                    <h3>Logistics & policies</h3>
+
+                    <details class="faq-item">
+                        <summary>What should I bring?</summary>
+                        <div class="faq-answer">
+                            <p>A laptop is required for hands-on and practical sessions.</p>
+                        </div>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary>Do you provide housing or food?</summary>
+                        <div class="faq-answer">
+                            <p>We do not provide accommodation directly, but we usually recommend the Yerevan State University guesthouse (price example from 2025). We provide coffee and snacks during breaks; lunch and dinner are on your own.</p>
+                        </div>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary>How do we stay updated during the school?</summary>
+                        <div class="faq-answer">
+                            <p>Once you are confirmed, you will get an invite to our Slack channel for agenda updates and session links.</p>
+                        </div>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary>Will I get a certificate? What about refunds?</summary>
+                        <div class="faq-answer">
+                            <p>Everyone who fully attends receives a Certificate of Participation. If you let us know early enough, we can usually issue a refund so we can offer your spot to someone on the waitlist.</p>
+                        </div>
+                    </details>
                 </div>
             </div>
         </div>
