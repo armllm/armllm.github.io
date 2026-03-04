@@ -14,6 +14,8 @@ Welcome! We know you have questions about how the summer school works. We have c
 
 **Will there be a hackathon?** Yes. The hackathon will start on **August 8 at 00:00** and run for a full **24-hour hack day**. It will be organized by our partner **AI9**. Armenia LLM Summer School will act as a **content partner** for the hackathon.
 
+**How do I register for the hackathon?** There will be a separate registration for participation in the hackathon. The hackathon will be organized by **AI9**, while **Armenia LLM Summer School** will be the partner of the hackathon content.
+
 **What should I bring?** A **laptop** is a must-have! All the hands-on and practical sessions require you to have your own machine.
 
 **Do I need a powerful computer?** If you are attending in person, we provide the **GPU resources** for the heavy lifting. You just need a reliable laptop to connect and code. Online participants generally do not have access to these shared GPU resources.
