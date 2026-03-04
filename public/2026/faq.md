@@ -59,7 +59,6 @@ Welcome! We know you have questions about how the summer school works. We have c
 **Is there financial aid for students?** Yes, we want to make this accessible!
 
 - **Student Waivers:** We offer financial aid applications for students that can cover up to **90% of the fee**.
-- **University Students:** Students currently enrolled in universities often qualify for a significantly reduced fee (around 10,000 AMD).
 - **International/Exceptional Applicants:** If we have the budget, we sometimes offer waivers (from 50% to full scholarships) to non-student applicants with exceptional backgrounds.
 
 **Can I apply for financial aid during registration?** Yes. The form includes a direct question asking whether you are applying for financial aid.

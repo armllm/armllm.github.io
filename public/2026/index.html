@@ -462,6 +462,41 @@
             margin: 0 auto;
         }
 
+        details.faq-category {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 14px;
+            padding: 1.25rem 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        details.faq-category summary {
+            cursor: pointer;
+            list-style: none;
+            outline: none;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1rem;
+            color: var(--accent-color);
+            font-weight: 700;
+            font-size: 1.15rem;
+            text-shadow: 0 0 10px rgba(129, 140, 248, 0.25);
+        }
+
+        details.faq-category summary::-webkit-details-marker {
+            display: none;
+        }
+
+        .faq-category-icon {
+            color: rgba(255, 255, 255, 0.7);
+            font-weight: 700;
+        }
+
+        .faq-category-body {
+            margin-top: 1rem;
+        }
+
         .faq-category {
             margin-bottom: 2rem;
         }
@@ -764,7 +799,7 @@
             <div class="cta-buttons">
                 <a href="https://forms.gle/1HnZ4BLitQkXo2reA" class="cta-button" target="_blank" rel="noopener noreferrer">Apply</a>
                 <a href="https://forms.gle/NMMsdenubnoGkRJ87" class="cta-button secondary" target="_blank" rel="noopener noreferrer">Fee waiver</a>
-                <a href="faq.md" class="cta-button secondary">Read FAQ</a>
+                <a href="#faq" class="cta-button secondary">FAQ</a>
             </div>
         </div>
     </section>
@@ -823,62 +858,234 @@
         <div class="container">
             <div class="section-title">
                 <h2>FAQ</h2>
-                <p>Quick answers. For the full list, see <a href="faq.md" style="color: rgba(255, 255, 255, 0.9); text-decoration: underline;">faq.md</a>.</p>
+                <p>All frequently asked questions for the 2026 edition.</p>
             </div>
 
             <div class="faq-grid">
-                <details class="faq-item">
-                    <summary>When and where is the summer school happening?</summary>
-                    <div class="faq-answer">
-                        <p>August 3–7, 2026 at the AI9 Startup Campus (9 Isahakyan St, Yerevan, Armenia).</p>
+                <details class="faq-category">
+                    <summary>
+                        <span>Program overview</span>
+                        <span class="faq-category-icon">+</span>
+                    </summary>
+                    <div class="faq-category-body">
+                        <details class="faq-item">
+                            <summary>When and where is the summer school happening?</summary>
+                            <div class="faq-answer">
+                                <p>The 2026 school is scheduled for <strong>August 3–7, 2026</strong> at the <strong>AI9 Startup Campus</strong> (9 Isahakyan St, Yerevan, Armenia).</p>
+                            </div>
+                        </details>
+
+                        <details class="faq-item">
+                            <summary>Is there an online option?</summary>
+                            <div class="faq-answer">
+                                <p>Yes. We offer an online track via Zoom. This covers all the theoretical sessions. Online participants typically do not get access to GPU resources.</p>
+                            </div>
+                        </details>
+
+                        <details class="faq-item">
+                            <summary>Will there be a hackathon?</summary>
+                            <div class="faq-answer">
+                                <p>Yes. The hackathon starts on <strong>August 8 at 00:00</strong> and runs for a full <strong>24-hour hack day</strong>. It is co-organized with our partner <strong>AI9</strong>.</p>
+                            </div>
+                        </details>
+
+                        <details class="faq-item">
+                            <summary>What should I bring?</summary>
+                            <div class="faq-answer">
+                                <p>A <strong>laptop</strong> is a must-have. All hands-on and practical sessions require you to have your own machine.</p>
+                            </div>
+                        </details>
+
+                        <details class="faq-item">
+                            <summary>Do I need a powerful computer?</summary>
+                            <div class="faq-answer">
+                                <p>If you attend in person, we provide GPU resources for the heavy lifting. You just need a reliable laptop to connect and code. Online participants generally do not have access to these shared GPU resources.</p>
+                            </div>
+                        </details>
+
+                        <details class="faq-item">
+                            <summary>Do you provide housing or food?</summary>
+                            <div class="faq-answer">
+                                <p>We do not provide accommodation directly, but we usually recommend the <strong>Yerevan State University guesthouse</strong>. For food, we provide coffee and snacks during breaks; you handle your own lunch and dinner.</p>
+                            </div>
+                        </details>
+
+                        <details class="faq-item">
+                            <summary>How do we stay updated during the school?</summary>
+                            <div class="faq-answer">
+                                <p>Once you are confirmed, you will get an invite to our <strong>Slack</strong> channel, where we post the agenda, links, and updates.</p>
+                            </div>
+                        </details>
                     </div>
                 </details>
 
-                <details class="faq-item">
-                    <summary>Is there an online option?</summary>
-                    <div class="faq-answer">
-                        <p>Yes. We offer an online track via Zoom covering the theoretical sessions. Online participants typically do not get access to shared GPU resources.</p>
+                <details class="faq-category">
+                    <summary>
+                        <span>Eligibility & technical background</span>
+                        <span class="faq-category-icon">+</span>
+                    </summary>
+                    <div class="faq-category-body">
+                        <details class="faq-item">
+                            <summary>Who should apply?</summary>
+                            <div class="faq-answer">
+                                <p>The program is designed for motivated learners in AI, including students, researchers, and engineers.</p>
+                            </div>
+                        </details>
+
+                        <details class="faq-item">
+                            <summary>Do I need prior LLM experience?</summary>
+                            <div class="faq-answer">
+                                <p>No. Prior hands-on LLM experience is not required. Applicants are expected to have a foundational understanding of machine learning and neural networks.</p>
+                            </div>
+                        </details>
+
+                        <details class="faq-item">
+                            <summary>Do I need Python experience?</summary>
+                            <div class="faq-answer">
+                                <p>Python proficiency is expected and is asked in the application form.</p>
+                            </div>
+                        </details>
                     </div>
                 </details>
 
-                <details class="faq-item">
-                    <summary>What is the application timeline for 2026?</summary>
-                    <div class="faq-answer">
-                        <ul>
-                            <li><strong>Stage 1:</strong> submit the form and CV by <strong>May 15, 2026</strong>.</li>
-                            <li><strong>Stage 2:</strong> monitor email for a test link on <strong>May 28, 2026</strong>.</li>
-                            <li><strong>Answers:</strong> expect to receive an answer by <strong>June 5</strong>.</li>
-                        </ul>
+                <details class="faq-category">
+                    <summary>
+                        <span>Application & selection</span>
+                        <span class="faq-category-icon">+</span>
+                    </summary>
+                    <div class="faq-category-body">
+                        <details class="faq-item">
+                            <summary>How are applicants selected?</summary>
+                            <div class="faq-answer">
+                                <p>Selection is competitive and follows a two-stage process: (1) initial application form and (2) technical assessment.</p>
+                            </div>
+                        </details>
+
+                        <details class="faq-item">
+                            <summary>What information do I need for registration?</summary>
+                            <div class="faq-answer">
+                                <p>The form asks for personal/contact details, location, affiliation, experience with ML and LLMs, Python proficiency, and a motivation paragraph (~100 words). You may also provide links (e.g., GitHub, Google Scholar).</p>
+                            </div>
+                        </details>
+
+                        <details class="faq-item">
+                            <summary>What files do I need to upload?</summary>
+                            <div class="faq-answer">
+                                <p>You must upload your CV/resume (1 file, up to 10 MB).</p>
+                            </div>
+                        </details>
+
+                        <details class="faq-item">
+                            <summary>What is the application timeline for 2026?</summary>
+                            <div class="faq-answer">
+                                <ul>
+                                    <li><strong>Stage 1:</strong> submit the form and CV by <strong>May 15, 2026</strong>.</li>
+                                    <li><strong>Stage 2:</strong> monitor email for a test link on <strong>May 28, 2026</strong>.</li>
+                                    <li><strong>Answers:</strong> expect to receive an answer by <strong>June 5</strong>.</li>
+                                </ul>
+                            </div>
+                        </details>
+
+                        <details class="faq-item">
+                            <summary>What if I do not receive the technical test link?</summary>
+                            <div class="faq-answer">
+                                <p>Contact the organizers at <a href="mailto:armeniallm@gmail.com" style="color: rgba(255, 255, 255, 0.9); text-decoration: underline;">armeniallm@gmail.com</a>.</p>
+                            </div>
+                        </details>
+
+                        <details class="faq-item">
+                            <summary>Is there a waitlist?</summary>
+                            <div class="faq-answer">
+                                <p>Capacity is limited and selection is competitive. If in-person spots open, we may contact waitlisted applicants; in some cases, online participation may be offered.</p>
+                            </div>
+                        </details>
+
+                        <details class="faq-item">
+                            <summary>Can international applicants register?</summary>
+                            <div class="faq-answer">
+                                <p>Yes. International applicants are welcome; payment and logistics instructions are shared after acceptance.</p>
+                            </div>
+                        </details>
                     </div>
                 </details>
 
-                <details class="faq-item">
-                    <summary>How much does the program cost?</summary>
-                    <div class="faq-answer">
-                        <ul>
-                            <li><strong>In-person:</strong> 100,000 AMD (or equivalent). Includes GPU access.</li>
-                            <li><strong>Online:</strong> $200 (or equivalent). Theoretical sessions via Zoom.</li>
-                        </ul>
+                <details class="faq-category">
+                    <summary>
+                        <span>Fees, financial aid & payments</span>
+                        <span class="faq-category-icon">+</span>
+                    </summary>
+                    <div class="faq-category-body">
+                        <details class="faq-item">
+                            <summary>How much does the program cost?</summary>
+                            <div class="faq-answer">
+                                <ul>
+                                    <li><strong>In-person:</strong> 100,000 AMD (or equivalent). Covers theoretical + practical sessions and includes GPU access.</li>
+                                    <li><strong>Online:</strong> $200 (or equivalent). Covers theoretical sessions; aid is distributed based on funding available.</li>
+                                </ul>
+                            </div>
+                        </details>
+
+                        <details class="faq-item">
+                            <summary>Is there financial aid for students?</summary>
+                            <div class="faq-answer">
+                                <ul>
+                                    <li><strong>Student waivers:</strong> up to <strong>90%</strong> of the fee.</li>
+                                    <li><strong>International/exceptional applicants:</strong> depending on budget, we may offer waivers (50% to full scholarships) to non-student applicants with exceptional backgrounds.</li>
+                                </ul>
+                            </div>
+                        </details>
+
+                        <details class="faq-item">
+                            <summary>Can I apply for financial aid during registration?</summary>
+                            <div class="faq-answer">
+                                <p>Yes. The application form includes a direct question asking whether you are applying for financial aid.</p>
+                            </div>
+                        </details>
+
+                        <details class="faq-item">
+                            <summary>How do I pay if I am an international applicant?</summary>
+                            <div class="faq-answer">
+                                <p>International bank transfers. If those do not work for you, let us know if you are stuck.</p>
+                            </div>
+                        </details>
+
+                        <details class="faq-item">
+                            <summary>Can my company pay for me?</summary>
+                            <div class="faq-answer">
+                                <p>Yes. We can issue a <strong>prepayment invoice</strong> for your employer and provide an official tax invoice after the program ends for reimbursement.</p>
+                            </div>
+                        </details>
+
+                        <details class="faq-item">
+                            <summary>Will I get payment documents for my university or employer?</summary>
+                            <div class="faq-answer">
+                                <p>Yes. If needed, we can provide prepayment and/or tax invoice documents for reimbursement workflows.</p>
+                            </div>
+                        </details>
                     </div>
                 </details>
 
-                <details class="faq-item">
-                    <summary>Is there financial aid?</summary>
-                    <div class="faq-answer">
-                        <p>Yes. Students can apply for waivers that can cover up to 90% of the fee. Depending on available funds, we may offer discounts to other participants as well.</p>
+                <details class="faq-category">
+                    <summary>
+                        <span>Participation, certification & policies</span>
+                        <span class="faq-category-icon">+</span>
+                    </summary>
+                    <div class="faq-category-body">
+                        <details class="faq-item">
+                            <summary>Will I get a certificate?</summary>
+                            <div class="faq-answer">
+                                <p>Yes. Everyone who fully attends the sessions, whether in-person or online, receives an official <strong>Certificate of Participation</strong>.</p>
+                            </div>
+                        </details>
+
+                        <details class="faq-item">
+                            <summary>Can I get a refund if I cannot attend?</summary>
+                            <div class="faq-answer">
+                                <p>If you let us know early enough, we can usually issue a refund so we can offer your spot to someone on the waitlist.</p>
+                            </div>
+                        </details>
                     </div>
                 </details>
-
-                <details class="faq-item">
-                    <summary>What should I bring?</summary>
-                    <div class="faq-answer">
-                        <p>A laptop is required for hands-on and practical sessions.</p>
-                    </div>
-                </details>
-
-                <div class="cta-buttons">
-                    <a href="faq.md" class="cta-button secondary">View full FAQ</a>
-                </div>
             </div>
         </div>
     </section>
