@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LLM Summer School 2026 - Coming Soon</title>
+    <title>LLM Summer School 2026</title>
     <link rel="icon" type="image/png" href="../2025/images/small_armllm.png">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
@@ -329,6 +329,69 @@
             background: rgba(129, 140, 248, 0.1);
         }
 
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+        }
+
+        .cta-button {
+            margin-top: 0;
+        }
+
+        .sponsors-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .sponsor-card {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 14px;
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+            text-decoration: none;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .sponsor-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 26px rgba(0,0,0,0.35);
+        }
+
+        .sponsor-meta {
+            text-align: center;
+        }
+
+        .sponsor-meta .label {
+            font-size: 0.85rem;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: rgba(0, 0, 0, 0.55);
+            margin-bottom: 0.25rem;
+            font-weight: 600;
+        }
+
+        .sponsor-meta .name {
+            font-size: 1.1rem;
+            color: rgba(0, 0, 0, 0.85);
+            font-weight: 700;
+        }
+
+        .ai9-logo {
+            width: min(360px, 100%);
+            height: auto;
+        }
+
         .past-editions-grid {
             display: flex;
             justify-content: center;
@@ -427,20 +490,26 @@
             </a>
             <div class="nav-links">
                 <a href="#about">About</a>
+                <a href="#apply">Apply</a>
+                <a href="#fees">Fees</a>
+                <a href="#sponsors">Sponsors</a>
                 <a href="#past-editions">Past Editions</a>
+                <a href="faq.md">FAQ</a>
             </div>
         </nav>
     </header>
 
     <section class="hero">
         <div class="container hero-content">
-            <div class="coming-soon-badge">Coming Soon</div>
+            <div class="coming-soon-badge">Applications Open</div>
             <img src="../2025/images/logo_armllm_bg_removed.png" alt="ARMLLM Logo" class="hero-logo">
             <h1>LLM Summer School 2026</h1>
-            <p class="hero-location">Yerevan, Armenia</p>
-            <p class="hero-dates"><span class="tbd-text">Dates to be announced</span></p>
-            <p>The 3rd edition of the LLM Summer School is coming! An intensive program for students and researchers exploring the latest advancements in Large Language Models.</p>
-            <div style="margin-top: 2rem;">
+            <p class="hero-location">AI9 Startup Campus • Yerevan, Armenia</p>
+            <p class="hero-dates">August 3–7, 2026</p>
+            <p>An intensive week of lectures and hands-on sessions on Large Language Models — with an online track and a 24-hour hackathon organized by AI9.</p>
+            <div class="cta-buttons">
+                <a href="https://forms.gle/1HnZ4BLitQkXo2reA" class="cta-button" target="_blank" rel="noopener noreferrer">Apply</a>
+                <a href="https://forms.gle/NMMsdenubnoGkRJ87" class="cta-button secondary" target="_blank" rel="noopener noreferrer">Fee waiver</a>
                 <a href="../2025/index.html" class="cta-button secondary">View 2025 Edition</a>
             </div>
         </div>
@@ -455,25 +524,107 @@
             
             <div style="margin-bottom: 3rem; color: rgba(255, 255, 255, 0.9); max-width: 900px; margin-left: auto; margin-right: auto; text-align: center;">
                 <p style="margin-bottom: 1.5rem;">The LLM Summer School in Armenia is an annual event dedicated to exploring the latest advancements in Large Language Models (LLMs). The program features comprehensive lectures, hands-on workshops, and an exciting hackathon where participants can apply their knowledge to innovative projects.</p>
-                
-                <p style="margin-bottom: 1.5rem;">Stay tuned for announcements about speakers, schedule, and application details for the 2026 edition.</p>
+                <p style="margin-bottom: 1.5rem;">In 2026 we welcome participants in Yerevan at AI9 Startup Campus, with a Zoom-based online track for theoretical sessions.</p>
             </div>
             
             <div class="grid">
                 <div class="card">
                     <h3>📚 Format</h3>
-                    <p>Combination of lectures, workshops, and practical sessions</p>
-                    <p class="card-subtitle">Followed by a hackathon</p>
+                    <p>In-person + online track</p>
+                    <p class="card-subtitle">Hackathon: Aug 8 (24-hour)</p>
                 </div>
                 <div class="card">
                     <h3>📍 Location</h3>
-                    <p>Yerevan, Armenia</p>
-                    <p class="card-subtitle">Venue to be announced</p>
+                    <p>AI9 Startup Campus</p>
+                    <p class="card-subtitle">9 Isahakyan St, Yerevan, Armenia</p>
                 </div>
                 <div class="card">
                     <h3>📅 Dates</h3>
-                    <p class="tbd-text">To be announced</p>
-                    <p class="card-subtitle">Expected: Summer 2026</p>
+                    <p>Aug 3–7, 2026</p>
+                    <p class="card-subtitle">Hackathon starts Aug 8 at 00:00</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="apply" class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Apply</h2>
+                <p>Applications are reviewed competitively (two-stage process)</p>
+            </div>
+
+            <div class="grid">
+                <div class="card">
+                    <h3>🗓️ Deadline</h3>
+                    <p><strong>May 15, 2026</strong></p>
+                    <p class="card-subtitle">Submit the form and upload your CV (1 file, up to 10 MB)</p>
+                </div>
+                <div class="card">
+                    <h3>🧪 Technical assessment</h3>
+                    <p>Test link sent by email</p>
+                    <p class="card-subtitle">Please watch for it on <strong>June 10</strong></p>
+                </div>
+                <div class="card">
+                    <h3>✉️ Questions</h3>
+                    <p>Contact</p>
+                    <p class="card-subtitle"><a href="mailto:armeniallm@gmail.com" style="color: rgba(255, 255, 255, 0.9); text-decoration: underline;">armeniallm@gmail.com</a></p>
+                </div>
+            </div>
+
+            <div class="cta-buttons">
+                <a href="https://forms.gle/1HnZ4BLitQkXo2reA" class="cta-button" target="_blank" rel="noopener noreferrer">Apply</a>
+                <a href="https://forms.gle/NMMsdenubnoGkRJ87" class="cta-button secondary" target="_blank" rel="noopener noreferrer">Fee waiver</a>
+                <a href="faq.md" class="cta-button secondary">Read FAQ</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="fees" class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Fees & Financial Aid</h2>
+                <p>Fees depend on participation mode. Financial aid is available for students.</p>
+            </div>
+
+            <div class="grid">
+                <div class="card">
+                    <h3>🎟️ In-person</h3>
+                    <p><strong>100,000 AMD</strong> (or equivalent)</p>
+                    <p class="card-subtitle">Includes theoretical + practical sessions and GPU access</p>
+                </div>
+                <div class="card">
+                    <h3>💻 Online</h3>
+                    <p><strong>$200</strong> (or equivalent)</p>
+                    <p class="card-subtitle">Theoretical sessions via Zoom (typically no shared GPU access)</p>
+                </div>
+                <div class="card">
+                    <h3>🧾 Financial aid</h3>
+                    <p>Student waivers up to <strong>90%</strong></p>
+                    <p class="card-subtitle">Apply using the fee waiver form</p>
+                </div>
+            </div>
+
+            <div class="cta-buttons">
+                <a href="https://forms.gle/NMMsdenubnoGkRJ87" class="cta-button secondary" target="_blank" rel="noopener noreferrer">Fee waiver application</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="sponsors" class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Sponsors</h2>
+                <p>We thank our sponsors and partners for making the school possible.</p>
+            </div>
+
+            <div class="sponsors-grid">
+                <div class="sponsor-card" aria-label="AI9 venue sponsor">
+                    <img src="images/ai9-startup-campus.svg" alt="AI9 Startup Campus" class="ai9-logo">
+                    <div class="sponsor-meta">
+                        <div class="label">Venue sponsor</div>
+                        <div class="name">AI9 Startup Campus</div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -503,7 +654,7 @@
 
     <footer>
         <div class="container">
-            <p style="margin-bottom: 1rem;">Want to stay updated? Check back soon for announcements.</p>
+            <p style="margin-bottom: 1rem;">Questions? Email <a href="mailto:armeniallm@gmail.com" style="color: rgba(255, 255, 255, 0.9); text-decoration: underline;">armeniallm@gmail.com</a>.</p>
             <p>&copy; 2026 LLM Summer School. All rights reserved.</p>
         </div>
     </footer>
