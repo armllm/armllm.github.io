@@ -6,7 +6,8 @@
   "description": "Armenia LLM Summer School Website",
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build && node scripts/copy-funding-deck.mjs",
+    "render:funding-deck": "node scripts/render-funding-deck.mjs",
+    "build": "node scripts/render-funding-deck.mjs && tsc && vite build && node scripts/copy-funding-deck.mjs",
     "preview": "vite preview"
   },
   "repository": {

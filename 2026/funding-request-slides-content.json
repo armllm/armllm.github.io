@@ -1,0 +1,163 @@
+{
+  "meta": {
+    "title": "Armenia LLM Summer School 2026 — Funding Request",
+    "contactEmail": "armeniallm@gmail.com",
+    "siteUrl2026": "https://armllm.github.io/2026/",
+    "siteUrl2025": "https://armllm.github.io/2025/",
+    "siteUrl2024": "https://armllm.github.io/2024/"
+  },
+  "slide1": {
+    "pill": "Funding Request • 2026",
+    "headline": "Building Armenia’s LLM talent pipeline",
+    "subHeadline": "with a world-class annual summer school",
+    "intro": "The 3rd edition (Aug 3–7, 2026) brings together students, researchers, and engineers for lectures, practical sessions, and a 24-hour hack day (Aug 8) with our partner AI9.",
+    "whatWeDeliverTitle": "What we deliver (every year)",
+    "whatWeDeliverBullets": [
+      "<b>High-signal lectures</b> on modern LLM training, post-training, and safety",
+      "<b>Hands-on practice</b> (tools, evaluation, workflows) + collaborative learning",
+      "<b>Hackathon</b> to convert learning into prototypes and community projects",
+      "<b>Access + inclusion</b> via fee waivers for students and exceptional applicants"
+    ],
+    "whatWeDeliverNote": "We’re seeking donor support to expand scholarships, improve hybrid delivery, and sustain compute + operations for 2026.",
+    "atAGlanceTitle": "2026 at a glance",
+    "atAGlanceKpis": [
+      { "tag": "Dates", "value": "Aug 3–7", "label": "Summer School (2026)" },
+      { "tag": "Hack day", "value": "Aug 8", "label": "24-hour hackathon" },
+      { "tag": "Tracks", "value": "Hybrid", "label": "In-person + online" },
+      { "tag": "Venue", "value": "AI9", "label": "Startup Campus (Yerevan)" }
+    ],
+    "atAGlanceBullets": [
+      "<b>Online track</b> via Zoom (theory sessions)",
+      "<b>GPU access</b> provided for in-person hands-on sessions",
+      "<b>Fees (2026)</b>: in-person 100,000 AMD • online 200 USD",
+      "<b>Financial aid</b>: student waivers up to 90% (funding-dependent)"
+    ],
+    "footerSource": "Source: ArmLLM 2026 FAQ + past-edition datasets in this repo (see `2026/*.xlsx`)."
+  },
+  "slide2": {
+    "pill": "Why funding matters",
+    "title": "Demand is strong",
+    "subtitle": "Applications vs capacity (2025)",
+    "headline": "Interest far exceeds seats",
+    "body": "Our selection is competitive. Donor funding directly expands scholarship support and improves our ability to serve qualified applicants.",
+    "kpis": [
+      { "tag": "Applications", "value": "255", "label": "Form responses (2025)" },
+      { "tag": "Unique", "value": "248", "label": "Distinct applicants (email)" },
+      { "tag": "Confirmed", "value": "74", "label": "Final participant list (2025)" }
+    ],
+    "scaleTitle": "Scale (past editions)",
+    "scaleBullets": [
+      "2024 edition: <b>“over 70”</b> participants (website highlight)",
+      "2025 edition: planned for <b>70+</b> participants (website statement)",
+      "2025 final list: <b>74</b> participants (attendance sheet)"
+    ],
+    "whoAppliesTitle": "Who applies (2025, unique applicants; multi-select)",
+    "whoAppliesBullets": [
+      "<b>186</b> graduate students (incl. MSc/PhD)",
+      "<b>88</b> undergraduate students",
+      "<b>105</b> industry professionals"
+    ],
+    "whoAppliesNote": "Applicant backgrounds include both academia and industry. Selection is competitive and includes a technical assessment (Python skills test).",
+    "funnelTitle": "Funnel snapshot (2025)",
+    "funnel": { "applications": 255, "registered": 77, "finalList": 74 },
+    "footerSource": "Source: `2026/Application 2025 - ...xlsx` + `2026/2025 ... Student Attendance.xlsx`."
+  },
+  "slide3": {
+    "pill": "Evidence for donors",
+    "title": "Quality and outcomes",
+    "subtitle": "Participant feedback (2024)",
+    "headline": "Participants rate the program highly",
+    "body": "Feedback from the inaugural edition shows strong satisfaction with lecture quality and instructor effectiveness — a key signal for sustaining and scaling the program.",
+    "surveyTitle": "2024 survey highlights (n = 55)",
+    "kpis": [
+      { "tag": "Overall", "value": "4.18", "label": "Avg rating (out of 5)" },
+      { "tag": "Lectures", "value": "4.49", "label": "Avg rating (out of 5)" },
+      { "tag": "Instructors", "value": "4.53", "label": "Avg rating (out of 5)" }
+    ],
+    "bullets": [
+      "Hands-on sessions are a core value: <b>4.11/5</b> average rating",
+      "Strong repeatable format: lectures + practicals + hackathon"
+    ],
+    "footerSource": "Source: `2026/LLM Summer School 2024 - Feedback (Responses).xlsx` (n=55)."
+  },
+  "slide4": {
+    "pill": "Credibility",
+    "title": "World-class speakers",
+    "subtitle": "Faculty from top labs and universities",
+    "headline": "Faculty quality is our cornerstone",
+    "body": "Past editions featured speakers affiliated with Meta FAIR, Google Research, Amazon, MIT, USC, UCL, MILA, and AI2. The curriculum spans pretraining, post-training, multimodality, agents, security, and safety.",
+    "col1Title": "2024 speakers (examples)",
+    "col1Bullets": [
+      "Armen Aghajanyan — <b>Meta FAIR</b>",
+      "Hrayr Harutyunyan — <b>Google Research</b>",
+      "Alex Andonian — <b>MIT</b>",
+      "Jonathan May — <b>USC</b>",
+      "Karen Hambardzumyan — <b>UCL</b>",
+      "Narine Kokhlikyan — <b>Meta FAIR</b>"
+    ],
+    "col1Note": "10 listed speakers (2024) in our structured program data.",
+    "col2Title": "2025 speakers (examples)",
+    "col2Bullets": [
+      "Nouha Dziri — <b>AI2</b>",
+      "Gauthier Gidel — <b>MILA (UdeM)</b>",
+      "Michael Noukhovitch — <b>MILA (UdeM)</b>",
+      "Alexandre Drouin — <b>MILA / ServiceNow Research</b>"
+    ],
+    "col2Note": "5 listed speakers (2025) in our structured program data.",
+    "col3Title": "Example modules (past agendas)",
+    "col3Bullets": [
+      "Pretraining + scaling laws",
+      "Alignment + instruction tuning",
+      "RLHF / DPO-style methods",
+      "Agents + tool use",
+      "Security, privacy, adversarial ML",
+      "RAG + knowledge graphs"
+    ],
+    "col3Note": "We keep the program current with the field.",
+    "footerSource": "Source: `src/data/speakers.ts` and `src/data/schedule.ts`."
+  },
+  "slide5": {
+    "pill": "Sustainability",
+    "title": "Organizers + partners",
+    "subtitle": "Annual commitment since 2024",
+    "headline": "A committed team, year over year",
+    "body": "The summer school is organized by researchers and practitioners across academia and industry, with partners supporting venue and compute.",
+    "organizersTitle": "Organizers (examples from past editions)",
+    "organizersBullets": [
+      "Aram Galstyan — <b>USC / Amazon</b>",
+      "Erik Arakelyan — <b>Nvidia</b> (2025) / UCPH (2024)",
+      "Armen Aghajanyan — <b>Perceptron AI</b> (2025) / Meta FAIR (2024)",
+      "Perouz Taslakian — <b>ServiceNow Research</b>",
+      "Hrant Khachatryan — <b>YerevaNN</b>"
+    ],
+    "organizersNote": "Organizers are maintained as structured data per edition.",
+    "supportTitle": "Past support (examples)",
+    "supportKpis": [
+      { "tag": "2024 sponsors", "value": "Nebius AI", "label": "Compute / support" },
+      { "tag": "2024 sponsors", "value": "Picsart", "label": "Community support" },
+      { "tag": "2025 sponsors", "value": "Armenia Fund", "label": "Support" },
+      { "tag": "2025 sponsors", "value": "ARCS AI", "label": "Support" }
+    ],
+    "mediaTitle": "Media + visibility",
+    "mediaBullets": [
+      "Video highlights and coverage (YouTube)",
+      "Press: News.am Tech, iTel.am",
+      "Podcast: EVN Report (EVN Disrupt)"
+    ],
+    "mediaNote": "Donors receive meaningful visibility to a targeted AI audience.",
+    "footerSource": "Source: `src/data/organizers.ts`, `src/data/sponsors.ts`, `src/data/media.ts`."
+  },
+  "slide6": {
+    "pill": "Call to action",
+    "title": "Funding request (2026)",
+    "subtitle": "What your support enables",
+    "headline": "We’re seeking donor support for 2026",
+    "body": "Our goal is to expand access (waivers) and sustainably run an annual program that keeps Armenia’s AI talent connected to frontier work.",
+    "whereFundsGoTitle": "Where funds go",
+    "whereFundsGoBullets": [
+      "<b>Scholarships / fee waivers</b> for students and exceptional applicants",
+      "<b>Speaker support</b> (travel/hosting where needed)"
+    ]
+  }
+}
+
