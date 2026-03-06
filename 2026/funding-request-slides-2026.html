@@ -1,0 +1,595 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Armenia LLM Summer School 2026 - Donor Presentation</title>
+    <style>
+      :root {
+        --bg1: #0b1220;
+        --bg2: #171f3a;
+        --card: rgba(255, 255, 255, 0.07);
+        --card-soft: rgba(255, 255, 255, 0.04);
+        --text: rgba(255, 255, 255, 0.93);
+        --muted: rgba(255, 255, 255, 0.75);
+        --muted2: rgba(255, 255, 255, 0.58);
+        --accent: #93a3ff;
+        --accent2: #5b6dff;
+        --line: 1px solid rgba(255, 255, 255, 0.13);
+        --shadow: 0 18px 40px rgba(0, 0, 0, 0.34);
+      }
+
+      @page {
+        size: 13.333in 7.5in;
+        margin: 0;
+      }
+
+      @media print {
+        html,
+        body {
+          background: #ffffff !important;
+        }
+
+        .slide {
+          box-shadow: none !important;
+          border: none !important;
+          margin-bottom: 0 !important;
+        }
+      }
+
+      html,
+      body {
+        margin: 0;
+        min-height: 100%;
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+        color: var(--text);
+        background: radial-gradient(900px 520px at 15% 0%, rgba(91, 109, 255, 0.36), transparent 70%),
+          radial-gradient(900px 600px at 85% 15%, rgba(147, 163, 255, 0.24), transparent 70%),
+          linear-gradient(160deg, var(--bg1), var(--bg2));
+      }
+
+      .deck {
+        width: 100%;
+      }
+
+      .slide {
+        width: 1600px;
+        height: 900px;
+        margin: 0 auto 28px;
+        border-radius: 20px;
+        border: var(--line);
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0.015));
+        box-shadow: var(--shadow);
+        overflow: hidden;
+        page-break-after: always;
+        position: relative;
+      }
+
+      .inner {
+        padding: 52px 62px;
+        height: 100%;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+      }
+
+      .top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+      }
+
+      .title-meta {
+        font-size: 18px;
+        color: var(--muted);
+      }
+
+      .pill {
+        font-size: 12px;
+        letter-spacing: 0.5px;
+        text-transform: uppercase;
+        border: var(--line);
+        border-radius: 999px;
+        padding: 10px 14px;
+        color: rgba(255, 255, 255, 0.9);
+        background: rgba(255, 255, 255, 0.06);
+      }
+
+      h1,
+      h2,
+      h3 {
+        margin: 0;
+        letter-spacing: -0.4px;
+      }
+
+      h1 {
+        font-size: 58px;
+        line-height: 1.08;
+      }
+
+      h2 {
+        font-size: 42px;
+      }
+
+      h3 {
+        font-size: 24px;
+      }
+
+      p {
+        margin: 0;
+        font-size: 22px;
+        line-height: 1.38;
+        color: var(--muted);
+      }
+
+      .accent {
+        color: var(--accent);
+      }
+
+      .grid2 {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 18px;
+      }
+
+      .grid3 {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 14px;
+      }
+
+      .card {
+        background: var(--card);
+        border: var(--line);
+        border-radius: 16px;
+        padding: 20px;
+      }
+
+      .card.soft {
+        background: var(--card-soft);
+      }
+
+      .bullets {
+        margin: 10px 0 0;
+        padding-left: 24px;
+        display: grid;
+        gap: 10px;
+        color: var(--muted);
+        font-size: 21px;
+        line-height: 1.35;
+      }
+
+      .bullets strong {
+        color: rgba(255, 255, 255, 0.95);
+      }
+
+      .kpi-row {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 12px;
+      }
+
+      .kpi {
+        border-radius: 14px;
+        border: var(--line);
+        background: rgba(255, 255, 255, 0.05);
+        padding: 14px 16px;
+      }
+
+      .kpi .n {
+        font-size: 42px;
+        line-height: 1;
+        font-weight: 800;
+        color: rgba(255, 255, 255, 0.97);
+      }
+
+      .kpi .l {
+        margin-top: 6px;
+        font-size: 14px;
+        color: var(--muted2);
+      }
+
+      .impact {
+        font-size: 26px;
+        color: rgba(255, 255, 255, 0.95);
+      }
+
+      .photos {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 14px;
+        margin-top: 8px;
+      }
+
+      .photo {
+        border-radius: 12px;
+        border: var(--line);
+        overflow: hidden;
+        background: #111827;
+        height: 370px;
+      }
+
+      .photo img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .link-list {
+        display: grid;
+        gap: 12px;
+        margin-top: 10px;
+      }
+
+      .link-item {
+        border: var(--line);
+        border-radius: 12px;
+        background: rgba(255, 255, 255, 0.05);
+        padding: 12px 14px;
+      }
+
+      .link-item a {
+        color: #c4ceff;
+        text-decoration: none;
+        font-size: 19px;
+        word-break: break-word;
+      }
+
+      .link-item a:hover {
+        text-decoration: underline;
+      }
+
+      .mini {
+        font-size: 14px;
+        color: var(--muted2);
+        margin-top: 6px;
+      }
+
+      .footer {
+        margin-top: auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        gap: 12px;
+        font-size: 12px;
+        color: var(--muted2);
+      }
+    </style>
+  </head>
+  <body>
+    <main class="deck">
+      <section class="slide">
+        <div class="inner">
+          <div class="top">
+            <div class="title-meta">Armenia LLM Summer School - 2026 edition</div>
+            <div class="pill">Donor Brief</div>
+          </div>
+
+          <div>
+            <h1>
+              Bringing <span class="accent">world-class LLM education</span><br />
+              to Armenia
+            </h1>
+            <p style="margin-top: 16px; max-width: 1080px">
+              Armenia LLM Summer School (August 3-7, 2026, Yerevan) connects local students and engineers
+              with frontier AI research through intensive lectures and practical sessions.
+            </p>
+          </div>
+
+          <div class="grid2">
+            <div class="card">
+              <h3>Why we are fundraising</h3>
+              <ul class="bullets">
+                <li><strong>Invite up to 5 international researchers</strong> to teach in person.</li>
+                <li><strong>Cover flights and accommodation</strong> for invited researchers.</li>
+                <li><strong>Support Armenian university students</strong> with discounts up to 90%.</li>
+              </ul>
+            </div>
+            <div class="card soft">
+              <h3>What registration fees cover</h3>
+              <ul class="bullets">
+                <li>Non-student participants usually pay around <strong>USD 300</strong>.</li>
+                <li>Those registrations are used to run <strong>core school operations</strong>.</li>
+                <li>Donor contributions are key for <strong>researcher travel + student aid</strong>.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="footer">
+            <div>Armenia LLM Summer School - Funding Presentation</div>
+            <div>https://armllm.github.io/2026/</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="slide">
+        <div class="inner">
+          <div class="top">
+            <div class="title-meta">Need and momentum</div>
+            <div class="pill">Why this matters</div>
+          </div>
+
+          <h2>Strong demand, proven outcomes</h2>
+
+          <div class="kpi-row">
+            <div class="kpi">
+              <div class="n">200+</div>
+              <div class="l">applications in 2025</div>
+            </div>
+            <div class="kpi">
+              <div class="n">115+</div>
+              <div class="l">participants across editions</div>
+            </div>
+            <div class="kpi">
+              <div class="n">90%</div>
+              <div class="l">typical student discount (target)</div>
+            </div>
+          </div>
+
+          <div class="grid2" style="margin-top: 6px">
+            <div class="card">
+              <h3>Educational impact</h3>
+              <ul class="bullets">
+                <li>Armenian students gain direct exposure to current LLM research directions.</li>
+                <li>Industry and academia learn together in one intensive format.</li>
+                <li>The program helps retain and grow local AI talent.</li>
+              </ul>
+            </div>
+            <div class="card soft">
+              <h3>Community impact</h3>
+              <ul class="bullets">
+                <li>Builds long-term researcher ties between Armenia and international labs.</li>
+                <li>Supports equal access for talented students with limited means.</li>
+                <li>Creates reusable knowledge resources after the school.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="footer">
+            <div>Demand and impact from prior editions</div>
+            <div>ArmLLM 2024-2025</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="slide">
+        <div class="inner">
+          <div class="top">
+            <div class="title-meta">Funding priority 1</div>
+            <div class="pill">International researchers</div>
+          </div>
+
+          <h2>Invite and host up to 5 international researchers</h2>
+          <p style="max-width: 1120px">
+            Donor funding is primarily needed for travel and accommodation so top researchers can teach
+            in person and mentor participants.
+          </p>
+
+          <div class="grid2">
+            <div class="card">
+              <h3>What this funding covers</h3>
+              <ul class="bullets">
+                <li>Round-trip flights for invited researchers.</li>
+                <li>Accommodation during the program period.</li>
+                <li>Core hosting costs needed for teaching participation.</li>
+              </ul>
+            </div>
+            <div class="card soft">
+              <h3>Expected donor impact</h3>
+              <div class="impact">
+                Every supported researcher directly increases lecture quality, mentorship depth, and the
+                international visibility of Armenia's AI ecosystem.
+              </div>
+            </div>
+          </div>
+
+          <div class="card" style="margin-top: 2px">
+            <h3>Why donor support is critical here</h3>
+            <p style="margin-top: 10px; font-size: 20px">
+              Registration income from non-student participants (about USD 300 each) is allocated to
+              school organization costs. External funding allows us to keep this researcher-in-residence
+              model viable each year.
+            </p>
+          </div>
+
+          <div class="footer">
+            <div>Priority ask: researcher flights + accommodation</div>
+            <div>Up to 5 invited researchers</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="slide">
+        <div class="inner">
+          <div class="top">
+            <div class="title-meta">Funding priority 2</div>
+            <div class="pill">Student access</div>
+          </div>
+
+          <h2>Support Armenian university students with up to 90% discounts</h2>
+          <p style="max-width: 1120px">
+            Financial aid keeps participation merit-based and accessible for high-potential students who
+            could not otherwise afford the program.
+          </p>
+
+          <div class="grid2">
+            <div class="card">
+              <h3>Student aid model</h3>
+              <ul class="bullets">
+                <li>Target discount level: <strong>up to 90%</strong> for Armenian university students.</li>
+                <li>Aid decisions are based on merit and financial need.</li>
+                <li>Goal: keep the strongest candidates in the room regardless of income.</li>
+              </ul>
+            </div>
+            <div class="card soft">
+              <h3>Why this matters</h3>
+              <ul class="bullets">
+                <li>Removes a major barrier for local talent entering advanced AI pathways.</li>
+                <li>Improves diversity across universities and backgrounds.</li>
+                <li>Creates long-term national capacity in LLM research and engineering.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="card">
+            <h3>Simple funding logic</h3>
+            <p style="margin-top: 10px; font-size: 20px">
+              Tuition from non-student registrations helps operate the school; donor gifts close the gap
+              that makes deep student discounts possible.
+            </p>
+          </div>
+
+          <div class="footer">
+            <div>Priority ask: student fee support</div>
+            <div>Target aid: up to 90% discount</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="slide">
+        <div class="inner">
+          <div class="top">
+            <div class="title-meta">Last-year school photos</div>
+            <div class="pill">Program in action</div>
+          </div>
+
+          <h2>Learning environment from previous edition</h2>
+          <p>Photos from prior media coverage of the Armenia LLM Summer School.</p>
+
+          <div class="photos">
+            <div class="photo">
+              <img src="images/school-2024-1.jpg" alt="LLM Summer School photo 1" />
+            </div>
+            <div class="photo">
+              <img src="images/school-2024-2.jpg" alt="LLM Summer School photo 2" />
+            </div>
+            <div class="photo">
+              <img src="images/school-2024-3.jpg" alt="LLM Summer School photo 3" />
+            </div>
+          </div>
+
+          <div class="card soft" style="padding-top: 14px; padding-bottom: 14px">
+            <div class="mini">
+              Photo source: iTel.am coverage of the first LLM summer school in Armenia
+              (<a href="https://itel.am/en/news/15435" style="color: #c4ceff">https://itel.am/en/news/15435</a>).
+            </div>
+          </div>
+
+          <div class="footer">
+            <div>Armenia LLM Summer School community</div>
+            <div>Yerevan, Armenia</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="slide">
+        <div class="inner">
+          <div class="top">
+            <div class="title-meta">Knowledge sharing and outreach</div>
+            <div class="pill">Public resources</div>
+          </div>
+
+          <h2>Open educational resources and media visibility</h2>
+
+          <div class="grid2">
+            <div class="card">
+              <h3>Recorded lectures for public learning</h3>
+              <p style="margin-top: 8px; font-size: 20px">
+                We published last year's lectures openly on YouTube to broaden impact beyond in-person
+                attendees.
+              </p>
+              <div class="link-list">
+                <div class="link-item">
+                  <a
+                    href="https://youtube.com/playlist?list=PL6uSmoBKOSuuZsTPc4EHx7HBt3zCvUnY4&si=mwTlYe2oVbdmEjgw"
+                    >Lecture playlist</a
+                  >
+                </div>
+                <div class="link-item">
+                  <a href="https://armllm.github.io/2026/">Official 2026 website</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="card soft">
+              <h3>Local media feature</h3>
+              <div style="margin-top: 12px; border-radius: 12px; overflow: hidden; border: var(--line)">
+                <img
+                  src="images/local-media-feature.jpg"
+                  alt="Local media feature thumbnail"
+                  style="width: 100%; height: 260px; object-fit: cover; display: block"
+                />
+              </div>
+              <div class="link-list" style="margin-top: 12px">
+                <div class="link-item">
+                  <a href="https://youtu.be/jXqUkthY_sI?si=hyqLRYPjfqGU00my">Media coverage video</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card" style="margin-top: 2px">
+            <h3>Why this matters for donors</h3>
+            <p style="margin-top: 8px; font-size: 20px">
+              Contributions create immediate local impact and lasting global value through openly shared
+              educational content.
+            </p>
+          </div>
+
+          <div class="footer">
+            <div>Public resources increase long-term impact</div>
+            <div>Website, YouTube playlist, and media coverage</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="slide">
+        <div class="inner">
+          <div class="top">
+            <div class="title-meta">Call to action</div>
+            <div class="pill">Support 2026 edition</div>
+          </div>
+
+          <h2>Help us fund access and research exchange in 2026</h2>
+          <p style="max-width: 1120px">
+            We welcome donor support for the two priorities below, with transparent allocation and clear
+            educational outcomes.
+          </p>
+
+          <div class="grid2">
+            <div class="card">
+              <h3>Priority A</h3>
+              <ul class="bullets">
+                <li>Invite up to 5 international researchers.</li>
+                <li>Cover flights and accommodation for teaching visits.</li>
+              </ul>
+            </div>
+            <div class="card soft">
+              <h3>Priority B</h3>
+              <ul class="bullets">
+                <li>Fund up to 90% discounts for Armenian university students.</li>
+                <li>Keep admission merit-based and inclusive.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="card">
+            <h3>Contact and links</h3>
+            <div class="link-list">
+              <div class="link-item"><a href="mailto:armeniallm@gmail.com">armeniallm@gmail.com</a></div>
+              <div class="link-item"><a href="https://armllm.github.io/2026/">https://armllm.github.io/2026/</a></div>
+            </div>
+            <div class="mini">Thank you for supporting AI education and talent development in Armenia.</div>
+          </div>
+
+          <div class="footer">
+            <div>Armenia LLM Summer School 2026</div>
+            <div>Yerevan - August 3-7, 2026</div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
