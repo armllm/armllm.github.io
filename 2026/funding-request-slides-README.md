@@ -15,6 +15,12 @@ This folder contains a **6-slide** donor-facing deck for the **Armenia LLM Summe
    - **Margins**: None (or minimum)
    - **Background graphics**: On
 
+## Open on the live site
+
+After this change is merged into `main` and deployed, the deck will be available at:
+
+- `https://armllm.github.io/2026/funding-request-slides-2026.html`
+
 ## Customize before sending to donors
 
 - Update the **funding target / tiers** on Slide 6 (currently examples/placeholders).
