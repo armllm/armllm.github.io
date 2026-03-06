@@ -1,6 +1,6 @@
 # Armenia LLM Summer School 2026 — Funding Request Slides
 
-This folder contains a **6-slide** donor-facing deck for the **Armenia LLM Summer School 2026** funding request.
+This folder contains a **simple donor-facing deck** for the **Armenia LLM Summer School 2026** funding request.
 
 ## Files
 
@@ -15,8 +15,9 @@ This folder contains a **6-slide** donor-facing deck for the **Armenia LLM Summe
    - **Margins**: None (or minimum)
    - **Background graphics**: On
 
-## Customize before sending to donors
+## What this deck focuses on
 
-- Update the **funding target / tiers** on Slide 6 (currently examples/placeholders).
-- Add a one-line **impact target** (e.g., “X additional scholarships”, “Y additional seats”, “Z recorded lectures”).
+- Funding to invite up to **5 international researchers** (flight + accommodation).
+- Funding for Armenian university students with **up to 90% fee discounts**.
+- Clear note that registration income from non-student participants (about **USD 300**) is used for school organization costs.
 
