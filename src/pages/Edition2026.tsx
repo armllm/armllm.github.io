@@ -42,9 +42,14 @@ const Edition2026 = memo(function Edition2026() {
             The 3rd edition of the LLM Summer School is coming! An intensive program for students
             and researchers exploring the latest advancements in Large Language Models.
           </p>
-          <Button to="/2025" variant="secondary">
-            View 2025 Edition
-          </Button>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Button href="/2026/funding-request-slides-2026.html" target="_blank">
+              View Funding Deck (PDF-ready)
+            </Button>
+            <Button to="/2025" variant="secondary">
+              View 2025 Edition
+            </Button>
+          </div>
         </div>
       </section>
 
