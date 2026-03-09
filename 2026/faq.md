@@ -28,7 +28,7 @@ Welcome! We know you have questions about how the summer school works. We have c
 
 **Who should apply?** The program is designed for motivated learners in AI, including students, researchers, and engineers. If you are interested in LLMs and can follow technical sessions, you are encouraged to apply.
 
-**Do I need prior LLM experience?** No. Prior hands-on LLM experience is not required. However, applicants are expected to have a foundational understanding of machine learning and neural networks.
+**Do I need prior LLM experience?** You do not need to be an expert in training LLMs, however we do expect that you have an understanding of neural networks, large language model architectures, and some hands-on experience training machine learning models.
 
 **Do I need Python experience?** Python proficiency is expected and is explicitly asked in the form. Applicants are asked to self-report their level (e.g., excellent, somewhat proficient, or not proficient).
 
