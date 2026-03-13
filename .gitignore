@@ -28,3 +28,7 @@ Thumbs.db
 
 # TypeScript cache
 *.tsbuildinfo
+
+# PowerPoint extraction temp dirs
+2026/pptx_extract/
+2026/pptx_verify/
