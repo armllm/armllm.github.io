@@ -7,6 +7,7 @@ interface EditionCardProps {
   description: string
   image: string
   featured?: boolean
+  badgeText?: string
   className?: string
 }
 
@@ -16,6 +17,7 @@ export default function EditionCard({
   description,
   image,
   featured = false,
+  badgeText = 'Latest',
   className
 }: EditionCardProps) {
   return (
@@ -31,7 +33,7 @@ export default function EditionCard({
     >
       {featured && (
         <span className="absolute top-4 right-4 bg-accent text-white px-3 py-1 rounded-full text-sm font-semibold z-10">
-          Latest
+          {badgeText}
         </span>
       )}
       <img

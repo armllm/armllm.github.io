@@ -1,10 +1,11 @@
-import { Link, useLocation } from 'react-router-dom'
+import { Link, useLocation, useNavigate } from 'react-router-dom'
 import clsx from 'clsx'
 
 interface NavLink {
   to: string
   label: string
   external?: boolean
+  hash?: string
 }
 
 interface HeaderProps {
@@ -17,11 +18,32 @@ const defaultNavLinks: NavLink[] = [
   { to: '/2026', label: '2026' },
   { to: '/2025', label: '2025' },
   { to: '/2024', label: '2024' },
+  { to: '/2026', label: 'FAQ', hash: 'faq' },
   { to: '/media', label: 'Media' },
 ]
 
 export default function Header({ title = 'LLM Summer School', navLinks = defaultNavLinks }: HeaderProps) {
   const location = useLocation()
+  const navigate = useNavigate()
+
+  const handleHashClick = (to: string, hash: string) => {
+    if (location.pathname === to) {
+      // Already on the page, just scroll to the element
+      const element = document.getElementById(hash)
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth', block: 'start' })
+      }
+    } else {
+      // Navigate to the page, then scroll after a short delay
+      navigate(to)
+      setTimeout(() => {
+        const element = document.getElementById(hash)
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth', block: 'start' })
+        }
+      }, 100)
+    }
+  }
 
   return (
     <header className="fixed top-0 w-full z-50 bg-glass border-b border-white/10 shadow-lg">
@@ -37,11 +59,11 @@ export default function Header({ title = 'LLM Summer School', navLinks = default
           </span>
         </Link>
         
-        <div className="hidden md:flex gap-8">
+        <div className="hidden md:flex items-center gap-6">
           {navLinks.map((link) => (
             link.external ? (
               <a
-                key={link.to}
+                key={link.to + link.label}
                 href={link.to}
                 target="_blank"
                 rel="noopener noreferrer"
@@ -50,6 +72,15 @@ export default function Header({ title = 'LLM Summer School', navLinks = default
                 {link.label}
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-accent transition-all duration-300 group-hover:w-full" />
               </a>
+            ) : link.hash ? (
+              <button
+                key={link.to + link.hash}
+                onClick={() => handleHashClick(link.to, link.hash!)}
+                className="text-white font-medium relative group cursor-pointer bg-transparent border-none"
+              >
+                {link.label}
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-accent transition-all duration-300 group-hover:w-full" />
+              </button>
             ) : (
               <Link
                 key={link.to}
@@ -69,6 +100,16 @@ export default function Header({ title = 'LLM Summer School', navLinks = default
               </Link>
             )
           ))}
+          
+          {/* Apply Button */}
+          <a
+            href="https://forms.gle/1HnZ4BLitQkXo2reA"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="ml-2 px-5 py-2 bg-gradient-to-r from-primary to-accent text-white font-semibold rounded-lg shadow-lg shadow-accent/30 hover:shadow-accent/50 hover:-translate-y-0.5 transition-all"
+          >
+            Apply
+          </a>
         </div>
       </nav>
     </header>

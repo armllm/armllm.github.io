@@ -12,6 +12,11 @@
 
 /* Base styles */
 @layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem; /* Account for fixed header */
+  }
+  
   body {
     @apply font-sans leading-relaxed text-gray-100 bg-dark overflow-x-hidden;
   }

@@ -55,10 +55,11 @@ const Home = memo(function Home() {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             <EditionCard
               year={2026}
-              dates="Coming Soon • Yerevan, Armenia"
-              description="The third edition of the Armenia LLM Summer School is coming! Stay tuned for announcements about speakers, schedule, and applications."
+              dates="August 3-7, 2026 • AI9 Startup Campus, Yerevan"
+              description="Applications now open! The third edition features in-person and online tracks, with a 24-hour hackathon on August 8."
               image="/images/coverllm.png"
               featured
+              badgeText="Apply Now"
             />
             <EditionCard
               year={2025}
