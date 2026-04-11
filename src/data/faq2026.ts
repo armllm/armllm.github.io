@@ -101,7 +101,7 @@ export const faq2026: FAQCategory[] = [
     items: [
       {
         question: "How much does the program cost?",
-        answer: "<ul><li><strong>In-person:</strong> 100,000 AMD (or equivalent). Covers theoretical + practical sessions and includes GPU access.</li><li><strong>Online:</strong> $200 (or equivalent). Covers theoretical sessions; aid is distributed based on funding available.</li></ul>"
+        answer: "<ul><li><strong>In-person:</strong> 120,000 AMD (or equivalent). Covers theoretical + practical sessions and includes GPU access.</li><li><strong>Online:</strong> $200 (or equivalent). Covers theoretical sessions; aid is distributed based on funding available.</li></ul>"
       },
       {
         question: "Is there financial aid for students?",

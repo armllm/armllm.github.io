@@ -168,7 +168,7 @@ const Edition2026 = memo(function Edition2026() {
           <div className="grid md:grid-cols-3 gap-8 mb-12">
             <Card>
               <h3 className="text-accent text-xl font-semibold mb-3">🎟️ In-person</h3>
-              <p className="text-white font-bold">100,000 AMD</p>
+              <p className="text-white font-bold">120,000 AMD</p>
               <p className="text-white/60 text-sm mt-2">Includes theoretical + practical sessions and GPU access</p>
             </Card>
             <Card>
