@@ -46,7 +46,7 @@ const Edition2026 = memo(function Edition2026() {
             August 3–7, 2026
           </p>
           <p className="text-lg text-white/90 max-w-3xl mx-auto mb-10">
-            An intensive week of lectures and hands-on sessions on Large Language Models — with an online track and a 24-hour hackathon organized by AI9.
+            An intensive week of lectures and hands-on sessions on Large Language Models and Physical AI — with an online track and a 24-hour hackathon organized by AI9.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Button href="https://forms.gle/1HnZ4BLitQkXo2reA" target="_blank">
@@ -70,7 +70,7 @@ const Edition2026 = memo(function Edition2026() {
           <div className="max-w-4xl mx-auto text-center text-white/90 space-y-6 mb-12">
             <p>
               The Armenia LLM Summer School is an annual event dedicated to exploring the latest
-              advancements in Large Language Models (LLMs). The program features comprehensive lectures,
+              advancements in Large Language Models (LLMs) and Physical AI. The program features comprehensive lectures,
               hands-on workshops, and an exciting hackathon where participants can apply their knowledge
               to innovative projects.
             </p>
