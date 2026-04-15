@@ -4,9 +4,12 @@ import SectionTitle from '../components/ui/SectionTitle'
 import Card from '../components/ui/Card'
 import Button from '../components/ui/Button'
 import OrganizerCard from '../components/OrganizerCard'
+import SpeakerCard from '../components/SpeakerCard'
 import FAQ from '../components/FAQ'
 import SEO from '../components/SEO'
 import { organizers2025 } from '../data/organizers'
+import { speakers2026 } from '../data/speakers'
+import { schedule2026 } from '../data/schedule2026'
 import { faq2026 } from '../data/faq2026'
 
 const Edition2026 = memo(function Edition2026() {
@@ -101,14 +104,68 @@ const Edition2026 = memo(function Edition2026() {
         <div className="container mx-auto px-8">
           <SectionTitle
             title="Featured Speakers"
-            subtitle="To be announced"
+            subtitle="Confirmed lecturers for 2026"
           />
-          <div className="grid md:grid-cols-1 gap-8 max-w-md mx-auto">
-            <Card>
-              <h3 className="text-accent text-xl font-semibold mb-3">🎤 Speakers</h3>
-              <p className="text-accent italic">To be announced</p>
-              <p className="text-white/60 text-sm mt-2">We'll announce speakers closer to the event.</p>
-            </Card>
+          
+          <div className="flex flex-wrap justify-center gap-8 mb-12">
+            {speakers2026.map((speaker) => (
+              <SpeakerCard key={speaker.name} speaker={speaker} />
+            ))}
+          </div>
+
+          <div className="text-center">
+            <p className="text-white/70 text-lg">
+              More speakers to be announced soon.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Agenda Section */}
+      <section id="agenda" className="py-20 bg-glass border-t border-white/10">
+        <div className="container mx-auto px-8">
+          <SectionTitle
+            title="Agenda"
+            subtitle="Five days of intensive learning"
+          />
+          
+          <div className="max-w-4xl mx-auto space-y-6">
+            {schedule2026.map((day) => (
+              <Card key={day.date} className="!text-left">
+                <div className="flex flex-col md:flex-row md:items-start gap-4">
+                  <div className="md:w-32 flex-shrink-0">
+                    <p className="text-accent font-bold text-lg">{day.date}</p>
+                    <p className="text-white/60 text-sm">{day.day}</p>
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-white text-xl font-semibold mb-2">{day.topic}</h3>
+                    {day.description && (
+                      <p className="text-white/70 mb-3">{day.description}</p>
+                    )}
+                    <div className="flex flex-wrap gap-2">
+                      {day.speakers.map((speaker, idx) => (
+                        <span
+                          key={idx}
+                          className={`px-3 py-1 rounded-full text-sm ${
+                            speaker === 'TBD'
+                              ? 'bg-white/10 text-white/50 italic'
+                              : 'bg-accent/20 text-accent'
+                          }`}
+                        >
+                          {speaker}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              </Card>
+            ))}
+          </div>
+
+          <div className="text-center mt-8">
+            <p className="text-white/60">
+              <strong className="text-accent">August 8:</strong> 24-hour Hackathon (organized by AI9)
+            </p>
           </div>
         </div>
       </section>
