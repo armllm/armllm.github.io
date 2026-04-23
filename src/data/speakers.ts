@@ -70,6 +70,12 @@ export const speakers2024: Speaker[] = [
 
 export const speakers2026: Speaker[] = [
   {
+    name: "André Martins",
+    affiliation: "IST / Unbabel",
+    image: "https://cmuportugal.org/wp-content/uploads/2019/02/successes_andre_martins.jpg",
+    scholarUrl: "https://andre-martins.github.io/"
+  },
+  {
     name: "Ivan Mashkov",
     affiliation: "NVIDIA",
     image: "/images/ivan.jpeg",

@@ -12,7 +12,7 @@ export const schedule2026: ScheduleDay[] = [
     day: "Day 1",
     topic: "Pre-training & Intro to LLMs",
     description: "Data mixture, scaling laws, MoE, VLM",
-    speakers: ["TBD"]
+    speakers: ["André Martins (IST / Unbabel)"]
   },
   {
     date: "August 4",
