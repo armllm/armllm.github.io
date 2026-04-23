@@ -70,12 +70,6 @@ export const speakers2024: Speaker[] = [
 
 export const speakers2026: Speaker[] = [
   {
-    name: "Siva Reddy",
-    affiliation: "McGill University / Mila",
-    image: "/images/siva2.jpg",
-    scholarUrl: "https://sivareddy.in/"
-  },
-  {
     name: "Ivan Mashkov",
     affiliation: "NVIDIA",
     image: "/images/ivan.jpeg",

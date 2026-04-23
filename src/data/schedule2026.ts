@@ -19,7 +19,7 @@ export const schedule2026: ScheduleDay[] = [
     day: "Day 2",
     topic: "SFT & Reinforcement Learning",
     description: "Supervised fine-tuning, RLHF, alignment",
-    speakers: ["Siva Reddy (McGill / Mila)"]
+    speakers: ["TBD"]
   },
   {
     date: "August 5",
