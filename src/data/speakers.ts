@@ -76,10 +76,16 @@ export const speakers2026: Speaker[] = [
     scholarUrl: "https://andre-martins.github.io/"
   },
   {
-    name: "Ivan Mashkov",
+    name: "Ivan Moshkov",
     affiliation: "NVIDIA",
     image: "/images/ivan.jpeg",
     scholarUrl: "https://scholar.google.com/citations?user=SJD5bowAAAAJ"
+  },
+  {
+    name: "Armen Aghajanyan",
+    affiliation: "Perceptron AI",
+    image: "https://itel.am/datas/znews/big_/2023/11/03/6544e40b4ad3e5.72335961.jpg",
+    scholarUrl: "https://scholar.google.com/citations?user=KxQfzRcAAAAJ"
   }
 ]
 

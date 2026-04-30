@@ -26,7 +26,7 @@ export const schedule2026: ScheduleDay[] = [
     day: "Day 3",
     topic: "Test-time Scaling",
     description: "Inference optimization, compute-optimal strategies",
-    speakers: ["Ivan Mashkov (NVIDIA)"]
+    speakers: ["Ivan Moshkov (NVIDIA)"]
   },
   {
     date: "August 6",
@@ -40,6 +40,6 @@ export const schedule2026: ScheduleDay[] = [
     day: "Day 5",
     topic: "Advanced Topics",
     description: "Context management, VLA/Robotics, or World Models",
-    speakers: ["TBD"]
+    speakers: ["Armen Aghajanyan (Perceptron AI)"]
   }
 ]
