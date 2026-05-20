@@ -80,7 +80,7 @@ export const faq2026: FAQCategory[] = [
       },
       {
         question: "What is the application timeline for 2026?",
-        answer: "<ul><li><strong>Stage 1:</strong> submit the form and CV by <strong>May 15, 2026</strong>.</li><li><strong>Stage 2:</strong> monitor email for a test link on <strong>May 28, 2026</strong>.</li><li><strong>Answers:</strong> expect to receive an answer by <strong>June 5</strong>.</li></ul>"
+        answer: "<ul><li><strong>Final Deadline:</strong> submit the form and CV by <strong>June 10, 2026</strong>.</li><li><strong>Technical Assessment:</strong> test link sent by email after application review.</li><li><strong>Answers:</strong> expect to receive an answer within 2 weeks of applying.</li></ul>"
       },
       {
         question: "What if I do not receive the technical test link?",

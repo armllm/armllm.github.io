@@ -180,14 +180,15 @@ const Edition2026 = memo(function Edition2026() {
           
           <div className="grid md:grid-cols-3 gap-8 mb-12">
             <Card>
-              <h3 className="text-accent text-xl font-semibold mb-3">🗓️ Deadline</h3>
-              <p className="text-white font-bold">May 15, 2026</p>
+              <h3 className="text-accent text-xl font-semibold mb-3">🗓️ Final Deadline</h3>
+              <p className="text-white font-bold text-xl">June 10, 2026</p>
               <p className="text-white/60 text-sm mt-2">Submit the form and upload your CV</p>
+              <p className="text-accent/80 text-xs mt-2 font-semibold uppercase tracking-wide">Final Application Deadline</p>
             </Card>
             <Card>
               <h3 className="text-accent text-xl font-semibold mb-3">🧪 Technical Assessment</h3>
               <p className="text-white/80">Test link sent by email</p>
-              <p className="text-white/60 text-sm mt-2">Watch for it on <strong>May 28, 2026</strong>. Answers by <strong>June 5</strong>.</p>
+              <p className="text-white/60 text-sm mt-2">After application review. Expect answers within 2 weeks.</p>
             </Card>
             <Card>
               <h3 className="text-accent text-xl font-semibold mb-3">✉️ Questions?</h3>
