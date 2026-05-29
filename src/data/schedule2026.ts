@@ -33,7 +33,7 @@ export const schedule2026: ScheduleDay[] = [
     day: "Day 4",
     topic: "Agents & Reasoning",
     description: "Tool usage, agentic workflows, reasoning capabilities",
-    speakers: ["Aram Markosyan (Meta FAIR)"]
+    speakers: ["Aram Markosyan (Axiom Math)"]
   },
   {
     date: "August 7",

@@ -83,7 +83,7 @@ export const speakers2026: Speaker[] = [
   },
   {
     name: "Aram Markosyan",
-    affiliation: "Meta FAIR",
+    affiliation: "Axiom Math (ex-Meta)",
     image: "/images/aram_markosyan.jpeg",
     scholarUrl: "https://scholar.google.com/citations?hl=en&user=NugC7bQAAAAJ&view_op=list_works&sortby=pubdate"
   },
