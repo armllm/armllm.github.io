@@ -82,6 +82,12 @@ export const speakers2026: Speaker[] = [
     scholarUrl: "https://scholar.google.com/citations?user=SJD5bowAAAAJ"
   },
   {
+    name: "Aram Markosyan",
+    affiliation: "Meta FAIR",
+    image: "/images/aram_markosyan.jpeg",
+    scholarUrl: "https://scholar.google.com/citations?hl=en&user=NugC7bQAAAAJ&view_op=list_works&sortby=pubdate"
+  },
+  {
     name: "Armen Aghajanyan",
     affiliation: "Perceptron AI",
     image: "https://itel.am/datas/znews/big_/2023/11/03/6544e40b4ad3e5.72335961.jpg",
