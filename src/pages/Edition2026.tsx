@@ -268,7 +268,9 @@ const Edition2026 = memo(function Edition2026() {
                 <img
                   src="/images/ai9-square.svg"
                   alt="AI9"
-                  className="w-36 h-auto"
+                  loading="lazy"
+                  decoding="async"
+                  className="h-20 w-auto object-contain"
                   onError={(e) => {
                     e.currentTarget.style.display = 'none'
                   }}
@@ -313,7 +315,7 @@ const Edition2026 = memo(function Edition2026() {
                   alt="PMI Science R&D Center Armenia"
                   loading="lazy"
                   decoding="async"
-                  className="h-24 w-auto rounded-lg"
+                  className="h-20 w-auto object-contain rounded-lg"
                 />
               </div>
               <div className="text-center">
