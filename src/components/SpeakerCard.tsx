@@ -18,6 +18,10 @@ export default function SpeakerCard({ speaker, className }: SpeakerCardProps) {
       <img
         src={speaker.image}
         alt={speaker.name}
+        width={144}
+        height={144}
+        loading="lazy"
+        decoding="async"
         className={clsx(
           'w-36 h-36 rounded-full object-cover',
           'border-3 border-accent shadow-lg shadow-accent/30',

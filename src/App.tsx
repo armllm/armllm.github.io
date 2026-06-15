@@ -1,13 +1,15 @@
-import { lazy, Suspense } from 'react'
-import { Routes, Route } from 'react-router-dom'
+import { Suspense } from 'react'
+import { Routes, Route, Navigate } from 'react-router-dom'
 import Layout from './components/layout/Layout'
+import ErrorBoundary from './components/ErrorBoundary'
+import { lazyWithRetry } from './utils/lazyWithRetry'
 
-// Lazy load pages for code splitting
-const Home = lazy(() => import('./pages/Home'))
-const Edition2024 = lazy(() => import('./pages/Edition2024'))
-const Edition2025 = lazy(() => import('./pages/Edition2025'))
-const Edition2026 = lazy(() => import('./pages/Edition2026'))
-const Media = lazy(() => import('./pages/Media'))
+// Lazy load pages for code splitting (with retry/reload on stale chunks)
+const Home = lazyWithRetry(() => import('./pages/Home'))
+const Edition2024 = lazyWithRetry(() => import('./pages/Edition2024'))
+const Edition2025 = lazyWithRetry(() => import('./pages/Edition2025'))
+const Edition2026 = lazyWithRetry(() => import('./pages/Edition2026'))
+const Media = lazyWithRetry(() => import('./pages/Media'))
 
 // Loading fallback component
 function PageLoader() {
@@ -24,15 +26,18 @@ function PageLoader() {
 function App() {
   return (
     <Layout>
-      <Suspense fallback={<PageLoader />}>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/2024" element={<Edition2024 />} />
-          <Route path="/2025" element={<Edition2025 />} />
-          <Route path="/2026" element={<Edition2026 />} />
-          <Route path="/media" element={<Media />} />
-        </Routes>
-      </Suspense>
+      <ErrorBoundary>
+        <Suspense fallback={<PageLoader />}>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/2024" element={<Edition2024 />} />
+            <Route path="/2025" element={<Edition2025 />} />
+            <Route path="/2026" element={<Edition2026 />} />
+            <Route path="/media" element={<Media />} />
+            <Route path="*" element={<Navigate to="/" replace />} />
+          </Routes>
+        </Suspense>
+      </ErrorBoundary>
     </Layout>
   )
 }

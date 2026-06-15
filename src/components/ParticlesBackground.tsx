@@ -1,32 +1,46 @@
-import { useEffect, useState, memo } from 'react'
+import { useEffect, useState, useMemo, memo } from 'react'
 import Particles, { initParticlesEngine } from '@tsparticles/react'
 import { loadSlim } from '@tsparticles/slim'
+
+const GRADIENT = 'radial-gradient(circle at center, #4f46e5 0%, #1e1b4b 100%)'
 
 // Memoized to prevent unnecessary re-renders
 const ParticlesBackground = memo(function ParticlesBackground() {
   const [init, setInit] = useState(false)
 
+  // Detect environment once: skip particles entirely for users who prefer
+  // reduced motion, and scale down particle density on small / touch screens.
+  const { enabled, isMobile } = useMemo(() => {
+    if (typeof window === 'undefined') {
+      return { enabled: true, isMobile: false }
+    }
+    const prefersReducedMotion = window.matchMedia(
+      '(prefers-reduced-motion: reduce)'
+    ).matches
+    const mobile = window.matchMedia('(max-width: 768px)').matches
+    return { enabled: !prefersReducedMotion, isMobile: mobile }
+  }, [])
+
   useEffect(() => {
-    // Only initialize particles after initial page load
+    if (!enabled) return
+    // Defer engine init so it never blocks first paint.
     const timer = setTimeout(() => {
       initParticlesEngine(async (engine) => {
         await loadSlim(engine)
       }).then(() => {
         setInit(true)
       })
-    }, 100) // Small delay to prioritize main content
+    }, 200)
 
     return () => clearTimeout(timer)
-  }, [])
+  }, [enabled])
 
-  // Show gradient background immediately, particles load after
-  if (!init) {
+  // Reduced-motion users (or SSR) just get the static gradient.
+  if (!enabled || !init) {
     return (
-      <div 
+      <div
         className="fixed inset-0 -z-10"
-        style={{
-          background: 'radial-gradient(circle at center, #4f46e5 0%, #1e1b4b 100%)'
-        }}
+        style={{ background: GRADIENT }}
       />
     )
   }
@@ -35,23 +49,21 @@ const ParticlesBackground = memo(function ParticlesBackground() {
     <Particles
       id="tsparticles"
       className="fixed inset-0 -z-10"
-      style={{
-        background: 'radial-gradient(circle at center, #4f46e5 0%, #1e1b4b 100%)'
-      }}
+      style={{ background: GRADIENT }}
       options={{
-        fpsLimit: 60,
+        fpsLimit: isMobile ? 30 : 60,
         particles: {
           number: {
-            value: 50, // Reduced for better performance
+            value: isMobile ? 22 : 50,
             density: {
               enable: true,
-            }
+            },
           },
           color: {
-            value: ['#818cf8', '#4f46e5', '#ffffff']
+            value: ['#818cf8', '#4f46e5', '#ffffff'],
           },
           shape: {
-            type: 'circle'
+            type: 'circle',
           },
           opacity: {
             value: { min: 0.1, max: 0.5 },
@@ -61,45 +73,46 @@ const ParticlesBackground = memo(function ParticlesBackground() {
           },
           links: {
             enable: true,
-            distance: 150,
+            distance: isMobile ? 110 : 150,
             color: '#818cf8',
             opacity: 0.15,
-            width: 1
+            width: 1,
           },
           move: {
             enable: true,
-            speed: 1.5, // Slower for less CPU usage
+            speed: isMobile ? 1 : 1.5,
             direction: 'none',
             random: true,
             straight: false,
             outModes: {
-              default: 'out'
-            }
-          }
+              default: 'out',
+            },
+          },
         },
         interactivity: {
           detectsOn: 'window',
           events: {
+            // Disable hover interactivity on touch devices (no benefit, costs CPU).
             onHover: {
-              enable: true,
-              mode: 'grab'
+              enable: !isMobile,
+              mode: 'grab',
             },
             resize: {
-              enable: true
-            }
+              enable: true,
+            },
           },
           modes: {
             grab: {
               distance: 120,
               links: {
-                opacity: 0.3
-              }
-            }
-          }
+                opacity: 0.3,
+              },
+            },
+          },
         },
         detectRetina: true,
-        pauseOnBlur: true, // Pause when tab not visible
-        pauseOnOutsideViewport: true
+        pauseOnBlur: true,
+        pauseOnOutsideViewport: true,
       }}
     />
   )

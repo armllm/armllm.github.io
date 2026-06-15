@@ -290,6 +290,8 @@ const Edition2026 = memo(function Edition2026() {
                 <img
                   src="/images/arcs_ai_logo.jpg"
                   alt="ARCS.ai"
+                  loading="lazy"
+                  decoding="async"
                   className="h-20 w-auto"
                 />
               </div>
@@ -309,6 +311,8 @@ const Edition2026 = memo(function Edition2026() {
                 <img
                   src="/images/pmi_science_white_logo.jpg"
                   alt="PMI Science R&D Center Armenia"
+                  loading="lazy"
+                  decoding="async"
                   className="h-24 w-auto rounded-lg"
                 />
               </div>
