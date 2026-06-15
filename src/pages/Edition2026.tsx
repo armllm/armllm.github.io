@@ -257,24 +257,64 @@ const Edition2026 = memo(function Edition2026() {
             subtitle="We thank our sponsors and partners for making the school possible."
           />
           
-          <div className="flex justify-center">
+          <div className="flex flex-wrap justify-center gap-8">
             <a
               href="https://www.ai9.am/"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-white/5 rounded-xl p-10 border border-white/10 flex flex-col items-center gap-4 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-accent/20 hover:bg-white/10"
             >
-              <img
-                src="/images/ai9-square.svg"
-                alt="AI9"
-                className="w-36 h-auto"
-                onError={(e) => {
-                  e.currentTarget.style.display = 'none'
-                }}
-              />
+              <div className="h-24 flex items-center justify-center">
+                <img
+                  src="/images/ai9-square.svg"
+                  alt="AI9"
+                  className="w-36 h-auto"
+                  onError={(e) => {
+                    e.currentTarget.style.display = 'none'
+                  }}
+                />
+              </div>
               <div className="text-center">
                 <p className="text-white/70 text-sm uppercase tracking-wider font-semibold">Venue Sponsor</p>
                 <p className="text-white font-bold text-lg">AI9 Startup Campus</p>
+              </div>
+            </a>
+
+            <a
+              href="https://arcs.ai/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-white/5 rounded-xl p-10 border border-white/10 flex flex-col items-center gap-4 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-accent/20 hover:bg-white/10"
+            >
+              <div className="h-24 flex items-center justify-center bg-white rounded-lg px-6">
+                <img
+                  src="/images/arcs_ai_logo.jpg"
+                  alt="ARCS.ai"
+                  className="h-20 w-auto"
+                />
+              </div>
+              <div className="text-center">
+                <p className="text-white/70 text-sm uppercase tracking-wider font-semibold">Partner</p>
+                <p className="text-white font-bold text-lg">ARCS.ai</p>
+              </div>
+            </a>
+
+            <a
+              href="https://www.pmiscience.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-white/5 rounded-xl p-10 border border-white/10 flex flex-col items-center gap-4 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-accent/20 hover:bg-white/10"
+            >
+              <div className="h-24 flex items-center justify-center">
+                <img
+                  src="/images/pmi_science_white_logo.jpg"
+                  alt="PMI Science R&D Center Armenia"
+                  className="h-24 w-auto rounded-lg"
+                />
+              </div>
+              <div className="text-center">
+                <p className="text-white/70 text-sm uppercase tracking-wider font-semibold">Partner</p>
+                <p className="text-white font-bold text-lg">PMI Science R&D Armenia</p>
               </div>
             </a>
           </div>
