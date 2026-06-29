@@ -112,6 +112,11 @@ const competitionFAQ: FAQCategory[] = [
         answer:
           'In the arena, you also choose which entries your opponent may observe — using only X, Z, and k, never the ground truth. A clever mask makes reconstruction harder for them while staying valid.',
       },
+      {
+        question: 'Can I just rebuild the matrix from the seed?',
+        answer:
+          'No. The <code>seed</code> handed to your agent is <em>decoupled</em> from instance generation — it is a one-way-derived value for your own RNG determinism, not the generation seed. The graded evaluation also uses secret, high-entropy generation seeds, so rebuilding from the seed (or brute-forcing which seed reproduces the visible X) yields an unrelated matrix on the real grader and only wastes your time budget. Use only your declared inputs to form a prediction.',
+      },
     ],
   },
   {
@@ -514,6 +519,12 @@ const Competition2026 = memo(function Competition2026() {
                 </p>
               </div>
             </div>
+            <p className="text-white/55 text-sm mt-4">
+              <span className="text-accent font-semibold">About <code>seed</code>:</span> it is a
+              decoupled, one-way-derived value for your own RNG determinism — not the seed used to
+              build the instance. The graded run uses secret, high-entropy generation seeds, so you
+              cannot rebuild Y* from <code>seed</code> or by matching the generator to X.
+            </p>
           </div>
         </div>
       </section>
@@ -557,6 +568,10 @@ const Competition2026 = memo(function Competition2026() {
               <h3 className="text-red-300 font-bold text-lg mb-4">✗ Don’t</h3>
               <ul className="text-white/80 space-y-2 text-sm list-disc list-inside">
                 <li>Try to read or reconstruct Y* inside <code>attack()</code>.</li>
+                <li>
+                  Rebuild Y* from the <code>seed</code> or by matching the generator to X — the
+                  seed is decoupled and the graded run uses secret seeds.
+                </li>
                 <li>Return NaN, Inf, or absurdly large values.</li>
                 <li>Read from disk or share state between calls.</li>
                 <li>Exceed the time limit or rely on a GPU.</li>
