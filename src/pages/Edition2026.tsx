@@ -59,6 +59,30 @@ const Edition2026 = memo(function Edition2026() {
         </div>
       </section>
 
+      {/* Competition Banner */}
+      <section className="py-12 bg-gradient-to-r from-primary/20 to-accent/20 border-t border-white/10">
+        <div className="container mx-auto px-8">
+          <div className="max-w-5xl mx-auto bg-white/[0.04] border border-accent/30 rounded-2xl p-8 md:flex md:items-center md:justify-between gap-6">
+            <div className="md:flex-1 mb-6 md:mb-0">
+              <span className="inline-block bg-accent/20 text-accent px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-widest mb-3">
+                Entrance Competition
+              </span>
+              <h3 className="text-2xl md:text-3xl font-bold text-white mb-2">
+                Matrix Arena: Adversarial Matrix Completion
+              </h3>
+              <p className="text-white/80">
+                Reconstruct hidden matrices from sparse observations and outwit opponents in
+                adversarial duels — the entrance test for ARMLLM 2026. Try the live demo, read the
+                rules, and submit your agent.
+              </p>
+            </div>
+            <div className="flex-shrink-0">
+              <Button to="/2026/competition">Enter the Arena →</Button>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* About Section */}
       <section id="about" className="py-20 bg-glass border-t border-white/10">
         <div className="container mx-auto px-8">

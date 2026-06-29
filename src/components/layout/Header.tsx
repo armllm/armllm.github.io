@@ -17,6 +17,7 @@ interface HeaderProps {
 const defaultNavLinks: NavLink[] = [
   { to: '/', label: 'Home' },
   { to: '/2026', label: '2026' },
+  { to: '/2026/competition', label: 'Competition' },
   { to: '/2025', label: '2025' },
   { to: '/2024', label: '2024' },
   { to: '/2026', label: 'FAQ', hash: 'faq' },
