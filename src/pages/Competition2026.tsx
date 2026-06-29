@@ -16,6 +16,7 @@ const FORM_EMBED =
 const STATEMENT_PDF = '/competition/matrix-arena-statement.pdf'
 const GITHUB_REPO = 'https://github.com/osoblanco/armllm_competition'
 const CONTACT_EMAIL = 'armeniallm@gmail.com'
+const DEADLINE = 'July 5, 2026'
 const IMG = '/images/competition'
 
 /* ----------------------------- inline content ---------------------------- */
@@ -76,6 +77,11 @@ const competitionFAQ: FAQCategory[] = [
         question: 'Who can take part?',
         answer:
           'The competition is the entrance test for the Armenia LLM Summer School 2026. It is open to all applicants invited to the technical assessment stage.',
+      },
+      {
+        question: 'When is the deadline?',
+        answer:
+          'The final day for submissions is <strong>July 5, 2026</strong> (end of day, Yerevan time). You may resubmit any number of times before then — the latest valid submission is the one that counts.',
       },
       {
         question: 'How do I submit?',
@@ -262,6 +268,9 @@ const Competition2026 = memo(function Competition2026() {
               Problem Statement (PDF)
             </Button>
           </div>
+          <p className="mt-8 text-accent font-semibold text-lg">
+            ⏰ Submissions close on {DEADLINE}
+          </p>
         </div>
       </section>
 
@@ -696,6 +705,13 @@ const Competition2026 = memo(function Competition2026() {
             subtitle="Upload your single-file Agent through the form below"
           />
           <div className="max-w-3xl mx-auto">
+            <div className="mb-6 bg-accent/10 border border-accent/40 rounded-xl p-5 text-center">
+              <p className="text-white/90">
+                <span className="text-accent font-bold">⏰ Final deadline:</span>{' '}
+                <span className="font-semibold">{DEADLINE}</span> (end of day, Yerevan time). You
+                may resubmit any number of times — the latest valid submission counts.
+              </p>
+            </div>
             <div className="bg-white/[0.03] border border-white/10 rounded-2xl p-3 md:p-4 mb-6">
               <iframe
                 src={FORM_EMBED}
