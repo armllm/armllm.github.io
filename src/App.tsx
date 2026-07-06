@@ -10,6 +10,7 @@ const Edition2024 = lazyWithRetry(() => import('./pages/Edition2024'))
 const Edition2025 = lazyWithRetry(() => import('./pages/Edition2025'))
 const Edition2026 = lazyWithRetry(() => import('./pages/Edition2026'))
 const Competition2026 = lazyWithRetry(() => import('./pages/Competition2026'))
+const CompetitionResults2026 = lazyWithRetry(() => import('./pages/CompetitionResults2026'))
 const Media = lazyWithRetry(() => import('./pages/Media'))
 
 // Loading fallback component
@@ -35,6 +36,7 @@ function App() {
             <Route path="/2025" element={<Edition2025 />} />
             <Route path="/2026" element={<Edition2026 />} />
             <Route path="/2026/competition" element={<Competition2026 />} />
+            <Route path="/2026/competition/results" element={<CompetitionResults2026 />} />
             <Route path="/media" element={<Media />} />
             <Route path="*" element={<Navigate to="/" replace />} />
           </Routes>

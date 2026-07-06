@@ -271,6 +271,12 @@ const Competition2026 = memo(function Competition2026() {
           <p className="mt-8 text-accent font-semibold text-lg">
             ⏰ Submissions close on {DEADLINE}
           </p>
+          <p className="mt-4">
+            <Link to="/2026/competition/results"
+               className="inline-block px-5 py-2 rounded-full bg-white/10 border border-accent/40 text-white font-semibold hover:bg-white/15 transition-colors">
+              🏆 The competition has concluded — see the results &amp; leaderboard →
+            </Link>
+          </p>
         </div>
       </section>
 
