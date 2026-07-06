@@ -28,6 +28,14 @@ const BASELINES = ROWS.filter((r) => r.is_baseline).length
 
 const MEDAL: Record<number, string> = { 1: '🥇', 2: '🥈', 3: '🥉' }
 
+type Tier = 'accepted' | 'waitlist' | 'online' | 'baseline'
+const TIER_META: Record<Tier, { label: string; badge: string; leftBorder: string }> = {
+  accepted: { label: 'Accepted', badge: 'bg-green-500/15 text-green-300 border border-green-400/40', leftBorder: 'border-l-green-400/70' },
+  waitlist: { label: 'Waitlist · FCFS', badge: 'bg-amber-500/15 text-amber-300 border border-amber-400/40', leftBorder: 'border-l-amber-400/70' },
+  online: { label: 'Online track', badge: 'bg-sky-500/15 text-sky-300 border border-sky-400/40', leftBorder: 'border-l-sky-400/70' },
+  baseline: { label: 'baseline', badge: 'bg-white/10 text-white/45 border border-white/15', leftBorder: 'border-l-white/15' },
+}
+
 const BREAKDOWNS = [
   {
     rank: 1,
@@ -68,9 +76,18 @@ const BREAKDOWNS = [
 ]
 
 const CompetitionResults2026 = memo(function CompetitionResults2026() {
-  const [showAll, setShowAll] = useState(false)
-  const shown = showAll ? ROWS : ROWS.slice(0, 25)
+  const [showAll, setShowAll] = useState(true)
   const podium = ROWS.filter((r) => !r.is_baseline).slice(0, 3)
+
+  // Acceptance tiers assigned by rank AMONG PARTICIPANTS (baselines excluded).
+  let pcount = 0
+  const tiered = ROWS.map((r) => {
+    if (r.is_baseline) return { ...r, tier: 'baseline' as Tier }
+    pcount += 1
+    const tier: Tier = pcount <= 25 ? 'accepted' : pcount <= 40 ? 'waitlist' : 'online'
+    return { ...r, tier }
+  })
+  const shown = showAll ? tiered : tiered.slice(0, 25)
 
   return (
     <div>
@@ -224,12 +241,34 @@ const CompetitionResults2026 = memo(function CompetitionResults2026() {
       <section id="leaderboard" className="py-20 bg-glass border-b border-white/10">
         <div className="container mx-auto px-8">
           <SectionTitle title="Full Leaderboard" subtitle={`All ${ROWS.length} ranked entries · ★ = baseline`} />
+
+          {/* Acceptance legend */}
+          <div className="max-w-4xl mx-auto mb-4 grid sm:grid-cols-3 gap-3">
+            <div className="rounded-lg px-4 py-3 bg-green-500/10 border border-green-400/30">
+              <p className="text-green-300 font-semibold text-sm">Ranks 1–25 · Accepted</p>
+              <p className="text-white/60 text-xs mt-0.5">Admitted to the summer school.</p>
+            </div>
+            <div className="rounded-lg px-4 py-3 bg-amber-500/10 border border-amber-400/30">
+              <p className="text-amber-300 font-semibold text-sm">Ranks 26–40 · Waitlist</p>
+              <p className="text-white/60 text-xs mt-0.5">Accepted on a first-come, first-served basis.</p>
+            </div>
+            <div className="rounded-lg px-4 py-3 bg-sky-500/10 border border-sky-400/30">
+              <p className="text-sky-300 font-semibold text-sm">Ranks 41+ · Online track</p>
+              <p className="text-white/60 text-xs mt-0.5">Considered for the online track.</p>
+            </div>
+          </div>
+          <p className="text-white/50 text-center text-xs mb-6 max-w-3xl mx-auto">
+            Tiers are assigned by rank <em>among participants</em>; the reference baselines (★) are
+            excluded from the counting and carry no acceptance status.
+          </p>
+
           <div className="max-w-5xl mx-auto overflow-x-auto">
             <table className="w-full text-left border-collapse text-sm">
               <thead>
                 <tr className="text-accent border-b border-white/15">
                   <th className="py-2 px-3">#</th>
                   <th className="py-2 px-3">Agent</th>
+                  <th className="py-2 px-3">Status</th>
                   <th className="py-2 px-3 text-right">Final</th>
                   <th className="py-2 px-3 text-right">Solve</th>
                   <th className="py-2 px-3 text-right">Elo</th>
@@ -243,13 +282,17 @@ const CompetitionResults2026 = memo(function CompetitionResults2026() {
                   <tr
                     key={r.agent_name}
                     className={
-                      'border-b border-white/5 ' +
-                      (r.rank <= 3 ? 'bg-accent/5 ' : '') +
+                      'border-b border-b-white/5 border-l-4 ' + TIER_META[r.tier].leftBorder + ' ' +
                       (r.is_baseline ? 'text-white/45 italic' : '')
                     }
                   >
                     <td className="py-2 px-3 font-semibold">{MEDAL[r.rank] || r.rank}</td>
                     <td className="py-2 px-3">{r.agent_name}{r.is_baseline ? ' ★' : ''}</td>
+                    <td className="py-2 px-3">
+                      <span className={'inline-block px-2 py-0.5 rounded-full text-xs font-semibold whitespace-nowrap ' + TIER_META[r.tier].badge}>
+                        {TIER_META[r.tier].label}
+                      </span>
+                    </td>
                     <td className="py-2 px-3 text-right font-semibold text-white">{r.final_score.toFixed(3)}</td>
                     <td className="py-2 px-3 text-right">{r.solve_score_raw.toFixed(3)}</td>
                     <td className="py-2 px-3 text-right">{r.bt_elo.toFixed(0)}</td>
@@ -261,16 +304,14 @@ const CompetitionResults2026 = memo(function CompetitionResults2026() {
               </tbody>
             </table>
           </div>
-          {!showAll && (
-            <div className="text-center mt-6">
-              <button
-                onClick={() => setShowAll(true)}
-                className="px-6 py-3 rounded-lg bg-accent/20 text-accent font-semibold hover:bg-accent/30 transition-colors"
-              >
-                Show all {ROWS.length} entries ▾
-              </button>
-            </div>
-          )}
+          <div className="text-center mt-6">
+            <button
+              onClick={() => setShowAll((v) => !v)}
+              className="px-6 py-3 rounded-lg bg-accent/20 text-accent font-semibold hover:bg-accent/30 transition-colors"
+            >
+              {showAll ? 'Collapse to top 25 ▴' : `Show all ${ROWS.length} entries ▾`}
+            </button>
+          </div>
         </div>
       </section>
     </div>
