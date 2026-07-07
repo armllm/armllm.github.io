@@ -5,7 +5,7 @@
     "is_baseline": false,
     "final_score": 0.9975,
     "solve_score_raw": 0.1598,
-    "solve_score_normalized": 0.9958,
+    "solve_score_normalized": 0.9959,
     "arena_points": 0.9583,
     "bt_elo": 1848.1,
     "arena_score_normalized": 1.0,
@@ -20,7 +20,8 @@
     "wins": 92,
     "draws": 0,
     "losses": 4,
-    "rank": 1
+    "rank": 1,
+    "accept_tier": "accepted"
   },
   {
     "agent_name": "Eduard Grigoryan",
@@ -28,7 +29,7 @@
     "is_baseline": false,
     "final_score": 0.9345,
     "solve_score_raw": 0.1602,
-    "solve_score_normalized": 0.998,
+    "solve_score_normalized": 0.9979,
     "arena_points": 0.7115,
     "bt_elo": 1669.0,
     "arena_score_normalized": 0.8164,
@@ -43,7 +44,8 @@
     "wins": 74,
     "draws": 0,
     "losses": 30,
-    "rank": 2
+    "rank": 2,
+    "accept_tier": "accepted"
   },
   {
     "agent_name": "Gayane Yazeryan",
@@ -51,7 +53,7 @@
     "is_baseline": false,
     "final_score": 0.9172,
     "solve_score_raw": 0.141,
-    "solve_score_normalized": 0.8991,
+    "solve_score_normalized": 0.8992,
     "arena_points": 0.9167,
     "bt_elo": 1786.0,
     "arena_score_normalized": 0.9363,
@@ -66,18 +68,19 @@
     "wins": 110,
     "draws": 0,
     "losses": 10,
-    "rank": 3
+    "rank": 3,
+    "accept_tier": "accepted"
   },
   {
     "agent_name": "Roza Bejanyan",
     "person_key": "roza bejanyan",
     "is_baseline": false,
-    "final_score": 0.9115,
+    "final_score": 0.9114,
     "solve_score_raw": 0.1434,
-    "solve_score_normalized": 0.9116,
+    "solve_score_normalized": 0.9115,
     "arena_points": 0.8519,
     "bt_elo": 1749.2,
-    "arena_score_normalized": 0.8987,
+    "arena_score_normalized": 0.8986,
     "robustness_score": 1.0,
     "num_crashes": 0,
     "num_invalid_masks": 0,
@@ -89,7 +92,8 @@
     "wins": 92,
     "draws": 0,
     "losses": 16,
-    "rank": 4
+    "rank": 4,
+    "accept_tier": "accepted"
   },
   {
     "agent_name": "Arash Rezaali",
@@ -112,7 +116,8 @@
     "wins": 90,
     "draws": 0,
     "losses": 18,
-    "rank": 5
+    "rank": 5,
+    "accept_tier": "accepted"
   },
   {
     "agent_name": "David Sargsyan",
@@ -123,7 +128,7 @@
     "solve_score_normalized": 0.858,
     "arena_points": 0.7976,
     "bt_elo": 1735.5,
-    "arena_score_normalized": 0.8846,
+    "arena_score_normalized": 0.8845,
     "robustness_score": 1.0,
     "num_crashes": 0,
     "num_invalid_masks": 0,
@@ -135,7 +140,8 @@
     "wins": 67,
     "draws": 0,
     "losses": 17,
-    "rank": 6
+    "rank": 6,
+    "accept_tier": "accepted"
   },
   {
     "agent_name": "Stepan Gharslyan",
@@ -143,7 +149,7 @@
     "is_baseline": false,
     "final_score": 0.873,
     "solve_score_raw": 0.1408,
-    "solve_score_normalized": 0.8983,
+    "solve_score_normalized": 0.8981,
     "arena_points": 0.6979,
     "bt_elo": 1664.4,
     "arena_score_normalized": 0.8116,
@@ -158,18 +164,19 @@
     "wins": 67,
     "draws": 0,
     "losses": 29,
-    "rank": 7
+    "rank": 7,
+    "accept_tier": "accepted"
   },
   {
     "agent_name": "Hayk Karapetyan",
     "person_key": "hayk karapetyan",
     "is_baseline": false,
-    "final_score": 0.8562,
+    "final_score": 0.8561,
     "solve_score_raw": 0.1224,
-    "solve_score_normalized": 0.8037,
+    "solve_score_normalized": 0.8035,
     "arena_points": 0.875,
     "bt_elo": 1775.6,
-    "arena_score_normalized": 0.9256,
+    "arena_score_normalized": 0.9257,
     "robustness_score": 1.0,
     "num_crashes": 0,
     "num_invalid_masks": 0,
@@ -181,15 +188,16 @@
     "wins": 98,
     "draws": 0,
     "losses": 14,
-    "rank": 8
+    "rank": 8,
+    "accept_tier": "accepted"
   },
   {
     "agent_name": "Albert Piliposyan",
     "person_key": "albert piliposyan",
     "is_baseline": false,
-    "final_score": 0.8371,
+    "final_score": 0.8372,
     "solve_score_raw": 0.1391,
-    "solve_score_normalized": 0.8892,
+    "solve_score_normalized": 0.8894,
     "arena_points": 0.5761,
     "bt_elo": 1579.4,
     "arena_score_normalized": 0.7245,
@@ -204,15 +212,16 @@
     "wins": 53,
     "draws": 0,
     "losses": 39,
-    "rank": 9
+    "rank": 9,
+    "accept_tier": "accepted"
   },
   {
     "agent_name": "Misha Aghamalyan",
     "person_key": "misha aghamalyan",
     "is_baseline": false,
-    "final_score": 0.8284,
+    "final_score": 0.8285,
     "solve_score_raw": 0.134,
-    "solve_score_normalized": 0.863,
+    "solve_score_normalized": 0.8632,
     "arena_points": 0.6481,
     "bt_elo": 1599.1,
     "arena_score_normalized": 0.7447,
@@ -227,15 +236,16 @@
     "wins": 70,
     "draws": 0,
     "losses": 38,
-    "rank": 10
+    "rank": 10,
+    "accept_tier": "accepted"
   },
   {
     "agent_name": "Arman Isajanyan",
     "person_key": "arman isajanyan",
     "is_baseline": false,
-    "final_score": 0.8273,
+    "final_score": 0.8272,
     "solve_score_raw": 0.1297,
-    "solve_score_normalized": 0.8413,
+    "solve_score_normalized": 0.841,
     "arena_points": 0.6759,
     "bt_elo": 1632.3,
     "arena_score_normalized": 0.7787,
@@ -250,7 +260,8 @@
     "wins": 73,
     "draws": 0,
     "losses": 35,
-    "rank": 11
+    "rank": 11,
+    "accept_tier": "accepted"
   },
   {
     "agent_name": "Art Shamtsyan",
@@ -258,10 +269,10 @@
     "is_baseline": false,
     "final_score": 0.8218,
     "solve_score_raw": 0.1334,
-    "solve_score_normalized": 0.86,
+    "solve_score_normalized": 0.8601,
     "arena_points": 0.6161,
     "bt_elo": 1585.5,
-    "arena_score_normalized": 0.7308,
+    "arena_score_normalized": 0.7307,
     "robustness_score": 1.0,
     "num_crashes": 0,
     "num_invalid_masks": 0,
@@ -273,15 +284,16 @@
     "wins": 69,
     "draws": 0,
     "losses": 43,
-    "rank": 12
+    "rank": 12,
+    "accept_tier": "accepted"
   },
   {
     "agent_name": "Naira Ghulghazaryan",
     "person_key": "naira ghulghazaryan",
     "is_baseline": false,
-    "final_score": 0.8136,
+    "final_score": 0.8137,
     "solve_score_raw": 0.1258,
-    "solve_score_normalized": 0.8209,
+    "solve_score_normalized": 0.821,
     "arena_points": 0.681,
     "bt_elo": 1628.2,
     "arena_score_normalized": 0.7745,
@@ -296,15 +308,16 @@
     "wins": 79,
     "draws": 0,
     "losses": 37,
-    "rank": 13
+    "rank": 13,
+    "accept_tier": "accepted"
   },
   {
     "agent_name": "Davit Badalyan",
     "person_key": "davit badalyan",
     "is_baseline": false,
-    "final_score": 0.8124,
+    "final_score": 0.8126,
     "solve_score_raw": 0.1234,
-    "solve_score_normalized": 0.8084,
+    "solve_score_normalized": 0.8086,
     "arena_points": 0.6711,
     "bt_elo": 1645.7,
     "arena_score_normalized": 0.7925,
@@ -319,7 +332,8 @@
     "wins": 51,
     "draws": 0,
     "losses": 25,
-    "rank": 14
+    "rank": 14,
+    "accept_tier": "accepted"
   },
   {
     "agent_name": "Silvi Avayan",
@@ -327,7 +341,7 @@
     "is_baseline": false,
     "final_score": 0.8095,
     "solve_score_raw": 0.1311,
-    "solve_score_normalized": 0.8481,
+    "solve_score_normalized": 0.8483,
     "arena_points": 0.58,
     "bt_elo": 1571.1,
     "arena_score_normalized": 0.716,
@@ -342,15 +356,16 @@
     "wins": 58,
     "draws": 0,
     "losses": 42,
-    "rank": 15
+    "rank": 15,
+    "accept_tier": "accepted"
   },
   {
     "agent_name": "Martin Kostanyan",
     "person_key": "martin kostanyan",
     "is_baseline": false,
-    "final_score": 0.8066,
+    "final_score": 0.8065,
     "solve_score_raw": 0.1176,
-    "solve_score_normalized": 0.7789,
+    "solve_score_normalized": 0.7788,
     "arena_points": 0.6944,
     "bt_elo": 1678.8,
     "arena_score_normalized": 0.8264,
@@ -365,7 +380,8 @@
     "wins": 75,
     "draws": 0,
     "losses": 33,
-    "rank": 16
+    "rank": 16,
+    "accept_tier": "accepted"
   },
   {
     "agent_name": "Gevorg Avetisyan",
@@ -388,15 +404,16 @@
     "wins": 64,
     "draws": 0,
     "losses": 40,
-    "rank": 17
+    "rank": 17,
+    "accept_tier": "accepted"
   },
   {
     "agent_name": "Vanuhi Baghdasarian",
     "person_key": "vanuhi baghdasarian",
     "is_baseline": false,
-    "final_score": 0.7986,
+    "final_score": 0.7985,
     "solve_score_raw": 0.1154,
-    "solve_score_normalized": 0.7677,
+    "solve_score_normalized": 0.7675,
     "arena_points": 0.7812,
     "bt_elo": 1675.4,
     "arena_score_normalized": 0.8229,
@@ -411,15 +428,16 @@
     "wins": 75,
     "draws": 0,
     "losses": 21,
-    "rank": 18
+    "rank": 18,
+    "accept_tier": "accepted"
   },
   {
-    "agent_name": "\u0533\u0587\u0578\u0580\u0563 \u0533\u0587\u0578\u0580\u0563\u0575\u0561\u0576",
-    "person_key": "\u0563\u0587\u0578\u0580\u0563 \u0563\u0587\u0578\u0580\u0563\u0575\u0561\u0576",
+    "agent_name": "Գևորգ Գևորգյան",
+    "person_key": "գևորգ գևորգյան",
     "is_baseline": false,
-    "final_score": 0.797,
+    "final_score": 0.7971,
     "solve_score_raw": 0.1247,
-    "solve_score_normalized": 0.8151,
+    "solve_score_normalized": 0.8153,
     "arena_points": 0.66,
     "bt_elo": 1591.5,
     "arena_score_normalized": 0.7369,
@@ -434,15 +452,16 @@
     "wins": 66,
     "draws": 0,
     "losses": 34,
-    "rank": 19
+    "rank": 19,
+    "accept_tier": "accepted"
   },
   {
     "agent_name": "Artem Netsvetaev",
     "person_key": "artem netsvetaev",
     "is_baseline": false,
-    "final_score": 0.7952,
+    "final_score": 0.7954,
     "solve_score_raw": 0.1066,
-    "solve_score_normalized": 0.722,
+    "solve_score_normalized": 0.7222,
     "arena_points": 0.7917,
     "bt_elo": 1742.4,
     "arena_score_normalized": 0.8916,
@@ -457,7 +476,8 @@
     "wins": 76,
     "draws": 0,
     "losses": 20,
-    "rank": 20
+    "rank": 20,
+    "accept_tier": "accepted"
   },
   {
     "agent_name": "Gevorg Hovhannisyan",
@@ -465,7 +485,7 @@
     "is_baseline": false,
     "final_score": 0.795,
     "solve_score_raw": 0.1304,
-    "solve_score_normalized": 0.8446,
+    "solve_score_normalized": 0.8447,
     "arena_points": 0.4773,
     "bt_elo": 1536.7,
     "arena_score_normalized": 0.6807,
@@ -480,15 +500,16 @@
     "wins": 42,
     "draws": 0,
     "losses": 46,
-    "rank": 21
+    "rank": 21,
+    "accept_tier": "accepted"
   },
   {
     "agent_name": "Garik Yeranosyan",
     "person_key": "garik yeranosyan",
     "is_baseline": false,
-    "final_score": 0.7895,
+    "final_score": 0.7894,
     "solve_score_raw": 0.126,
-    "solve_score_normalized": 0.8222,
+    "solve_score_normalized": 0.822,
     "arena_points": 0.5648,
     "bt_elo": 1558.7,
     "arena_score_normalized": 0.7033,
@@ -503,15 +524,16 @@
     "wins": 61,
     "draws": 0,
     "losses": 47,
-    "rank": 22
+    "rank": 22,
+    "accept_tier": "accepted"
   },
   {
     "agent_name": "Haykuhi Aleksanyan",
     "person_key": "haykuhi aleksanyan",
     "is_baseline": false,
-    "final_score": 0.789,
+    "final_score": 0.7888,
     "solve_score_raw": 0.1197,
-    "solve_score_normalized": 0.7899,
+    "solve_score_normalized": 0.7896,
     "arena_points": 0.6481,
     "bt_elo": 1611.4,
     "arena_score_normalized": 0.7573,
@@ -526,15 +548,16 @@
     "wins": 70,
     "draws": 0,
     "losses": 38,
-    "rank": 23
+    "rank": 23,
+    "accept_tier": "accepted"
   },
   {
-    "agent_name": "\u0414\u0438\u0430\u043d\u0430 \u0422\u0443\u043c\u0430\u0441\u044f\u043d",
-    "person_key": "\u0434\u0438\u0430\u043d\u0430 \u0442\u0443\u043c\u0430\u0441\u044f\u043d",
+    "agent_name": "Диана Тумасян",
+    "person_key": "диана тумасян",
     "is_baseline": false,
-    "final_score": 0.7807,
+    "final_score": 0.7808,
     "solve_score_raw": 0.1213,
-    "solve_score_normalized": 0.7976,
+    "solve_score_normalized": 0.7978,
     "arena_points": 0.5682,
     "bt_elo": 1575.4,
     "arena_score_normalized": 0.7204,
@@ -549,18 +572,19 @@
     "wins": 50,
     "draws": 0,
     "losses": 38,
-    "rank": 24
+    "rank": 24,
+    "accept_tier": "accepted"
   },
   {
     "agent_name": "Alen Gevorgyan",
     "person_key": "alen gevorgyan",
     "is_baseline": false,
-    "final_score": 0.7779,
+    "final_score": 0.778,
     "solve_score_raw": 0.1221,
-    "solve_score_normalized": 0.8017,
+    "solve_score_normalized": 0.802,
     "arena_points": 0.5726,
     "bt_elo": 1560.7,
-    "arena_score_normalized": 0.7054,
+    "arena_score_normalized": 0.7053,
     "robustness_score": 1.0,
     "num_crashes": 0,
     "num_invalid_masks": 0,
@@ -572,7 +596,8 @@
     "wins": 71,
     "draws": 0,
     "losses": 53,
-    "rank": 25
+    "rank": 25,
+    "accept_tier": "accepted"
   },
   {
     "agent_name": "Araksya Gevorgyan",
@@ -595,15 +620,16 @@
     "wins": 39,
     "draws": 0,
     "losses": 45,
-    "rank": 26
+    "rank": 26,
+    "accept_tier": "waitlist"
   },
   {
-    "agent_name": "\u0421\u043e\u0444\u044c\u044f \u0421\u0442\u0440\u043e\u0433\u0430\u043d\u043e\u0432\u0430",
-    "person_key": "\u0441\u043e\u0444\u044c\u044f \u0441\u0442\u0440\u043e\u0433\u0430\u043d\u043e\u0432\u0430",
+    "agent_name": "Софья Строганова",
+    "person_key": "софья строганова",
     "is_baseline": false,
-    "final_score": 0.7738,
+    "final_score": 0.7739,
     "solve_score_raw": 0.1096,
-    "solve_score_normalized": 0.7374,
+    "solve_score_normalized": 0.7377,
     "arena_points": 0.7283,
     "bt_elo": 1656.8,
     "arena_score_normalized": 0.8039,
@@ -618,15 +644,16 @@
     "wins": 67,
     "draws": 0,
     "losses": 25,
-    "rank": 27
+    "rank": 27,
+    "accept_tier": "waitlist"
   },
   {
-    "agent_name": "\u0531\u0576\u056b \u0531\u056c\u0578\u0575\u0561\u0576",
-    "person_key": "\u0561\u0576\u056b \u0561\u056c\u0578\u0575\u0561\u0576",
+    "agent_name": "Անի Ալոյան",
+    "person_key": "անի ալոյան",
     "is_baseline": false,
-    "final_score": 0.7635,
+    "final_score": 0.7633,
     "solve_score_raw": 0.1154,
-    "solve_score_normalized": 0.7678,
+    "solve_score_normalized": 0.7675,
     "arena_points": 0.5603,
     "bt_elo": 1577.4,
     "arena_score_normalized": 0.7224,
@@ -641,7 +668,8 @@
     "wins": 65,
     "draws": 0,
     "losses": 51,
-    "rank": 28
+    "rank": 28,
+    "accept_tier": "waitlist"
   },
   {
     "agent_name": "Suren Avdalyan",
@@ -664,7 +692,8 @@
     "wins": 56,
     "draws": 0,
     "losses": 32,
-    "rank": 29
+    "rank": 29,
+    "accept_tier": "waitlist"
   },
   {
     "agent_name": "Susanna Avetisyan",
@@ -672,10 +701,10 @@
     "is_baseline": false,
     "final_score": 0.7617,
     "solve_score_raw": 0.1081,
-    "solve_score_normalized": 0.7298,
+    "solve_score_normalized": 0.7299,
     "arena_points": 0.6667,
     "bt_elo": 1635.7,
-    "arena_score_normalized": 0.7823,
+    "arena_score_normalized": 0.7822,
     "robustness_score": 1.0,
     "num_crashes": 0,
     "num_invalid_masks": 0,
@@ -687,15 +716,16 @@
     "wins": 64,
     "draws": 0,
     "losses": 32,
-    "rank": 30
+    "rank": 30,
+    "accept_tier": "waitlist"
   },
   {
     "agent_name": "Mohammad Azarijafari",
     "person_key": "mohammad azarijafari",
     "is_baseline": false,
-    "final_score": 0.752,
+    "final_score": 0.7519,
     "solve_score_raw": 0.1189,
-    "solve_score_normalized": 0.7856,
+    "solve_score_normalized": 0.7855,
     "arena_points": 0.4815,
     "bt_elo": 1515.4,
     "arena_score_normalized": 0.6589,
@@ -710,7 +740,8 @@
     "wins": 52,
     "draws": 0,
     "losses": 56,
-    "rank": 31
+    "rank": 31,
+    "accept_tier": "waitlist"
   },
   {
     "agent_name": "Maria Hovhannisyan",
@@ -721,7 +752,7 @@
     "solve_score_normalized": 0.8164,
     "arena_points": 0.3587,
     "bt_elo": 1434.8,
-    "arena_score_normalized": 0.5763,
+    "arena_score_normalized": 0.5762,
     "robustness_score": 1.0,
     "num_crashes": 0,
     "num_invalid_masks": 0,
@@ -733,7 +764,8 @@
     "wins": 33,
     "draws": 0,
     "losses": 59,
-    "rank": 32
+    "rank": 32,
+    "accept_tier": "waitlist"
   },
   {
     "agent_name": "Hrachya Aslanyan",
@@ -741,7 +773,7 @@
     "is_baseline": false,
     "final_score": 0.7341,
     "solve_score_raw": 0.1069,
-    "solve_score_normalized": 0.7237,
+    "solve_score_normalized": 0.7238,
     "arena_points": 0.5543,
     "bt_elo": 1569.1,
     "arena_score_normalized": 0.7139,
@@ -756,13 +788,14 @@
     "wins": 51,
     "draws": 0,
     "losses": 41,
-    "rank": 33
+    "rank": 33,
+    "accept_tier": "waitlist"
   },
   {
     "agent_name": "Narek Stepanyan",
     "person_key": "narek stepanyan",
     "is_baseline": false,
-    "final_score": 0.7224,
+    "final_score": 0.7225,
     "solve_score_raw": 0.1227,
     "solve_score_normalized": 0.805,
     "arena_points": 0.3125,
@@ -779,15 +812,16 @@
     "wins": 25,
     "draws": 0,
     "losses": 55,
-    "rank": 34
+    "rank": 34,
+    "accept_tier": "waitlist"
   },
   {
     "agent_name": "Kima Rafayelyan",
     "person_key": "kima rafayelyan",
     "is_baseline": false,
-    "final_score": 0.7197,
+    "final_score": 0.7196,
     "solve_score_raw": 0.1143,
-    "solve_score_normalized": 0.762,
+    "solve_score_normalized": 0.7618,
     "arena_points": 0.3958,
     "bt_elo": 1464.9,
     "arena_score_normalized": 0.6071,
@@ -802,15 +836,16 @@
     "wins": 38,
     "draws": 0,
     "losses": 58,
-    "rank": 35
+    "rank": 35,
+    "accept_tier": "waitlist"
   },
   {
     "agent_name": "Aram Matinyan",
     "person_key": "aram matinyan",
     "is_baseline": false,
-    "final_score": 0.7134,
+    "final_score": 0.7132,
     "solve_score_raw": 0.111,
-    "solve_score_normalized": 0.7451,
+    "solve_score_normalized": 0.7449,
     "arena_points": 0.425,
     "bt_elo": 1475.5,
     "arena_score_normalized": 0.618,
@@ -825,15 +860,16 @@
     "wins": 51,
     "draws": 0,
     "losses": 69,
-    "rank": 36
+    "rank": 36,
+    "accept_tier": "waitlist"
   },
   {
     "agent_name": "Silva Vardanyan",
     "person_key": "silva vardanyan",
     "is_baseline": false,
-    "final_score": 0.7075,
+    "final_score": 0.7074,
     "solve_score_raw": 0.1115,
-    "solve_score_normalized": 0.7476,
+    "solve_score_normalized": 0.7474,
     "arena_points": 0.3542,
     "bt_elo": 1454.9,
     "arena_score_normalized": 0.5968,
@@ -848,15 +884,16 @@
     "wins": 34,
     "draws": 0,
     "losses": 62,
-    "rank": 37
+    "rank": 37,
+    "accept_tier": "waitlist"
   },
   {
     "agent_name": "Levon Gevorgyan",
     "person_key": "levon gevorgyan",
     "is_baseline": false,
-    "final_score": 0.7071,
+    "final_score": 0.7072,
     "solve_score_raw": 0.1029,
-    "solve_score_normalized": 0.703,
+    "solve_score_normalized": 0.7032,
     "arena_points": 0.5,
     "bt_elo": 1528.4,
     "arena_score_normalized": 0.6722,
@@ -871,7 +908,8 @@
     "wins": 50,
     "draws": 0,
     "losses": 50,
-    "rank": 38
+    "rank": 38,
+    "accept_tier": "waitlist"
   },
   {
     "agent_name": "Davit Ishkhanyan",
@@ -879,10 +917,10 @@
     "is_baseline": false,
     "final_score": 0.7052,
     "solve_score_raw": 0.109,
-    "solve_score_normalized": 0.7345,
+    "solve_score_normalized": 0.7346,
     "arena_points": 0.4286,
     "bt_elo": 1470.5,
-    "arena_score_normalized": 0.6129,
+    "arena_score_normalized": 0.6128,
     "robustness_score": 1.0,
     "num_crashes": 0,
     "num_invalid_masks": 0,
@@ -894,15 +932,16 @@
     "wins": 48,
     "draws": 0,
     "losses": 64,
-    "rank": 39
+    "rank": 39,
+    "accept_tier": "waitlist"
   },
   {
     "agent_name": "Hayk Daghunts",
     "person_key": "hayk daghunts",
     "is_baseline": false,
-    "final_score": 0.7011,
+    "final_score": 0.7012,
     "solve_score_raw": 0.0964,
-    "solve_score_normalized": 0.6697,
+    "solve_score_normalized": 0.6698,
     "arena_points": 0.56,
     "bt_elo": 1567.5,
     "arena_score_normalized": 0.7123,
@@ -917,15 +956,16 @@
     "wins": 56,
     "draws": 0,
     "losses": 44,
-    "rank": 40
+    "rank": 40,
+    "accept_tier": "waitlist"
   },
   {
     "agent_name": "Hayk Sahakyan",
     "person_key": "hayk sahakyan",
     "is_baseline": false,
-    "final_score": 0.6902,
+    "final_score": 0.6903,
     "solve_score_raw": 0.0932,
-    "solve_score_normalized": 0.6531,
+    "solve_score_normalized": 0.6533,
     "arena_points": 0.5873,
     "bt_elo": 1564.8,
     "arena_score_normalized": 0.7095,
@@ -940,15 +980,16 @@
     "wins": 73,
     "draws": 2,
     "losses": 51,
-    "rank": 41
+    "rank": 41,
+    "accept_tier": "online"
   },
   {
     "agent_name": "Armen Mkrtchyan",
     "person_key": "armen mkrtchyan",
     "is_baseline": false,
-    "final_score": 0.6847,
+    "final_score": 0.6846,
     "solve_score_raw": 0.0979,
-    "solve_score_normalized": 0.6776,
+    "solve_score_normalized": 0.6775,
     "arena_points": 0.5948,
     "bt_elo": 1508.6,
     "arena_score_normalized": 0.6519,
@@ -963,7 +1004,8 @@
     "wins": 69,
     "draws": 0,
     "losses": 47,
-    "rank": 42
+    "rank": 42,
+    "accept_tier": "online"
   },
   {
     "agent_name": "Balamurugan D",
@@ -971,7 +1013,7 @@
     "is_baseline": false,
     "final_score": 0.6835,
     "solve_score_raw": 0.0958,
-    "solve_score_normalized": 0.6666,
+    "solve_score_normalized": 0.6667,
     "arena_points": 0.5179,
     "bt_elo": 1523.5,
     "arena_score_normalized": 0.6672,
@@ -986,15 +1028,16 @@
     "wins": 58,
     "draws": 0,
     "losses": 54,
-    "rank": 43
+    "rank": 43,
+    "accept_tier": "online"
   },
   {
     "agent_name": "Hayk Asatryan",
     "person_key": "hayk asatryan",
     "is_baseline": false,
-    "final_score": 0.6815,
+    "final_score": 0.6816,
     "solve_score_raw": 0.1018,
-    "solve_score_normalized": 0.6974,
+    "solve_score_normalized": 0.6975,
     "arena_points": 0.3571,
     "bt_elo": 1466.6,
     "arena_score_normalized": 0.6088,
@@ -1009,18 +1052,19 @@
     "wins": 30,
     "draws": 0,
     "losses": 54,
-    "rank": 44
+    "rank": 44,
+    "accept_tier": "online"
   },
   {
     "agent_name": "Armen S.",
     "person_key": "armen s.",
     "is_baseline": false,
-    "final_score": 0.6806,
+    "final_score": 0.6805,
     "solve_score_raw": 0.0992,
-    "solve_score_normalized": 0.6843,
+    "solve_score_normalized": 0.6842,
     "arena_points": 0.4259,
     "bt_elo": 1485.8,
-    "arena_score_normalized": 0.6286,
+    "arena_score_normalized": 0.6285,
     "robustness_score": 1.0,
     "num_crashes": 0,
     "num_invalid_masks": 0,
@@ -1032,7 +1076,8 @@
     "wins": 46,
     "draws": 0,
     "losses": 62,
-    "rank": 45
+    "rank": 45,
+    "accept_tier": "online"
   },
   {
     "agent_name": "Raffi Stepanyan",
@@ -1040,7 +1085,7 @@
     "is_baseline": false,
     "final_score": 0.6746,
     "solve_score_raw": 0.1047,
-    "solve_score_normalized": 0.7125,
+    "solve_score_normalized": 0.7124,
     "arena_points": 0.3452,
     "bt_elo": 1422.0,
     "arena_score_normalized": 0.5631,
@@ -1055,18 +1100,19 @@
     "wins": 41,
     "draws": 0,
     "losses": 78,
-    "rank": 46
+    "rank": 46,
+    "accept_tier": "online"
   },
   {
     "agent_name": "Ashish Kumar",
     "person_key": "ashish kumar",
     "is_baseline": false,
-    "final_score": 0.6539,
+    "final_score": 0.654,
     "solve_score_raw": 0.0834,
-    "solve_score_normalized": 0.6027,
+    "solve_score_normalized": 0.6029,
     "arena_points": 0.5568,
     "bt_elo": 1547.9,
-    "arena_score_normalized": 0.6923,
+    "arena_score_normalized": 0.6922,
     "robustness_score": 1.0,
     "num_crashes": 0,
     "num_invalid_masks": 0,
@@ -1078,18 +1124,19 @@
     "wins": 49,
     "draws": 0,
     "losses": 39,
-    "rank": 47
+    "rank": 47,
+    "accept_tier": "online"
   },
   {
     "agent_name": "Raf",
     "person_key": "raf",
     "is_baseline": false,
-    "final_score": 0.6401,
+    "final_score": 0.64,
     "solve_score_raw": 0.0875,
-    "solve_score_normalized": 0.6241,
+    "solve_score_normalized": 0.624,
     "arena_points": 0.4286,
     "bt_elo": 1473.7,
-    "arena_score_normalized": 0.6162,
+    "arena_score_normalized": 0.6161,
     "robustness_score": 1.0,
     "num_crashes": 0,
     "num_invalid_masks": 0,
@@ -1101,15 +1148,16 @@
     "wins": 36,
     "draws": 0,
     "losses": 48,
-    "rank": 48
+    "rank": 48,
+    "accept_tier": "online"
   },
   {
     "agent_name": "Kristine Hambardzumyan",
     "person_key": "kristine hambardzumyan",
     "is_baseline": false,
-    "final_score": 0.6087,
+    "final_score": 0.6086,
     "solve_score_raw": 0.0894,
-    "solve_score_normalized": 0.6339,
+    "solve_score_normalized": 0.6337,
     "arena_points": 0.2411,
     "bt_elo": 1369.9,
     "arena_score_normalized": 0.5097,
@@ -1124,18 +1172,19 @@
     "wins": 27,
     "draws": 0,
     "losses": 85,
-    "rank": 49
+    "rank": 49,
+    "accept_tier": "online"
   },
   {
     "agent_name": "Gurgen Kolotyan",
     "person_key": "gurgen kolotyan",
     "is_baseline": false,
-    "final_score": 0.6051,
+    "final_score": 0.6052,
     "solve_score_raw": 0.0948,
-    "solve_score_normalized": 0.6613,
+    "solve_score_normalized": 0.6615,
     "arena_points": 0.2368,
     "bt_elo": 1313.8,
-    "arena_score_normalized": 0.4521,
+    "arena_score_normalized": 0.4522,
     "robustness_score": 1.0,
     "num_crashes": 0,
     "num_invalid_masks": 0,
@@ -1147,15 +1196,16 @@
     "wins": 29,
     "draws": 0,
     "losses": 94,
-    "rank": 50
+    "rank": 50,
+    "accept_tier": "online"
   },
   {
     "agent_name": "Arman Martirosyan",
     "person_key": "arman martirosyan",
     "is_baseline": false,
-    "final_score": 0.5858,
+    "final_score": 0.5859,
     "solve_score_raw": 0.0811,
-    "solve_score_normalized": 0.5909,
+    "solve_score_normalized": 0.591,
     "arena_points": 0.3173,
     "bt_elo": 1378.0,
     "arena_score_normalized": 0.518,
@@ -1170,7 +1220,8 @@
     "wins": 33,
     "draws": 0,
     "losses": 71,
-    "rank": 51
+    "rank": 51,
+    "accept_tier": "online"
   },
   {
     "agent_name": "baseline:hybrid_agent",
@@ -1178,7 +1229,7 @@
     "is_baseline": true,
     "final_score": 0.582,
     "solve_score_raw": 0.0933,
-    "solve_score_normalized": 0.6537,
+    "solve_score_normalized": 0.6538,
     "arena_points": 0.2292,
     "bt_elo": 1262.2,
     "arena_score_normalized": 0.3993,
@@ -1193,15 +1244,16 @@
     "wins": 22,
     "draws": 0,
     "losses": 74,
-    "rank": 52
+    "rank": 52,
+    "accept_tier": "baseline"
   },
   {
-    "agent_name": "\u0546\u0561\u0580\u0565 \u0547\u0561\u0584\u0561\u0580\u0575\u0561\u0576",
-    "person_key": "\u0576\u0561\u0580\u0565 \u0577\u0561\u0584\u0561\u0580\u0575\u0561\u0576",
+    "agent_name": "Նարե Շաքարյան",
+    "person_key": "նարե շաքարյան",
     "is_baseline": false,
-    "final_score": 0.5254,
+    "final_score": 0.5253,
     "solve_score_raw": 0.0652,
-    "solve_score_normalized": 0.5095,
+    "solve_score_normalized": 0.5093,
     "arena_points": 0.2935,
     "bt_elo": 1345.7,
     "arena_score_normalized": 0.4849,
@@ -1216,7 +1268,8 @@
     "wins": 27,
     "draws": 0,
     "losses": 65,
-    "rank": 53
+    "rank": 53,
+    "accept_tier": "online"
   },
   {
     "agent_name": "Hovakim Grabski",
@@ -1224,7 +1277,7 @@
     "is_baseline": false,
     "final_score": 0.4909,
     "solve_score_raw": 0.1139,
-    "solve_score_normalized": 0.7599,
+    "solve_score_normalized": 0.7598,
     "arena_points": 0.0312,
     "bt_elo": 872.8,
     "arena_score_normalized": 0.0,
@@ -1239,18 +1292,19 @@
     "wins": 3,
     "draws": 0,
     "losses": 93,
-    "rank": 54
+    "rank": 54,
+    "accept_tier": "online"
   },
   {
     "agent_name": "baseline:adversarial_agent",
     "person_key": "baseline:adversarial_agent",
     "is_baseline": true,
-    "final_score": 0.4792,
+    "final_score": 0.4791,
     "solve_score_raw": 0.0446,
     "solve_score_normalized": 0.4033,
     "arena_points": 0.3558,
     "bt_elo": 1394.3,
-    "arena_score_normalized": 0.5348,
+    "arena_score_normalized": 0.5347,
     "robustness_score": 1.0,
     "num_crashes": 0,
     "num_invalid_masks": 0,
@@ -1262,15 +1316,16 @@
     "wins": 37,
     "draws": 0,
     "losses": 67,
-    "rank": 55
+    "rank": 55,
+    "accept_tier": "baseline"
   },
   {
     "agent_name": "Suren Bichakhchyan",
     "person_key": "suren bichakhchyan",
     "is_baseline": false,
-    "final_score": 0.4395,
+    "final_score": 0.4396,
     "solve_score_raw": 0.0535,
-    "solve_score_normalized": 0.4489,
+    "solve_score_normalized": 0.4491,
     "arena_points": 0.15,
     "bt_elo": 1207.5,
     "arena_score_normalized": 0.3432,
@@ -1285,15 +1340,16 @@
     "wins": 15,
     "draws": 0,
     "losses": 85,
-    "rank": 56
+    "rank": 56,
+    "accept_tier": "online"
   },
   {
     "agent_name": "Sevak Grigoryan",
     "person_key": "sevak grigoryan",
     "is_baseline": false,
-    "final_score": 0.3321,
+    "final_score": 0.3323,
     "solve_score_raw": -0.0017,
-    "solve_score_normalized": 0.1647,
+    "solve_score_normalized": 0.1651,
     "arena_points": 0.2927,
     "bt_elo": 1383.4,
     "arena_score_normalized": 0.5235,
@@ -1308,18 +1364,19 @@
     "wins": 23,
     "draws": 2,
     "losses": 57,
-    "rank": 57
+    "rank": 57,
+    "accept_tier": "online"
   },
   {
     "agent_name": "baseline:mean_agent",
     "person_key": "baseline:mean_agent",
     "is_baseline": true,
-    "final_score": 0.2483,
+    "final_score": 0.2484,
     "solve_score_raw": 0.0,
-    "solve_score_normalized": 0.1737,
+    "solve_score_normalized": 0.1739,
     "arena_points": 0.1,
     "bt_elo": 1134.9,
-    "arena_score_normalized": 0.2688,
+    "arena_score_normalized": 0.2687,
     "robustness_score": 1.0,
     "num_crashes": 0,
     "num_invalid_masks": 0,
@@ -1331,15 +1388,16 @@
     "wins": 10,
     "draws": 0,
     "losses": 90,
-    "rank": 58
+    "rank": 58,
+    "accept_tier": "baseline"
   },
   {
     "agent_name": "baseline:random_attack_agent",
     "person_key": "baseline:random_attack_agent",
     "is_baseline": true,
-    "final_score": 0.2351,
+    "final_score": 0.2352,
     "solve_score_raw": 0.0,
-    "solve_score_normalized": 0.1737,
+    "solve_score_normalized": 0.1739,
     "arena_points": 0.1136,
     "bt_elo": 1098.1,
     "arena_score_normalized": 0.231,
@@ -1354,7 +1412,32 @@
     "wins": 10,
     "draws": 0,
     "losses": 78,
-    "rank": 59
+    "rank": 59,
+    "accept_tier": "baseline"
+  },
+  {
+    "agent_name": "Nelli Poghosyan",
+    "person_key": "nelli poghosyan",
+    "is_baseline": false,
+    "solve_score_raw": 0.0002,
+    "bt_elo": 1057.5,
+    "robustness_score": 1.0,
+    "num_crashes": 0,
+    "num_invalid_masks": 0,
+    "num_timeouts": 0,
+    "num_invalid_preds": 0,
+    "nondeterministic": 0,
+    "mean_loss": 0.5002,
+    "median_loss": 0.4999,
+    "wins": 4,
+    "draws": 0,
+    "losses": 52,
+    "solve_score_normalized": 0.1749,
+    "arena_score_normalized": 0.1894,
+    "final_score": 0.2212,
+    "rank": 60,
+    "accept_tier": "online",
+    "arena_points": 0.0714
   },
   {
     "agent_name": "baseline:ridge_agent",
@@ -1365,7 +1448,7 @@
     "solve_score_normalized": 0.1224,
     "arena_points": 0.0662,
     "bt_elo": 1054.6,
-    "arena_score_normalized": 0.1865,
+    "arena_score_normalized": 0.1864,
     "robustness_score": 1.0,
     "num_crashes": 0,
     "num_invalid_masks": 0,
@@ -1377,7 +1460,8 @@
     "wins": 9,
     "draws": 0,
     "losses": 127,
-    "rank": 60
+    "rank": 61,
+    "accept_tier": "baseline"
   },
   {
     "agent_name": "baseline:low_rank_agent",
@@ -1400,15 +1484,16 @@
     "wins": 10,
     "draws": 0,
     "losses": 122,
-    "rank": 61
+    "rank": 62,
+    "accept_tier": "baseline"
   },
   {
     "agent_name": "Venkata Sai Jagadeesh Dumpa",
     "person_key": "venkata sai jagadeesh dumpa",
     "is_baseline": false,
-    "final_score": 0.0967,
+    "final_score": 0.0968,
     "solve_score_raw": -0.0241,
-    "solve_score_normalized": 0.0496,
+    "solve_score_normalized": 0.0499,
     "arena_points": 0.0395,
     "bt_elo": 919.9,
     "arena_score_normalized": 0.0483,
@@ -1423,6 +1508,31 @@
     "wins": 3,
     "draws": 0,
     "losses": 73,
-    "rank": 62
+    "rank": 63,
+    "accept_tier": "online"
+  },
+  {
+    "agent_name": "Davit Kirakosyan",
+    "person_key": "davit kirakosyan",
+    "is_baseline": false,
+    "solve_score_raw": -0.0337,
+    "bt_elo": 939.0,
+    "robustness_score": 1.0,
+    "num_crashes": 0,
+    "num_invalid_masks": 0,
+    "num_timeouts": 0,
+    "num_invalid_preds": 0,
+    "nondeterministic": 0,
+    "mean_loss": 0.5354,
+    "median_loss": 0.5324,
+    "wins": 4,
+    "draws": 0,
+    "losses": 52,
+    "solve_score_normalized": 0.0005,
+    "arena_score_normalized": 0.0679,
+    "final_score": 0.0741,
+    "rank": 64,
+    "accept_tier": "online",
+    "arena_points": 0.0714
   }
 ]
