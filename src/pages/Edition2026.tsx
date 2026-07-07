@@ -72,12 +72,13 @@ const Edition2026 = memo(function Edition2026() {
               </h3>
               <p className="text-white/80">
                 Reconstruct hidden matrices from sparse observations and outwit opponents in
-                adversarial duels — the entrance test for ARMLLM 2026. Try the live demo, read the
-                rules, and submit your agent.
+                adversarial duels — the entrance test for ARMLLM 2026. Explore the challenge and the
+                live demo, or see the final leaderboard.
               </p>
             </div>
-            <div className="flex-shrink-0">
-              <Button to="/2026/competition">Enter the Arena →</Button>
+            <div className="flex-shrink-0 flex flex-col sm:flex-row gap-3">
+              <Button to="/2026/competition">The Challenge →</Button>
+              <Button to="/2026/competition/results" variant="secondary">Results →</Button>
             </div>
           </div>
         </div>
