@@ -84,7 +84,7 @@ const CompetitionResults2026 = memo(function CompetitionResults2026() {
   const tiered = ROWS.map((r) => {
     if (r.is_baseline) return { ...r, tier: 'baseline' as Tier }
     pcount += 1
-    const tier: Tier = pcount <= 25 ? 'accepted' : pcount <= 40 ? 'waitlist' : 'online'
+    const tier: Tier = pcount <= 40 ? 'accepted' : 'online'
     return { ...r, tier }
   })
   const shown = showAll ? tiered : tiered.slice(0, 25)
@@ -243,14 +243,10 @@ const CompetitionResults2026 = memo(function CompetitionResults2026() {
           <SectionTitle title="Full Leaderboard" subtitle={`All ${ROWS.length} ranked entries · ★ = baseline`} />
 
           {/* Acceptance legend */}
-          <div className="max-w-4xl mx-auto mb-4 grid sm:grid-cols-3 gap-3">
+          <div className="max-w-3xl mx-auto mb-4 grid sm:grid-cols-2 gap-3">
             <div className="rounded-lg px-4 py-3 bg-green-500/10 border border-green-400/30">
-              <p className="text-green-300 font-semibold text-sm">Ranks 1–25 · Accepted</p>
+              <p className="text-green-300 font-semibold text-sm">Ranks 1–40 · Accepted</p>
               <p className="text-white/60 text-xs mt-0.5">Admitted to the summer school.</p>
-            </div>
-            <div className="rounded-lg px-4 py-3 bg-amber-500/10 border border-amber-400/30">
-              <p className="text-amber-300 font-semibold text-sm">Ranks 26–40 · Waitlist</p>
-              <p className="text-white/60 text-xs mt-0.5">Accepted on a first-come, first-served basis.</p>
             </div>
             <div className="rounded-lg px-4 py-3 bg-sky-500/10 border border-sky-400/30">
               <p className="text-sky-300 font-semibold text-sm">Ranks 41+ · Online track</p>
