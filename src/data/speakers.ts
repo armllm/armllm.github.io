@@ -76,6 +76,12 @@ export const speakers2026: Speaker[] = [
     scholarUrl: "https://andre-martins.github.io/"
   },
   {
+    name: "Edgar Minasyan",
+    affiliation: "NVIDIA",
+    image: "/images/edgar_minasyan.jpeg",
+    scholarUrl: "https://minasyan.github.io/"
+  },
+  {
     name: "Ivan Moshkov",
     affiliation: "NVIDIA",
     image: "/images/ivan.jpeg",
@@ -83,7 +89,7 @@ export const speakers2026: Speaker[] = [
   },
   {
     name: "Aram Markosyan",
-    affiliation: "Axiom Math (ex-Meta)",
+    affiliation: "NVIDIA",
     image: "/images/aram_markosyan.jpeg",
     scholarUrl: "https://scholar.google.com/citations?hl=en&user=NugC7bQAAAAJ&view_op=list_works&sortby=pubdate"
   },

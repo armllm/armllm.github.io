@@ -19,7 +19,7 @@ export const schedule2026: ScheduleDay[] = [
     day: "Day 2",
     topic: "SFT & Reinforcement Learning",
     description: "Supervised fine-tuning, RLHF, alignment",
-    speakers: ["TBD"]
+    speakers: ["Edgar Minasyan (NVIDIA)"]
   },
   {
     date: "August 5",
@@ -33,7 +33,7 @@ export const schedule2026: ScheduleDay[] = [
     day: "Day 4",
     topic: "Agents & Reasoning",
     description: "Tool usage, agentic workflows, reasoning capabilities",
-    speakers: ["Aram Markosyan (Axiom Math)"]
+    speakers: ["Aram Markosyan (NVIDIA)"]
   },
   {
     date: "August 7",
