@@ -29,7 +29,7 @@ function IdeaCard({ idea }: { idea: ProjectIdea }) {
       <div
         className={clsx(
           'transition-all duration-300 overflow-hidden',
-          open ? 'max-h-[44rem] opacity-100' : 'max-h-0 opacity-0'
+          open ? 'max-h-[80rem] opacity-100' : 'max-h-0 opacity-0'
         )}
       >
         <dl className="px-5 pb-5 space-y-3">
@@ -56,6 +56,7 @@ export default function DomainExplorer() {
           <button
             key={d.key}
             type="button"
+            aria-current={i === active}
             onClick={() => setActive(i)}
             className={clsx(
               'px-4 py-2 rounded-lg text-sm font-semibold transition-colors border',
