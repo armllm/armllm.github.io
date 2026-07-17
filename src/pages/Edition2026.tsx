@@ -189,8 +189,35 @@ const Edition2026 = memo(function Edition2026() {
 
           <div className="text-center mt-8">
             <p className="text-white/60">
-              <strong className="text-accent">August 8:</strong> 24-hour Hackathon (organized by AI9)
+              <strong className="text-accent">August 8:</strong> 24-hour Hackathon (organized by AI9) —{' '}
+              <Link to="/2026/hackathon" className="text-accent underline hover:text-white">
+                explore Hack Armenia →
+              </Link>
             </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Hackathon Banner */}
+      <section className="py-12 bg-gradient-to-r from-accent/20 to-primary/20 border-t border-white/10">
+        <div className="container mx-auto px-8">
+          <div className="max-w-5xl mx-auto bg-white/[0.04] border border-accent/30 rounded-2xl p-8 md:flex md:items-center md:justify-between gap-6">
+            <div className="md:flex-1 mb-6 md:mb-0">
+              <span className="inline-block bg-accent/20 text-accent px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-widest mb-3">
+                24-Hour Hackathon · Aug 8
+              </span>
+              <h3 className="text-2xl md:text-3xl font-bold text-white mb-2">
+                Hack Armenia: build LLMs for Armenia
+              </h3>
+              <p className="text-white/80">
+                A 24-hour build sprint after the school — one umbrella challenge across four Armenian
+                public-interest domains: urban development, public systems, healthcare, and education.
+                Explore the tracks and register.
+              </p>
+            </div>
+            <div className="flex-shrink-0">
+              <Button to="/2026/hackathon">Explore Hack Armenia →</Button>
+            </div>
           </div>
         </div>
       </section>
