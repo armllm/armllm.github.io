@@ -109,7 +109,7 @@ const RULES = [
   {
     icon: '👥',
     title: 'Build in teams',
-    text: 'Form a team at kickoff and pick one track. Registration is handled by AI9.',
+    text: 'Form a team at kickoff and pick one track. Registration is handled by the organizers.',
   },
 ]
 
@@ -120,7 +120,7 @@ const hackathonFAQ: FAQCategory[] = [
       {
         question: 'Is this the same as the Matrix Arena entrance competition?',
         answer:
-          'No. <strong>Matrix Arena</strong> is the Summer School entrance test. <strong>Hack Armenia</strong> is a separate 24-hour build sprint on <strong>August 8</strong>, organized by <strong>AI9</strong> with the Armenia LLM Summer School co-organizing the content, with its own registration.',
+          'No. <strong>Matrix Arena</strong> is the Summer School entrance test. <strong>Hack Armenia</strong> is a separate 24-hour build sprint on <strong>August 8</strong>, organized by the <strong>Armenia LLM Summer School</strong>, <strong>AI9</strong> and <strong>YerevaNN</strong>, with its own registration.',
       },
       {
         question: 'When and where is it?',
@@ -130,7 +130,7 @@ const hackathonFAQ: FAQCategory[] = [
       {
         question: 'How do we register?',
         answer:
-          'Through the registration form linked on this page (the "Register" button). Registration is run by <strong>AI9</strong>.',
+          'Through the registration form linked on this page (the "Register" button). Registration is run by the organizers — the Armenia LLM Summer School, AI9 and YerevaNN.',
       },
     ],
   },
@@ -235,7 +235,7 @@ const Hackathon2026 = memo(function Hackathon2026() {
             <Card>
               <h3 className="text-accent text-lg font-semibold mb-2">🤝 Who runs it</h3>
               <p className="text-white/80 text-sm">
-                Organized by AI9; the Armenia LLM Summer School co-organizes the content.
+                Organized by the Armenia LLM Summer School, AI9 and YerevaNN.
               </p>
             </Card>
             <Card>
@@ -440,7 +440,7 @@ const Hackathon2026 = memo(function Hackathon2026() {
         <div className="container mx-auto px-8">
           <SectionTitle
             title="Register"
-            subtitle="Registration is run by AI9 — sign up through the form below"
+            subtitle="Registration is run by the organizers — sign up through the form below"
           />
           <div className="max-w-3xl mx-auto">
             <div className="bg-white/[0.03] border border-white/10 rounded-2xl p-3 md:p-4 mb-6">

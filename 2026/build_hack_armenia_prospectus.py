@@ -176,11 +176,15 @@ country's public interest — the finale of the Armenia LLM Summer School.</div>
 <div class="fact">📍 AI9 Startup Campus, Yerevan</div><div class="fact">🎯 9 public-interest tracks</div></div>
 <div class="rule" style="margin-top:24px"></div>
 <div class="org-row">
-<span class="org-lab">Organized with</span>
+<span class="org-lab">Organized by</span>
+<div class="chip"><img src="{uri('logo_armllm_bg_removed.png')}" alt="Armenia LLM Summer School"/></div>
 <div class="chip"><img src="{uri('ai9-square.svg')}" alt="AI9"/></div>
-<div class="chip"><img src="{uri('yn_logo.png')}" alt="YerevaNN"/></div>
-<div class="chip">{NVIDIA_SVG}</div>
-<span class="org-lab" style="margin-left:4px">Faculty from NVIDIA · Meta · Google · Amazon</span></div>
+<div class="chip"><img src="{uri('yn_logo.png')}" alt="YerevaNN"/></div></div>
+<div style="font-size:13.5px;color:#dbe2ff;font-weight:700;margin-top:11px">Armenia LLM Summer School&nbsp;·&nbsp;AI9&nbsp;·&nbsp;YerevaNN</div>
+<div class="org-row" style="margin-top:12px">
+<span class="org-lab">Faculty from</span>
+<div class="chip" style="height:44px;padding:8px 14px">{NVIDIA_SVG}</div>
+<span style="font-size:13px;color:rgba(255,255,255,.72);font-weight:600">Meta · Google · Amazon · ServiceNow</span></div>
 <div class="ribbon"><div class="org-lab">Nine public-interest tracks</div><div class="rb-row">{ribbon_chips}</div></div>
 </div>
 <div class="cta"><div class="rule"></div>
@@ -193,8 +197,9 @@ opp=f'''<div>
 <div class="h2">The <span class="accent">opportunity</span></div>
 <div class="lead" style="margin-top:10px;max-width:170mm">The Armenia LLM Summer School is the country's flagship
 program on large language models, taught by researchers from <b>NVIDIA, Meta, Google, Amazon and ServiceNow</b>.
-<b>Hack Armenia</b> caps the 2026 edition with a 24-hour sprint: teams build working LLM systems for real Armenian
-public-interest problems — and sponsors get a front-row seat to the talent and the work.</div>
+<b>Hack Armenia</b> — organized by the <b>Armenia LLM Summer School, AI9 and YerevaNN</b> — caps the 2026 edition with a
+24-hour sprint: teams build working LLM systems for real Armenian public-interest problems, and sponsors get a
+front-row seat to the talent and the work.</div>
 <div class="rule"></div>
 <div class="tiles">{tiles_html}</div>
 <div style="margin-top:18px" class="card">

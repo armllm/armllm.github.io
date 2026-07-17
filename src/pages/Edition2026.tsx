@@ -46,7 +46,7 @@ const Edition2026 = memo(function Edition2026() {
             August 3–7, 2026
           </p>
           <p className="text-lg text-white/90 max-w-3xl mx-auto mb-10">
-            An intensive week of lectures and hands-on sessions on Large Language Models and Physical AI — with an online track and a 24-hour hackathon organized by AI9.
+            An intensive week of lectures and hands-on sessions on Large Language Models and Physical AI — with an online track and a 24-hour hackathon organized by the Armenia LLM Summer School, AI9 and YerevaNN.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Button href="https://forms.gle/1HnZ4BLitQkXo2reA" target="_blank">
@@ -189,7 +189,7 @@ const Edition2026 = memo(function Edition2026() {
 
           <div className="text-center mt-8">
             <p className="text-white/60">
-              <strong className="text-accent">August 8:</strong> 24-hour Hackathon (organized by AI9) —{' '}
+              <strong className="text-accent">August 8:</strong> 24-hour Hackathon (organized by ARMLLM, AI9 &amp; YerevaNN) —{' '}
               <Link to="/2026/hackathon" className="text-accent underline hover:text-white">
                 explore Hack Armenia →
               </Link>
@@ -213,6 +213,9 @@ const Edition2026 = memo(function Edition2026() {
                 A 24-hour build sprint after the school — one umbrella challenge across Armenian
                 public-interest domains, from urban systems and healthcare to security, food, and
                 disaster response. Explore the tracks and register.
+              </p>
+              <p className="text-white/55 text-sm mt-2">
+                Organized by the Armenia LLM Summer School, AI9 &amp; YerevaNN.
               </p>
             </div>
             <div className="flex-shrink-0">

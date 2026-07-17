@@ -22,11 +22,11 @@ export const faq2026: FAQCategory[] = [
       },
       {
         question: "Will there be a hackathon?",
-        answer: "Yes. The hackathon starts on <strong>August 8 at 00:00</strong> and runs for a full <strong>24-hour hack day</strong>. It is organized by <strong>AI9</strong>, and Armenia LLM Summer School is a co-organizer for hackathon content. See the <a href=\"/2026/hackathon\" class=\"text-accent underline\">Hack Armenia challenge page</a> for tracks, requirements, and registration."
+        answer: "Yes. The hackathon starts on <strong>August 8 at 00:00</strong> and runs for a full <strong>24-hour hack day</strong>. It is organized by the <strong>Armenia LLM Summer School</strong>, <strong>AI9</strong> and <strong>YerevaNN</strong>. See the <a href=\"/2026/hackathon\" class=\"text-accent underline\">Hack Armenia challenge page</a> for tracks, requirements, and registration."
       },
       {
         question: "How do I register for the hackathon?",
-        answer: "There will be a separate registration for participation in the hackathon. The hackathon is organized by <strong>AI9</strong>, while <strong>Armenia LLM Summer School</strong> is a co-organizer for hackathon content. Register and see the tracks on the <a href=\"/2026/hackathon\" class=\"text-accent underline\">Hack Armenia challenge page</a>."
+        answer: "There will be a separate registration for participation in the hackathon. The hackathon is organized by the <strong>Armenia LLM Summer School</strong>, <strong>AI9</strong> and <strong>YerevaNN</strong>. Register and see the tracks on the <a href=\"/2026/hackathon\" class=\"text-accent underline\">Hack Armenia challenge page</a>."
       },
       {
         question: "What should I bring?",
