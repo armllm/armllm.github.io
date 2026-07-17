@@ -239,4 +239,264 @@ export const hackathonDomains: Domain[] = [
       },
     ],
   },
+  {
+    key: 'security',
+    icon: '🔒',
+    name: 'Security',
+    tagline:
+      'LLM and VLM systems that detect threats, harden software, and keep Armenian users and institutions safe online.',
+    ideas: [
+      {
+        title: 'Phishing & scam detector (Armenian)',
+        hook: 'Catch fraudulent SMS, emails, and sites targeting Armenian users.',
+        problem:
+          'Armenian users are hit by bank-impersonation SMS, fake government notices, and scam sites, with little localized protection.',
+        data: 'Public phishing corpora plus collected or synthetic Armenian-language scam messages and URLs.',
+        whyLLM:
+          'Reads unstructured messages in Armenian and English, judges intent, and explains the red flags in plain language.',
+        evaluate:
+          'Precision/recall on a labeled phishing-vs-legitimate set; report the false-positive rate, since flagging real bank messages erodes trust.',
+        impact: 'Protects citizens — especially older, less tech-savvy users — from fraud.',
+      },
+      {
+        title: 'Secure-code review assistant',
+        hook: 'Scan a repo or diff for vulnerabilities and explain the fix.',
+        problem: 'Small Armenian dev teams and startups often ship code without any security review.',
+        data: 'Public vulnerability datasets (known CWE/CVE samples) and open-source repositories.',
+        whyLLM:
+          'Reasons over code context to spot injection, hard-coded secrets, and broken authorization, and drafts a concrete fix with rationale.',
+        evaluate:
+          'Detection rate on a labeled vulnerable/clean code set plus the false-positive rate; compare against a plain linter baseline.',
+        impact: "Safer software from Armenia's growing tech sector.",
+      },
+      {
+        title: 'Log anomaly explainer',
+        hook: 'Turn noisy server and auth logs into plain-language incident summaries.',
+        problem: "Small organizations can't staff a security operations center to watch their logs.",
+        data: 'Public security-log datasets (auth, web, network) with labeled incidents.',
+        whyLLM:
+          'Correlates events across noisy logs, flags patterns like brute-force or data exfiltration, and explains them for non-experts.',
+        evaluate:
+          'Detection precision/recall on labeled incidents; measure alert volume, since drowning users in alerts is its own failure mode.',
+        impact: 'A lightweight "SOC-in-a-box" for under-resourced institutions.',
+      },
+      {
+        title: 'Security-advisory triage & patch assistant',
+        hook: 'Turn CVE feeds into a prioritized, org-specific patch plan.',
+        problem: "IT teams drown in vulnerability advisories and can't tell which ones matter for their systems.",
+        data: 'Public CVE/NVD feeds plus a synthetic asset inventory.',
+        whyLLM:
+          "Maps advisories to the organization's actual software, prioritizes by exploitability and exposure, and drafts remediation steps.",
+        evaluate: 'Prioritization agreement with an expert ranking on a labeled advisory set.',
+        impact: 'Faster, smarter patching for under-staffed Armenian IT teams.',
+      },
+    ],
+  },
+  {
+    key: 'food',
+    icon: '🍎',
+    name: 'Food & agriculture',
+    tagline:
+      "LLM and VLM tools for farmers, food safety, and nutrition — a sector at the heart of Armenia's economy.",
+    ideas: [
+      {
+        title: 'Crop advisory & plant-disease agent (VLM)',
+        hook: 'Diagnose plant disease from a photo and advise on the fix, in Armenian.',
+        problem: 'Smallholder farmers lack timely agronomy advice and often misidentify crop diseases.',
+        data: 'Public plant-disease image datasets, agronomy guidelines, and weather data.',
+        whyLLM:
+          'A VLM identifies disease from a leaf photo; the LLM reasons over weather and crop guidelines to recommend treatment and timing in Armenian.',
+        evaluate:
+          'Disease-classification accuracy on a held-out image set plus an advice-quality rubric; flag low-confidence cases instead of guessing.',
+        impact: 'Higher yields and lower losses for smallholder farmers.',
+      },
+      {
+        title: 'Food-safety inspection assistant',
+        hook: 'Help inspectors catch violations and document them faster.',
+        problem: 'Food-safety oversight is stretched thin and applied inconsistently.',
+        data: 'Public food-safety regulations plus synthetic inspection reports and restaurant reviews.',
+        whyLLM:
+          'Cross-references reports against regulations to flag likely violations with citations, and drafts the write-up.',
+        evaluate:
+          'Rubric on an expert-annotated set of cases — did it catch the real violations with correct citations? Report false flags.',
+        impact: 'A safer food supply with less inspector paperwork.',
+      },
+      {
+        title: 'Market-price & supply intelligence',
+        hook: 'Tell farmers where and when to sell for a fair price.',
+        problem: 'Producers lack visibility into produce prices across markets and get squeezed by middlemen.',
+        data: 'Public or collected market price feeds across regions.',
+        whyLLM: 'Aggregates messy price data, explains trends, and reasons about where and when to sell.',
+        evaluate: 'Forecast and explanation accuracy against held-out prices; sanity-check against a naive baseline.',
+        impact: 'Fairer prices and less waste for producers.',
+      },
+      {
+        title: 'Nutrition & meal-planning assistant (Armenian cuisine)',
+        hook: 'Affordable, healthy meal plans grounded in local ingredients.',
+        problem: 'Families want healthy meals but lack guidance tuned to local food and budgets.',
+        data: 'Nutrition databases plus Armenian recipes and seasonal-ingredient lists.',
+        whyLLM:
+          'Generates budget- and diet-aware meal plans grounded in local dishes, and explains substitutions.',
+        evaluate:
+          'Nutritional accuracy against a reference plus groundedness — does it stay within real ingredients and recipes?',
+        impact: 'Better nutrition literacy using familiar, affordable food.',
+      },
+    ],
+  },
+  {
+    key: 'energy',
+    icon: '🌱',
+    name: 'Environment & energy',
+    tagline:
+      'LLM agents for cleaner energy, resilient resources, and a healthier environment across Armenia.',
+    ideas: [
+      {
+        title: 'Building energy-efficiency advisor',
+        hook: 'Cut energy bills with tailored, explained retrofit advice.',
+        problem: "Households and small businesses waste energy and don't know which efficiency upgrades pay off.",
+        data: 'Public building-energy guidelines, tariff schedules, and synthetic consumption profiles.',
+        whyLLM:
+          "Reasons over a building's usage and local tariffs to recommend and prioritize upgrades, explaining payback in plain Armenian.",
+        evaluate:
+          'Agreement with an energy-auditor rubric on sample buildings; sanity-check predicted savings against a baseline.',
+        impact: 'Lower bills and lower energy demand for Armenian households.',
+      },
+      {
+        title: 'Air & water quality explainer',
+        hook: 'Turn environmental sensor data into plain-language health guidance.',
+        problem: 'Air- and water-quality data is published but rarely understandable or actionable for the public.',
+        data: 'Public environmental monitoring feeds (air quality, water) plus health-guideline references.',
+        whyLLM:
+          'Reasons over multi-sensor readings and guidelines to explain the risk and recommend precautions for a given day and location.',
+        evaluate:
+          'Factual-consistency check against guidelines plus a clarity rubric; flag when data is missing rather than inventing it.',
+        impact: 'Actionable environmental-health information for residents.',
+      },
+      {
+        title: 'Seismic & wildfire risk briefing assistant',
+        hook: 'Grounded, plain-language hazard briefings for a location.',
+        problem: 'Residents and local officials struggle to interpret hazard data for their own area.',
+        data: 'Public seismic hazard maps, wildfire-risk data, and preparedness guidelines.',
+        whyLLM:
+          'Synthesizes hazard layers and preparedness guidance into a location-specific briefing, with citations.',
+        evaluate:
+          'Grounding check (every claim tied to a source) plus an expert rubric across a set of locations.',
+        impact: 'Better preparedness in a seismically active, wildfire-prone country.',
+      },
+      {
+        title: 'Water-resource & irrigation planning aid',
+        hook: 'Help allocate scarce water across competing needs.',
+        problem: 'Water is scarce and unevenly managed, and allocation decisions are often opaque.',
+        data: 'Public hydrology and reservoir data plus irrigation guidelines (or synthetic stand-ins).',
+        whyLLM:
+          'Reasons over supply, demand, and constraints to propose and explain allocation and irrigation schedules.',
+        evaluate:
+          'Simulated efficiency and fairness versus a baseline allocation, plus an explanation-quality rubric.',
+        impact: 'More efficient, transparent water use for agriculture and communities.',
+      },
+    ],
+  },
+  {
+    key: 'finance',
+    icon: '🏦',
+    name: 'Finance & fintech',
+    tagline:
+      'LLM systems for fairer credit, safer transactions, and stronger financial literacy in Armenia.',
+    ideas: [
+      {
+        title: 'SME credit-assessment copilot',
+        hook: 'Fairer, explainable lending decisions for small businesses.',
+        problem: 'Small businesses without formal credit histories struggle to access financing.',
+        data: 'Public financial statements and ratios plus synthetic SME financials and loan outcomes.',
+        whyLLM:
+          'Reads mixed financial documents, reasons about creditworthiness, and produces an explainable, evidence-cited assessment.',
+        evaluate:
+          'Predictive accuracy versus labeled outcomes plus a fairness and consistency check; the stated reasons must be grounded in the inputs.',
+        impact: "Wider, fairer access to capital for Armenia's small businesses.",
+      },
+      {
+        title: 'Transaction fraud & anomaly detector',
+        hook: 'Flag suspicious transactions with an explanation, not a black box.',
+        problem: 'Fraud detection is often either too crude or too opaque for small institutions to trust.',
+        data: 'Public fraud-detection datasets plus synthetic transaction streams.',
+        whyLLM: 'Reasons over transaction context to flag anomalies and explain why, cutting analyst review time.',
+        evaluate:
+          'Precision/recall on labeled fraud plus the false-positive rate, since blocking good customers is costly.',
+        impact: 'Safer digital payments for banks and their customers.',
+      },
+      {
+        title: 'Financial-literacy assistant (Armenian)',
+        hook: 'Plain-Armenian answers to real money questions.',
+        problem:
+          "Many people lack guidance on budgeting, loans, and taxes, and the advice that exists isn't in accessible Armenian.",
+        data: 'Public financial-education materials and consumer-finance regulations.',
+        whyLLM:
+          'Answers grounded questions about budgeting, loans, and savings in plain Armenian, with appropriate caution and citations.',
+        evaluate:
+          'Factual-consistency against source materials plus a clarity rubric; it must hedge or refuse on out-of-scope advice.',
+        impact: 'Stronger financial literacy, especially for young people and first-time borrowers.',
+      },
+      {
+        title: 'Invoice-financing & cash-flow assistant',
+        hook: 'Help small firms turn unpaid invoices into working capital.',
+        problem: "SMEs face cash-flow gaps waiting on invoices and don't understand their financing options.",
+        data: 'Synthetic invoices and receivables plus public information on financing products.',
+        whyLLM: 'Extracts invoice data, projects cash flow, and explains financing options and their trade-offs.',
+        evaluate:
+          'Extraction accuracy plus projection sanity versus a baseline, and an explanation-quality rubric.',
+        impact: 'Healthier cash flow for small businesses.',
+      },
+    ],
+  },
+  {
+    key: 'emergency',
+    icon: '🚨',
+    name: 'Emergency & disaster response',
+    tagline:
+      'LLM agents that help people and responders prepare for and act in crises — critical in a seismically active region.',
+    ideas: [
+      {
+        title: 'Earthquake response coordination agent',
+        hook: 'Turn chaotic incoming reports into a prioritized response picture.',
+        problem: 'In the first hours of a disaster, information is chaotic and coordination is slow.',
+        data: 'Public disaster-response datasets, synthetic incident reports, and resource inventories.',
+        whyLLM:
+          'Ingests messy reports, extracts location, severity, and needs, de-duplicates them, and proposes resource routing.',
+        evaluate:
+          'Extraction and prioritization accuracy on a labeled incident set; measure how performance degrades with noisier input.',
+        impact: 'Faster, better-coordinated response when minutes matter.',
+      },
+      {
+        title: 'Preparedness & evacuation assistant (Armenian)',
+        hook: 'Personalized, grounded preparedness guidance before disaster strikes.',
+        problem: "People often don't know how to prepare for or evacuate during earthquakes, floods, or fires.",
+        data: 'Public preparedness and evacuation guidelines plus local hazard maps.',
+        whyLLM:
+          'Produces location- and household-specific preparedness plans grounded in official guidance, in plain Armenian.',
+        evaluate:
+          'Grounding check against the guidelines plus an expert rubric; flag anything not covered by the sources.',
+        impact: 'A more prepared population in a high-hazard country.',
+      },
+      {
+        title: 'Emergency-call triage & routing',
+        hook: 'Help dispatchers extract what matters and route the right help.',
+        problem: 'Emergency dispatchers must extract critical details fast, under stress, sometimes across languages.',
+        data: 'Synthetic emergency-call transcripts plus a resource and dispatch taxonomy.',
+        whyLLM:
+          'Extracts location, nature, and severity from a call, flags critical cues, and suggests routing — as a decision aid, never autonomous.',
+        evaluate:
+          'Extraction accuracy and routing agreement with expert labels; explicitly measure dangerous misses (recall on critical cases).',
+        impact: 'Faster, more accurate dispatch — with humans in control.',
+      },
+      {
+        title: 'Damage assessment from imagery (VLM)',
+        hook: 'Rapid, first-pass damage maps from photos and drone imagery.',
+        problem: 'After a disaster, assessing building and infrastructure damage is slow and manual.',
+        data: 'Public disaster damage-assessment image datasets (satellite, drone, ground).',
+        whyLLM: 'A VLM classifies damage severity from imagery and summarizes affected areas for responders.',
+        evaluate: 'Classification accuracy versus labeled damage grades; report confusion between adjacent severity levels.',
+        impact: 'Faster situational awareness and resource targeting after a disaster.',
+      },
+    ],
+  },
 ]

@@ -70,7 +70,7 @@ const RUBRIC = [
 ]
 
 const TIMELINE = [
-  { when: 'Hour 0', title: 'Kickoff & challenge brief', text: 'The umbrella challenge and the four tracks are presented.' },
+  { when: 'Hour 0', title: 'Kickoff & challenge brief', text: 'The umbrella challenge and the tracks are presented.' },
   { when: 'Hour 0–1', title: 'Team formation & pick your track', text: 'Form a team and choose the domain you care about.' },
   { when: 'Hour 1–2', title: 'Scope your problem & data', text: 'Narrow to one problem and line up realistic data.' },
   { when: 'Hours 2–12', title: 'Build — with mentor checkpoints', text: 'Prototype end-to-end early; iterate with mentors.' },
@@ -176,7 +176,7 @@ const Hackathon2026 = memo(function Hackathon2026() {
     <div>
       <SEO
         title="Hack Armenia — 2026 Hackathon"
-        description="Hack Armenia: a 24-hour LLM build sprint after the Armenia LLM Summer School 2026. Build an LLM-powered system for one Armenian public-interest domain — urban development, public systems, healthcare, or education."
+        description="Hack Armenia: a 24-hour LLM build sprint after the Armenia LLM Summer School 2026. Build an LLM-powered system for one Armenian public-interest domain — urban development, public systems, healthcare, education, security, food & agriculture, environment & energy, finance, or disaster response."
         url="/2026/hackathon"
         keywords={[
           'Hack Armenia',
@@ -241,7 +241,7 @@ const Hackathon2026 = memo(function Hackathon2026() {
             <Card>
               <h3 className="text-accent text-lg font-semibold mb-2">🎯 What</h3>
               <p className="text-white/80 text-sm">
-                One umbrella challenge across four Armenian public-interest tracks.
+                One umbrella challenge across many Armenian public-interest tracks.
               </p>
             </Card>
           </div>
@@ -253,7 +253,7 @@ const Hackathon2026 = memo(function Hackathon2026() {
         <div className="container mx-auto px-8">
           <SectionTitle
             title="The Challenge in One Minute"
-            subtitle="One umbrella challenge, four domains, one rubric"
+            subtitle="One umbrella challenge, many domains, one rubric"
           />
           <div className="max-w-4xl mx-auto text-white/85 space-y-5 text-lg leading-relaxed">
             <p>
@@ -282,7 +282,7 @@ const Hackathon2026 = memo(function Hackathon2026() {
         <div className="container mx-auto px-8">
           <SectionTitle
             title="Choose Your Track"
-            subtitle="Four domains where LLMs can be genuinely useful to Armenia — click any idea to expand it"
+            subtitle="Armenian public-interest domains where LLMs can be genuinely useful — click any idea to expand it"
           />
           <DomainExplorer />
         </div>

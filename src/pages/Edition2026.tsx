@@ -210,9 +210,9 @@ const Edition2026 = memo(function Edition2026() {
                 Hack Armenia: build LLMs for Armenia
               </h3>
               <p className="text-white/80">
-                A 24-hour build sprint after the school — one umbrella challenge across four Armenian
-                public-interest domains: urban development, public systems, healthcare, and education.
-                Explore the tracks and register.
+                A 24-hour build sprint after the school — one umbrella challenge across Armenian
+                public-interest domains, from urban systems and healthcare to security, food, and
+                disaster response. Explore the tracks and register.
               </p>
             </div>
             <div className="flex-shrink-0">
