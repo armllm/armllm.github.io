@@ -70,12 +70,12 @@ const RUBRIC = [
 ]
 
 const TIMELINE = [
-  { when: 'Fri 10:00', title: 'Kickoff & challenge reveal', text: 'The one real-world LLM challenge is revealed to everyone.' },
-  { when: 'Fri 11:00', title: 'Teams form & plan', text: 'Form a team of 3–4, then scope your approach and data.' },
-  { when: 'Fri–Sat', title: 'Build — with mentors', text: 'Prototype end-to-end early; iterate with 8–15 senior AI mentors.' },
-  { when: 'Sat 10:00', title: 'Code freeze', text: 'Lock the repo and prepare your demo and pitch.' },
-  { when: 'Sat 11:00', title: 'Demo Day', text: 'Present to an expert jury — a short demo plus questions.' },
-  { when: 'Sat 13:00', title: 'Awards & close', text: 'The jury names the winners; prizes for the top teams.' },
+  { when: 'Sat 10:00', title: 'Kickoff & challenge reveal', text: 'The one real-world LLM challenge is revealed to everyone.' },
+  { when: 'Sat 11:00', title: 'Teams form & plan', text: 'Form a team of 3–4, then scope your approach and data.' },
+  { when: 'Sat–Sun', title: 'Build — with mentors', text: 'Prototype end-to-end early; iterate with 8–15 senior AI mentors.' },
+  { when: 'Sun 10:00', title: 'Code freeze', text: 'Lock the repo and prepare your demo and pitch.' },
+  { when: 'Sun 11:00', title: 'Demo Day', text: 'Present to an expert jury — a short demo plus questions.' },
+  { when: 'Sun 13:00', title: 'Awards & close', text: 'The jury names the winners; prizes for the top teams.' },
 ]
 
 const RULES = [
@@ -123,7 +123,7 @@ const hackathonFAQ: FAQCategory[] = [
       {
         question: 'When and where is it?',
         answer:
-          'It runs <strong>August 8–9, 2026</strong> — Friday 10:00 to Saturday 13:00, with 24 hours of building — at the <strong>AI9 Startup Campus</strong> in Yerevan.',
+          'It runs <strong>August 8–9, 2026</strong> — Saturday 10:00 to Sunday 13:00, with 24 hours of building — at the <strong>AI9 Startup Campus</strong> in Yerevan.',
       },
       {
         question: 'How do we register?',
@@ -201,7 +201,7 @@ const Hackathon2026 = memo(function Hackathon2026() {
             real-world cases — on one real-world Armenian public-interest challenge, revealed at kickoff.
           </p>
           <p className="text-accent font-medium mb-8">
-            August 8–9, 2026 · Fri 10:00 → Sat 13:00 · 24 hours of building · AI9 Startup Campus, Yerevan
+            August 8–9, 2026 · Sat 10:00 → Sun 13:00 · 24 hours of building · AI9 Startup Campus, Yerevan
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Button href="#register">Register</Button>
@@ -224,7 +224,7 @@ const Hackathon2026 = memo(function Hackathon2026() {
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             <Card>
               <h3 className="text-accent text-lg font-semibold mb-2">🗓️ When</h3>
-              <p className="text-white/80 text-sm">August 8–9, 2026 — Fri 10:00 to Sat 13:00 (24 hours of building).</p>
+              <p className="text-white/80 text-sm">August 8–9, 2026 — Sat 10:00 to Sun 13:00 (24 hours of building).</p>
             </Card>
             <Card>
               <h3 className="text-accent text-lg font-semibold mb-2">📍 Where</h3>
@@ -392,7 +392,7 @@ const Hackathon2026 = memo(function Hackathon2026() {
         <div className="container mx-auto px-8">
           <SectionTitle
             title="The 24 Hours"
-            subtitle="Friday 10:00 to Saturday 13:00 — 24 hours of building, then Demo Day"
+            subtitle="Saturday 10:00 to Sunday 13:00 — 24 hours of building, then Demo Day"
           />
           <div className="max-w-3xl mx-auto space-y-4">
             {TIMELINE.map((t) => (

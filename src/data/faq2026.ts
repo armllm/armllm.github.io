@@ -22,7 +22,7 @@ export const faq2026: FAQCategory[] = [
       },
       {
         question: "Will there be a hackathon?",
-        answer: "Yes. The hackathon runs <strong>August 8–9, 2026</strong> — Friday 10:00 to Saturday 13:00, with 24 hours of building. It is organized by the <strong>Armenia LLM Summer School</strong>, <strong>AI9</strong> and <strong>YerevaNN</strong>. See the <a href=\"/2026/hackathon\" class=\"text-accent underline\">Hack Armenia challenge page</a> for the challenge, requirements, and registration."
+        answer: "Yes. The hackathon runs <strong>August 8–9, 2026</strong> — Saturday 10:00 to Sunday 13:00, with 24 hours of building. It is organized by the <strong>Armenia LLM Summer School</strong>, <strong>AI9</strong> and <strong>YerevaNN</strong>. See the <a href=\"/2026/hackathon\" class=\"text-accent underline\">Hack Armenia challenge page</a> for the challenge, requirements, and registration."
       },
       {
         question: "How do I register for the hackathon?",

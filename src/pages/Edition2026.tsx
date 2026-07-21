@@ -118,7 +118,7 @@ const Edition2026 = memo(function Edition2026() {
             <Card>
               <h3 className="text-accent text-xl font-semibold mb-3">📅 Dates</h3>
               <p className="text-white/80">Aug 3–7, 2026</p>
-              <p className="text-white/60 text-sm mt-2">Hackathon: Aug 8–9 (Fri 10:00 – Sat 13:00)</p>
+              <p className="text-white/60 text-sm mt-2">Hackathon: Aug 8–9 (Sat 10:00 – Sun 13:00)</p>
             </Card>
           </div>
         </div>
