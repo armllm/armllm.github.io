@@ -56,7 +56,7 @@ const Home = memo(function Home() {
             <EditionCard
               year={2026}
               dates="August 3-7, 2026 • AI9 Startup Campus, Yerevan"
-              description="Applications now open! The third edition features in-person and online tracks, with a 24-hour hackathon on August 8."
+              description="Applications now open! The third edition features in-person and online tracks, with a 24-hour hackathon on August 8–9."
               image="/images/coverllm.png"
               featured
               badgeText="Apply Now"

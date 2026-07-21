@@ -108,7 +108,7 @@ const Edition2026 = memo(function Edition2026() {
             <Card>
               <h3 className="text-accent text-xl font-semibold mb-3">📚 Format</h3>
               <p className="text-white/80">In-person + online track</p>
-              <p className="text-white/60 text-sm mt-2">Hackathon: Aug 8 (24-hour)</p>
+              <p className="text-white/60 text-sm mt-2">Hackathon: Aug 8–9 (24-hour)</p>
             </Card>
             <Card>
               <h3 className="text-accent text-xl font-semibold mb-3">📍 Location</h3>
@@ -118,7 +118,7 @@ const Edition2026 = memo(function Edition2026() {
             <Card>
               <h3 className="text-accent text-xl font-semibold mb-3">📅 Dates</h3>
               <p className="text-white/80">Aug 3–7, 2026</p>
-              <p className="text-white/60 text-sm mt-2">Hackathon starts Aug 8 at 00:00</p>
+              <p className="text-white/60 text-sm mt-2">Hackathon: Aug 8–9 (Fri 10:00 – Sat 13:00)</p>
             </Card>
           </div>
         </div>
@@ -189,7 +189,7 @@ const Edition2026 = memo(function Edition2026() {
 
           <div className="text-center mt-8">
             <p className="text-white/60">
-              <strong className="text-accent">August 8:</strong> 24-hour Hackathon (organized by ARMLLM, AI9 &amp; YerevaNN) —{' '}
+              <strong className="text-accent">August 8–9:</strong> 24-hour Hackathon (organized by ARMLLM, AI9 &amp; YerevaNN) —{' '}
               <Link to="/2026/hackathon" className="text-accent underline hover:text-white">
                 explore Hack Armenia →
               </Link>
@@ -204,7 +204,7 @@ const Edition2026 = memo(function Edition2026() {
           <div className="max-w-5xl mx-auto bg-white/[0.04] border border-accent/30 rounded-2xl p-8 md:flex md:items-center md:justify-between gap-6">
             <div className="md:flex-1 mb-6 md:mb-0">
               <span className="inline-block bg-accent/20 text-accent px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-widest mb-3">
-                24-Hour Hackathon · Aug 8
+                24-Hour Hackathon · Aug 8–9
               </span>
               <h3 className="text-2xl md:text-3xl font-bold text-white mb-2">
                 Hack Armenia: build LLMs for Armenia

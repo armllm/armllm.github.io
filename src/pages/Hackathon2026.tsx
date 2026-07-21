@@ -70,14 +70,12 @@ const RUBRIC = [
 ]
 
 const TIMELINE = [
-  { when: 'Hour 0', title: 'Kickoff & challenge brief', text: 'The umbrella challenge and the tracks are presented.' },
-  { when: 'Hour 0–1', title: 'Team formation & pick your track', text: 'Form a team and choose the domain you care about.' },
-  { when: 'Hour 1–2', title: 'Scope your problem & data', text: 'Narrow to one problem and line up realistic data.' },
-  { when: 'Hours 2–12', title: 'Build — with mentor checkpoints', text: 'Prototype end-to-end early; iterate with mentors.' },
-  { when: '~Hour 12', title: 'Mid-point evaluation gut-check', text: 'Have a working slice and the start of an evaluation.' },
-  { when: 'Hours 12–20', title: 'Build continues', text: 'Harden the prototype, strengthen the evaluation, handle failure modes.' },
-  { when: 'Hours 20–22', title: 'Code freeze & demo prep', text: 'Lock the repo, record the demo, prepare the pitch.' },
-  { when: 'Hours 22–24', title: 'Demos, pitches & awards', text: '3–5 minute pitches plus questions, then judging and awards.' },
+  { when: 'Fri 10:00', title: 'Kickoff & challenge reveal', text: 'The one real-world LLM challenge is revealed to everyone.' },
+  { when: 'Fri 11:00', title: 'Teams form & plan', text: 'Form a team of 3–4, then scope your approach and data.' },
+  { when: 'Fri–Sat', title: 'Build — with mentors', text: 'Prototype end-to-end early; iterate with 8–15 senior AI mentors.' },
+  { when: 'Sat 10:00', title: 'Code freeze', text: 'Lock the repo and prepare your demo and pitch.' },
+  { when: 'Sat 11:00', title: 'Demo Day', text: 'Present to an expert jury — a short demo plus questions.' },
+  { when: 'Sat 13:00', title: 'Awards & close', text: 'The jury names the winners; prizes for the top teams.' },
 ]
 
 const RULES = [
@@ -109,7 +107,7 @@ const RULES = [
   {
     icon: '👥',
     title: 'Build in teams',
-    text: 'Form a team at kickoff and pick one track. Registration is handled by the organizers.',
+    text: 'Form a team of 3–4 at kickoff — 15–20 teams in all. Registration is handled by the organizers.',
   },
 ]
 
@@ -120,12 +118,12 @@ const hackathonFAQ: FAQCategory[] = [
       {
         question: 'Is this the same as the Matrix Arena entrance competition?',
         answer:
-          'No. <strong>Matrix Arena</strong> is the Summer School entrance test. <strong>Hack Armenia</strong> is a separate 24-hour build sprint on <strong>August 8</strong>, organized by the <strong>Armenia LLM Summer School</strong>, <strong>AI9</strong> and <strong>YerevaNN</strong>, with its own registration.',
+          'No. <strong>Matrix Arena</strong> is the Summer School entrance test. <strong>Hack Armenia</strong> is a separate 24-hour build sprint on <strong>August 8–9</strong>, organized by the <strong>Armenia LLM Summer School</strong>, <strong>AI9</strong> and <strong>YerevaNN</strong>, with its own registration.',
       },
       {
         question: 'When and where is it?',
         answer:
-          'It starts on <strong>August 8, 2026 at 00:00</strong> and runs for a full <strong>24 hours</strong> at the <strong>AI9 Startup Campus</strong> in Yerevan.',
+          'It runs <strong>August 8–9, 2026</strong> — Friday 10:00 to Saturday 13:00, with 24 hours of building — at the <strong>AI9 Startup Campus</strong> in Yerevan.',
       },
       {
         question: 'How do we register?',
@@ -140,7 +138,7 @@ const hackathonFAQ: FAQCategory[] = [
       {
         question: 'What are we expected to build?',
         answer:
-          'An LLM-powered system in one Armenian public-interest domain that can evaluate evidence, reason under uncertainty, and generalize — with a working prototype and a real (even lightweight) evaluation.',
+          'An LLM-powered system that tackles the one real-world challenge revealed at kickoff — evaluating evidence, reasoning under uncertainty, and generalizing — with a working prototype and a real (even lightweight) evaluation.',
       },
       {
         question: 'Can we use any model or API?',
@@ -176,7 +174,7 @@ const Hackathon2026 = memo(function Hackathon2026() {
     <div>
       <SEO
         title="Hack Armenia — 2026 Hackathon"
-        description="Hack Armenia: a 24-hour LLM build sprint after the Armenia LLM Summer School 2026. Build an LLM-powered system for one Armenian public-interest domain — urban development, public systems, healthcare, education, security, food & agriculture, environment & energy, finance, or disaster response."
+        description="Hack Armenia: a 24-hour LLM build sprint on August 8–9, 2026 after the Armenia LLM Summer School. One real-world challenge, revealed at kickoff, spanning Armenian public-interest domains — urban development, public systems, healthcare, education, security, food & agriculture, environment & energy, finance, or disaster response."
         url="/2026/hackathon"
         keywords={[
           'Hack Armenia',
@@ -200,22 +198,22 @@ const Hackathon2026 = memo(function Hackathon2026() {
           <p className="text-lg text-white/85 max-w-3xl mx-auto mb-8">
             Build an LLM-powered system that can <strong>evaluate</strong> evidence,{' '}
             <strong>reason</strong> through uncertainty, and <strong>generalize</strong> across
-            real-world cases — in one Armenian public-interest domain.
+            real-world cases — on one real-world Armenian public-interest challenge, revealed at kickoff.
           </p>
           <p className="text-accent font-medium mb-8">
-            August 8, 2026 · starts 00:00 · 24 hours · AI9 Startup Campus, Yerevan
+            August 8–9, 2026 · Fri 10:00 → Sat 13:00 · 24 hours of building · AI9 Startup Campus, Yerevan
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Button href="#register">Register</Button>
             <Button href="#tracks" variant="secondary">
-              Explore the Tracks
+              Explore the Domains
             </Button>
             <Button href="#submit" variant="secondary">
               Submission Requirements
             </Button>
           </div>
           <p className="mt-8 inline-block bg-white/5 border border-accent/30 text-white/70 text-sm px-4 py-2 rounded-full">
-            🚧 Challenge details are being finalized — subject to change.
+            🔒 One real-world challenge — revealed live at kickoff.
           </p>
         </div>
       </section>
@@ -226,7 +224,7 @@ const Hackathon2026 = memo(function Hackathon2026() {
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             <Card>
               <h3 className="text-accent text-lg font-semibold mb-2">🗓️ When</h3>
-              <p className="text-white/80 text-sm">August 8, 2026 — a full 24-hour hack day, starting at 00:00.</p>
+              <p className="text-white/80 text-sm">August 8–9, 2026 — Fri 10:00 to Sat 13:00 (24 hours of building).</p>
             </Card>
             <Card>
               <h3 className="text-accent text-lg font-semibold mb-2">📍 Where</h3>
@@ -241,8 +239,26 @@ const Hackathon2026 = memo(function Hackathon2026() {
             <Card>
               <h3 className="text-accent text-lg font-semibold mb-2">🎯 What</h3>
               <p className="text-white/80 text-sm">
-                One umbrella challenge across many Armenian public-interest tracks.
+                One real-world LLM challenge, revealed at kickoff — built for Armenia's public interest.
               </p>
+            </Card>
+          </div>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-6">
+            <Card>
+              <h3 className="text-accent text-lg font-semibold mb-2">👥 60–80</h3>
+              <p className="text-white/80 text-sm">participants, hand-picked from the Summer School pool.</p>
+            </Card>
+            <Card>
+              <h3 className="text-accent text-lg font-semibold mb-2">🧩 15–20 teams</h3>
+              <p className="text-white/80 text-sm">small, focused teams of 3–4.</p>
+            </Card>
+            <Card>
+              <h3 className="text-accent text-lg font-semibold mb-2">🧑‍🏫 8–15 mentors</h3>
+              <p className="text-white/80 text-sm">senior AI mentors, hands-on all sprint.</p>
+            </Card>
+            <Card>
+              <h3 className="text-accent text-lg font-semibold mb-2">🏆 Demo Day</h3>
+              <p className="text-white/80 text-sm">present to an expert jury; top teams win prizes.</p>
             </Card>
           </div>
         </div>
@@ -253,36 +269,36 @@ const Hackathon2026 = memo(function Hackathon2026() {
         <div className="container mx-auto px-8">
           <SectionTitle
             title="The Challenge in One Minute"
-            subtitle="One umbrella challenge, many domains, one rubric"
+            subtitle="One real-world challenge, revealed at kickoff, judged by one rubric"
           />
           <div className="max-w-4xl mx-auto text-white/85 space-y-5 text-lg leading-relaxed">
             <p>
               Build an <strong>LLM-powered system</strong> that can <strong>evaluate</strong>{' '}
               evidence, <strong>reason</strong> through uncertainty, and <strong>generalize</strong>{' '}
-              across real-world cases — in one Armenian public-interest domain you care about.
+              across real-world cases — on one Armenian public-interest challenge, revealed to everyone at kickoff.
             </p>
             <p>
-              Pick a track, ship a working prototype, and — crucially — <em>measure</em> it. The
-              projects that stand out are the ones that tested the system, understood where the model
-              breaks, and could plausibly work outside a demo.
+              Ship a working prototype, and — crucially — <em>measure</em> it. The projects that stand
+              out are the ones that tested the system, understood where the model breaks, and could
+              plausibly work outside a demo.
             </p>
           </div>
           <div className="max-w-4xl mx-auto mt-8 bg-accent/10 border border-accent/40 rounded-xl p-6">
             <p className="text-white/90">
-              <span className="text-accent font-bold">The shape.</span> One challenge with several
-              Armenian public-interest domains, judged under a single umbrella — so you choose a
-              domain you care about while judging stays fair and coherent.
+              <span className="text-accent font-bold">The shape.</span> Every team tackles the same
+              real-world challenge, revealed at kickoff. It draws from Armenia's public-interest
+              domains — so the work matters, and judging stays fair and coherent.
             </p>
           </div>
         </div>
       </section>
 
-      {/* Choose your track */}
+      {/* The challenge space */}
       <section id="tracks" className="py-20 bg-glass border-b border-white/10">
         <div className="container mx-auto px-8">
           <SectionTitle
-            title="Choose Your Track"
-            subtitle="Armenian public-interest domains where LLMs can be genuinely useful — click any idea to expand it"
+            title="The Challenge Space"
+            subtitle="The challenge is revealed at kickoff — here are the Armenian public-interest domains it could draw from. Click any idea to explore."
           />
           <DomainExplorer />
         </div>
@@ -376,7 +392,7 @@ const Hackathon2026 = memo(function Hackathon2026() {
         <div className="container mx-auto px-8">
           <SectionTitle
             title="The 24 Hours"
-            subtitle="An indicative rhythm — the final schedule is shared at kickoff"
+            subtitle="Friday 10:00 to Saturday 13:00 — 24 hours of building, then Demo Day"
           />
           <div className="max-w-3xl mx-auto space-y-4">
             {TIMELINE.map((t) => (
@@ -417,10 +433,10 @@ const Hackathon2026 = memo(function Hackathon2026() {
           <SectionTitle title="Prizes" subtitle="Recognition for the strongest builds" />
           <div className="max-w-2xl mx-auto">
             <Card>
-              <h3 className="text-accent text-xl font-semibold mb-2">🏆 To be announced</h3>
+              <h3 className="text-accent text-xl font-semibold mb-2">🏆 Prizes for the top teams</h3>
               <p className="text-white/75 text-sm">
-                Prizes and awards will be announced closer to the event. Check back, or register to be
-                notified.
+                An expert jury picks the top teams on Demo Day, and they win prizes. The exact prizes
+                are announced closer to the event.
               </p>
             </Card>
           </div>

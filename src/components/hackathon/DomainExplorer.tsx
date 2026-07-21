@@ -80,8 +80,8 @@ export default function DomainExplorer() {
       </div>
 
       <p className="text-white/50 text-sm text-center mt-8 max-w-3xl mx-auto">
-        These ideas are starting points, not requirements — bring your own, as long as it serves an
-        Armenian public-interest domain. Every track is judged by the same rubric.
+        These are illustrative directions, not the challenge itself — the real problem is revealed at
+        kickoff. Whatever it is, it draws from domains like these, and the same rubric applies.
       </p>
     </div>
   )

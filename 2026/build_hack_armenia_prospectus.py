@@ -48,14 +48,14 @@ tracks=[("🏙️","Urban development","City ops, planning & mobility"),
  ("🌱","Environment & energy","Efficiency, hazards & resources"),
  ("🏦","Finance & fintech","Fair credit, fraud & literacy"),
  ("🚨","Emergency & disaster","Coordination, preparedness & response")]
-timeline=[("0h","Kickoff &amp; brief"),("1h","Team &amp; track"),("2–20h","Build + mentors"),
- ("20–22h","Freeze &amp; demo"),("22–24h","Demos &amp; judging"),("+","Awards")]
+timeline=[("Fri 10:00","Kickoff &amp; reveal"),("Fri 11:00","Teams form"),("Fri–Sat","Build + mentors"),
+ ("Sat 10:00","Code freeze"),("Sat 11:00","Demo Day"),("Sat 13:00","Awards")]
 stats=[("248","applicants in 2025","3.2 per available seat"),
- ("77","selected participants","in-person cohort"),
- ("4.5/5","lecture &amp; instructor rating","2024 exit survey, n=55"),
- ("9","challenge tracks","Armenian public-interest domains"),
- ("24h","non-stop build sprint","Aug 8, 2026 · AI9, Yerevan"),
- ("100%","open-source outputs","reproducible by design")]
+ ("60–80","expected participants","hand-picked from the pool"),
+ ("15–20","teams of 3–4","small, focused teams"),
+ ("8–15","senior AI mentors","hands-on all sprint"),
+ ("24h","of building","then Demo Day &amp; expert jury"),
+ ("4.5/5","program rating","2024 exit survey, n=55")]
 why=[("🎯","Meet &amp; recruit talent","Direct access to Armenia's sharpest LLM engineers and researchers, mid-build and at demos."),
  ("📣","National brand presence","Your logo across a flagship program with press, media and open-course reach."),
  ("🧩","Shape a real challenge","Put your own problem statement in front of motivated, capable teams."),
@@ -172,8 +172,8 @@ cover=f'''<div>
 A 24-hour LLM build sprint where Armenia's strongest engineers and researchers ship AI systems for the
 country's public interest — the finale of the Armenia LLM Summer School.</div>
 <div class="cover-facts">
-<div class="fact">📅 August 8, 2026</div><div class="fact">⏱️ 24 hours, non-stop</div>
-<div class="fact">📍 AI9 Startup Campus, Yerevan</div><div class="fact">🎯 9 public-interest tracks</div></div>
+<div class="fact">📅 August 8–9, 2026</div><div class="fact">🕙 Fri 10:00 → Sat 13:00</div>
+<div class="fact">⏱️ 24 hours of building</div><div class="fact">📍 AI9 Startup Campus, Yerevan</div></div>
 <div class="rule" style="margin-top:24px"></div>
 <div class="org-row">
 <span class="org-lab">Organized by</span>
@@ -185,7 +185,7 @@ country's public interest — the finale of the Armenia LLM Summer School.</div>
 <span class="org-lab">Faculty from</span>
 <div class="chip" style="height:44px;padding:8px 14px">{NVIDIA_SVG}</div>
 <span style="font-size:13px;color:rgba(255,255,255,.72);font-weight:600">Meta · Google · Amazon · ServiceNow</span></div>
-<div class="ribbon"><div class="org-lab">Nine public-interest tracks</div><div class="rb-row">{ribbon_chips}</div></div>
+<div class="ribbon"><div class="org-lab">The challenge space · nine public-interest domains</div><div class="rb-row">{ribbon_chips}</div></div>
 </div>
 <div class="cta"><div class="rule"></div>
 <div class="big">Partner with us to put world-class LLM talent to work on problems<br/>that matter for Armenia — and meet the people building its AI future.</div>
@@ -229,12 +229,12 @@ charts=f'''<div>
 tk_html="".join(track_cell(*t) for t in tracks)
 tl_html="".join(tl_node(t,l) for t,l in timeline)
 challenge=f'''<div>
-<div class="h2">One challenge, <span class="accent">nine Armenian public-interest tracks</span></div>
-<div class="sub" style="margin-top:8px;max-width:175mm">Teams pick a track and build an LLM system that can evaluate evidence, reason under uncertainty, and generalize — with a working prototype and a real evaluation. Every track is judged by one rubric.</div>
+<div class="h2">One challenge, <span class="accent">revealed at kickoff</span></div>
+<div class="sub" style="margin-top:8px;max-width:175mm">Every team tackles the same real-world challenge, revealed live at kickoff. It draws from the Armenian public-interest domains below — teams ship a working prototype with a real evaluation, judged by one rubric.</div>
 <div class="rule"></div>
 <div class="tk-grid">{tk_html}</div>
 <div style="margin-top:20px" class="chart-card"><div class="chart-h">The 24 hours</div>
-<div class="chart-s">Indicative rhythm — the final schedule is shared at kickoff</div><div class="tl">{tl_html}</div></div>
+<div class="chart-s">Friday 10:00 to Saturday 13:00 — 24 hours of building, then Demo Day</div><div class="tl">{tl_html}</div></div>
 <div style="margin-top:16px" class="grid2">
 <div class="card"><div class="ic-t">What every strong build shows</div><div class="ic-b">A working prototype · a real (even lightweight) evaluation · named failure modes &amp; safety · realistic data · and a clear reason an LLM is the right tool.</div></div>
 <div class="card"><div class="ic-t">Open by default</div><div class="ic-b">Winning projects are open-source and fully reproducible — a lasting public good, and a credible showcase of what your compute, data or problem statement made possible.</div></div></div>
