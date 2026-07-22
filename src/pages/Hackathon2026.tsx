@@ -69,7 +69,7 @@ const RUBRIC = [
 ]
 
 const TIMELINE = [
-  { when: 'Sat 10:00', title: 'Kickoff & challenge reveal', text: 'The one real-world LLM challenge is revealed to everyone.' },
+  { when: 'Sat 10:00', title: 'Kickoff & briefing', text: 'Welcome, the theme walkthrough, and logistics.' },
   { when: 'Sat 11:00', title: 'Teams form & plan', text: 'Form a team of 3–4, then scope your approach and data.' },
   { when: 'Sat–Sun', title: 'Build — with mentors', text: 'Prototype end-to-end early; iterate with 8–15 senior AI mentors.' },
   { when: 'Sun 10:00', title: 'Code freeze', text: 'Lock the repo and prepare your demo and pitch.' },
@@ -137,7 +137,7 @@ const hackathonFAQ: FAQCategory[] = [
       {
         question: 'What are we expected to build?',
         answer:
-          'An LLM-powered system that tackles the one real-world challenge revealed at kickoff — evaluating evidence, reasoning under uncertainty, and generalizing — with a working prototype and a real (even lightweight) evaluation.',
+          'An LLM-powered system for an Armenian public-interest problem — evaluating evidence, reasoning under uncertainty, and generalizing — with a working prototype and a real (even lightweight) evaluation. The example projects on this page guide the theme; bring your own idea or adapt one.',
       },
       {
         question: 'Can we use any model or API?',
@@ -173,7 +173,7 @@ const Hackathon2026 = memo(function Hackathon2026() {
     <div>
       <SEO
         title="Hack Armenia — 2026 Hackathon"
-        description="Hack Armenia: a 24-hour LLM build sprint on August 8–9, 2026 after the Armenia LLM Summer School. One real-world challenge, revealed at kickoff, spanning Armenian public-interest domains — urban development, public systems, healthcare, education, security, food & agriculture, environment & energy, finance, or disaster response."
+        description="Hack Armenia: a 24-hour LLM build sprint on August 8–9, 2026 after the Armenia LLM Summer School. Build an LLM system for an Armenian public-interest problem — across domains like urban development, public systems, healthcare, education, security, food & agriculture, environment & energy, finance, or disaster response."
         url="/2026/hackathon"
         keywords={[
           'Hack Armenia',
@@ -197,7 +197,7 @@ const Hackathon2026 = memo(function Hackathon2026() {
           <p className="text-lg text-white/85 max-w-3xl mx-auto mb-8">
             Build an LLM-powered system that can <strong>evaluate</strong> evidence,{' '}
             <strong>reason</strong> through uncertainty, and <strong>generalize</strong> across
-            real-world cases — on one real-world Armenian public-interest challenge, revealed at kickoff.
+            real-world cases — for a real-world Armenian public-interest problem you care about.
           </p>
           <p className="text-accent font-medium mb-8">
             August 8–9, 2026 · Sat 10:00 → Sun 13:00 · 24 hours of building · AI9 Startup Campus, Yerevan
@@ -212,7 +212,7 @@ const Hackathon2026 = memo(function Hackathon2026() {
             </Button>
           </div>
           <p className="mt-8 inline-block bg-white/5 border border-accent/30 text-white/70 text-sm px-4 py-2 rounded-full">
-            🔒 One real-world challenge — revealed live at kickoff.
+            🎯 Themed around Armenia's public-interest problems.
           </p>
         </div>
       </section>
@@ -238,7 +238,7 @@ const Hackathon2026 = memo(function Hackathon2026() {
             <Card>
               <h3 className="text-accent text-lg font-semibold mb-2">🎯 What</h3>
               <p className="text-white/80 text-sm">
-                One real-world LLM challenge, revealed at kickoff — built for Armenia's public interest.
+                LLM systems for Armenia's public interest — the example domains guide the theme.
               </p>
             </Card>
           </div>
@@ -268,13 +268,13 @@ const Hackathon2026 = memo(function Hackathon2026() {
         <div className="container mx-auto px-8">
           <SectionTitle
             title="The Challenge in One Minute"
-            subtitle="One real-world challenge, revealed at kickoff, judged by one rubric"
+            subtitle="A themed sprint for Armenia's public interest — judged by one rubric"
           />
           <div className="max-w-4xl mx-auto text-white/85 space-y-5 text-lg leading-relaxed">
             <p>
               Build an <strong>LLM-powered system</strong> that can <strong>evaluate</strong>{' '}
               evidence, <strong>reason</strong> through uncertainty, and <strong>generalize</strong>{' '}
-              across real-world cases — on one Armenian public-interest challenge, revealed to everyone at kickoff.
+              across real-world cases — for an Armenian public-interest problem you care about.
             </p>
             <p>
               Ship a working prototype, and — crucially — <em>measure</em> it. The projects that stand
@@ -284,20 +284,20 @@ const Hackathon2026 = memo(function Hackathon2026() {
           </div>
           <div className="max-w-4xl mx-auto mt-8 bg-accent/10 border border-accent/40 rounded-xl p-6">
             <p className="text-white/90">
-              <span className="text-accent font-bold">The shape.</span> Every team tackles the same
-              real-world challenge, revealed at kickoff. It draws from Armenia's public-interest
-              domains — so the work matters, and judging stays fair and coherent.
+              <span className="text-accent font-bold">The shape.</span> One theme — Armenia's public
+              interest. The domains and example projects below guide you; bring your own idea or start
+              from one. A single rubric keeps judging fair and coherent.
             </p>
           </div>
         </div>
       </section>
 
-      {/* The challenge space */}
+      {/* Themes & example projects */}
       <section id="tracks" className="py-20 bg-glass border-b border-white/10">
         <div className="container mx-auto px-8">
           <SectionTitle
-            title="The Challenge Space"
-            subtitle="The challenge is revealed at kickoff — here are the Armenian public-interest domains it could draw from. Click any idea to explore."
+            title="Themes & Example Projects"
+            subtitle="These Armenian public-interest domains and example projects set the theme — build one, or bring your own idea in the same spirit. Click any idea to explore."
           />
           <DomainExplorer />
         </div>

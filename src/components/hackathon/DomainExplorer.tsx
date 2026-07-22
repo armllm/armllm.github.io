@@ -80,8 +80,8 @@ export default function DomainExplorer() {
       </div>
 
       <p className="text-white/50 text-sm text-center mt-8 max-w-3xl mx-auto">
-        These are illustrative directions, not the challenge itself — the real problem is revealed at
-        kickoff. Whatever it is, it draws from domains like these, and the same rubric applies.
+        These are examples to guide the theme, not a fixed list — bring your own idea in the same
+        spirit. Whatever you build, the same rubric applies.
       </p>
     </div>
   )

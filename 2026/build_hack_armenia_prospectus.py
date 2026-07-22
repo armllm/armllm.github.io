@@ -48,7 +48,7 @@ tracks=[("🏙️","Urban development","City ops, planning & mobility"),
  ("🌱","Environment & energy","Efficiency, hazards & resources"),
  ("🏦","Finance & fintech","Fair credit, fraud & literacy"),
  ("🚨","Emergency & disaster","Coordination, preparedness & response")]
-timeline=[("Sat 10:00","Kickoff &amp; reveal"),("Sat 11:00","Teams form"),("Sat–Sun","Build + mentors"),
+timeline=[("Sat 10:00","Kickoff &amp; brief"),("Sat 11:00","Teams form"),("Sat–Sun","Build + mentors"),
  ("Sun 10:00","Code freeze"),("Sun 11:00","Demo Day"),("Sun 13:00","Awards")]
 stats=[("248","applicants in 2025","3.2 per available seat"),
  ("60–80","expected participants","hand-picked from the pool"),
@@ -185,7 +185,7 @@ country's public interest — the finale of the Armenia LLM Summer School.</div>
 <span class="org-lab">Faculty from</span>
 <div class="chip" style="height:44px;padding:8px 14px">{NVIDIA_SVG}</div>
 <span style="font-size:13px;color:rgba(255,255,255,.72);font-weight:600">Meta · Google · Amazon · ServiceNow</span></div>
-<div class="ribbon"><div class="org-lab">The challenge space · nine public-interest domains</div><div class="rb-row">{ribbon_chips}</div></div>
+<div class="ribbon"><div class="org-lab">The theme · nine public-interest domains</div><div class="rb-row">{ribbon_chips}</div></div>
 </div>
 <div class="cta"><div class="rule"></div>
 <div class="big">Partner with us to put world-class LLM talent to work on problems<br/>that matter for Armenia — and meet the people building its AI future.</div>
@@ -229,8 +229,8 @@ charts=f'''<div>
 tk_html="".join(track_cell(*t) for t in tracks)
 tl_html="".join(tl_node(t,l) for t,l in timeline)
 challenge=f'''<div>
-<div class="h2">One challenge, <span class="accent">revealed at kickoff</span></div>
-<div class="sub" style="margin-top:8px;max-width:175mm">Every team tackles the same real-world challenge, revealed live at kickoff. It draws from the Armenian public-interest domains below — teams ship a working prototype with a real evaluation, judged by one rubric.</div>
+<div class="h2">One theme, <span class="accent">nine public-interest domains</span></div>
+<div class="sub" style="margin-top:8px;max-width:175mm">Every team builds for the same theme — Armenia's public interest. The domains and example projects below guide you; teams ship a working prototype with a real evaluation, judged by one rubric.</div>
 <div class="rule"></div>
 <div class="tk-grid">{tk_html}</div>
 <div style="margin-top:20px" class="chart-card"><div class="chart-h">The 24 hours</div>
