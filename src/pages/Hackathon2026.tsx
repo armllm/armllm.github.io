@@ -9,8 +9,7 @@ import FAQ from '../components/FAQ'
 import type { FAQCategory } from '../data/faq2026'
 import DomainExplorer from '../components/hackathon/DomainExplorer'
 
-const FORM_VIEW =
-  'https://docs.google.com/forms/d/e/1FAIpQLSfnxFoPMmU_k6sE_V_kCSiCh-AMgf9VnbDkyrxqzH395xHrng/viewform?usp=sharing'
+const FORM_VIEW = 'https://forms.gle/SzbxuvProoqwbpVJ6'
 const FORM_EMBED =
   'https://docs.google.com/forms/d/e/1FAIpQLSfnxFoPMmU_k6sE_V_kCSiCh-AMgf9VnbDkyrxqzH395xHrng/viewform?embedded=true'
 const CONTACT_EMAIL = 'armeniallm@gmail.com'
