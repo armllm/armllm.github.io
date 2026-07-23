@@ -304,12 +304,12 @@ const Edition2026 = memo(function Edition2026() {
         </div>
       </section>
 
-      {/* Sponsors Section */}
+      {/* Partners Section */}
       <section id="sponsors" className="py-20 bg-glass border-t border-white/10">
         <div className="container mx-auto px-8">
           <SectionTitle
-            title="Sponsors"
-            subtitle="We thank our sponsors and partners for making the school possible."
+            title="Partners"
+            subtitle="We thank our partners for making the school possible."
           />
           
           <div className="flex flex-wrap justify-center gap-8">
@@ -332,7 +332,7 @@ const Edition2026 = memo(function Edition2026() {
                 />
               </div>
               <div className="text-center">
-                <p className="text-white/70 text-sm uppercase tracking-wider font-semibold">Venue Sponsor</p>
+                <p className="text-white/70 text-sm uppercase tracking-wider font-semibold">Venue Partner</p>
                 <p className="text-white font-bold text-lg">AI9 Startup Campus</p>
               </div>
             </a>
