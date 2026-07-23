@@ -305,7 +305,7 @@ const Edition2026 = memo(function Edition2026() {
       </section>
 
       {/* Partners Section */}
-      <section id="sponsors" className="py-20 bg-glass border-t border-white/10">
+      <section id="partners" className="py-20 bg-glass border-t border-white/10">
         <div className="container mx-auto px-8">
           <SectionTitle
             title="Partners"
