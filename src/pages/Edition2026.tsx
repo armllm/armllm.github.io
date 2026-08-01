@@ -132,16 +132,10 @@ const Edition2026 = memo(function Edition2026() {
             subtitle="Confirmed lecturers for 2026"
           />
           
-          <div className="flex flex-wrap justify-center gap-8 mb-12">
+          <div className="flex flex-wrap justify-center gap-8">
             {speakers2026.map((speaker) => (
               <SpeakerCard key={speaker.name} speaker={speaker} />
             ))}
-          </div>
-
-          <div className="text-center">
-            <p className="text-white/70 text-lg">
-              More speakers to be announced soon.
-            </p>
           </div>
         </div>
       </section>
@@ -378,6 +372,57 @@ const Edition2026 = memo(function Edition2026() {
                 <p className="text-white font-bold text-lg">PMI Science R&D Armenia</p>
               </div>
             </a>
+          </div>
+
+          {/* Compute providers */}
+          <div className="mt-16 pt-12 border-t border-white/10">
+            <p className="text-center text-accent text-sm uppercase tracking-widest font-semibold mb-8">
+              Compute is generously provided by
+            </p>
+
+            <div className="flex flex-wrap justify-center gap-8">
+              <a
+                href="https://nebius.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-white/5 rounded-xl p-10 border border-white/10 flex flex-col items-center gap-4 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-accent/20 hover:bg-white/10"
+              >
+                <div className="h-24 flex items-center justify-center bg-white rounded-lg px-6">
+                  <img
+                    src="/images/nebius_logo.jpg"
+                    alt="Nebius"
+                    loading="lazy"
+                    decoding="async"
+                    className="h-10 w-auto object-contain"
+                  />
+                </div>
+                <div className="text-center">
+                  <p className="text-white/70 text-sm uppercase tracking-wider font-semibold">Compute Partner</p>
+                  <p className="text-white font-bold text-lg">Nebius</p>
+                </div>
+              </a>
+
+              <a
+                href="https://www.ysu.am/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-white/5 rounded-xl p-10 border border-white/10 flex flex-col items-center gap-4 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-accent/20 hover:bg-white/10"
+              >
+                <div className="h-24 flex items-center justify-center bg-white rounded-lg px-6">
+                  <img
+                    src="/images/ysu_logo.png"
+                    alt="Yerevan State University"
+                    loading="lazy"
+                    decoding="async"
+                    className="h-16 w-auto object-contain"
+                  />
+                </div>
+                <div className="text-center">
+                  <p className="text-white/70 text-sm uppercase tracking-wider font-semibold">Compute Partner</p>
+                  <p className="text-white font-bold text-lg">Yerevan State University</p>
+                </div>
+              </a>
+            </div>
           </div>
         </div>
       </section>
