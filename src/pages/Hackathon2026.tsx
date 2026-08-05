@@ -8,6 +8,8 @@ import SEO from '../components/SEO'
 import FAQ from '../components/FAQ'
 import type { FAQCategory } from '../data/faq2026'
 import DomainExplorer from '../components/hackathon/DomainExplorer'
+import PersonCard from '../components/hackathon/PersonCard'
+import { hackathonMentors, hackathonJury } from '../data/hackathonPeople'
 
 const FORM_VIEW = 'https://forms.gle/SzbxuvProoqwbpVJ6'
 const FORM_EMBED =
@@ -383,6 +385,34 @@ const Hackathon2026 = memo(function Hackathon2026() {
             Judges compare not only idea quality, but whether you tested the system, understood the
             model's limits, and built something that could work outside a demo.
           </p>
+        </div>
+      </section>
+
+      {/* Mentors & jury */}
+      <section id="mentors" className="py-20 bg-glass border-b border-white/10">
+        <div className="container mx-auto px-8">
+          <SectionTitle
+            title="Mentors & Jury"
+            subtitle="The people you build alongside — and present to on Demo Day"
+          />
+
+          <h3 className="text-accent text-center text-sm uppercase tracking-widest font-semibold mb-8">
+            Mentors
+          </h3>
+          <div className="flex flex-wrap justify-center gap-6 mb-16">
+            {hackathonMentors.map((person) => (
+              <PersonCard key={person.name} person={person} />
+            ))}
+          </div>
+
+          <h3 className="text-accent text-center text-sm uppercase tracking-widest font-semibold mb-8">
+            Jury
+          </h3>
+          <div className="flex flex-wrap justify-center gap-6">
+            {hackathonJury.map((person) => (
+              <PersonCard key={person.name} person={person} />
+            ))}
+          </div>
         </div>
       </section>
 
