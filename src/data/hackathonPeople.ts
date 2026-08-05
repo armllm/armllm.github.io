@@ -55,11 +55,6 @@ export const hackathonMentors: Person[] = [
     image: '/images/hackathon/marie-mikayelyan.jpg',
   },
   {
-    name: 'Erik Arakelyan',
-    company: 'NVIDIA',
-    image: '/images/hackathon/erik-arakelyan.jpg',
-  },
-  {
     name: 'Armen Grigoryan',
     image: '/images/hackathon/armen-grigoryan.jpg',
   },
@@ -88,5 +83,10 @@ export const hackathonJury: Person[] = [
     name: 'Perouz Taslakian',
     company: 'ServiceNow Research',
     image: '/images/hackathon/perouz-taslakian.jpg',
+  },
+  {
+    name: 'Erik Arakelyan',
+    company: 'NVIDIA',
+    image: '/images/hackathon/erik-arakelyan.jpg',
   },
 ]
