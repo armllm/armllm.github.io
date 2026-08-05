@@ -49,7 +49,7 @@ tracks=[("🏙️","Urban development","City ops, planning & mobility"),
  ("🏦","Finance & fintech","Fair credit, fraud & literacy"),
  ("🚨","Emergency & disaster","Coordination, preparedness & response")]
 timeline=[("Sat 10:00","Kickoff &amp; brief"),("Sat 11:00","Teams form"),("Sat–Sun","Build + mentors"),
- ("Sun 10:00","Code freeze"),("Sun 11:00","Demo Day"),("Sun 13:00","Awards")]
+ ("Sun 12:00","Code freeze"),("Sun 13:00","Demo Day"),("After","Awards")]
 stats=[("248","applicants in 2025","3.2 per available seat"),
  ("60–80","expected participants","hand-picked from the pool"),
  ("15–20","teams of 3–4","small, focused teams"),
@@ -172,7 +172,7 @@ cover=f'''<div>
 A 24-hour LLM build sprint where Armenia's strongest engineers and researchers ship AI systems for the
 country's public interest — the finale of the Armenia LLM Summer School.</div>
 <div class="cover-facts">
-<div class="fact">📅 August 8–9, 2026</div><div class="fact">🕙 Sat 10:00 → Sun 13:00</div>
+<div class="fact">📅 August 8–9, 2026</div><div class="fact">🕙 Sat 10:00 → Sun afternoon</div>
 <div class="fact">⏱️ 24 hours of building</div><div class="fact">📍 AI9 Startup Campus, Yerevan</div></div>
 <div class="rule" style="margin-top:24px"></div>
 <div class="org-row">
@@ -234,7 +234,7 @@ challenge=f'''<div>
 <div class="rule"></div>
 <div class="tk-grid">{tk_html}</div>
 <div style="margin-top:20px" class="chart-card"><div class="chart-h">The 24 hours</div>
-<div class="chart-s">Saturday 10:00 to Sunday 13:00 — 24 hours of building, then Demo Day</div><div class="tl">{tl_html}</div></div>
+<div class="chart-s">From Saturday 10:00 — 24 hours of building, then Demo Day at 13:00 on Sunday</div><div class="tl">{tl_html}</div></div>
 <div style="margin-top:16px" class="grid2">
 <div class="card"><div class="ic-t">What every strong build shows</div><div class="ic-b">A working prototype · a real (even lightweight) evaluation · named failure modes &amp; safety · realistic data · and a clear reason an LLM is the right tool.</div></div>
 <div class="card"><div class="ic-t">Open by default</div><div class="ic-b">Winning projects are open-source and fully reproducible — a lasting public good, and a credible showcase of what your compute, data or problem statement made possible.</div></div></div>
