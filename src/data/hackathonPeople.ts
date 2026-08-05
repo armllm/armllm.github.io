@@ -23,13 +23,6 @@ export const hackathonMentors: Person[] = [
     image: '/images/hackathon/aram-shakhbandaryan.jpg',
   },
   {
-    name: 'Emil Kapustin',
-    position: 'AI Engineer',
-    company: 'PulsePoint',
-    linkedin: 'https://www.linkedin.com/in/emkapustin/',
-    image: '/images/hackathon/emil-kapustin.jpg',
-  },
-  {
     name: 'Ani Vanyan',
     position: 'ML Researcher',
     company: 'YerevaNN',
@@ -69,6 +62,13 @@ export const hackathonMentors: Person[] = [
     company: 'Ucom',
     linkedin: 'https://www.linkedin.com/in/grigsarmen/',
     image: '/images/hackathon/armen-grigoryan.jpg',
+  },
+  {
+    name: 'Khachik Badeyan',
+    position: 'Technical Portfolio Lead',
+    company: 'PMI Science Armenia',
+    linkedin: 'https://www.linkedin.com/in/khbadeyan/',
+    image: '/images/hackathon/khachik-badeyan.jpg',
   },
 ]
 
