@@ -17,6 +17,8 @@ export const hackathonMentors: Person[] = [
   },
   {
     name: 'Aram Shakhbandaryan',
+    position: 'Founder',
+    company: 'Empy.ai',
     linkedin: 'https://www.linkedin.com/in/aram-empy/',
     image: '/images/hackathon/aram-shakhbandaryan.jpg',
   },
@@ -55,12 +57,18 @@ export const hackathonMentors: Person[] = [
     image: '/images/hackathon/marie-mikayelyan.jpg',
   },
   {
-    name: 'Armen Grigoryan',
-    image: '/images/hackathon/armen-grigoryan.jpg',
+    name: 'Hovhannes Kuloghlyan',
+    position: 'Co-Founder',
+    company: 'Wirestock',
+    linkedin: 'https://www.linkedin.com/in/h0vhannes/',
+    image: '/images/hackathon/hovhannes-kuloghlyan.jpg',
   },
   {
-    name: 'Hovhannes Kuloghlyan',
-    image: '/images/hackathon/hovhannes-kuloghlyan.jpg',
+    name: 'Armen Grigoryan',
+    position: 'Head of TV & Digital Products Division',
+    company: 'Ucom',
+    linkedin: 'https://www.linkedin.com/in/grigsarmen/',
+    image: '/images/hackathon/armen-grigoryan.jpg',
   },
 ]
 
@@ -80,13 +88,24 @@ export const hackathonJury: Person[] = [
     image: '/images/hackathon/vazgen-hakobjanyan.jpg',
   },
   {
+    name: 'Davit Arakelyan',
+    position: 'Chief Business Officer',
+    company: 'Eleveight AI',
+    linkedin: 'https://www.linkedin.com/in/davit-arakelyan-320007184/',
+    image: '/images/hackathon/davit-arakelyan.jpg',
+  },
+  {
     name: 'Perouz Taslakian',
-    company: 'ServiceNow Research',
+    position: 'AI Research Scientist / Research Lead',
+    company: 'ServiceNow AI Research',
+    linkedin: 'https://www.linkedin.com/in/perouz/',
     image: '/images/hackathon/perouz-taslakian.jpg',
   },
   {
     name: 'Erik Arakelyan',
-    company: 'NVIDIA',
+    position: 'Senior Researcher',
+    company: 'NVIDIA Armenia',
+    linkedin: 'https://www.linkedin.com/in/erik-arakelyan-a6a84470/',
     image: '/images/hackathon/erik-arakelyan.jpg',
   },
 ]
