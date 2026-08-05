@@ -21,11 +21,11 @@ export const hackathonMentors: Person[] = [
     image: '/images/hackathon/aram-shakhbandaryan.jpg',
   },
   {
-    name: 'Egor Kapustin',
+    name: 'Emil Kapustin',
     position: 'AI Engineer',
     company: 'PulsePoint',
     linkedin: 'https://www.linkedin.com/in/emkapustin/',
-    image: '/images/hackathon/egor-kapustin.jpg',
+    image: '/images/hackathon/emil-kapustin.jpg',
   },
   {
     name: 'Ani Vanyan',
@@ -54,6 +54,19 @@ export const hackathonMentors: Person[] = [
     linkedin: 'https://www.linkedin.com/in/marie-mikayelyan/',
     image: '/images/hackathon/marie-mikayelyan.jpg',
   },
+  {
+    name: 'Erik Arakelyan',
+    company: 'NVIDIA',
+    image: '/images/hackathon/erik-arakelyan.jpg',
+  },
+  {
+    name: 'Armen Grigoryan',
+    image: '/images/hackathon/armen-grigoryan.jpg',
+  },
+  {
+    name: 'Hovhannes Kuloghlyan',
+    image: '/images/hackathon/hovhannes-kuloghlyan.jpg',
+  },
 ]
 
 export const hackathonJury: Person[] = [
@@ -73,6 +86,7 @@ export const hackathonJury: Person[] = [
   },
   {
     name: 'Perouz Taslakian',
+    company: 'ServiceNow Research',
     image: '/images/hackathon/perouz-taslakian.jpg',
   },
 ]
