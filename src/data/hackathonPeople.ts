@@ -81,11 +81,11 @@ export const hackathonJury: Person[] = [
     image: '/images/hackathon/gevorg-mantashyan.jpg',
   },
   {
-    name: 'Vazgen Hakobjanyan',
-    position: 'Founder & CEO',
-    company: 'Magical Labs',
-    linkedin: 'https://www.linkedin.com/in/vazgen-hakobjanyan-a09ba52/',
-    image: '/images/hackathon/vazgen-hakobjanyan.jpg',
+    name: 'David Zokhrabyan',
+    position: 'Growth',
+    company: 'OpenAI',
+    linkedin: 'https://www.linkedin.com/in/davidzokhrabyan/',
+    image: '/images/hackathon/david-zokhrabyan.jpg',
   },
   {
     name: 'Davit Arakelyan',
@@ -102,10 +102,31 @@ export const hackathonJury: Person[] = [
     image: '/images/hackathon/perouz-taslakian.jpg',
   },
   {
+    name: 'Arik Akhverdyan',
+    position: 'Co-Founder & CEO',
+    company: 'AI9',
+    linkedin: 'https://www.linkedin.com/in/arik-akverdian/',
+    image: '/images/hackathon/arik-akhverdyan.jpg',
+  },
+  {
+    name: 'Vazgen Hakobjanyan',
+    position: 'Founder & CEO',
+    company: 'Magical Labs',
+    linkedin: 'https://www.linkedin.com/in/vazgen-hakobjanyan-a09ba52/',
+    image: '/images/hackathon/vazgen-hakobjanyan.jpg',
+  },
+  {
     name: 'Erik Arakelyan',
     position: 'Senior Researcher',
     company: 'NVIDIA Armenia',
     linkedin: 'https://www.linkedin.com/in/erik-arakelyan-a6a84470/',
     image: '/images/hackathon/erik-arakelyan.jpg',
+  },
+  {
+    name: 'Hrant Khachatryan',
+    position: 'Founding Director',
+    company: 'YerevaNN',
+    linkedin: 'https://www.linkedin.com/in/hrant-khachatrian-b97425206/',
+    image: '/images/hackathon/hrant-khachatryan.jpg',
   },
 ]
