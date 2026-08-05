@@ -37,12 +37,6 @@ export default function PersonCard({ person }: { person: Person }) {
       <h4 className="text-white font-semibold mt-4">{person.name}</h4>
 
       {affiliation && <p className="text-white/70 text-sm mt-1">{affiliation}</p>}
-
-      {person.role && (
-        <span className="mt-3 inline-block bg-accent/15 text-accent text-xs font-semibold uppercase tracking-wider px-3 py-1 rounded-full">
-          {person.role}
-        </span>
-      )}
     </>
   )
 

@@ -2,10 +2,8 @@ export interface Person {
   name: string
   position?: string
   company?: string
-  /** e.g. "Technical mentor", "Product mentor" — omitted when not specified. */
-  role?: string
   linkedin?: string
-  /** Path under /images once a photo is available; falls back to initials. */
+  /** Path under /images; falls back to initials when absent. */
   image?: string
 }
 
@@ -14,46 +12,47 @@ export const hackathonMentors: Person[] = [
     name: 'Philipp Guevorguian',
     position: 'Technical Staff',
     company: 'Perceptron AI',
-    role: 'Technical mentor',
     linkedin: 'https://www.linkedin.com/in/philipp-guevorguian/',
+    image: '/images/hackathon/philipp-guevorguian.jpg',
   },
   {
     name: 'Aram Shakhbandaryan',
-    role: 'Technical mentor',
     linkedin: 'https://www.linkedin.com/in/aram-empy/',
+    image: '/images/hackathon/aram-shakhbandaryan.jpg',
   },
   {
-    name: 'Emil Kapustin',
+    name: 'Egor Kapustin',
     position: 'AI Engineer',
     company: 'PulsePoint',
     linkedin: 'https://www.linkedin.com/in/emkapustin/',
+    image: '/images/hackathon/egor-kapustin.jpg',
   },
   {
     name: 'Ani Vanyan',
     position: 'ML Researcher',
     company: 'YerevaNN',
-    role: 'Technical mentor',
+    image: '/images/hackathon/ani-vanyan.jpg',
   },
   {
     name: 'Khoren Petrosyan',
     position: 'ML Researcher',
     company: 'YerevaNN',
-    role: 'Technical mentor',
     linkedin: 'https://www.linkedin.com/in/khoren-petrosyan/',
+    image: '/images/hackathon/khoren-petrosyan.jpg',
   },
   {
-    name: 'Nare Gevorgyan',
+    name: 'Naré Gevorgyan',
     position: 'CEO',
     company: 'AICA',
-    role: 'Product mentor',
     linkedin: 'https://www.linkedin.com/in/nare-gevorgyan/',
+    image: '/images/hackathon/nare-gevorgyan.jpg',
   },
   {
     name: 'Marie Mikayelyan',
     position: 'CPO',
     company: 'OmniShift',
-    role: 'Product mentor',
     linkedin: 'https://www.linkedin.com/in/marie-mikayelyan/',
+    image: '/images/hackathon/marie-mikayelyan.jpg',
   },
 ]
 
@@ -63,14 +62,17 @@ export const hackathonJury: Person[] = [
     position: 'First Deputy Minister',
     company: 'Ministry of High-Tech Industry',
     linkedin: 'https://www.linkedin.com/in/gevorg-mantashyan-80643ab/',
+    image: '/images/hackathon/gevorg-mantashyan.jpg',
   },
   {
     name: 'Vazgen Hakobjanyan',
     position: 'Founder & CEO',
     company: 'Magical Labs',
     linkedin: 'https://www.linkedin.com/in/vazgen-hakobjanyan-a09ba52/',
+    image: '/images/hackathon/vazgen-hakobjanyan.jpg',
   },
   {
-    name: 'Perouz Tslakian',
+    name: 'Perouz Taslakian',
+    image: '/images/hackathon/perouz-taslakian.jpg',
   },
 ]
