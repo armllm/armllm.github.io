@@ -80,9 +80,9 @@ const TIMELINE = [
 ]
 
 const PRIZES = [
-  { medal: '🥇', place: '1st place', amount: '$12,000', first: true },
-  { medal: '🥈', place: '2nd place', amount: '$7,500', first: false },
-  { medal: '🥉', place: '3rd place', amount: '$5,000', first: false },
+  { place: '1st place', amount: '$12,000', image: '/images/hackathon/prizes/prize-1st.jpg' },
+  { place: '2nd place', amount: '$7,500', image: '/images/hackathon/prizes/prize-2nd.jpg' },
+  { place: '3rd place', amount: '$5,000', image: '/images/hackathon/prizes/prize-3rd.jpg' },
 ]
 
 const RULES = [
@@ -504,24 +504,20 @@ const Hackathon2026 = memo(function Hackathon2026() {
             title="Prizes"
             subtitle="Sponsored by OpenAI, with GPUs for the winners from Eleveight AI"
           />
-          <div className="grid sm:grid-cols-3 gap-6 max-w-5xl mx-auto">
+          <div className="grid sm:grid-cols-3 gap-6 max-w-6xl mx-auto">
             {PRIZES.map((p) => (
-              <div
+              <figure
                 key={p.place}
-                className={`rounded-2xl p-8 text-center border ${
-                  p.first
-                    ? 'bg-amber-200/10 border-amber-200/40'
-                    : 'bg-white/[0.04] border-white/12'
-                }`}
+                className="rounded-2xl overflow-hidden border border-white/10 shadow-xl shadow-black/40"
               >
-                <div className="text-4xl">{p.medal}</div>
-                <h3 className="text-white text-xl font-bold mt-3">{p.place}</h3>
-                <p className="text-white text-3xl font-extrabold mt-3">{p.amount}</p>
-                <p className="text-white/70 text-sm mt-1">equivalent API credits</p>
-                <span className="inline-block mt-4 bg-accent/15 text-accent text-xs font-semibold uppercase tracking-wider px-3 py-1 rounded-full">
-                  by OpenAI
-                </span>
-              </div>
+                <img
+                  src={p.image}
+                  alt={`${p.place}: ${p.amount} equivalent API credits by OpenAI`}
+                  loading="lazy"
+                  decoding="async"
+                  className="block w-full h-auto"
+                />
+              </figure>
             ))}
           </div>
 
