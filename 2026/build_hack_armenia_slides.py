@@ -37,7 +37,7 @@ NUMBERS = [
     ("60–80", "participants", "one cohort"),
     ("15–20", "teams", "3–4 people each"),
     ("12", "mentors", "on-site Saturday"),
-    ("7", "jury members", "judging Demo Day"),
+    ("6", "jury members", "judging Demo Day"),
     ("9", "domains", "Armenia's public interest"),
 ]
 
@@ -122,7 +122,6 @@ JURY = [
     ("Gevorg Mantashyan", "First Deputy Minister · Ministry of High-Tech Industry", "gevorg-mantashyan.jpg"),
     ("David Zokhrabyan", "Growth · OpenAI", "david-zokhrabyan.jpg"),
     ("Davit Arakelyan", "Chief Business Officer · Eleveight AI", "davit-arakelyan.jpg"),
-    ("Perouz Taslakian", "AI Research Scientist / Research Lead · ServiceNow AI Research", "perouz-taslakian.jpg"),
     ("Arik Akhverdyan", "Co-Founder & CEO · AI9", "arik-akhverdyan.jpg"),
     ("Vazgen Hakobjanyan", "Founder & CEO · Magical Labs", "vazgen-hakobjanyan.jpg"),
     ("Vazgen Badalyan", "Founder · Evidenso", "vazgen-badalyan.jpg"),
@@ -495,6 +494,22 @@ def prize_slide(img, label):
 prize_slide("prize-1st.jpg", "1st")
 prize_slide("prize-2nd.jpg", "2nd")
 prize_slide("prize-3rd.jpg", "3rd")
+
+# 20 — the Eleveight GPU prize for first place
+slide(f'''
+<h2>First place also wins <span class="ac">GPUs</span></h2>
+<div class="rule" style="margin:16px 0 14px"></div>
+<div class="body" style="flex-direction:row;align-items:center;justify-content:center;gap:52px">
+  <img src="{uri("hackathon/prizes/prize-eleveight.jpg")}" alt="5000 USD equivalent GPUs from Eleveight AI"
+       style="max-height:400px;width:auto;border-radius:18px;box-shadow:0 18px 50px rgba(0,0,0,.55)"/>
+  <div style="max-width:440px">
+    <div class="prize-t" style="font-size:30px">$5,000 equivalent GPUs</div>
+    <div class="card-b" style="font-size:16px;margin-top:12px">
+      On top of the OpenAI credits, the winning team gets real compute to keep building —
+      GPUs worth $5,000, provided by <b>Eleveight AI</b>.
+    </div>
+  </div>
+</div>''')
 
 # 20 — supporters
 slide(f'''

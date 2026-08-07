@@ -521,14 +521,26 @@ const Hackathon2026 = memo(function Hackathon2026() {
             ))}
           </div>
 
-          <div className="max-w-5xl mx-auto mt-6 bg-accent/10 border border-accent/40 rounded-2xl p-6 flex items-center gap-5">
-            <div className="text-4xl">⚡</div>
-            <div>
-              <h3 className="text-white text-lg font-bold">
-                Plus $5,000 equivalent GPUs for first place
+          <div className="max-w-5xl mx-auto mt-8 bg-accent/10 border border-accent/40 rounded-2xl p-6 md:p-8 flex flex-col md:flex-row items-center gap-8">
+            <figure className="rounded-xl overflow-hidden border border-white/10 shadow-xl shadow-black/40 shrink-0">
+              <img
+                src="/images/hackathon/prizes/prize-eleveight.jpg"
+                alt="5000 USD equivalent GPUs from Eleveight AI"
+                loading="lazy"
+                decoding="async"
+                className="block w-56 h-auto"
+              />
+            </figure>
+            <div className="text-center md:text-left">
+              <span className="inline-block bg-accent/20 text-accent text-xs font-semibold uppercase tracking-widest px-3 py-1 rounded-full mb-3">
+                First place bonus
+              </span>
+              <h3 className="text-white text-2xl font-bold">
+                $5,000 equivalent GPUs from Eleveight AI
               </h3>
-              <p className="text-white/75 text-sm mt-1">
-                Compute for the winning team, provided by <strong>Eleveight AI</strong>.
+              <p className="text-white/75 mt-2">
+                On top of the OpenAI credits, the winning team gets real compute to keep building —
+                GPUs worth $5,000, provided by <strong className="text-white">Eleveight AI</strong>.
               </p>
             </div>
           </div>

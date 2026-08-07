@@ -112,13 +112,6 @@ export const hackathonJury: Person[] = [
     image: '/images/hackathon/davit-arakelyan.jpg',
   },
   {
-    name: 'Perouz Taslakian',
-    position: 'AI Research Scientist / Research Lead',
-    company: 'ServiceNow AI Research',
-    linkedin: 'https://www.linkedin.com/in/perouz/',
-    image: '/images/hackathon/perouz-taslakian.jpg',
-  },
-  {
     name: 'Arik Akhverdyan',
     position: 'Co-Founder & CEO',
     company: 'AI9',
