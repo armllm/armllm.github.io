@@ -12,7 +12,7 @@
 import base64, os
 
 IMG = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "public", "images")
-OUT = os.path.join(os.path.dirname(os.path.abspath(__file__)), "hack-armenia-slides.html")
+OUT = os.path.join(os.path.dirname(os.path.abspath(__file__)), "Hack-Armenia-Slides.html")
 
 
 def uri(fn):
@@ -220,6 +220,21 @@ h2 .ac{color:#a78bfa}
 .li-b{font-size:14px;color:rgba(255,255,255,.7);margin-top:2px}
 .big{font-size:34px;font-weight:900;color:#fff;line-height:1.25}
 .note{font-size:14px;color:rgba(255,255,255,.55);margin-top:14px}
+/* --- editing toolbar (screen only; hidden when printing) --- */
+body{padding-top:52px}
+.toolbar{position:fixed;top:0;left:0;right:0;z-index:9999;display:flex;gap:10px;align-items:center;
+ padding:9px 18px;background:rgba(10,14,26,.94);backdrop-filter:blur(10px);
+ border-bottom:1px solid rgba(255,255,255,.15);font-size:13px;color:#e2e8f0}
+.toolbar b{color:#a78bfa;font-weight:800;letter-spacing:.4px}
+.toolbar button{font:inherit;font-weight:700;color:#fff;cursor:pointer;border-radius:8px;padding:7px 13px;
+ border:1px solid rgba(255,255,255,.18);background:rgba(255,255,255,.08)}
+.toolbar button:hover{background:rgba(255,255,255,.15)}
+.toolbar button.on{background:linear-gradient(90deg,#6366f1,#a78bfa);border-color:transparent}
+.toolbar .hint{margin-left:auto;color:rgba(255,255,255,.55)}
+body.editing .slide{outline:2px dashed rgba(167,139,250,.55);outline-offset:-6px}
+body.editing .slide:focus-within{outline-color:#a78bfa}
+@media print{.toolbar{display:none !important}body{padding-top:0}
+ body.editing .slide{outline:none}}
 """
 
 # ------------------------------------------------------------------ slides ---
@@ -476,12 +491,68 @@ slide(f'''
 
 # ------------------------------------------------------------------ render ---
 
-html = [f"<!doctype html><html><head><meta charset='utf-8'><style>{CSS}</style></head><body>"]
+TOOLBAR = (
+    '<div class="toolbar">'
+    '<b>HACK ARMENIA · SLIDES</b>'
+    '<button id="btnEdit">✏️ Edit text</button>'
+    '<button id="btnPrint">🖨️ Print / Save as PDF</button>'
+    '<button id="btnSave">💾 Download edited copy</button>'
+    '<span class="hint">Click <b>Edit text</b>, type directly on any slide, then download or print. '
+    'This bar never appears in the PDF.</span>'
+    '</div>'
+)
+
+# Plain (non-f) string: contains JS braces.
+SCRIPT = """
+<script>
+(function () {
+  var slides = [].slice.call(document.querySelectorAll('.slide'));
+  var btnEdit = document.getElementById('btnEdit');
+  var btnPrint = document.getElementById('btnPrint');
+  var btnSave = document.getElementById('btnSave');
+  var editing = false;
+
+  function setEditing(on) {
+    editing = on;
+    slides.forEach(function (s) { s.contentEditable = on ? 'true' : 'false'; });
+    document.body.classList.toggle('editing', on);
+    btnEdit.classList.toggle('on', on);
+    btnEdit.textContent = on ? '✅ Done editing' : '✏️ Edit text';
+  }
+
+  btnEdit.addEventListener('click', function () { setEditing(!editing); });
+  btnPrint.addEventListener('click', function () { setEditing(false); window.print(); });
+
+  btnSave.addEventListener('click', function () {
+    setEditing(false);
+    var clone = document.documentElement.cloneNode(true);
+    clone.querySelectorAll('[contenteditable]').forEach(function (el) {
+      el.removeAttribute('contenteditable');
+    });
+    var blob = new Blob(['<!doctype html>' + clone.outerHTML], { type: 'text/html' });
+    var a = document.createElement('a');
+    a.href = URL.createObjectURL(blob);
+    a.download = 'Hack-Armenia-Slides-edited.html';
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    setTimeout(function () { URL.revokeObjectURL(a.href); }, 1000);
+  });
+
+  window.addEventListener('beforeprint', function () { setEditing(false); });
+})();
+</script>
+"""
+
+html = [f"<!doctype html><html><head><meta charset='utf-8'>"
+        f"<title>Hack Armenia — slides</title><style>{CSS}</style></head><body>"]
+html.append(TOOLBAR)
 total = len(slides)
 for i, (inner, cls, foot) in enumerate(slides):
     f = (f'<div class="foot"><span>Hack Armenia · {EVENT["dates"]} · AI9 Startup Campus</span>'
          f'<span class="pg">{i+1} / {total}</span></div>') if foot else ""
     html.append(f'<div class="slide {cls}">{inner}{f}</div>')
+html.append(SCRIPT)
 html.append("</body></html>")
 
 with open(OUT, "w") as fh:
