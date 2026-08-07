@@ -2,6 +2,13 @@ import { lazy, type ComponentType } from 'react'
 
 const RELOAD_KEY = 'chunk-reload-attempt'
 
+/**
+ * How long to wait before allowing another recovery reload. This only exists to
+ * stop a reload loop when the fresh index.html is *also* broken; it must not
+ * block recovery from a later, unrelated deploy in the same tab session.
+ */
+const RELOAD_COOLDOWN_MS = 30_000
+
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 type AnyComponent = ComponentType<any>
 
@@ -35,10 +42,12 @@ export function lazyWithRetry<T extends AnyComponent>(
         }
       }
 
-      // Likely a stale chunk after a deploy. Force a one-time reload.
-      const alreadyReloaded = sessionStorage.getItem(RELOAD_KEY)
-      if (!alreadyReloaded) {
-        sessionStorage.setItem(RELOAD_KEY, '1')
+      // Likely a stale chunk after a deploy: reload to pick up the fresh
+      // index.html. The timestamp guard allows recovery from a *later* deploy
+      // in the same tab while still preventing a rapid reload loop.
+      const lastReload = Number(sessionStorage.getItem(RELOAD_KEY)) || 0
+      if (Date.now() - lastReload > RELOAD_COOLDOWN_MS) {
+        sessionStorage.setItem(RELOAD_KEY, String(Date.now()))
         window.location.reload()
         // Never resolve so nothing flashes before the reload kicks in.
         return new Promise<{ default: T }>(() => {})
