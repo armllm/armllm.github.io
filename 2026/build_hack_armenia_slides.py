@@ -37,7 +37,7 @@ NUMBERS = [
     ("60–80", "participants", "one cohort"),
     ("15–20", "teams", "3–4 people each"),
     ("12", "mentors", "on-site Saturday"),
-    ("6", "jury members", "judging Demo Day"),
+    ("7", "jury members", "judging Demo Day"),
     ("9", "domains", "Armenia's public interest"),
 ]
 
@@ -125,6 +125,7 @@ JURY = [
     ("Perouz Taslakian", "AI Research Scientist / Research Lead · ServiceNow AI Research", "perouz-taslakian.jpg"),
     ("Arik Akhverdyan", "Co-Founder & CEO · AI9", "arik-akhverdyan.jpg"),
     ("Vazgen Hakobjanyan", "Founder & CEO · Magical Labs", "vazgen-hakobjanyan.jpg"),
+    ("Vazgen Badalyan", "Founder · Evidenso", "vazgen-badalyan.jpg"),
 ]
 
 ORGANIZERS = [
@@ -441,7 +442,7 @@ slide(f'''
 <h2>The <span class="ac">jury</span></h2>
 <div class="sub" style="font-size:17px;margin-top:8px">Who you present to on Sunday at 13:00.</div>
 <div class="rule" style="margin:16px 0 20px"></div>
-<div class="body"><div class="people" style="grid-template-columns:repeat(3,1fr);gap:16px">{jury}</div></div>''')
+<div class="body"><div class="people" style="grid-template-columns:repeat(4,1fr);gap:14px">{jury}</div></div>''')
 
 # 15b — organizers
 orgs = "".join(f'<div class="person"><img src="{uri("hackathon/" + f)}" alt="{n}"/>'

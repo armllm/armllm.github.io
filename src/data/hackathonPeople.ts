@@ -132,6 +132,12 @@ export const hackathonJury: Person[] = [
     linkedin: 'https://www.linkedin.com/in/vazgen-hakobjanyan-a09ba52/',
     image: '/images/hackathon/vazgen-hakobjanyan.jpg',
   },
+  {
+    name: 'Vazgen Badalyan',
+    position: 'Founder',
+    company: 'Evidenso',
+    image: '/images/hackathon/vazgen-badalyan.jpg',
+  },
 ]
 
 export const hackathonOrganizers: Person[] = [
