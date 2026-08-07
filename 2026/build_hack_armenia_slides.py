@@ -464,13 +464,13 @@ slide(f'''
   <div class="prizes">
     <div class="prize gold"><div class="prize-p">🥇</div><div class="prize-t">1st place</div>
       <div class="prize-s" style="font-size:26px;font-weight:900;color:#fff;margin-top:8px">$12,000</div>
-      <div class="prize-s">equivalent API credits</div><div class="byline">by OpenAI</div></div>
+      <div class="prize-s">in OpenAI API credits</div></div>
     <div class="prize"><div class="prize-p">🥈</div><div class="prize-t">2nd place</div>
       <div class="prize-s" style="font-size:26px;font-weight:900;color:#fff;margin-top:8px">$7,500</div>
-      <div class="prize-s">equivalent API credits</div><div class="byline">by OpenAI</div></div>
+      <div class="prize-s">in OpenAI API credits</div></div>
     <div class="prize"><div class="prize-p">🥉</div><div class="prize-t">3rd place</div>
       <div class="prize-s" style="font-size:26px;font-weight:900;color:#fff;margin-top:8px">$5,000</div>
-      <div class="prize-s">equivalent API credits</div><div class="byline">by OpenAI</div></div>
+      <div class="prize-s">in OpenAI API credits</div></div>
   </div>
 </div>''')
 

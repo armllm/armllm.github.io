@@ -140,7 +140,7 @@ const hackathonFAQ: FAQCategory[] = [
       {
         question: 'What are the prizes?',
         answer:
-          'OpenAI is sponsoring the hackathon prizes with API credits: <strong>$12,000</strong> equivalent for first place, <strong>$7,500</strong> for second and <strong>$5,000</strong> for third. Hack Armenia is generously supported by the <strong>Ministry of High-Tech Industry of the Republic of Armenia</strong> and <strong>ISAA</strong>.',
+          'OpenAI is sponsoring the hackathon prizes with API credits: <strong>$12,000</strong> for first place, <strong>$7,500</strong> for second and <strong>$5,000</strong> for third, all in OpenAI API credits. Hack Armenia is generously supported by the <strong>Ministry of High-Tech Industry of the Republic of Armenia</strong> and <strong>ISAA</strong>.',
       },
       {
         question: 'Is there a special prize?',
@@ -548,7 +548,7 @@ const Hackathon2026 = memo(function Hackathon2026() {
               >
                 <img
                   src={p.image}
-                  alt={`${p.place}: ${p.amount} equivalent API credits by OpenAI`}
+                  alt={`${p.place}: ${p.amount} in OpenAI API credits`}
                   loading="lazy"
                   decoding="async"
                   className="block w-full h-auto"
