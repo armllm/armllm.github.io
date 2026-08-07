@@ -84,6 +84,7 @@ export const hackathonMentors: Person[] = [
   },
   {
     name: 'Tigran Atoyan',
+    position: 'Founder & AI Researcher',
     image: '/images/hackathon/tigran-atoyan.jpg',
   },
 ]

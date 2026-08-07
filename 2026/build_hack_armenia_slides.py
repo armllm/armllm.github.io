@@ -115,7 +115,7 @@ MENTORS = [
     ("Khachik Badeyan", "Technical Portfolio Lead · PMI Science Armenia", "khachik-badeyan.jpg"),
     ("Gevorg Minasyan", "Async", "gevorg-minasyan.jpg"),
     ("Davit Karamyan", "NVIDIA", "davit-karamyan.jpg"),
-    ("Tigran Atoyan", "", "tigran-atoyan.jpg"),
+    ("Tigran Atoyan", "Founder & AI Researcher", "tigran-atoyan.jpg"),
 ]
 
 JURY = [
