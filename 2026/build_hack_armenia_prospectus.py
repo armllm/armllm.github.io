@@ -159,6 +159,14 @@ td.yes{color:#a78bfa;font-weight:900;font-size:16px}td.no{color:rgba(255,255,255
 .contact{border-top:1px solid rgba(255,255,255,.14);padding-top:16px;display:flex;justify-content:space-between;align-items:flex-end}
 .pagenum{position:absolute;bottom:8mm;right:15mm;font-size:11px;color:rgba(255,255,255,.4);font-weight:600}
 .wm{position:absolute;bottom:8mm;left:15mm;font-size:11px;color:rgba(255,255,255,.4);font-weight:600}
+/* Apple's PDF renderer (Preview, iOS, QuickLook) does not honour
+   background-clip:text or blurred box-shadows — it paints them as solid
+   rectangles over the artwork. Use flat equivalents in the PDF.
+   .tl-dot keeps its shadow: a zero-blur ring renders correctly. */
+@media print{
+ h1{background:none;-webkit-background-clip:border-box;background-clip:border-box;color:#c7d2fe}
+ .chip{box-shadow:none}
+}
 """
 
 def page(inner,num,cls="",wm="Hack Armenia · Partnership Prospectus"):

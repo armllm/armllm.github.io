@@ -234,7 +234,13 @@ body{padding-top:52px}
 body.editing .slide{outline:2px dashed rgba(167,139,250,.55);outline-offset:-6px}
 body.editing .slide:focus-within{outline-color:#a78bfa}
 @media print{.toolbar{display:none !important}body{padding-top:0}
- body.editing .slide{outline:none}}
+ body.editing .slide{outline:none}
+ /* Apple's PDF renderer (Preview, iOS, QuickLook, Telegram) does not honour
+    background-clip:text or blurred box-shadows — it paints them as solid
+    rectangles over the artwork. Use flat equivalents in the PDF. */
+ h1{background:none;-webkit-background-clip:border-box;background-clip:border-box;color:#c7d2fe}
+ .chip{box-shadow:none}
+ img{box-shadow:none !important}}
 """
 
 # ------------------------------------------------------------------ slides ---
