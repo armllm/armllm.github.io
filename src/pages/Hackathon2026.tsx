@@ -79,6 +79,12 @@ const TIMELINE = [
   { when: 'After demos', title: 'Awards & close', text: 'The jury names the winners; prizes for the top teams.' },
 ]
 
+const PRIZES = [
+  { medal: '🥇', place: '1st place', amount: '$12,000', first: true },
+  { medal: '🥈', place: '2nd place', amount: '$7,500', first: false },
+  { medal: '🥉', place: '3rd place', amount: '$5,000', first: false },
+]
+
 const RULES = [
   {
     icon: '🧠',
@@ -130,6 +136,11 @@ const hackathonFAQ: FAQCategory[] = [
         question: 'How do we register?',
         answer:
           'Through the registration form linked on this page (the "Register" button). Registration is run by the organizers — the Armenia LLM Summer School, AI9 and YerevaNN.',
+      },
+      {
+        question: 'What are the prizes?',
+        answer:
+          'The top three teams win <strong>OpenAI API credits</strong>: $12,000 equivalent for first place, $7,500 for second and $5,000 for third. First place also receives <strong>$5,000 equivalent in GPUs from Eleveight AI</strong>. Hack Armenia is generously supported by the <strong>Ministry of High-Tech Industry of the Republic of Armenia</strong> and <strong>ISAA</strong>.',
       },
     ],
   },
@@ -259,7 +270,7 @@ const Hackathon2026 = memo(function Hackathon2026() {
             </Card>
             <Card>
               <h3 className="text-accent text-lg font-semibold mb-2">🏆 Demo Day</h3>
-              <p className="text-white/80 text-sm">present to an expert jury; top teams win prizes.</p>
+              <p className="text-white/80 text-sm">present to an expert jury; $29,500 in prizes.</p>
             </Card>
           </div>
         </div>
@@ -489,16 +500,50 @@ const Hackathon2026 = memo(function Hackathon2026() {
       {/* Prizes */}
       <section className="py-20 bg-glass border-b border-white/10">
         <div className="container mx-auto px-8">
-          <SectionTitle title="Prizes" subtitle="Recognition for the strongest builds" />
-          <div className="max-w-2xl mx-auto">
-            <Card>
-              <h3 className="text-accent text-xl font-semibold mb-2">🏆 Prizes for the top teams</h3>
-              <p className="text-white/75 text-sm">
-                An expert jury picks the top teams on Demo Day, and they win prizes. The exact prizes
-                are announced closer to the event.
-              </p>
-            </Card>
+          <SectionTitle
+            title="Prizes"
+            subtitle="Sponsored by OpenAI, with GPUs for the winners from Eleveight AI"
+          />
+          <div className="grid sm:grid-cols-3 gap-6 max-w-5xl mx-auto">
+            {PRIZES.map((p) => (
+              <div
+                key={p.place}
+                className={`rounded-2xl p-8 text-center border ${
+                  p.first
+                    ? 'bg-amber-200/10 border-amber-200/40'
+                    : 'bg-white/[0.04] border-white/12'
+                }`}
+              >
+                <div className="text-4xl">{p.medal}</div>
+                <h3 className="text-white text-xl font-bold mt-3">{p.place}</h3>
+                <p className="text-white text-3xl font-extrabold mt-3">{p.amount}</p>
+                <p className="text-white/70 text-sm mt-1">equivalent API credits</p>
+                <span className="inline-block mt-4 bg-accent/15 text-accent text-xs font-semibold uppercase tracking-wider px-3 py-1 rounded-full">
+                  by OpenAI
+                </span>
+              </div>
+            ))}
           </div>
+
+          <div className="max-w-5xl mx-auto mt-6 bg-accent/10 border border-accent/40 rounded-2xl p-6 flex items-center gap-5">
+            <div className="text-4xl">⚡</div>
+            <div>
+              <h3 className="text-white text-lg font-bold">
+                Plus $5,000 equivalent GPUs for first place
+              </h3>
+              <p className="text-white/75 text-sm mt-1">
+                Compute for the winning team, provided by <strong>Eleveight AI</strong>.
+              </p>
+            </div>
+          </div>
+
+          <p className="text-white/60 text-center text-sm mt-10 max-w-3xl mx-auto">
+            Hack Armenia is generously supported by the{' '}
+            <strong className="text-white/80">
+              Ministry of High-Tech Industry of the Republic of Armenia
+            </strong>{' '}
+            and <strong className="text-white/80">ISAA</strong>.
+          </p>
         </div>
       </section>
 

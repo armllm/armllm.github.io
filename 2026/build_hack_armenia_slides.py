@@ -456,23 +456,66 @@ slide(f'''
   <div class="chips" style="margin-top:26px;justify-content:center">{ORG_CHIPS_SM}</div>
 </div>''')
 
-# 16 — prizes
+# 16 — prizes overview
 slide(f'''
 <h2><span class="ac">Prizes</span></h2>
-<div class="rule"></div>
+<div class="sub" style="font-size:17px;margin-top:8px">Sponsored by OpenAI, with GPUs for the winners from Eleveight AI.</div>
+<div class="rule" style="margin:16px 0 22px"></div>
 <div class="body">
   <div class="prizes">
     <div class="prize gold"><div class="prize-p">🥇</div><div class="prize-t">1st place</div>
-      <div class="prize-s">Best overall build</div><div class="byline">Prize by OpenAI</div></div>
+      <div class="prize-s" style="font-size:26px;font-weight:900;color:#fff;margin-top:8px">$12,000</div>
+      <div class="prize-s">equivalent API credits</div><div class="byline">by OpenAI</div></div>
     <div class="prize"><div class="prize-p">🥈</div><div class="prize-t">2nd place</div>
-      <div class="prize-s">Runner-up</div><div class="byline">Prize by OpenAI</div></div>
+      <div class="prize-s" style="font-size:26px;font-weight:900;color:#fff;margin-top:8px">$7,500</div>
+      <div class="prize-s">equivalent API credits</div><div class="byline">by OpenAI</div></div>
     <div class="prize"><div class="prize-p">🥉</div><div class="prize-t">3rd place</div>
-      <div class="prize-s">Third place</div><div class="byline">Prize by OpenAI</div></div>
+      <div class="prize-s" style="font-size:26px;font-weight:900;color:#fff;margin-top:8px">$5,000</div>
+      <div class="prize-s">equivalent API credits</div><div class="byline">by OpenAI</div></div>
   </div>
   <div class="special">
-    <div style="font-size:38px">🏅</div>
-    <div><div class="prize-t" style="margin:0">Special prize</div>
-      <div class="prize-s" style="margin-top:4px">An additional award chosen by <b>Eleveight AI</b>.</div></div>
+    <div style="font-size:38px">⚡</div>
+    <div><div class="prize-t" style="margin:0">Plus $5,000 equivalent GPUs for first place</div>
+      <div class="prize-s" style="margin-top:4px">Compute for the winning team, from <b>Eleveight AI</b>.</div></div>
+  </div>
+</div>''')
+
+
+def prize_slide(img, label):
+    slide(f'''
+<h2>{label} <span class="ac">prize</span></h2>
+<div class="rule" style="margin:16px 0 14px"></div>
+<div class="body" style="align-items:center;justify-content:center">
+  <img src="{uri("hackathon/prizes/" + img)}" alt="{label} prize"
+       style="max-height:430px;width:auto;border-radius:18px;box-shadow:0 18px 50px rgba(0,0,0,.55)"/>
+</div>''')
+
+
+# 17–19 — one slide per prize
+prize_slide("prize-1st.jpg", "1st")
+prize_slide("prize-2nd.jpg", "2nd")
+prize_slide("prize-3rd.jpg", "3rd")
+
+# 20 — supporters
+slide(f'''
+<h2>Supported <span class="ac">by</span></h2>
+<div class="rule"></div>
+<div class="body">
+  <div class="grid2">
+    <div class="card"><div class="card-i">🏛️</div>
+      <div class="card-t">Ministry of High-Tech Industry</div>
+      <div class="card-b">Hack Armenia is generously supported by the Ministry of High-Tech Industry
+      of the Republic of Armenia.</div></div>
+    <div class="card"><div class="card-i">🤝</div>
+      <div class="card-t">ISAA</div>
+      <div class="card-b">Supporting the sprint alongside the Ministry.</div></div>
+    <div class="card"><div class="card-i">🎁</div>
+      <div class="card-t">OpenAI</div>
+      <div class="card-b">Sponsoring the hackathon prizes with API credits —
+      $12,000, $7,500 and $5,000 equivalent for the top three teams.</div></div>
+    <div class="card"><div class="card-i">⚡</div>
+      <div class="card-t">Eleveight AI</div>
+      <div class="card-b">$5,000 equivalent GPUs for the first-place team.</div></div>
   </div>
 </div>''')
 
