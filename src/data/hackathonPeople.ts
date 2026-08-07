@@ -136,6 +136,16 @@ export const hackathonJury: Person[] = [
 
 export const hackathonOrganizers: Person[] = [
   {
+    name: 'Armen Aghajanyan',
+    company: 'Perceptron AI',
+    image: '/images/hackathon/armen-aghajanyan.jpg',
+  },
+  {
+    name: 'Aram Galstyan',
+    company: 'USC / Amazon',
+    image: '/images/hackathon/aram-galstyan.jpg',
+  },
+  {
     name: 'Erik Arakelyan',
     position: 'Senior Researcher',
     company: 'NVIDIA Armenia',
@@ -148,6 +158,13 @@ export const hackathonOrganizers: Person[] = [
     company: 'YerevaNN',
     linkedin: 'https://www.linkedin.com/in/hrant-khachatrian-b97425206/',
     image: '/images/hackathon/hrant-khachatryan.jpg',
+  },
+  {
+    name: 'Perouz Taslakian',
+    position: 'AI Research Scientist / Research Lead',
+    company: 'ServiceNow AI Research',
+    linkedin: 'https://www.linkedin.com/in/perouz/',
+    image: '/images/hackathon/perouz-taslakian.jpg',
   },
   {
     name: 'Tatev Vardanyan',

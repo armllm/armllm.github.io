@@ -128,8 +128,11 @@ JURY = [
 ]
 
 ORGANIZERS = [
+    ("Armen Aghajanyan", "Perceptron AI", "armen-aghajanyan.jpg"),
+    ("Aram Galstyan", "USC / Amazon", "aram-galstyan.jpg"),
     ("Erik Arakelyan", "Senior Researcher · NVIDIA Armenia", "erik-arakelyan.jpg"),
     ("Hrant Khachatryan", "Founding Director · YerevaNN", "hrant-khachatryan.jpg"),
+    ("Perouz Taslakian", "ServiceNow AI Research", "perouz-taslakian.jpg"),
     ("Tatev Vardanyan", "YerevaNN", "tatev-vardanyan.jpg"),
     ("Arik Akhverdyan", "Co-Founder & CEO · AI9", "arik-akhverdyan.jpg"),
 ]
@@ -433,8 +436,8 @@ slide(f'''
 <div class="sub" style="font-size:17px;margin-top:8px">Hack Armenia is run by the Armenia LLM Summer School, AI9 and YerevaNN.</div>
 <div class="rule" style="margin:16px 0 20px"></div>
 <div class="body">
-  <div class="people" style="grid-template-columns:repeat(4,1fr);gap:16px;max-width:1000px;margin:0 auto">{orgs}</div>
-  <div class="chips" style="margin-top:34px;justify-content:center">{ORG_CHIPS}</div>
+  <div class="people" style="grid-template-columns:repeat(4,1fr);gap:14px;max-width:1060px;margin:0 auto">{orgs}</div>
+  <div class="chips" style="margin-top:26px;justify-content:center">{ORG_CHIPS_SM}</div>
 </div>''')
 
 # 16 — prizes
