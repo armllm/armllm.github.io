@@ -40,8 +40,8 @@ const JUDGES_LOOK_FOR = [
 ]
 
 const SUBMISSIONS = [
-  { icon: '🎬', title: 'Demo', text: 'Live or recorded, under 3 minutes.' },
-  { icon: '🎤', title: 'Pitch', text: '3–5 minutes plus questions.' },
+  { icon: '🎤', title: 'Pitch', text: '5 minutes maximum, split however you like between talk and demo.' },
+  { icon: '🎬', title: 'Demo', text: 'Show it running on a real case — live if you can, recorded if the network is not.' },
   {
     icon: '📦',
     title: 'Artifact',
@@ -75,7 +75,7 @@ const TIMELINE = [
   { when: 'Sat 11:00', title: 'Teams form & plan', text: 'Form a team of 3–4, then scope your approach and data.' },
   { when: 'Sat–Sun', title: 'Build — with mentors', text: 'Prototype end-to-end early; iterate with 8–15 senior AI mentors.' },
   { when: 'Sun 12:00', title: 'Code freeze', text: 'Lock the repo and prepare your demo and pitch.' },
-  { when: 'Sun 13:00', title: 'Demo Day', text: 'Present to an expert jury — a short demo plus questions.' },
+  { when: 'Sun 13:00', title: 'Demo Day', text: 'Present to an expert jury — 5 minutes per team, talk plus demo.' },
   { when: 'After demos', title: 'Awards & close', text: 'The jury names the winners; prizes for the top teams.' },
 ]
 

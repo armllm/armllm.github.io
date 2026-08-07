@@ -72,11 +72,13 @@ export const hackathonMentors: Person[] = [
   },
   {
     name: 'Gevorg Minasyan',
+    company: 'Async',
     linkedin: 'https://www.linkedin.com/in/gevorg-minasyan-42475a132/',
     image: '/images/hackathon/gevorg-minasyan.jpg',
   },
   {
     name: 'Davit Karamyan',
+    company: 'NVIDIA',
     linkedin: 'https://www.linkedin.com/in/davit-karamyan-62790b139/',
     image: '/images/hackathon/davit-karamyan.jpg',
   },

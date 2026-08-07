@@ -113,8 +113,8 @@ MENTORS = [
     ("Hovhannes Kuloghlyan", "Co-Founder · Wirestock", "hovhannes-kuloghlyan.jpg"),
     ("Armen Grigoryan", "Head of TV & Digital Products · Ucom", "armen-grigoryan.jpg"),
     ("Khachik Badeyan", "Technical Portfolio Lead · PMI Science Armenia", "khachik-badeyan.jpg"),
-    ("Gevorg Minasyan", "", "gevorg-minasyan.jpg"),
-    ("Davit Karamyan", "", "davit-karamyan.jpg"),
+    ("Gevorg Minasyan", "Async", "gevorg-minasyan.jpg"),
+    ("Davit Karamyan", "NVIDIA", "davit-karamyan.jpg"),
     ("Tigran Atoyan", "", "tigran-atoyan.jpg"),
 ]
 
