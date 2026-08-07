@@ -26,6 +26,11 @@ Thumbs.db
 .env.local
 .env.*.local
 
+# Secrets and personal data — never commit these
+hackathon_api_key_info/
+info/
+*keys.txt
+
 # TypeScript cache
 *.tsbuildinfo
 
