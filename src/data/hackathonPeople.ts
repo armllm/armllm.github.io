@@ -80,6 +80,10 @@ export const hackathonMentors: Person[] = [
     linkedin: 'https://www.linkedin.com/in/davit-karamyan-62790b139/',
     image: '/images/hackathon/davit-karamyan.jpg',
   },
+  {
+    name: 'Tigran Atoyan',
+    image: '/images/hackathon/tigran-atoyan.jpg',
+  },
 ]
 
 export const hackathonJury: Person[] = [
@@ -146,5 +150,12 @@ export const hackathonOrganizers: Person[] = [
     name: 'Tatev Vardanyan',
     company: 'YerevaNN',
     image: '/images/hackathon/tatev-vardanyan.jpg',
+  },
+  {
+    name: 'Arik Akhverdyan',
+    position: 'Co-Founder & CEO',
+    company: 'AI9',
+    linkedin: 'https://www.linkedin.com/in/arik-akverdian/',
+    image: '/images/hackathon/arik-akhverdyan.jpg',
   },
 ]

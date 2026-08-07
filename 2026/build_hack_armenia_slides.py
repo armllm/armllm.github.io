@@ -36,7 +36,7 @@ NUMBERS = [
     ("24h", "of building", "Sat 10:00 → Sun"),
     ("60–80", "participants", "one cohort"),
     ("15–20", "teams", "3–4 people each"),
-    ("11", "mentors", "on-site Saturday"),
+    ("12", "mentors", "on-site Saturday"),
     ("6", "jury members", "judging Demo Day"),
     ("9", "domains", "Armenia's public interest"),
 ]
@@ -115,6 +115,7 @@ MENTORS = [
     ("Khachik Badeyan", "Technical Portfolio Lead · PMI Science Armenia", "khachik-badeyan.jpg"),
     ("Gevorg Minasyan", "", "gevorg-minasyan.jpg"),
     ("Davit Karamyan", "", "davit-karamyan.jpg"),
+    ("Tigran Atoyan", "", "tigran-atoyan.jpg"),
 ]
 
 JURY = [
@@ -130,6 +131,7 @@ ORGANIZERS = [
     ("Erik Arakelyan", "Senior Researcher · NVIDIA Armenia", "erik-arakelyan.jpg"),
     ("Hrant Khachatryan", "Founding Director · YerevaNN", "hrant-khachatryan.jpg"),
     ("Tatev Vardanyan", "YerevaNN", "tatev-vardanyan.jpg"),
+    ("Arik Akhverdyan", "Co-Founder & CEO · AI9", "arik-akhverdyan.jpg"),
 ]
 
 # --------------------------------------------------------------------- css ---
@@ -431,7 +433,7 @@ slide(f'''
 <div class="sub" style="font-size:17px;margin-top:8px">Hack Armenia is run by the Armenia LLM Summer School, AI9 and YerevaNN.</div>
 <div class="rule" style="margin:16px 0 20px"></div>
 <div class="body">
-  <div class="people" style="grid-template-columns:repeat(3,1fr);gap:18px;max-width:820px;margin:0 auto">{orgs}</div>
+  <div class="people" style="grid-template-columns:repeat(4,1fr);gap:16px;max-width:1000px;margin:0 auto">{orgs}</div>
   <div class="chips" style="margin-top:34px;justify-content:center">{ORG_CHIPS}</div>
 </div>''')
 

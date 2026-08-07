@@ -422,6 +422,27 @@ const Hackathon2026 = memo(function Hackathon2026() {
               <PersonCard key={person.name} person={person} />
             ))}
           </div>
+
+          <div className="flex flex-wrap justify-center items-center gap-6 mt-12">
+            {[
+              { src: '/images/logo_armllm_bg_removed.png', alt: 'Armenia LLM Summer School', h: 'h-12' },
+              { src: '/images/ai9-square.svg', alt: 'AI9', h: 'h-12' },
+              { src: '/images/yn_logo.png', alt: 'YerevaNN', h: 'h-12' },
+            ].map((logo) => (
+              <div
+                key={logo.alt}
+                className="bg-white rounded-xl px-6 h-20 flex items-center justify-center shadow-lg shadow-black/30"
+              >
+                <img
+                  src={logo.src}
+                  alt={logo.alt}
+                  loading="lazy"
+                  decoding="async"
+                  className={`${logo.h} w-auto object-contain`}
+                />
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
