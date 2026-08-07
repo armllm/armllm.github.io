@@ -70,6 +70,16 @@ export const hackathonMentors: Person[] = [
     linkedin: 'https://www.linkedin.com/in/khbadeyan/',
     image: '/images/hackathon/khachik-badeyan.jpg',
   },
+  {
+    name: 'Gevorg Minasyan',
+    linkedin: 'https://www.linkedin.com/in/gevorg-minasyan-42475a132/',
+    image: '/images/hackathon/gevorg-minasyan.jpg',
+  },
+  {
+    name: 'Davit Karamyan',
+    linkedin: 'https://www.linkedin.com/in/davit-karamyan-62790b139/',
+    image: '/images/hackathon/davit-karamyan.jpg',
+  },
 ]
 
 export const hackathonJury: Person[] = [
@@ -115,6 +125,9 @@ export const hackathonJury: Person[] = [
     linkedin: 'https://www.linkedin.com/in/vazgen-hakobjanyan-a09ba52/',
     image: '/images/hackathon/vazgen-hakobjanyan.jpg',
   },
+]
+
+export const hackathonOrganizers: Person[] = [
   {
     name: 'Erik Arakelyan',
     position: 'Senior Researcher',
@@ -128,5 +141,10 @@ export const hackathonJury: Person[] = [
     company: 'YerevaNN',
     linkedin: 'https://www.linkedin.com/in/hrant-khachatrian-b97425206/',
     image: '/images/hackathon/hrant-khachatryan.jpg',
+  },
+  {
+    name: 'Tatev Vardanyan',
+    company: 'YerevaNN',
+    image: '/images/hackathon/tatev-vardanyan.jpg',
   },
 ]

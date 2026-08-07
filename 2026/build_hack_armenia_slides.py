@@ -36,8 +36,8 @@ NUMBERS = [
     ("24h", "of building", "Sat 10:00 → Sun"),
     ("60–80", "participants", "one cohort"),
     ("15–20", "teams", "3–4 people each"),
-    ("9", "mentors", "on-site Saturday"),
-    ("8", "jury members", "judging Demo Day"),
+    ("11", "mentors", "on-site Saturday"),
+    ("6", "jury members", "judging Demo Day"),
     ("9", "domains", "Armenia's public interest"),
 ]
 
@@ -113,6 +113,8 @@ MENTORS = [
     ("Hovhannes Kuloghlyan", "Co-Founder · Wirestock", "hovhannes-kuloghlyan.jpg"),
     ("Armen Grigoryan", "Head of TV & Digital Products · Ucom", "armen-grigoryan.jpg"),
     ("Khachik Badeyan", "Technical Portfolio Lead · PMI Science Armenia", "khachik-badeyan.jpg"),
+    ("Gevorg Minasyan", "", "gevorg-minasyan.jpg"),
+    ("Davit Karamyan", "", "davit-karamyan.jpg"),
 ]
 
 JURY = [
@@ -122,8 +124,12 @@ JURY = [
     ("Perouz Taslakian", "AI Research Scientist / Research Lead · ServiceNow AI Research", "perouz-taslakian.jpg"),
     ("Arik Akhverdyan", "Co-Founder & CEO · AI9", "arik-akhverdyan.jpg"),
     ("Vazgen Hakobjanyan", "Founder & CEO · Magical Labs", "vazgen-hakobjanyan.jpg"),
+]
+
+ORGANIZERS = [
     ("Erik Arakelyan", "Senior Researcher · NVIDIA Armenia", "erik-arakelyan.jpg"),
     ("Hrant Khachatryan", "Founding Director · YerevaNN", "hrant-khachatryan.jpg"),
+    ("Tatev Vardanyan", "YerevaNN", "tatev-vardanyan.jpg"),
 ]
 
 # --------------------------------------------------------------------- css ---
@@ -333,7 +339,7 @@ slide(f'''
 <h2>Your <span class="ac">mentors</span></h2>
 <div class="sub" style="font-size:17px;margin-top:8px">On-site <b style="color:#a78bfa">Saturday 15:00–18:00</b> — flexible, drop in any time.</div>
 <div class="rule" style="margin:16px 0 20px"></div>
-<div class="body"><div class="people">{mentors}</div></div>''')
+<div class="body"><div class="people" style="grid-template-columns:repeat(6,1fr);gap:13px">{mentors}</div></div>''')
 
 # 10 — how to use mentors
 slide(f'''
@@ -415,7 +421,19 @@ slide(f'''
 <h2>The <span class="ac">jury</span></h2>
 <div class="sub" style="font-size:17px;margin-top:8px">Who you present to on Sunday at 13:00.</div>
 <div class="rule" style="margin:16px 0 20px"></div>
-<div class="body"><div class="people" style="grid-template-columns:repeat(4,1fr);gap:14px">{jury}</div></div>''')
+<div class="body"><div class="people" style="grid-template-columns:repeat(3,1fr);gap:16px">{jury}</div></div>''')
+
+# 15b — organizers
+orgs = "".join(f'<div class="person"><img src="{uri("hackathon/" + f)}" alt="{n}"/>'
+               f'<div class="person-n">{n}</div><div class="person-a">{a}</div></div>' for n, a, f in ORGANIZERS)
+slide(f'''
+<h2>The <span class="ac">organizers</span></h2>
+<div class="sub" style="font-size:17px;margin-top:8px">Hack Armenia is run by the Armenia LLM Summer School, AI9 and YerevaNN.</div>
+<div class="rule" style="margin:16px 0 20px"></div>
+<div class="body">
+  <div class="people" style="grid-template-columns:repeat(3,1fr);gap:18px;max-width:820px;margin:0 auto">{orgs}</div>
+  <div class="chips" style="margin-top:34px;justify-content:center">{ORG_CHIPS}</div>
+</div>''')
 
 # 16 — prizes
 slide(f'''

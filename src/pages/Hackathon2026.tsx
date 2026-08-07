@@ -9,7 +9,7 @@ import FAQ from '../components/FAQ'
 import type { FAQCategory } from '../data/faq2026'
 import DomainExplorer from '../components/hackathon/DomainExplorer'
 import PersonCard from '../components/hackathon/PersonCard'
-import { hackathonMentors, hackathonJury } from '../data/hackathonPeople'
+import { hackathonMentors, hackathonJury, hackathonOrganizers } from '../data/hackathonPeople'
 
 const FORM_VIEW = 'https://forms.gle/SzbxuvProoqwbpVJ6'
 const FORM_EMBED =
@@ -392,8 +392,8 @@ const Hackathon2026 = memo(function Hackathon2026() {
       <section id="mentors" className="py-20 bg-glass border-b border-white/10">
         <div className="container mx-auto px-8">
           <SectionTitle
-            title="Mentors & Jury"
-            subtitle="The people you build alongside — and present to on Demo Day"
+            title="Mentors, Jury & Organizers"
+            subtitle="The people you build alongside, present to, and who make it happen"
           />
 
           <h3 className="text-accent text-center text-sm uppercase tracking-widest font-semibold mb-8">
@@ -408,8 +408,17 @@ const Hackathon2026 = memo(function Hackathon2026() {
           <h3 className="text-accent text-center text-sm uppercase tracking-widest font-semibold mb-8">
             Jury
           </h3>
-          <div className="flex flex-wrap justify-center gap-6">
+          <div className="flex flex-wrap justify-center gap-6 mb-16">
             {hackathonJury.map((person) => (
+              <PersonCard key={person.name} person={person} />
+            ))}
+          </div>
+
+          <h3 className="text-accent text-center text-sm uppercase tracking-widest font-semibold mb-8">
+            Organizers
+          </h3>
+          <div className="flex flex-wrap justify-center gap-6">
+            {hackathonOrganizers.map((person) => (
               <PersonCard key={person.name} person={person} />
             ))}
           </div>
