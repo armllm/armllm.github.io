@@ -131,6 +131,24 @@ export const hackathonJury: Person[] = [
     company: 'Evidenso',
     image: '/images/hackathon/vazgen-badalyan.jpg',
   },
+  {
+    name: 'Erik Arakelyan',
+    position: 'Senior Researcher',
+    company: 'NVIDIA Armenia',
+    linkedin: 'https://www.linkedin.com/in/erik-arakelyan-a6a84470/',
+    image: '/images/hackathon/erik-arakelyan.jpg',
+  },
+  {
+    name: 'Marie Mikayelyan',
+    position: 'CPO',
+    company: 'OmniShift',
+    linkedin: 'https://www.linkedin.com/in/marie-mikayelyan/',
+    image: '/images/hackathon/marie-mikayelyan.jpg',
+  },
+  {
+    name: 'Arto Yeritsyan',
+    image: '/images/hackathon/arto-yeritsyan.jpg',
+  },
 ]
 
 export const hackathonOrganizers: Person[] = [
@@ -176,5 +194,9 @@ export const hackathonOrganizers: Person[] = [
     company: 'AI9',
     linkedin: 'https://www.linkedin.com/in/arik-akverdian/',
     image: '/images/hackathon/arik-akhverdyan.jpg',
+  },
+  {
+    name: 'Roza Khachatryan',
+    image: '/images/hackathon/roza-khachatryan.jpg',
   },
 ]
