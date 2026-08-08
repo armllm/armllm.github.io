@@ -127,7 +127,7 @@ JURY = [
     ("Vazgen Badalyan", "Founder · Evidenso", "vazgen-badalyan.jpg"),
     ("Erik Arakelyan", "Senior Researcher · NVIDIA Armenia", "erik-arakelyan.jpg"),
     ("Marie Mikayelyan", "CPO · OmniShift", "marie-mikayelyan.jpg"),
-    ("Arto Yeritsyan", "", "arto-yeritsyan.jpg"),
+    ("Arto Yeritsyan", "CEO & Founder · Async", "arto-yeritsyan.jpg"),
 ]
 
 ORGANIZERS = [
@@ -138,7 +138,7 @@ ORGANIZERS = [
     ("Perouz Taslakian", "ServiceNow AI Research", "perouz-taslakian.jpg"),
     ("Tatev Vardanyan", "YerevaNN", "tatev-vardanyan.jpg"),
     ("Arik Akhverdyan", "Co-Founder & CEO · AI9", "arik-akhverdyan.jpg"),
-    ("Roza Khachatryan", "", "roza-khachatryan.jpg"),
+    ("Roza Khachatryan", "COO · AI9 Startup Campus", "roza-khachatryan.jpg"),
 ]
 
 # --------------------------------------------------------------------- css ---

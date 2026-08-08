@@ -147,6 +147,8 @@ export const hackathonJury: Person[] = [
   },
   {
     name: 'Arto Yeritsyan',
+    position: 'CEO & Founder',
+    company: 'Async',
     image: '/images/hackathon/arto-yeritsyan.jpg',
   },
 ]
@@ -197,6 +199,8 @@ export const hackathonOrganizers: Person[] = [
   },
   {
     name: 'Roza Khachatryan',
+    position: 'COO',
+    company: 'AI9 Startup Campus',
     image: '/images/hackathon/roza-khachatryan.jpg',
   },
 ]
