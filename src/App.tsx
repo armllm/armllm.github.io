@@ -1,5 +1,5 @@
-import { Suspense } from 'react'
-import { Routes, Route, Navigate } from 'react-router-dom'
+import { Suspense, useEffect, useRef } from 'react'
+import { Routes, Route, Navigate, useLocation } from 'react-router-dom'
 import Layout from './components/layout/Layout'
 import ErrorBoundary from './components/ErrorBoundary'
 import { lazyWithRetry } from './utils/lazyWithRetry'
@@ -26,7 +26,40 @@ function PageLoader() {
   )
 }
 
+/**
+ * Report client-side navigations to Google Analytics.
+ *
+ * The gtag snippet in index.html only fires a page_view on the initial document
+ * load, so in a single-page app every route change after that would go
+ * uncounted. The first view is skipped here because the snippet already sent
+ * it; the short delay lets the lazily-loaded page's <SEO> effect set
+ * document.title before the event goes out.
+ */
+function usePageViews() {
+  const location = useLocation()
+  const isInitialView = useRef(true)
+
+  useEffect(() => {
+    if (isInitialView.current) {
+      isInitialView.current = false
+      return
+    }
+
+    const timer = window.setTimeout(() => {
+      window.gtag?.('event', 'page_view', {
+        page_path: location.pathname + location.search + location.hash,
+        page_location: window.location.href,
+        page_title: document.title,
+      })
+    }, 50)
+
+    return () => window.clearTimeout(timer)
+  }, [location])
+}
+
 function App() {
+  usePageViews()
+
   return (
     <Layout>
       <ErrorBoundary>
