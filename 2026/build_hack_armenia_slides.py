@@ -88,19 +88,64 @@ SUBMISSION = [
     ("🎯", "Impact note", "Who uses it, and what changes if it works."),
 ]
 
-JUDGING = [
-    ("Idea quality & fit", "Does it target a real Armenian public-interest problem worth solving?"),
-    ("Evaluation & evidence", "Did you actually test the system and show results — not just assert them?"),
-    ("Model limits & safety", "Do you know where the model fails, and how you mitigate it?"),
-    ("Real-world plausibility", "Could this work outside the demo — realistic data, reproducible, deployable?"),
-]
-
-JUDGES_LOOK_FOR = [
-    ("A working prototype", "Judges want to see it run, not just slides."),
-    ("An evaluation method", "Even lightweight. “It seems to work” is not evidence."),
-    ("Failure modes & safety", "Name where it breaks and who it could harm. Show your guardrails."),
-    ("Realistic data", "Toy data that ignores messy reality will not convince."),
-    ("The LLM earns its place", "If a regex or a plain form would do the job, use that instead."),
+# The judging rubric: five criteria, each scored 0–5 against the anchors below.
+# (short title, what it means, 0-point anchor, 3-point anchor, 5-point anchor, worked example)
+RUBRIC = [
+    (
+        "Idea quality and public-interest fit",
+        "Is this a real Armenian problem, with a real user and a benefit you can point at?",
+        "Problem is unclear, outside scope, or has no identified user.",
+        "A clear Armenia-relevant problem and user are identified; the benefit is plausible.",
+        "Local need and user workflow are well understood, with specific and measurable potential impact.",
+        "A construction-permit pre-check. <b>3</b> — names municipal reviewers as the user and explains "
+        "the pain. <b>5</b> — shows how many applications bounce today, which rejection reasons dominate, "
+        "and what share the tool would catch before filing.",
+    ),
+    (
+        "Working prototype and appropriate LLM use",
+        "It has to run — and the model has to be doing real work, not decoration.",
+        "No working prototype is shown, or the LLM/VLM is merely decorative.",
+        "The core workflow works on a representative case, and the model's role is credible.",
+        "The system works end to end across varied cases and shows why an LLM/VLM is better than a "
+        "simpler alternative.",
+        "A symptom-triage assistant. <b>3</b> — runs one vignette end to end. <b>5</b> — runs ten varied "
+        "vignettes and shows a keyword baseline mis-routing the cases the model gets right.",
+    ),
+    (
+        "Evaluation and supporting evidence",
+        "Numbers, not vibes. Show how you measured it and what came out.",
+        "No meaningful evaluation evidence is provided.",
+        "An appropriate test set, examples, metric, or rubric is used and results are reported.",
+        "Evaluation is realistic and reproducible, includes a baseline or error analysis, and supports "
+        "the team's claims.",
+        "An auto-grading assistant. <b>3</b> — reports agreement with teacher marks on 30 labelled "
+        "answers. <b>5</b> — adds a majority-class baseline, breaks errors down by question type, and "
+        "ships a script that re-runs the whole thing.",
+    ),
+    (
+        "Model limitations, failure modes, and safety",
+        "Know where it breaks, who it could harm, and what you do about it.",
+        "Relevant limitations, failure modes, or safety risks are not identified.",
+        "Important risks and failure cases are identified, with basic safeguards or human escalation.",
+        "Risky cases are tested systematically and effective mitigation, abstention, escalation, or "
+        "monitoring is demonstrated.",
+        "The same triage assistant. <b>3</b> — names under-triage as the key risk and always offers a "
+        "“seek care” fallback. <b>5</b> — measures the under-triage rate on deliberately hard vignettes "
+        "and abstains instead of guessing when confidence is low.",
+    ),
+    (
+        "Real-world feasibility and reproducibility",
+        "Could this survive outside the demo — and can someone else run it?",
+        "The project relies on toy assumptions, is not reproducible, or has no credible path beyond "
+        "the demo.",
+        "It uses realistic data or labelled stand-ins, documents setup, and describes a plausible "
+        "deployment path.",
+        "It fits real workflows and considers integration, cost, latency, privacy, and maintenance; "
+        "reproduction is straightforward.",
+        "An e-invoice extractor. <b>3</b> — real invoice layouts and a README that actually runs. "
+        "<b>5</b> — reports cost and latency per document, says where personal data is handled, and "
+        "names the system it would plug into.",
+    ),
 ]
 
 MENTORS = [
@@ -224,6 +269,30 @@ h2 .ac{color:#a78bfa}
 .li-b{font-size:14px;color:rgba(255,255,255,.7);margin-top:2px}
 .big{font-size:34px;font-weight:900;color:#fff;line-height:1.25}
 .note{font-size:14px;color:rgba(255,255,255,.55);margin-top:14px}
+/* rubric */
+.anch{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.anch-c{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);border-radius:16px;
+ padding:24px 24px;min-height:190px}
+.anch-c.a0{border-color:rgba(248,113,113,.4)}
+.anch-c.a3{border-color:rgba(253,230,138,.4)}
+.anch-c.a5{border-color:rgba(134,239,172,.45)}
+.anch-h{font-size:13.5px;font-weight:800;letter-spacing:1.4px;text-transform:uppercase;margin-bottom:12px}
+.a0 .anch-h{color:#fca5a5}.a3 .anch-h{color:#fde68a}.a5 .anch-h{color:#86efac}
+.anch-b{font-size:16px;color:rgba(255,255,255,.8);line-height:1.55}
+.exbox{margin-top:20px;background:rgba(129,140,248,.12);border:1px solid rgba(129,140,248,.42);
+ border-radius:16px;padding:20px 24px;font-size:16px;color:rgba(255,255,255,.85);line-height:1.6}
+.exbox .lab{display:block;font-size:12px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;
+ color:#c7d2fe;margin-bottom:5px}
+.exbox b{color:#fff}
+.rub{width:100%;border-collapse:separate;border-spacing:0}
+.rub th,.rub td{padding:9px 11px;text-align:left;vertical-align:top;font-size:12px;line-height:1.42}
+.rub th{font-size:12.5px;font-weight:800;color:#c7d2fe;border-bottom:2px solid rgba(255,255,255,.18)}
+.rub td{border-bottom:1px solid rgba(255,255,255,.08);color:rgba(255,255,255,.76)}
+.rub tr:nth-child(even) td{background:rgba(255,255,255,.025)}
+.rub .crit{color:#fff;font-weight:800;width:23%}
+.scale{display:flex;gap:10px;justify-content:center;margin-top:6px}
+.scale span{font-size:13px;font-weight:700;padding:6px 14px;border-radius:999px;
+ background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);color:rgba(255,255,255,.8)}
 /* --- editing toolbar (screen only; hidden when printing) --- */
 body{padding-top:52px}
 .toolbar{position:fixed;top:0;left:0;right:0;z-index:9999;display:flex;gap:10px;align-items:center;
@@ -427,22 +496,54 @@ slide(f'''
   <div class="note">Split it as you see fit — but at 5:00 you stop. Practise it once before you present.</div>
 </div>''')
 
-# 13 — judging criteria
+# 13 — judging overview
 jl = "".join(f'<div class="li"><div class="li-n">{i+1}</div><div><div class="li-t">{t}</div>'
-             f'<div class="li-b">{b}</div></div></div>' for i, (t, b) in enumerate(JUDGING))
+             f'<div class="li-b">{blurb}</div></div></div>'
+             for i, (t, blurb, _z, _t3, _f, _ex) in enumerate(RUBRIC))
 slide(f'''
 <h2>How you are <span class="ac">judged</span></h2>
-<div class="sub" style="font-size:17px;margin-top:8px">One rubric for every team, whatever domain you pick.</div>
-<div class="rule" style="margin:16px 0 20px"></div>
-<div class="body"><div class="list">{jl}</div></div>''')
+<div class="sub" style="font-size:17px;margin-top:8px">Five criteria, one rubric for every team — whatever domain you pick.</div>
+<div class="rule" style="margin:14px 0 16px"></div>
+<div class="body"><div class="list">{jl}</div>
+  <div class="scale"><span>0 — missing</span><span>3 — adequate</span><span>5 — exceptional</span>
+    <span>25 points total</span></div>
+</div>''')
 
-# 14 — what judges look for
-jlf = "".join(f'<div class="li"><div class="li-n">✓</div><div><div class="li-t">{t}</div>'
-              f'<div class="li-b">{b}</div></div></div>' for t, b in JUDGES_LOOK_FOR)
+# 14 — the rubric at a glance
+rows = "".join(
+    f'<tr><td class="crit">{i+1}. {t}</td><td>{z}</td><td>{t3}</td><td>{f5}</td></tr>'
+    for i, (t, _b, z, t3, f5, _ex) in enumerate(RUBRIC))
 slide(f'''
-<h2>What judges <span class="ac">look for</span></h2>
-<div class="rule" style="margin:16px 0 20px"></div>
-<div class="body"><div class="list">{jlf}</div></div>''')
+<h2>The rubric <span class="ac">at a glance</span></h2>
+<div class="sub" style="font-size:16px;margin-top:6px">Criterion-specific evidence anchors.</div>
+<div class="rule" style="margin:12px 0 12px"></div>
+<div class="body" style="justify-content:flex-start">
+  <table class="rub">
+    <thead><tr><th>Criterion</th><th>0 points</th><th>3 points — adequate</th>
+      <th>5 points — exceptional</th></tr></thead>
+    <tbody>{rows}</tbody>
+  </table>
+</div>''')
+
+
+def rubric_slide(i, title, blurb, zero, three, five, example):
+    slide(f'''
+<h2><span class="ac">{i}</span> · {title}</h2>
+<div class="sub" style="font-size:17px;margin-top:8px">{blurb}</div>
+<div class="rule" style="margin:14px 0 18px"></div>
+<div class="body">
+  <div class="anch">
+    <div class="anch-c a0"><div class="anch-h">0 points</div><div class="anch-b">{zero}</div></div>
+    <div class="anch-c a3"><div class="anch-h">3 — adequate</div><div class="anch-b">{three}</div></div>
+    <div class="anch-c a5"><div class="anch-h">5 — exceptional</div><div class="anch-b">{five}</div></div>
+  </div>
+  <div class="exbox"><span class="lab">What this looks like</span>{example}</div>
+</div>''')
+
+
+# 15–19 — one slide per criterion
+for i, (t, blurb, z, t3, f5, ex) in enumerate(RUBRIC):
+    rubric_slide(i + 1, t, blurb, z, t3, f5, ex)
 
 # 15 — jury
 jury = "".join(f'<div class="person"><img src="{uri("hackathon/" + f)}" alt="{n}"/>'
