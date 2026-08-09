@@ -88,8 +88,98 @@ SUBMISSION = [
     ("🎯", "Impact note", "Who uses it, and what changes if it works."),
 ]
 
-# The judging rubric: five criteria, each scored 0–5 against the anchors below.
-# (short title, what it means, 0-point anchor, 3-point anchor, 5-point anchor, worked example)
+# One running example carries through every criterion, so the difference between
+# a 0, a 3 and a 5 is visible on the same project rather than five different ones.
+EXAMPLE_PROJECT = "Guarded symptom triage in Armenian"
+EXAMPLE_BLURB = (
+    "An assistant that asks about symptoms and routes the person to self-care, a GP, "
+    "or urgent care. Not diagnosis."
+)
+
+# (title, what judges are actually checking,
+#  (0-anchor, example at 0), (3-anchor, example at 3), (5-anchor, example at 5))
+RUBRIC_V2 = [
+    (
+        "Idea quality and public-interest fit",
+        "Judges are checking that you picked a problem someone in Armenia actually has, that you can "
+        "name the person who would use it, and that you can say what changes if it works. Vague "
+        "“AI for good” framing scores nothing here.",
+        ("Problem is unclear, outside scope, or has no identified user.",
+         "“An AI health chatbot for Armenia.” No specific user, no workflow, no stated benefit."),
+        ("A clear Armenia-relevant problem and user are identified; the benefit is plausible.",
+         "“People outside Yerevan often can’t tell whether a symptom needs a GP or the emergency "
+         "room.” The user is the patient at home; the benefit is fewer delayed presentations."),
+        ("Local need and user workflow are well understood, with specific and measurable potential "
+         "impact.",
+         "The same, plus which regions lack after-hours care, what people do today (call a relative, "
+         "wait it out), and a target: cut avoidable ER trips at one pilot clinic by a stated share."),
+    ),
+    (
+        "Working prototype and appropriate LLM use",
+        "Judges will ask you to run it. They are checking that the core loop works on a real case, "
+        "and that the model earns its place — that a lookup table or a plain form could not have done "
+        "the same job.",
+        ("No working prototype is shown, or the LLM/VLM is merely decorative.",
+         "Slides and a Figma mock-up. Or: a keyword lookup table, with the model only rewriting the "
+         "final sentence."),
+        ("The core workflow works on a representative case, and the model’s role is credible.",
+         "A live run: you type “chest tightness since this morning”, it asks two follow-up questions "
+         "in Armenian and routes to urgent care."),
+        ("The system works end to end across varied cases and shows why an LLM/VLM is better than a "
+         "simpler alternative.",
+         "Ten varied vignettes run live, including deliberately ambiguous ones — next to a keyword "
+         "baseline visibly mis-routing the cases the model gets right."),
+    ),
+    (
+        "Evaluation and supporting evidence",
+        "“It seems to work” is not evidence. Judges want to know what you measured it on, what number "
+        "came out, and whether they could get that number again themselves.",
+        ("No meaningful evaluation evidence is provided.",
+         "“We tried a few examples and it worked well.”"),
+        ("An appropriate test set, examples, metric, or rubric is used and results are reported.",
+         "60 vignettes labelled against a nurse-authored triage rubric, with agreement reported as a "
+         "single accuracy figure."),
+        ("Evaluation is realistic and reproducible, includes a baseline or error analysis, and "
+         "supports the team’s claims.",
+         "The same 60 vignettes plus a keyword baseline to beat, accuracy broken down by severity, "
+         "the confusion pairs named — and one script that re-runs every number."),
+    ),
+    (
+        "Model limitations, failure modes, and safety",
+        "Every system fails somewhere. Judges are checking that you know where it fails, who is hurt "
+        "when it does, and that you built something to catch it — not that you claim it never fails.",
+        ("Relevant limitations, failure modes, or safety risks are not identified.",
+         "No mention that telling someone with cardiac symptoms to rest at home could kill them."),
+        ("Important risks and failure cases are identified, with basic safeguards or human escalation.",
+         "Under-triage named as the dangerous direction, a permanent “if in doubt, seek care” "
+         "fallback, and an explicit “this is not diagnosis” boundary."),
+        ("Risky cases are tested systematically and effective mitigation, abstention, escalation, or "
+         "monitoring is demonstrated.",
+         "A deliberate red-flag set is run; the under-triage rate is reported separately from overall "
+         "accuracy; below a confidence threshold the system abstains and escalates instead of "
+         "guessing."),
+    ),
+    (
+        "Real-world feasibility and reproducibility",
+        "Judges are asking whether this could exist outside the demo: whether the data is real, "
+        "whether someone else can run it from a clean checkout, and whether you have thought about "
+        "what running it actually costs.",
+        ("The project relies on toy assumptions, is not reproducible, or has no credible path beyond "
+         "the demo.",
+         "Hard-coded English vignettes, an API key pasted into a notebook, and no README."),
+        ("It uses realistic data or labelled stand-ins, documents setup, and describes a plausible "
+         "deployment path.",
+         "Real public triage guidelines, Armenian-language input, a README that runs from a clean "
+         "checkout, and a stated path: a phone line at one clinic."),
+        ("It fits real workflows and considers integration, cost, latency, privacy, and maintenance; "
+         "reproduction is straightforward.",
+         "The same, plus cost and latency per consultation, where symptom data is stored and for how "
+         "long, who updates the guidelines as they change, and one command that reproduces the "
+         "evaluation."),
+    ),
+]
+
+# Legacy flat form kept for the overview list and the at-a-glance table.
 RUBRIC = [
     (
         "Idea quality and public-interest fit",
@@ -272,13 +362,17 @@ h2 .ac{color:#a78bfa}
 /* rubric */
 .anch{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
 .anch-c{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);border-radius:16px;
- padding:24px 24px;min-height:190px}
+ padding:26px 26px;min-height:390px}
 .anch-c.a0{border-color:rgba(248,113,113,.4)}
 .anch-c.a3{border-color:rgba(253,230,138,.4)}
 .anch-c.a5{border-color:rgba(134,239,172,.45)}
 .anch-h{font-size:13.5px;font-weight:800;letter-spacing:1.4px;text-transform:uppercase;margin-bottom:12px}
 .a0 .anch-h{color:#fca5a5}.a3 .anch-h{color:#fde68a}.a5 .anch-h{color:#86efac}
-.anch-b{font-size:16px;color:rgba(255,255,255,.8);line-height:1.55}
+.anch-b{font-size:16.5px;color:rgba(255,255,255,.85);line-height:1.55}
+.anch-ex{margin-top:16px;padding-top:15px;border-top:1px solid rgba(255,255,255,.14);
+ font-size:15.5px;color:rgba(255,255,255,.7);line-height:1.55}
+.ex-l{display:block;font-size:11.5px;font-weight:800;letter-spacing:1.4px;text-transform:uppercase;
+ color:rgba(199,210,254,.8);margin-bottom:7px}
 .exbox{margin-top:20px;background:rgba(129,140,248,.12);border:1px solid rgba(129,140,248,.42);
  border-radius:16px;padding:20px 24px;font-size:16px;color:rgba(255,255,255,.85);line-height:1.6}
 .exbox .lab{display:block;font-size:12px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;
@@ -526,24 +620,45 @@ slide(f'''
 </div>''')
 
 
-def rubric_slide(i, title, blurb, zero, three, five, example):
+def rubric_slide(i, title, meaning, a0, a3, a5):
+    """One criterion: what it means, then the same project graded 0 / 3 / 5."""
+    def card(cls, label, anchor, example):
+        return (f'<div class="anch-c {cls}"><div class="anch-h">{label}</div>'
+                f'<div class="anch-b">{anchor}</div>'
+                f'<div class="anch-ex"><span class="ex-l">Triage assistant</span>{example}</div></div>')
+
     slide(f'''
 <h2><span class="ac">{i}</span> · {title}</h2>
-<div class="sub" style="font-size:17px;margin-top:8px">{blurb}</div>
-<div class="rule" style="margin:14px 0 18px"></div>
-<div class="body">
+<div class="sub" style="font-size:16.5px;margin-top:7px;max-width:1090px">{meaning}</div>
+<div class="rule" style="margin:12px 0 14px"></div>
+<div class="body" style="justify-content:flex-start">
   <div class="anch">
-    <div class="anch-c a0"><div class="anch-h">0 points</div><div class="anch-b">{zero}</div></div>
-    <div class="anch-c a3"><div class="anch-h">3 — adequate</div><div class="anch-b">{three}</div></div>
-    <div class="anch-c a5"><div class="anch-h">5 — exceptional</div><div class="anch-b">{five}</div></div>
+    {card("a0", "0 points", a0[0], a0[1])}
+    {card("a3", "3 — adequate", a3[0], a3[1])}
+    {card("a5", "5 — exceptional", a5[0], a5[1])}
   </div>
-  <div class="exbox"><span class="lab">What this looks like</span>{example}</div>
 </div>''')
 
 
-# 15–19 — one slide per criterion
-for i, (t, blurb, z, t3, f5, ex) in enumerate(RUBRIC):
-    rubric_slide(i + 1, t, blurb, z, t3, f5, ex)
+# 15 — introduce the running example
+slide(f'''
+<h2>One project, <span class="ac">graded three ways</span></h2>
+<div class="rule"></div>
+<div class="body">
+  <div class="big" style="max-width:1020px">
+    The next five slides grade the <span class="ac">same</span> project against each criterion — so
+    you can see exactly what separates a 0, a 3 and a 5.
+  </div>
+  <div class="exbox" style="margin-top:28px">
+    <span class="lab">The running example</span>
+    <b style="font-size:19px">{EXAMPLE_PROJECT}</b><br/>{EXAMPLE_BLURB}
+  </div>
+  <div class="note">Healthcare is only the vehicle here — the same distinctions apply in every domain.</div>
+</div>''')
+
+# 16–20 — one slide per criterion, same project throughout
+for i, (t, meaning, a0, a3, a5) in enumerate(RUBRIC_V2):
+    rubric_slide(i + 1, t, meaning, a0, a3, a5)
 
 # 15 — jury
 jury = "".join(f'<div class="person"><img src="{uri("hackathon/" + f)}" alt="{n}"/>'
