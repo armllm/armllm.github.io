@@ -37,7 +37,7 @@ NUMBERS = [
     ("60–80", "participants", "one cohort"),
     ("15–20", "teams", "3–4 people each"),
     ("12", "mentors", "on-site Saturday"),
-    ("9", "jury members", "judging Demo Day"),
+    ("10", "jury members", "judging Demo Day"),
     ("9", "domains", "Armenia's public interest"),
 ]
 
@@ -263,6 +263,7 @@ JURY = [
     ("Erik Arakelyan", "Senior Researcher · NVIDIA Armenia", "erik-arakelyan.jpg"),
     ("Marie Mikayelyan", "CPO · OmniShift", "marie-mikayelyan.jpg"),
     ("Arto Yeritsyan", "CEO & Founder · Async", "arto-yeritsyan.jpg"),
+    ("Levon Sarkisian", "Head of Solutions Architecture · Nebius", "levon-sarkisian.jpg"),
 ]
 
 ORGANIZERS = [

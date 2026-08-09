@@ -151,6 +151,13 @@ export const hackathonJury: Person[] = [
     company: 'Async',
     image: '/images/hackathon/arto-yeritsyan.jpg',
   },
+  {
+    name: 'Levon Sarkisian',
+    position: 'Head of Solutions Architecture',
+    company: 'Nebius',
+    linkedin: 'https://www.linkedin.com/in/levon-sarkisian-996a22126/',
+    image: '/images/hackathon/levon-sarkisian.jpg',
+  },
 ]
 
 export const hackathonOrganizers: Person[] = [
