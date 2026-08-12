@@ -29,6 +29,7 @@ Thumbs.db
 # Secrets and personal data — never commit these
 hackathon_api_key_info/
 info/
+hack_armenia_results/
 *keys.txt
 
 # TypeScript cache
