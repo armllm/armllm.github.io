@@ -49,6 +49,7 @@ const Home = memo(function Home() {
         </div>
       </section>
 
+      <section className="py-16 bg-glass border-t border-white/10 text-center"><div className="container mx-auto px-8"><h2 className="text-4xl font-bold text-gradient mb-4">Armenia LLM Summer School 2027</h2><p className="text-xl text-accent mb-4">Fourth edition · July 5–11, 2027</p><p className="text-white/80 mb-6">Program, speakers, venue, and application details coming soon.</p><a href="/2027/" className="inline-block bg-primary text-white px-8 py-3 rounded-lg font-semibold">View 2027 Website →</a></div></section>
       {/* Editions Grid */}
       <section className="py-20 bg-glass border-t border-white/10">
         <div className="container mx-auto px-8">
@@ -56,10 +57,8 @@ const Home = memo(function Home() {
             <EditionCard
               year={2026}
               dates="August 3-7, 2026 • AI9 Startup Campus, Yerevan"
-              description="Applications now open! The third edition features in-person and online tracks, with a 24-hour hackathon on August 8–9."
+              description="The third edition featured in-person and online tracks, followed by a 24-hour hackathon on August 8–9."
               image="/images/coverllm.png"
-              featured
-              badgeText="Apply Now"
             />
             <EditionCard
               year={2025}
