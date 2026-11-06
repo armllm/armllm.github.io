@@ -25,7 +25,7 @@ const defaultNavLinks: NavLink[] = [
   { to: '/media', label: 'Media' },
 ]
 
-const APPLY_URL = 'https://forms.gle/1HnZ4BLitQkXo2reA'
+const COMING_SOON_URL = '/2027/'
 
 export default function Header({ title = 'LLM Summer School', navLinks = defaultNavLinks }: HeaderProps) {
   const location = useLocation()
@@ -123,12 +123,10 @@ export default function Header({ title = 'LLM Summer School', navLinks = default
           )}
 
           <a
-            href={APPLY_URL}
-            target="_blank"
-            rel="noopener noreferrer"
+            href={COMING_SOON_URL}
             className="ml-2 px-5 py-2 bg-gradient-to-r from-primary to-accent text-white font-semibold rounded-lg shadow-lg shadow-accent/30 hover:shadow-accent/50 hover:-translate-y-0.5 transition-all"
           >
-            Apply
+            Coming Soon
           </a>
         </div>
 
@@ -206,13 +204,11 @@ export default function Header({ title = 'LLM Summer School', navLinks = default
           )}
 
           <a
-            href={APPLY_URL}
-            target="_blank"
-            rel="noopener noreferrer"
+            href={COMING_SOON_URL}
             onClick={() => setMenuOpen(false)}
             className="mt-2 text-center px-5 py-3 bg-gradient-to-r from-primary to-accent text-white font-semibold rounded-lg shadow-lg shadow-accent/30"
           >
-            Apply
+            Coming Soon
           </a>
         </div>
       </div>
