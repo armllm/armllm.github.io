@@ -5,6 +5,7 @@ import clsx from 'clsx'
 interface NavLink {
   to: string
   label: string
+  reloadDocument?: boolean
   external?: boolean
   hash?: string
 }
@@ -16,6 +17,7 @@ interface HeaderProps {
 
 const defaultNavLinks: NavLink[] = [
   { to: '/', label: 'Home' },
+  { to: '/2027/', label: '2027', reloadDocument: true },
   { to: '/2026', label: '2026' },
   { to: '/2025', label: '2025' },
   { to: '/2024', label: '2024' },
@@ -103,6 +105,7 @@ export default function Header({ title = 'LLM Summer School', navLinks = default
               <Link
                 key={link.to}
                 to={link.to}
+                reloadDocument={link.reloadDocument}
                 className={clsx(
                   'text-white font-medium relative group',
                   location.pathname === link.to && 'text-accent'
@@ -190,6 +193,7 @@ export default function Header({ title = 'LLM Summer School', navLinks = default
               <Link
                 key={link.to}
                 to={link.to}
+                reloadDocument={link.reloadDocument}
                 onClick={() => setMenuOpen(false)}
                 className={clsx(
                   'text-white font-medium py-3 px-3 rounded-lg hover:bg-white/10 transition-colors',
