@@ -32,7 +32,7 @@ export const mediaItems: MediaItem[] = [
     "title": "Hack Armenia brings AI specialists together to build practical solutions",
     "source": "Public Radio of Armenia · 2026",
     "url": "https://en.armradio.am/2026/08/10/hack-armenia-24-hour-hackathon-brings-together-ai-specialists-to-develop-practical-solutions/",
-    "thumbnail": "https://en.armradio.am/wp-content/uploads/2026/08/IMG_2583-scaled.jpeg",
+    "thumbnail": "https://how2b.am/wp-content/uploads/2026/08/IMG_2583.jpeg",
     "description": "10 August 2026 · English-language coverage of the hackathon, expert jury, and prizes."
   },
   {
@@ -46,7 +46,7 @@ export const mediaItems: MediaItem[] = [
     "title": "Applications open for the Hack Armenia AI hackathon",
     "source": "NEWS.am Tech · 2026",
     "url": "https://tech.news.am/en/news/7514",
-    "thumbnail": "https://darpass.com/wp-content/uploads/2026/07/Armenia-LLM-Summer-School-2026.jpg",
+    "thumbnail": "https://how2b.am/wp-content/uploads/2026/08/IMG_2583.jpeg",
     "description": "24 July 2026 · Announcement of the school’s associated hackathon, challenge areas, and participation format."
   },
   {
