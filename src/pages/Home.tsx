@@ -152,10 +152,9 @@ const Home = memo(function Home() {
         <div className="container mx-auto px-8">
           <SectionTitle title="Our Partners" />
           <div className="flex flex-wrap justify-center gap-12 items-center">
-            <img src="/images/aua.png" alt="American University of Armenia" width={64} height={64} className="h-16 w-auto opacity-80 hover:opacity-100 hover:-translate-y-1 transition-all" loading="lazy" />
             <img src="/images/ynn.png" alt="YerevaNN" width={64} height={64} className="h-16 w-auto opacity-80 hover:opacity-100 hover:-translate-y-1 transition-all" loading="lazy" />
             <img src="/images/nebius.png" alt="Nebius AI" width={64} height={64} className="h-16 w-auto opacity-80 hover:opacity-100 hover:-translate-y-1 transition-all" loading="lazy" />
-            <img src="/images/picsart.png" alt="Picsart" width={64} height={64} className="h-16 w-auto opacity-80 hover:opacity-100 hover:-translate-y-1 transition-all" loading="lazy" />
+            <img src="/images/ai9-square.svg" alt="AI9 Startup Campus" width={64} height={64} className="h-16 w-auto opacity-80 hover:opacity-100 hover:-translate-y-1 transition-all" loading="lazy" />
           </div>
         </div>
       </section>
